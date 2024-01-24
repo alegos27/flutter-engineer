@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the HardwareKeyboard class from the services library, for the Dart programming language.">
+  <title>HardwareKeyboard class - services library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">HardwareKeyboard class</li>
+  </ol>
+  <div class="self-name">HardwareKeyboard</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="services&#47;services-library-sidebar.html"
+      data-below-sidebar="services&#47;HardwareKeyboard-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/services/hardware_keyboard.dart#L417"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">HardwareKeyboard</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Manages key events from hardware keyboards.</p>
+<p><a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> manages all key events of the Flutter application from
+hardware keyboards (in contrast to on-screen keyboards). It receives key
+data from the native platform, dispatches key events to registered
+handlers, and records the keyboard state.</p>
+<p>To stay notified whenever keys are pressed, held, or released, add a
+handler with <a href="services/HardwareKeyboard/addHandler.html">addHandler</a>. To only be notified when a specific part of the
+app is focused, use a <a href="widgets/Focus-class.html">Focus</a> widget's <code>onFocusChanged</code> attribute instead
+of <a href="services/HardwareKeyboard/addHandler.html">addHandler</a>. Handlers should be removed with <a href="services/HardwareKeyboard/removeHandler.html">removeHandler</a> when
+notification is no longer necessary, or when the handler is being disposed.</p>
+<p>To query whether a key is being held, or a lock mode is enabled, use
+<a href="services/HardwareKeyboard/physicalKeysPressed.html">physicalKeysPressed</a>, <a href="services/HardwareKeyboard/logicalKeysPressed.html">logicalKeysPressed</a>, or <a href="services/HardwareKeyboard/lockModesEnabled.html">lockModesEnabled</a>.
+These states will have been updated with the event when used during a key
+event handler.</p>
+<p>The singleton <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> instance is held by the <a href="services/ServicesBinding-mixin.html">ServicesBinding</a>
+as <a href="services/ServicesBinding/keyboard.html">ServicesBinding.keyboard</a>, and can be conveniently accessed using the
+<a href="services/HardwareKeyboard/instance.html">HardwareKeyboard.instance</a> static accessor.</p>
+<h2 id="event-model">Event model</h2>
+<p>Flutter uses a universal event model (<a href="services/KeyEvent-class.html">KeyEvent</a>) and key options
+(<a href="services/LogicalKeyboardKey-class.html">LogicalKeyboardKey</a> and <a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a>) regardless of the native
+platform, while preserving platform-specific features as much as
+possible.</p>
+<p><a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> guarantees that the key model is "regularized": The key
+event stream consists of "key tap sequences", where a key tap sequence is
+defined as one <a href="services/KeyDownEvent-class.html">KeyDownEvent</a>, zero or more <a href="services/KeyRepeatEvent-class.html">KeyRepeatEvent</a>s, and one
+<a href="services/KeyUpEvent-class.html">KeyUpEvent</a> in order, all with the same physical key and logical key.</p>
+<p>Example:</p>
+<ul>
+<li>Tap and hold key A, US layout:
+<ul>
+<li>KeyDownEvent(physicalKey: keyA, logicalKey: keyA, character: "a")</li>
+<li>KeyRepeatEvent(physicalKey: keyA, logicalKey: keyA, character: "a")</li>
+<li>KeyUpEvent(physicalKey: keyA, logicalKey: keyA)</li>
+</ul>
+</li>
+<li>Press ShiftLeft, tap key A, then release ShiftLeft, US layout:
+<ul>
+<li>KeyDownEvent(physicalKey: shiftLeft, logicalKey: shiftLeft)</li>
+<li>KeyDownEvent(physicalKey: keyA, logicalKey: keyA, character: "A")</li>
+<li>KeyRepeatEvent(physicalKey: keyA, logicalKey: keyA, character: "A")</li>
+<li>KeyUpEvent(physicalKey: keyA, logicalKey: keyA)</li>
+<li>KeyUpEvent(physicalKey: shiftLeft, logicalKey: shiftLeft)</li>
+</ul>
+</li>
+<li>Tap key Q, French layout:
+<ul>
+<li>KeyDownEvent(physicalKey: keyA, logicalKey: keyQ, character: "q")</li>
+<li>KeyUpEvent(physicalKey: keyA, logicalKey: keyQ)</li>
+</ul>
+</li>
+<li>Tap CapsLock:
+<ul>
+<li>KeyDownEvent(physicalKey: capsLock, logicalKey: capsLock)</li>
+<li>KeyUpEvent(physicalKey: capsLock, logicalKey: capsLock)</li>
+</ul>
+</li>
+</ul>
+<p>When the Flutter application starts, all keys are released, and all lock
+modes are disabled. Upon key events, <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> will update its
+states, then dispatch callbacks: <a href="services/KeyDownEvent-class.html">KeyDownEvent</a>s and <a href="services/KeyUpEvent-class.html">KeyUpEvent</a>s set
+or reset the pressing state, while <a href="services/KeyDownEvent-class.html">KeyDownEvent</a>s also toggle lock modes.</p>
+<p>Flutter will try to synchronize with the ground truth of keyboard states
+using synthesized events (<a href="services/KeyEvent/synthesized.html">KeyEvent.synthesized</a>), subject to the
+availability of the platform. The desynchronization can be caused by
+non-empty initial state or a change in the focused window or application.
+For example, if CapsLock is enabled when the application starts, then
+immediately before the first key event, a synthesized <a href="services/KeyDownEvent-class.html">KeyDownEvent</a> and
+<a href="services/KeyUpEvent-class.html">KeyUpEvent</a> of CapsLock will be dispatched.</p>
+<p>The resulting event stream does not map one-to-one to the native key event
+stream. Some native events might be skipped, while some events might be
+synthesized and do not correspond to native events. Synthesized events will
+be indicated by <a href="services/KeyEvent/synthesized.html">KeyEvent.synthesized</a>.</p>
+<p>Example:</p>
+<ul>
+<li>Flutter starts with CapsLock on, the first press of keyA:
+<ul>
+<li>KeyDownEvent(physicalKey: capsLock, logicalKey: capsLock, synthesized: true)</li>
+<li>KeyUpEvent(physicalKey: capsLock, logicalKey: capsLock, synthesized: true)</li>
+<li>KeyDownEvent(physicalKey: keyA, logicalKey: keyA, character: "a")</li>
+</ul>
+</li>
+<li>While holding ShiftLeft, lose window focus, release shiftLeft, then focus
+back and press keyA:
+<ul>
+<li>KeyUpEvent(physicalKey: shiftLeft, logicalKey: shiftLeft, synthesized: true)</li>
+<li>KeyDownEvent(physicalKey: keyA, logicalKey: keyA, character: "a")</li>
+</ul>
+</li>
+</ul>
+<p>Flutter does not distinguish between multiple keyboards. Flutter will
+process all events as if they come from a single keyboard, and try to
+resolve any conflicts and provide a regularized key event stream, which
+can deviate from the ground truth.</p>
+<h2 id="compared-to-rawkeyboard">Compared to <a href="services/RawKeyboard-class.html">RawKeyboard</a></h2>
+<p><a href="services/RawKeyboard-class.html">RawKeyboard</a> is the legacy API, and will be deprecated and removed in the
+future. It is recommended to always use <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> and <a href="services/KeyEvent-class.html">KeyEvent</a>
+APIs (such as <a href="widgets/FocusNode/onKeyEvent.html">FocusNode.onKeyEvent</a>) to handle key events.</p>
+<p>Behavior-wise, <a href="services/RawKeyboard-class.html">RawKeyboard</a> provides a less unified, less regular
+event model than <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a>. For example:</p>
+<ul>
+<li>Down events might not be matched with an up event, and vice versa (the
+set of pressed keys is silently updated).</li>
+<li>The logical key of the down event might not be the same as that of the up
+event.</li>
+<li>Down events and repeat events are not easily distinguishable (must be
+tracked manually).</li>
+<li>Lock modes (such as CapsLock) only have their "enabled" state recorded.
+There's no way to acquire their pressing state.</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="services/KeyDownEvent-class.html">KeyDownEvent</a>, <a href="services/KeyRepeatEvent-class.html">KeyRepeatEvent</a>, and <a href="services/KeyUpEvent-class.html">KeyUpEvent</a>, the classes used to
+describe specific key events.</li>
+<li><a href="services/HardwareKeyboard/instance.html">instance</a>, the singleton instance of this class.</li>
+<li><a href="services/RawKeyboard-class.html">RawKeyboard</a>, the legacy API that dispatches key events containing raw
+system data.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="HardwareKeyboard" class="callable">
+          <span class="name"><a href="services/HardwareKeyboard/HardwareKeyboard.html">HardwareKeyboard</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="lockModesEnabled" class="property">
+  <span class="name"><a href="services/HardwareKeyboard/lockModesEnabled.html">lockModesEnabled</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="services/KeyboardLockMode.html">KeyboardLockMode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The set of <code>KeyboardLockMode</code> that are enabled.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="logicalKeysPressed" class="property">
+  <span class="name"><a href="services/HardwareKeyboard/logicalKeysPressed.html">logicalKeysPressed</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="services/LogicalKeyboardKey-class.html">LogicalKeyboardKey</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The set of <code>LogicalKeyboardKey</code>s that are pressed.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="physicalKeysPressed" class="property">
+  <span class="name"><a href="services/HardwareKeyboard/physicalKeysPressed.html">physicalKeysPressed</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The set of <code>PhysicalKeyboardKey</code>s that are pressed.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addHandler" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/addHandler.html">addHandler</a></span><span class="signature">(<wbr><span class="parameter" id="addHandler-param-handler"><span class="type-annotation"><a href="services/KeyEventCallback.html">KeyEventCallback</a></span> <span class="parameter-name">handler</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Register a listener that is called every time a hardware key event
+occurs.
+  
+
+</dd>
+
+        <dt id="clearState" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/clearState.html">clearState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Clear all keyboard states and additional handlers.
+  
+
+</dd>
+
+        <dt id="handleKeyEvent" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/handleKeyEvent.html">handleKeyEvent</a></span><span class="signature">(<wbr><span class="parameter" id="handleKeyEvent-param-event"><span class="type-annotation"><a href="services/KeyEvent-class.html">KeyEvent</a></span> <span class="parameter-name">event</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Process a new <a href="services/KeyEvent-class.html">KeyEvent</a> by recording the state changes and dispatching
+to handlers.
+  
+
+</dd>
+
+        <dt id="lookUpLayout" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/lookUpLayout.html">lookUpLayout</a></span><span class="signature">(<wbr><span class="parameter" id="lookUpLayout-param-physicalKey"><span class="type-annotation"><a href="services/PhysicalKeyboardKey-class.html">PhysicalKeyboardKey</a></span> <span class="parameter-name">physicalKey</span></span>)
+    <span class="returntype parameter">&#8594; <a href="services/LogicalKeyboardKey-class.html">LogicalKeyboardKey</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the logical key that corresponds to the given pressed physical key.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="removeHandler" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/removeHandler.html">removeHandler</a></span><span class="signature">(<wbr><span class="parameter" id="removeHandler-param-handler"><span class="type-annotation"><a href="services/KeyEventCallback.html">KeyEventCallback</a></span> <span class="parameter-name">handler</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stop calling the given listener every time a hardware key event
+occurs.
+  
+
+</dd>
+
+        <dt id="syncKeyboardState" class="callable">
+  <span class="name"><a href="services/HardwareKeyboard/syncKeyboardState.html">syncKeyboardState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Query the engine and update _pressedKeys accordingly to the engine answer.
+Both the framework and the engine maintain a state of the current pressed
+keys. There are edge cases, related to startup and restart, where the framework
+needs to resynchronize its keyboard state.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+
+    <dl class="properties">
+        <dt id="instance" class="property">
+  <span class="name"><a href="services/HardwareKeyboard/instance.html">instance</a></span>
+  <span class="signature">&#8594; <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a></span> 
+
+</dt>
+<dd>
+  Provides convenient access to the current <a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> singleton from
+the <a href="services/ServicesBinding-mixin.html">ServicesBinding</a> instance.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">HardwareKeyboard class</li>
+</ol>
+
+
+    <!--<h5>services library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

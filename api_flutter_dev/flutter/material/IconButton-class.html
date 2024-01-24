@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the IconButton class from the material library, for the Dart programming language.">
+  <title>IconButton class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">IconButton class</li>
+  </ol>
+  <div class="self-name">IconButton</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;IconButton-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/icon_button.dart#L167"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">IconButton</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A Material Design icon button.</p>
+<p>An icon button is a picture printed on a <a href="material/Material-class.html">Material</a> widget that reacts to
+touches by filling with color (ink).</p>
+<p>Icon buttons are commonly used in the <a href="material/AppBar/actions.html">AppBar.actions</a> field, but they can
+be used in many other places as well.</p>
+<p>If the <a href="material/IconButton/onPressed.html">onPressed</a> callback is null, then the button will be disabled and
+will not react to touch.</p>
+<p>Requires one of its ancestors to be a <a href="material/Material-class.html">Material</a> widget. In Material Design 3,
+this requirement no longer exists because this widget builds a subclass of
+<a href="material/ButtonStyleButton-class.html">ButtonStyleButton</a>.</p>
+<p>The hit region of an icon button will, if possible, be at least
+kMinInteractiveDimension pixels in size, regardless of the actual
+<a href="material/IconButton/iconSize.html">iconSize</a>, to satisfy the <a href="https://material.io/design/layout/spacing-methods.html#touch-targets">touch target size</a>
+requirements in the Material Design specification. The <a href="material/IconButton/alignment.html">alignment</a> controls
+how the icon itself is positioned within the hit region.</p>
+<p>
+<a name="material.IconButton.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows an <a href="material/IconButton-class.html">IconButton</a> that uses the Material icon "volume_up" to
+increase the volume.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/material/icon_button.png" alt="">
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.IconButton.1');" onclick="fixHref(this, 'material.IconButton.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.IconButton.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.IconButton.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<h3 id="icon-sizes">Icon sizes</h3>
+<p>When creating an icon button with an <a href="widgets/Icon-class.html">Icon</a>, do not override the
+icon's size with its <a href="widgets/Icon/size.html">Icon.size</a> parameter, use the icon button's
+<a href="material/IconButton/iconSize.html">iconSize</a> parameter instead. For example do this:</p>
+<pre class="language-dart"><code class="language-dart">IconButton(
+  iconSize: 72,
+  icon: const Icon(Icons.favorite),
+  onPressed: () {
+    // ...
+  },
+),
+</code></pre>
+<p>Avoid doing this:</p>
+<pre class="language-dart"><code class="language-dart">IconButton(
+  icon: const Icon(Icons.favorite, size: 72),
+  onPressed: () {
+    // ...
+  },
+),
+</code></pre>
+<p>If you do, the button's size will be based on the default icon
+size, not 72, which may produce unexpected layouts and clipping
+issues.</p>
+<h3 id="adding-a-filled-background">Adding a filled background</h3>
+<p>Icon buttons don't support specifying a background color or other
+background decoration because typically the icon is just displayed
+on top of the parent widget's background. Icon buttons that appear
+in <a href="material/AppBar/actions.html">AppBar.actions</a> are an example of this.</p>
+<p>It's easy enough to create an icon button with a filled background
+using the <a href="material/Ink-class.html">Ink</a> widget. The <a href="material/Ink-class.html">Ink</a> widget renders a decoration on
+the underlying <a href="material/Material-class.html">Material</a> along with the splash and highlight
+<a href="material/InkResponse-class.html">InkResponse</a> contributed by descendant widgets.</p>
+<p>
+<a name="material.IconButton.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+In this sample the icon button's background color is defined with an <a href="material/Ink-class.html">Ink</a>
+widget whose child is an <a href="material/IconButton-class.html">IconButton</a>. The icon button's filled background
+is a light shade of blue, it's a filled circle, and it's as big as the
+button is.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/material/icon_button_background.png" alt="">
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.IconButton.2');" onclick="fixHref(this, 'material.IconButton.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.IconButton.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.IconButton.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>Material Design 3 introduced new types (standard and contained) of <a href="material/IconButton-class.html">IconButton</a>s.
+The default <a href="material/IconButton-class.html">IconButton</a> is the standard type. To create a filled icon button,
+use <a href="material/IconButton/IconButton.filled.html">IconButton.filled</a>; to create a filled tonal icon button, use <a href="material/IconButton/IconButton.filledTonal.html">IconButton.filledTonal</a>;
+to create a outlined icon button, use <a href="material/IconButton/IconButton.outlined.html">IconButton.outlined</a>.</p>
+<p>Material Design 3 also treats <a href="material/IconButton-class.html">IconButton</a>s as toggle buttons. In order
+to not break existing apps, the toggle feature can be optionally controlled
+by the <a href="material/IconButton/isSelected.html">isSelected</a> property.</p>
+<p>If <a href="material/IconButton/isSelected.html">isSelected</a> is null it will behave as a normal button. If <a href="material/IconButton/isSelected.html">isSelected</a> is not
+null then it will behave as a toggle button. If <a href="material/IconButton/isSelected.html">isSelected</a> is true then it will
+show <a href="material/IconButton/selectedIcon.html">selectedIcon</a>, if it false it will show the normal <a href="material/IconButton/icon.html">icon</a>.</p>
+<p>In Material Design 3, both <a href="widgets/IconTheme-class.html">IconTheme</a> and <a href="material/IconButtonTheme-class.html">IconButtonTheme</a> are used to override the default style
+of <a href="material/IconButton-class.html">IconButton</a>. If both themes exist, the <a href="material/IconButtonTheme-class.html">IconButtonTheme</a> will override <a href="widgets/IconTheme-class.html">IconTheme</a> no matter
+which is closer to the <a href="material/IconButton-class.html">IconButton</a>. Each <a href="material/IconButton-class.html">IconButton</a>'s property is resolved by the order of
+precedence: widget property, <a href="material/IconButtonTheme-class.html">IconButtonTheme</a> property, <a href="widgets/IconTheme-class.html">IconTheme</a> property and
+internal default property value.</p>
+<p>In Material Design 3, the <a href="material/IconButton/visualDensity.html">IconButton.visualDensity</a> defaults to <a href="material/VisualDensity/standard-constant.html">VisualDensity.standard</a>
+for all platforms; otherwise the button will have a rounded rectangle shape if
+the <a href="material/IconButton/visualDensity.html">IconButton.visualDensity</a> is set to <a href="material/VisualDensity/compact-constant.html">VisualDensity.compact</a>. Users can
+customize it by using <a href="material/IconButtonTheme-class.html">IconButtonTheme</a>, <a href="material/IconButton/style.html">IconButton.style</a> or <a href="material/IconButton/visualDensity.html">IconButton.visualDensity</a>.</p>
+<p>
+<a name="material.IconButton.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This sample shows creation of <a href="material/IconButton-class.html">IconButton</a> widgets for standard, filled,
+filled tonal and outlined types, as described in: <a href="https://m3.material.io/components/icon-buttons/overview">https://m3.material.io/components/icon-buttons/overview</a>
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.IconButton.3');" onclick="fixHref(this, 'material.IconButton.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.IconButton.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.IconButton.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.IconButton.4"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet4">
+    <div class="snippet-description">
+This sample shows creation of <a href="material/IconButton-class.html">IconButton</a> widgets with toggle feature for
+standard, filled, filled tonal and outlined types, as described
+in: <a href="https://m3.material.io/components/icon-buttons/overview">https://m3.material.io/components/icon-buttons/overview</a>
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.IconButton.4');" onclick="fixHref(this, 'material.IconButton.4'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.IconButton.4 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.IconButton.4&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/Icons-class.html">Icons</a>, the library of Material Icons.</li>
+<li><a href="material/BackButton-class.html">BackButton</a>, an icon button for a "back" affordance which adapts to the
+current platform's conventions.</li>
+<li><a href="material/CloseButton-class.html">CloseButton</a>, an icon button for closing pages.</li>
+<li><a href="material/AppBar-class.html">AppBar</a>, to show a toolbar at the top of an application.</li>
+<li><a href="material/TextButton-class.html">TextButton</a>, <a href="material/ElevatedButton-class.html">ElevatedButton</a>, <a href="material/OutlinedButton-class.html">OutlinedButton</a>, for buttons with text labels and an optional icon.</li>
+<li><a href="material/InkResponse-class.html">InkResponse</a> and <a href="material/InkWell-class.html">InkWell</a>, for the ink splash effect itself.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatelessWidget-class.html">StatelessWidget</a></li>
+      <li>IconButton</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="IconButton" class="callable">
+          <span class="name"><a href="material/IconButton/IconButton.html">IconButton</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="-param-splashRadius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">splashRadius</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="-param-onPressed"><span>required</span> <span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="-param-mouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">mouseCursor</span>, </span><span class="parameter" id="-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-tooltip"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tooltip</span>, </span><span class="parameter" id="-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span><span class="parameter" id="-param-style"><span class="type-annotation"><a href="material/ButtonStyle-class.html">ButtonStyle</a>?</span> <span class="parameter-name">style</span>, </span><span class="parameter" id="-param-isSelected"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSelected</span>, </span><span class="parameter" id="-param-selectedIcon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">selectedIcon</span>, </span><span class="parameter" id="-param-icon"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">icon</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates an icon button.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="IconButton.filled" class="callable">
+          <span class="name"><a href="material/IconButton/IconButton.filled.html">IconButton.filled</a></span><span class="signature">(<span class="parameter" id="filled-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="filled-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="filled-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="filled-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="filled-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="filled-param-splashRadius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">splashRadius</span>, </span><span class="parameter" id="filled-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="filled-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="filled-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="filled-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="filled-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="filled-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="filled-param-onPressed"><span>required</span> <span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="filled-param-mouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">mouseCursor</span>, </span><span class="parameter" id="filled-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="filled-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="filled-param-tooltip"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tooltip</span>, </span><span class="parameter" id="filled-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="filled-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span><span class="parameter" id="filled-param-style"><span class="type-annotation"><a href="material/ButtonStyle-class.html">ButtonStyle</a>?</span> <span class="parameter-name">style</span>, </span><span class="parameter" id="filled-param-isSelected"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSelected</span>, </span><span class="parameter" id="filled-param-selectedIcon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">selectedIcon</span>, </span><span class="parameter" id="filled-param-icon"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">icon</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a filled variant of IconButton.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="IconButton.filledTonal" class="callable">
+          <span class="name"><a href="material/IconButton/IconButton.filledTonal.html">IconButton.filledTonal</a></span><span class="signature">(<span class="parameter" id="filledTonal-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="filledTonal-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="filledTonal-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="filledTonal-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="filledTonal-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="filledTonal-param-splashRadius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">splashRadius</span>, </span><span class="parameter" id="filledTonal-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="filledTonal-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="filledTonal-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="filledTonal-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="filledTonal-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="filledTonal-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="filledTonal-param-onPressed"><span>required</span> <span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="filledTonal-param-mouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">mouseCursor</span>, </span><span class="parameter" id="filledTonal-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="filledTonal-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="filledTonal-param-tooltip"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tooltip</span>, </span><span class="parameter" id="filledTonal-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="filledTonal-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span><span class="parameter" id="filledTonal-param-style"><span class="type-annotation"><a href="material/ButtonStyle-class.html">ButtonStyle</a>?</span> <span class="parameter-name">style</span>, </span><span class="parameter" id="filledTonal-param-isSelected"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSelected</span>, </span><span class="parameter" id="filledTonal-param-selectedIcon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">selectedIcon</span>, </span><span class="parameter" id="filledTonal-param-icon"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">icon</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a filled tonal variant of IconButton.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="IconButton.outlined" class="callable">
+          <span class="name"><a href="material/IconButton/IconButton.outlined.html">IconButton.outlined</a></span><span class="signature">(<span class="parameter" id="outlined-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="outlined-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="outlined-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="outlined-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="outlined-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="outlined-param-splashRadius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">splashRadius</span>, </span><span class="parameter" id="outlined-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="outlined-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="outlined-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="outlined-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="outlined-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="outlined-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="outlined-param-onPressed"><span>required</span> <span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onPressed</span>, </span><span class="parameter" id="outlined-param-mouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">mouseCursor</span>, </span><span class="parameter" id="outlined-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="outlined-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="outlined-param-tooltip"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tooltip</span>, </span><span class="parameter" id="outlined-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="outlined-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span><span class="parameter" id="outlined-param-style"><span class="type-annotation"><a href="material/ButtonStyle-class.html">ButtonStyle</a>?</span> <span class="parameter-name">style</span>, </span><span class="parameter" id="outlined-param-isSelected"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">isSelected</span>, </span><span class="parameter" id="outlined-param-selectedIcon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">selectedIcon</span>, </span><span class="parameter" id="outlined-param-icon"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">icon</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a filled tonal variant of IconButton.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="alignment" class="property">
+  <span class="name"><a href="material/IconButton/alignment.html">alignment</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Defines how the icon is positioned within the IconButton.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="autofocus" class="property">
+  <span class="name"><a href="material/IconButton/autofocus.html">autofocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  True if this widget will be selected as the initial focus when no other
+node in its scope is currently focused.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property">
+  <span class="name"><a href="material/IconButton/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to use for the icon inside the button, if the icon is enabled.
+Defaults to leaving this up to the <a href="material/IconButton/icon.html">icon</a> widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="constraints" class="property">
+  <span class="name"><a href="material/IconButton/constraints.html">constraints</a></span>
+  <span class="signature">&#8594; <a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> 
+
+</dt>
+<dd>
+  Optional size constraints for the button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="disabledColor" class="property">
+  <span class="name"><a href="material/IconButton/disabledColor.html">disabledColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to use for the icon inside the button, if the icon is disabled.
+Defaults to the <a href="material/ThemeData/disabledColor.html">ThemeData.disabledColor</a> of the current <a href="material/Theme-class.html">Theme</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableFeedback" class="property">
+  <span class="name"><a href="material/IconButton/enableFeedback.html">enableFeedback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether detected gestures should provide acoustic and/or haptic feedback.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="focusColor" class="property">
+  <span class="name"><a href="material/IconButton/focusColor.html">focusColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color for the button when it has the input focus.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="focusNode" class="property">
+  <span class="name"><a href="material/IconButton/focusNode.html">focusNode</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusNode-class.html">FocusNode</a>?</span> 
+
+</dt>
+<dd>
+  An optional focus node to use as the focus node for this widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="highlightColor" class="property">
+  <span class="name"><a href="material/IconButton/highlightColor.html">highlightColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The secondary color of the button when the button is in the down (pressed)
+state. The highlight color is represented as a solid color that is overlaid over the
+button color (if any). If the highlight color has transparency, the button color
+will show through. The highlight fades in quickly as the button is held down.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hoverColor" class="property">
+  <span class="name"><a href="material/IconButton/hoverColor.html">hoverColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color for the button when a pointer is hovering over it.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="icon" class="property">
+  <span class="name"><a href="material/IconButton/icon.html">icon</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a></span> 
+
+</dt>
+<dd>
+  The icon to display inside the button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconSize" class="property">
+  <span class="name"><a href="material/IconButton/iconSize.html">iconSize</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The size of the icon inside the button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isSelected" class="property">
+  <span class="name"><a href="material/IconButton/isSelected.html">isSelected</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  The optional selection state of the icon button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="mouseCursor" class="property">
+  <span class="name"><a href="material/IconButton/mouseCursor.html">mouseCursor</a></span>
+  <span class="signature">&#8594; <a href="services/MouseCursor-class.html">MouseCursor</a>?</span> 
+
+</dt>
+<dd>
+  The cursor for a mouse pointer when it enters or is hovering over the
+button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPressed" class="property">
+  <span class="name"><a href="material/IconButton/onPressed.html">onPressed</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  The callback that is called when the button is tapped or otherwise activated.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="material/IconButton/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  The padding around the button's icon. The entire padded icon will react
+to input gestures.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedIcon" class="property">
+  <span class="name"><a href="material/IconButton/selectedIcon.html">selectedIcon</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The icon to display inside the button when <a href="material/IconButton/isSelected.html">isSelected</a> is true. This property
+can be null. The original <a href="material/IconButton/icon.html">icon</a> will be used for both selected and unselected
+status if it is null.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="splashColor" class="property">
+  <span class="name"><a href="material/IconButton/splashColor.html">splashColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The primary color of the button when the button is in the down (pressed) state.
+The splash is represented as a circular overlay that appears above the
+<a href="material/IconButton/highlightColor.html">highlightColor</a> overlay. The splash overlay has a center point that matches
+the hit point of the user touch event. The splash overlay will expand to
+fill the button area if the touch is held for long enough time. If the splash
+color has transparency then the highlight and button color will show through.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="splashRadius" class="property">
+  <span class="name"><a href="material/IconButton/splashRadius.html">splashRadius</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The splash radius.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="style" class="property">
+  <span class="name"><a href="material/IconButton/style.html">style</a></span>
+  <span class="signature">&#8594; <a href="material/ButtonStyle-class.html">ButtonStyle</a>?</span> 
+
+</dt>
+<dd>
+  Customizes this button's appearance.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tooltip" class="property">
+  <span class="name"><a href="material/IconButton/tooltip.html">tooltip</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  Text that describes the action that will occur when the button is pressed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="visualDensity" class="property">
+  <span class="name"><a href="material/IconButton/visualDensity.html">visualDensity</a></span>
+  <span class="signature">&#8594; <a href="material/VisualDensity-class.html">VisualDensity</a>?</span> 
+
+</dt>
+<dd>
+  Defines how compact the icon button's layout will be.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable">
+  <span class="name"><a href="material/IconButton/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/Widget-class.html">Widget</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Describes the part of the user interface represented by this widget.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatelessWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatelessElement-class.html">StatelessElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="material/IconButton/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="styleFrom" class="callable">
+  <span class="name"><a href="material/IconButton/styleFrom.html">styleFrom</a></span><span class="signature">(<wbr><span class="parameter" id="styleFrom-param-foregroundColor">{<span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">foregroundColor</span>, </span><span class="parameter" id="styleFrom-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="styleFrom-param-disabledForegroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledForegroundColor</span>, </span><span class="parameter" id="styleFrom-param-disabledBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledBackgroundColor</span>, </span><span class="parameter" id="styleFrom-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="styleFrom-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="styleFrom-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="styleFrom-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="styleFrom-param-surfaceTintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTintColor</span>, </span><span class="parameter" id="styleFrom-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span><span class="parameter" id="styleFrom-param-minimumSize"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a>?</span> <span class="parameter-name">minimumSize</span>, </span><span class="parameter" id="styleFrom-param-fixedSize"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a>?</span> <span class="parameter-name">fixedSize</span>, </span><span class="parameter" id="styleFrom-param-maximumSize"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a>?</span> <span class="parameter-name">maximumSize</span>, </span><span class="parameter" id="styleFrom-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="styleFrom-param-side"><span class="type-annotation"><a href="painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">side</span>, </span><span class="parameter" id="styleFrom-param-shape"><span class="type-annotation"><a href="painting/OutlinedBorder-class.html">OutlinedBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="styleFrom-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="styleFrom-param-enabledMouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">enabledMouseCursor</span>, </span><span class="parameter" id="styleFrom-param-disabledMouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">disabledMouseCursor</span>, </span><span class="parameter" id="styleFrom-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="styleFrom-param-tapTargetSize"><span class="type-annotation"><a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a>?</span> <span class="parameter-name">tapTargetSize</span>, </span><span class="parameter" id="styleFrom-param-animationDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a>?</span> <span class="parameter-name">animationDuration</span>, </span><span class="parameter" id="styleFrom-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="styleFrom-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="styleFrom-param-splashFactory"><span class="type-annotation"><a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a>?</span> <span class="parameter-name">splashFactory</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="material/ButtonStyle-class.html">ButtonStyle</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A static convenience method that constructs an icon button
+<a href="material/ButtonStyle-class.html">ButtonStyle</a> given simple values. This method is only used for Material 3.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">IconButton class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

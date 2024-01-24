@@ -1,0 +1,13 @@
+{
+    "id": "material.ClipRRect.2",
+    "element": "ClipRRect",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 846,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a [ClipRRect] that adds round corners to an image.",
+    "file": "material.ClipRRect.2.dart"
+}

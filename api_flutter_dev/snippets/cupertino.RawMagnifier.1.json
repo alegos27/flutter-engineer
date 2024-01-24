@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.RawMagnifier.1",
+    "element": "RawMagnifier",
+    "sourcePath": "lib/src/widgets/magnifier.dart",
+    "sourceLine": 410,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample demonstrates what a magnifier is, and how it can be used.",
+    "file": "cupertino.RawMagnifier.1.dart"
+}

@@ -1,0 +1,13 @@
+{
+    "id": "material.Slider.1",
+    "element": "Slider",
+    "sourcePath": "lib/src/material/slider.dart",
+    "sourceLine": 152,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "![A legacy slider widget, consisting of 5 divisions and showing the default value\nindicator.](https://flutter.github.io/assets-for-api-docs/assets/material/slider.png)\n\nThe Sliders value is part of the Stateful widget subclass to change the value\nsetState was called.",
+    "file": "material.Slider.1.dart"
+}

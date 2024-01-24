@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the precacheImage function from the widgets library, for the Dart programming language.">
+  <title>precacheImage function - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">precacheImage function</li>
+  </ol>
+  <div class="self-name">precacheImage</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/image.dart#L107"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">precacheImage</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+<span class="name ">precacheImage</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="precacheImage-param-provider"><span class="type-annotation"><a href="painting/ImageProvider-class.html">ImageProvider</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">provider</span>, </span></li>
+<li><span class="parameter" id="precacheImage-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="precacheImage-param-size">{<span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a>?</span> <span class="parameter-name">size</span>, </span></li>
+<li><span class="parameter" id="precacheImage-param-onError"><span class="type-annotation"><a href="painting/ImageErrorListener.html">ImageErrorListener</a>?</span> <span class="parameter-name">onError</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Prefetches an image into the image cache.</p>
+<p>Returns a <a href="dart-async/Future-class.html">Future</a> that will complete when the first image yielded by the
+<a href="painting/ImageProvider-class.html">ImageProvider</a> is available or failed to load.</p>
+<p>If the image is later used by an <a href="widgets/Image-class.html">Image</a> or <a href="painting/BoxDecoration-class.html">BoxDecoration</a> or <a href="widgets/FadeInImage-class.html">FadeInImage</a>,
+it will probably be loaded faster. The consumer of the image does not need
+to use the same <a href="painting/ImageProvider-class.html">ImageProvider</a> instance. The <a href="painting/ImageCache-class.html">ImageCache</a> will find the image
+as long as both images share the same key, and the image is held by the
+cache.</p>
+<p>The cache may refuse to hold the image if it is disabled, the image is too
+large, or some other criteria implemented by a custom <a href="painting/ImageCache-class.html">ImageCache</a>
+implementation.</p>
+<p>The <a href="painting/ImageCache-class.html">ImageCache</a> holds a reference to all images passed to
+<a href="painting/ImageCache/putIfAbsent.html">ImageCache.putIfAbsent</a> as long as their <a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a> has at
+least one listener. This method will wait until the end of the frame after
+its future completes before releasing its own listener. This gives callers a
+chance to listen to the stream if necessary. A caller can determine if the
+image ended up in the cache by calling <a href="painting/ImageProvider/obtainCacheStatus.html">ImageProvider.obtainCacheStatus</a>. If
+it is only held as <a href="painting/ImageCacheStatus/live.html">ImageCacheStatus.live</a>, and the caller wishes to keep
+the resolved image in memory, the caller should immediately call
+<code>provider.resolve</code> and add a listener to the returned <a href="painting/ImageStream-class.html">ImageStream</a>. The
+image will remain pinned in memory at least until the caller removes its
+listener from the stream, even if it would not otherwise fit into the cache.</p>
+<p>Callers should be cautious about pinning large images or a large number of
+images in memory, as this can result in running out of memory and being
+killed by the operating system. The lower the available physical memory, the
+more susceptible callers will be to running into OOM issues. These issues
+manifest as immediate process death, sometimes with no other error messages.</p>
+<p>The <a href="widgets/BuildContext-class.html">BuildContext</a> and <a href="dart-ui/Size-class.html">Size</a> are used to select an image configuration
+(see <a href="widgets/createLocalImageConfiguration.html">createLocalImageConfiguration</a>).</p>
+<p>The returned future will not complete with error, even if precaching
+failed. The <code>onError</code> argument can be used to manually handle errors while
+pre-caching.</p>
+<p>See also:</p>
+<ul>
+<li><a href="painting/ImageCache-class.html">ImageCache</a>, which holds images that may be reused.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; precacheImage(
+  ImageProvider provider,
+  BuildContext context, {
+  Size? size,
+  ImageErrorListener? onError,
+}) {
+  final ImageConfiguration config = createLocalImageConfiguration(context, size: size);
+  final Completer&lt;void&gt; completer = Completer&lt;void&gt;();
+  final ImageStream stream = provider.resolve(config);
+  ImageStreamListener? listener;
+  listener = ImageStreamListener(
+    (ImageInfo? image, bool sync) {
+      if (!completer.isCompleted) {
+        completer.complete();
+      }
+      &#47;&#47; Give callers until at least the end of the frame to subscribe to the
+      &#47;&#47; image stream.
+      &#47;&#47; See ImageCache._liveImages
+      SchedulerBinding.instance.addPostFrameCallback((Duration timeStamp) {
+        stream.removeListener(listener!);
+      });
+    },
+    onError: (Object exception, StackTrace? stackTrace) {
+      if (!completer.isCompleted) {
+        completer.complete();
+      }
+      stream.removeListener(listener!);
+      if (onError != null) {
+        onError(exception, stackTrace);
+      } else {
+        FlutterError.reportError(FlutterErrorDetails(
+          context: ErrorDescription(&#39;image failed to precache&#39;),
+          library: &#39;image resource service&#39;,
+          exception: exception,
+          stack: stackTrace,
+          silent: true,
+        ));
+      }
+    },
+  );
+  stream.addListener(listener);
+  return completer.future;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">precacheImage function</li>
+</ol>
+
+
+    <h5>widgets library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

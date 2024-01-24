@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the saveLayer method from the TestRecordingCanvas class, for the Dart programming language.">
+  <title>saveLayer method - TestRecordingCanvas class - flutter_test library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li><a href="flutter_test/TestRecordingCanvas-class.html">TestRecordingCanvas</a></li>
+    <li class="self-crumb">saveLayer method</li>
+  </ol>
+  <div class="self-name">saveLayer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="flutter_test&#47;TestRecordingCanvas-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_test/lib/src/recording_canvas.dart#L77"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">saveLayer</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">saveLayer</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="saveLayer-param-bounds"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">bounds</span>, </span></li>
+<li><span class="parameter" id="saveLayer-param-paint"><span class="type-annotation"><a href="dart-ui/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Saves a copy of the current transform and clip on the save stack, and then
+creates a new group which subsequent calls will become a part of. When the
+save stack is later popped, the group will be flattened into a layer and
+have the given <code>paint</code>'s <a href="dart-ui/Paint/colorFilter.html">Paint.colorFilter</a> and <a href="dart-ui/Paint/blendMode.html">Paint.blendMode</a>
+applied.</p>
+<p>This lets you create composite effects, for example making a group of
+drawing commands semi-transparent. Without using <a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a>, each part of
+the group would be painted individually, so where they overlap would be
+darker than where they do not. By using <a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a> to group them
+together, they can be drawn with an opaque color at first, and then the
+entire group can be made transparent using the <a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a>'s paint.</p>
+<p>Call <a href="flutter_test/TestRecordingCanvas/restore.html">restore</a> to pop the save stack and apply the paint to the group.</p>
+<h2 id="using-savelayer-with-clips">Using saveLayer with clips</h2>
+<p>When a rectangular clip operation (from <a href="dart-ui/Canvas/clipRect.html">clipRect</a>) is not axis-aligned
+with the raster buffer, or when the clip operation is not rectilinear
+(e.g. because it is a rounded rectangle clip created by <a href="dart-ui/Canvas/clipRRect.html">clipRRect</a> or an
+arbitrarily complicated path clip created by <a href="dart-ui/Canvas/clipPath.html">clipPath</a>), the edge of the
+clip needs to be anti-aliased.</p>
+<p>If two draw calls overlap at the edge of such a clipped region, without
+using <a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a>, the first drawing will be anti-aliased with the
+background first, and then the second will be anti-aliased with the result
+of blending the first drawing and the background. On the other hand, if
+<a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a> is used immediately after establishing the clip, the second
+drawing will cover the first in the layer, and thus the second alone will
+be anti-aliased with the background when the layer is clipped and
+composited (when <a href="flutter_test/TestRecordingCanvas/restore.html">restore</a> is called).</p>
+<p>For example, this <a href="rendering/CustomPainter/paint.html">CustomPainter.paint</a> method paints a clean white
+rounded rectangle:</p>
+<pre class="language-dart"><code class="language-dart">void paint(Canvas canvas, Size size) {
+  Rect rect = Offset.zero &amp; size;
+  canvas.save();
+  canvas.clipRRect(RRect.fromRectXY(rect, 100.0, 100.0));
+  canvas.saveLayer(rect, Paint());
+  canvas.drawPaint(Paint()..color = Colors.red);
+  canvas.drawPaint(Paint()..color = Colors.white);
+  canvas.restore();
+  canvas.restore();
+}
+</code></pre>
+<p>On the other hand, this one renders a red outline, the result of the red
+paint being anti-aliased with the background at the clip edge, then the
+white paint being similarly anti-aliased with the background <em>including
+the clipped red paint</em>:</p>
+<pre class="language-dart"><code class="language-dart">void paint(Canvas canvas, Size size) {
+  // (this example renders poorly, prefer the example above)
+  Rect rect = Offset.zero &amp; size;
+  canvas.save();
+  canvas.clipRRect(RRect.fromRectXY(rect, 100.0, 100.0));
+  canvas.drawPaint(Paint()..color = Colors.red);
+  canvas.drawPaint(Paint()..color = Colors.white);
+  canvas.restore();
+}
+</code></pre>
+<p>This point is moot if the clip only clips one draw operation. For example,
+the following paint method paints a pair of clean white rounded
+rectangles, even though the clips are not done on a separate layer:</p>
+<pre class="language-dart"><code class="language-dart">void paint(Canvas canvas, Size size) {
+  canvas.save();
+  canvas.clipRRect(RRect.fromRectXY(Offset.zero &amp; (size / 2.0), 50.0, 50.0));
+  canvas.drawPaint(Paint()..color = Colors.white);
+  canvas.restore();
+  canvas.save();
+  canvas.clipRRect(RRect.fromRectXY(size.center(Offset.zero) &amp; (size / 2.0), 50.0, 50.0));
+  canvas.drawPaint(Paint()..color = Colors.white);
+  canvas.restore();
+}
+</code></pre>
+<p>(Incidentally, rather than using <a href="dart-ui/Canvas/clipRRect.html">clipRRect</a> and <a href="dart-ui/Canvas/drawPaint.html">drawPaint</a> to draw
+rounded rectangles like this, prefer the <a href="dart-ui/Canvas/drawRRect.html">drawRRect</a> method. These
+examples are using <a href="dart-ui/Canvas/drawPaint.html">drawPaint</a> as a proxy for "complicated draw operations
+that will get clipped", to illustrate the point.)</p>
+<h2 id="performance-considerations">Performance considerations</h2>
+<p>Generally speaking, <a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a> is relatively expensive.</p>
+<p>There are a several different hardware architectures for GPUs (graphics
+processing units, the hardware that handles graphics), but most of them
+involve batching commands and reordering them for performance. When layers
+are used, they cause the rendering pipeline to have to switch render
+target (from one layer to another). Render target switches can flush the
+GPU's command buffer, which typically means that optimizations that one
+could get with larger batching are lost. Render target switches also
+generate a lot of memory churn because the GPU needs to copy out the
+current frame buffer contents from the part of memory that's optimized for
+writing, and then needs to copy it back in once the previous render target
+(layer) is restored.</p>
+<p>See also:</p>
+<ul>
+<li><a href="flutter_test/TestRecordingCanvas/save.html">save</a>, which saves the current state, but does not create a new layer
+for subsequent commands.</li>
+<li><a href="dart-ui/BlendMode.html">BlendMode</a>, which discusses the use of <a href="dart-ui/Paint/blendMode.html">Paint.blendMode</a> with
+<a href="flutter_test/TestRecordingCanvas/saveLayer.html">saveLayer</a>.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+void saveLayer(Rect? bounds, Paint paint) {
+  _saveCount += 1;
+  invocations.add(RecordedInvocation(_MethodCall(#saveLayer, &lt;dynamic&gt;[bounds, paint]), stack: StackTrace.current));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li><a href="flutter_test/TestRecordingCanvas-class.html">TestRecordingCanvas</a></li>
+    <li class="self-crumb">saveLayer method</li>
+</ol>
+
+
+    <h5>TestRecordingCanvas class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

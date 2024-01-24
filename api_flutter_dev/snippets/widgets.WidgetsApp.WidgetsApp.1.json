@@ -1,0 +1,13 @@
+{
+    "id": "widgets.WidgetsApp.WidgetsApp.1",
+    "element": "WidgetsApp.WidgetsApp",
+    "sourcePath": "lib/src/widgets/app.dart",
+    "sourceLine": 310,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This sample shows a basic Flutter application using [WidgetsApp].",
+    "file": "widgets.WidgetsApp.WidgetsApp.1.dart"
+}

@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Navigator class from the widgets library, for the Dart programming language.">
+  <title>Navigator class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">Navigator class</li>
+  </ol>
+  <div class="self-name">Navigator</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="widgets&#47;Navigator-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/navigator.dart#L1449"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">Navigator</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A widget that manages a set of child widgets with a stack discipline.</p>
+<p>Many apps have a navigator near the top of their widget hierarchy in order
+to display their logical history using an <a href="widgets/Overlay-class.html">Overlay</a> with the most recently
+visited pages visually on top of the older pages. Using this pattern lets
+the navigator visually transition from one page to another by moving the widgets
+around in the overlay. Similarly, the navigator can be used to show a dialog
+by positioning the dialog widget above the current page.</p>
+<h2 id="using-the-pages-api">Using the Pages API</h2>
+<p>The <a href="widgets/Navigator-class.html">Navigator</a> will convert its <a href="widgets/Navigator/pages.html">Navigator.pages</a> into a stack of <a href="widgets/Route-class.html">Route</a>s
+if it is provided. A change in <a href="widgets/Navigator/pages.html">Navigator.pages</a> will trigger an update to
+the stack of <a href="widgets/Route-class.html">Route</a>s. The <a href="widgets/Navigator-class.html">Navigator</a> will update its routes to match the
+new configuration of its <a href="widgets/Navigator/pages.html">Navigator.pages</a>. To use this API, one can create
+a <a href="widgets/Page-class.html">Page</a> subclass and defines a list of <a href="widgets/Page-class.html">Page</a>s for <a href="widgets/Navigator/pages.html">Navigator.pages</a>. A
+<a href="widgets/Navigator/onPopPage.html">Navigator.onPopPage</a> callback is also required to properly clean up the
+input pages in case of a pop.</p>
+<p>By Default, the <a href="widgets/Navigator-class.html">Navigator</a> will use <a href="widgets/DefaultTransitionDelegate-class.html">DefaultTransitionDelegate</a> to decide
+how routes transition in or out of the screen. To customize it, define a
+<a href="widgets/TransitionDelegate-class.html">TransitionDelegate</a> subclass and provide it to the
+<a href="widgets/Navigator/transitionDelegate.html">Navigator.transitionDelegate</a>.</p>
+<p>For more information on using the pages API, see the <a href="widgets/Router-class.html">Router</a> widget.</p>
+<h2 id="using-the-navigator-api">Using the Navigator API</h2>
+<p>Mobile apps typically reveal their contents via full-screen elements
+called "screens" or "pages". In Flutter these elements are called
+routes and they're managed by a <a href="widgets/Navigator-class.html">Navigator</a> widget. The navigator
+manages a stack of <a href="widgets/Route-class.html">Route</a> objects and provides two ways for managing
+the stack, the declarative API <a href="widgets/Navigator/pages.html">Navigator.pages</a> or imperative API
+<a href="widgets/Navigator/push.html">Navigator.push</a> and <a href="widgets/Navigator/pop.html">Navigator.pop</a>.</p>
+<p>When your user interface fits this paradigm of a stack, where the user
+should be able to <em>navigate</em> back to an earlier element in the stack,
+the use of routes and the Navigator is appropriate. On certain platforms,
+such as Android, the system UI will provide a back button (outside the
+bounds of your application) that will allow the user to navigate back
+to earlier routes in your application's stack. On platforms that don't
+have this build-in navigation mechanism, the use of an <a href="material/AppBar-class.html">AppBar</a> (typically
+used in the <a href="material/Scaffold/appBar.html">Scaffold.appBar</a> property) can automatically add a back
+button for user navigation.</p>
+<h3 id="displaying-a-full-screen-route">Displaying a full-screen route</h3>
+<p>Although you can create a navigator directly, it's most common to use the
+navigator created by the <code>Router</code> which itself is created and configured by
+a <a href="widgets/WidgetsApp-class.html">WidgetsApp</a> or a <a href="material/MaterialApp-class.html">MaterialApp</a> widget. You can refer to that navigator
+with <a href="widgets/Navigator/of.html">Navigator.of</a>.</p>
+<p>A <a href="material/MaterialApp-class.html">MaterialApp</a> is the simplest way to set things up. The <a href="material/MaterialApp-class.html">MaterialApp</a>'s
+home becomes the route at the bottom of the <a href="widgets/Navigator-class.html">Navigator</a>'s stack. It is what
+you see when the app is launched.</p>
+<pre class="language-dart"><code class="language-dart">void main() {
+  runApp(const MaterialApp(home: MyAppHome()));
+}
+</code></pre>
+<p>To push a new route on the stack you can create an instance of
+<a href="material/MaterialPageRoute-class.html">MaterialPageRoute</a> with a builder function that creates whatever you
+want to appear on the screen. For example:</p>
+<pre class="language-dart"><code class="language-dart">Navigator.push(context, MaterialPageRoute&lt;void&gt;(
+  builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('My Page')),
+      body: Center(
+        child: TextButton(
+          child: const Text('POP'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+    );
+  },
+));
+</code></pre>
+<p>The route defines its widget with a builder function instead of a
+child widget because it will be built and rebuilt in different
+contexts depending on when it's pushed and popped.</p>
+<p>As you can see, the new route can be popped, revealing the app's home
+page, with the Navigator's pop method:</p>
+<pre class="language-dart"><code class="language-dart">Navigator.pop(context);
+</code></pre>
+<p>It usually isn't necessary to provide a widget that pops the Navigator
+in a route with a <a href="material/Scaffold-class.html">Scaffold</a> because the Scaffold automatically adds a
+'back' button to its AppBar. Pressing the back button causes
+<a href="widgets/Navigator/pop.html">Navigator.pop</a> to be called. On Android, pressing the system back
+button does the same thing.</p>
+<h3 id="using-named-navigator-routes">Using named navigator routes</h3>
+<p>Mobile apps often manage a large number of routes and it's often
+easiest to refer to them by name. Route names, by convention,
+use a path-like structure (for example, '/a/b/c').
+The app's home page route is named '/' by default.</p>
+<p>The <a href="material/MaterialApp-class.html">MaterialApp</a> can be created
+with a <a href="dart-core/Map-class.html">Map&lt;String, WidgetBuilder&gt;</a> which maps from a route's name to
+a builder function that will create it. The <a href="material/MaterialApp-class.html">MaterialApp</a> uses this
+map to create a value for its navigator's <a href="widgets/Navigator/onGenerateRoute.html">onGenerateRoute</a> callback.</p>
+<pre class="language-dart"><code class="language-dart">void main() {
+  runApp(MaterialApp(
+    home: const MyAppHome(), // becomes the route named '/'
+    routes: &lt;String, WidgetBuilder&gt; {
+      '/a': (BuildContext context) =&gt; const MyPage(title: Text('page A')),
+      '/b': (BuildContext context) =&gt; const MyPage(title: Text('page B')),
+      '/c': (BuildContext context) =&gt; const MyPage(title: Text('page C')),
+    },
+  ));
+}
+</code></pre>
+<p>To show a route by name:</p>
+<pre class="language-dart"><code class="language-dart">Navigator.pushNamed(context, '/b');
+</code></pre>
+<h3 id="routes-can-return-a-value">Routes can return a value</h3>
+<p>When a route is pushed to ask the user for a value, the value can be
+returned via the <a href="widgets/Navigator/pop.html">pop</a> method's result parameter.</p>
+<p>Methods that push a route return a <a href="dart-async/Future-class.html">Future</a>. The Future resolves when the
+route is popped and the <a href="dart-async/Future-class.html">Future</a>'s value is the <a href="widgets/Navigator/pop.html">pop</a> method's <code>result</code>
+parameter.</p>
+<p>For example if we wanted to ask the user to press 'OK' to confirm an
+operation we could <code>await</code> the result of <a href="widgets/Navigator/push.html">Navigator.push</a>:</p>
+<pre class="language-dart"><code class="language-dart">bool? value = await Navigator.push(context, MaterialPageRoute&lt;bool&gt;(
+  builder: (BuildContext context) {
+    return Center(
+      child: GestureDetector(
+        child: const Text('OK'),
+        onTap: () { Navigator.pop(context, true); }
+      ),
+    );
+  }
+));
+</code></pre>
+<p>If the user presses 'OK' then value will be true. If the user backs
+out of the route, for example by pressing the Scaffold's back button,
+the value will be null.</p>
+<p>When a route is used to return a value, the route's type parameter must
+match the type of <a href="widgets/Navigator/pop.html">pop</a>'s result. That's why we've used
+<code>MaterialPageRoute&lt;bool&gt;</code> instead of <code>MaterialPageRoute&lt;void&gt;</code> or just
+<code>MaterialPageRoute</code>. (If you prefer to not specify the types, though, that's
+fine too.)</p>
+<h3 id="popup-routes">Popup routes</h3>
+<p>Routes don't have to obscure the entire screen. <a href="widgets/PopupRoute-class.html">PopupRoute</a>s cover the
+screen with a <a href="widgets/ModalRoute/barrierColor.html">ModalRoute.barrierColor</a> that can be only partially opaque to
+allow the current screen to show through. Popup routes are "modal" because
+they block input to the widgets below.</p>
+<p>There are functions which create and show popup routes. For
+example: <a href="material/showDialog.html">showDialog</a>, <a href="material/showMenu.html">showMenu</a>, and <a href="material/showModalBottomSheet.html">showModalBottomSheet</a>. These
+functions return their pushed route's Future as described above.
+Callers can await the returned value to take an action when the
+route is popped, or to discover the route's value.</p>
+<p>There are also widgets which create popup routes, like <a href="material/PopupMenuButton-class.html">PopupMenuButton</a> and
+<a href="material/DropdownButton-class.html">DropdownButton</a>. These widgets create internal subclasses of PopupRoute
+and use the Navigator's push and pop methods to show and dismiss them.</p>
+<h3 id="custom-routes">Custom routes</h3>
+<p>You can create your own subclass of one of the widget library route classes
+like <a href="widgets/PopupRoute-class.html">PopupRoute</a>, <a href="widgets/ModalRoute-class.html">ModalRoute</a>, or <a href="widgets/PageRoute-class.html">PageRoute</a>, to control the animated
+transition employed to show the route, the color and behavior of the route's
+modal barrier, and other aspects of the route.</p>
+<p>The <a href="widgets/PageRouteBuilder-class.html">PageRouteBuilder</a> class makes it possible to define a custom route
+in terms of callbacks. Here's an example that rotates and fades its child
+when the route appears or disappears. This route does not obscure the entire
+screen because it specifies <code>opaque: false</code>, just as a popup route does.</p>
+<pre class="language-dart"><code class="language-dart">Navigator.push(context, PageRouteBuilder&lt;void&gt;(
+  opaque: false,
+  pageBuilder: (BuildContext context, _, __) {
+    return const Center(child: Text('My PageRoute'));
+  },
+  transitionsBuilder: (___, Animation&lt;double&gt; animation, ____, Widget child) {
+    return FadeTransition(
+      opacity: animation,
+      child: RotationTransition(
+        turns: Tween&lt;double&gt;(begin: 0.5, end: 1.0).animate(animation),
+        child: child,
+      ),
+    );
+  }
+));
+</code></pre>
+<p>The page route is built in two parts, the "page" and the
+"transitions". The page becomes a descendant of the child passed to
+the <code>transitionsBuilder</code> function. Typically the page is only built once,
+because it doesn't depend on its animation parameters (elided with <code>_</code>
+and <code>__</code> in this example). The transition is built on every frame
+for its duration.</p>
+<p>(In this example, <code>void</code> is used as the return type for the route, because
+it does not return a value.)</p>
+<h3 id="nesting-navigators">Nesting Navigators</h3>
+<p>An app can use more than one <a href="widgets/Navigator-class.html">Navigator</a>. Nesting one <a href="widgets/Navigator-class.html">Navigator</a> below
+another <a href="widgets/Navigator-class.html">Navigator</a> can be used to create an "inner journey" such as tabbed
+navigation, user registration, store checkout, or other independent journeys
+that represent a subsection of your overall application.</p>
+<h4 id="example">Example</h4>
+<p>It is standard practice for iOS apps to use tabbed navigation where each
+tab maintains its own navigation history. Therefore, each tab has its own
+<a href="widgets/Navigator-class.html">Navigator</a>, creating a kind of "parallel navigation."</p>
+<p>In addition to the parallel navigation of the tabs, it is still possible to
+launch full-screen pages that completely cover the tabs. For example: an
+on-boarding flow, or an alert dialog. Therefore, there must exist a "root"
+<a href="widgets/Navigator-class.html">Navigator</a> that sits above the tab navigation. As a result, each of the
+tab's <a href="widgets/Navigator-class.html">Navigator</a>s are actually nested <a href="widgets/Navigator-class.html">Navigator</a>s sitting below a single
+root <a href="widgets/Navigator-class.html">Navigator</a>.</p>
+<p>In practice, the nested <a href="widgets/Navigator-class.html">Navigator</a>s for tabbed navigation sit in the
+<a href="widgets/WidgetsApp-class.html">WidgetsApp</a> and <a href="cupertino/CupertinoTabView-class.html">CupertinoTabView</a> widgets and do not need to be explicitly
+created or managed.</p>
+<p>
+<a name="widgets.Navigator.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The following example demonstrates how a nested <a href="widgets/Navigator-class.html">Navigator</a> can be used to
+present a standalone user registration journey.</p>
+<p>Even though this example uses two <a href="widgets/Navigator-class.html">Navigator</a>s to demonstrate nested
+<a href="widgets/Navigator-class.html">Navigator</a>s, a similar result is possible using only a single <a href="widgets/Navigator-class.html">Navigator</a>.</p>
+<p>Run this example with <code>flutter run --route=/signup</code> to start it with
+the signup flow instead of on the home page.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, 'widgets.Navigator.1');"
+    onclick="fixHref(this, 'widgets.Navigator.1'); copyStringToClipboard(this.href);" href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="snippet-description">
+    <p>To create a local project with this code sample, run:<br />
+      <span class="snippet-create-command">flutter create --sample=widgets.Navigator.1 mysample</span>
+    </p>
+  </div>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(longSnippet1);">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre id="longSnippet1"
+      class="language-dart"><code class="language-dart">import &#39;package:flutter&#47;material.dart&#39;;
+
+&#47;&#47;&#47; Flutter code sample for [Navigator].
+
+void main() =&gt; runApp(const NavigatorExampleApp());
+
+class NavigatorExampleApp extends StatelessWidget {
+  const NavigatorExampleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      &#47;&#47; MaterialApp contains our top-level Navigator
+      initialRoute: &#39;&#47;&#39;,
+      routes: &lt;String, WidgetBuilder&gt;{
+        &#39;&#47;&#39;: (BuildContext context) =&gt; const HomePage(),
+        &#39;&#47;signup&#39;: (BuildContext context) =&gt; const SignUpPage(),
+      },
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTextStyle(
+      style: Theme.of(context).textTheme.headlineMedium!,
+      child: Container(
+        color: Colors.white,
+        alignment: Alignment.center,
+        child: const Text(&#39;Home Page&#39;),
+      ),
+    );
+  }
+}
+
+class CollectPersonalInfoPage extends StatelessWidget {
+  const CollectPersonalInfoPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTextStyle(
+      style: Theme.of(context).textTheme.headlineMedium!,
+      child: GestureDetector(
+        onTap: () {
+          &#47;&#47; This moves from the personal info page to the credentials page,
+          &#47;&#47; replacing this page with that one.
+          Navigator.of(context)
+              .pushReplacementNamed(&#39;signup&#47;choose_credentials&#39;);
+        },
+        child: Container(
+          color: Colors.lightBlue,
+          alignment: Alignment.center,
+          child: const Text(&#39;Collect Personal Info Page&#39;),
+        ),
+      ),
+    );
+  }
+}
+
+class ChooseCredentialsPage extends StatelessWidget {
+  const ChooseCredentialsPage({
+    super.key,
+    required this.onSignupComplete,
+  });
+
+  final VoidCallback onSignupComplete;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onSignupComplete,
+      child: DefaultTextStyle(
+        style: Theme.of(context).textTheme.headlineMedium!,
+        child: Container(
+          color: Colors.pinkAccent,
+          alignment: Alignment.center,
+          child: const Text(&#39;Choose Credentials Page&#39;),
+        ),
+      ),
+    );
+  }
+}
+
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    &#47;&#47; SignUpPage builds its own Navigator which ends up being a nested
+    &#47;&#47; Navigator in our app.
+    return Navigator(
+      initialRoute: &#39;signup&#47;personal_info&#39;,
+      onGenerateRoute: (RouteSettings settings) {
+        WidgetBuilder builder;
+        switch (settings.name) {
+          case &#39;signup&#47;personal_info&#39;:
+            &#47;&#47; Assume CollectPersonalInfoPage collects personal info and then
+            &#47;&#47; navigates to &#39;signup&#47;choose_credentials&#39;.
+            builder = (BuildContext context) =&gt; const CollectPersonalInfoPage();
+          case &#39;signup&#47;choose_credentials&#39;:
+            &#47;&#47; Assume ChooseCredentialsPage collects new credentials and then
+            &#47;&#47; invokes &#39;onSignupComplete()&#39;.
+            builder = (BuildContext _) =&gt; ChooseCredentialsPage(
+                  onSignupComplete: () {
+                    &#47;&#47; Referencing Navigator.of(context) from here refers to the
+                    &#47;&#47; top level Navigator because SignUpPage is above the
+                    &#47;&#47; nested Navigator that it created. Therefore, this pop()
+                    &#47;&#47; will pop the entire &quot;sign up&quot; journey and return to the
+                    &#47;&#47; &quot;&#47;&quot; route, AKA HomePage.
+                    Navigator.of(context).pop();
+                  },
+                );
+          default:
+            throw Exception(&#39;Invalid route: ${settings.name}&#39;);
+        }
+        return MaterialPageRoute&lt;void&gt;(builder: builder, settings: settings);
+      },
+    );
+  }
+}
+</code></pre>
+  </div>
+</div>
+</p>
+<p><a href="widgets/Navigator/of.html">Navigator.of</a> operates on the nearest ancestor <a href="widgets/Navigator-class.html">Navigator</a> from the given
+<a href="widgets/BuildContext-class.html">BuildContext</a>. Be sure to provide a <a href="widgets/BuildContext-class.html">BuildContext</a> below the intended
+<a href="widgets/Navigator-class.html">Navigator</a>, especially in large <code>build</code> methods where nested <a href="widgets/Navigator-class.html">Navigator</a>s
+are created. The <a href="widgets/Builder-class.html">Builder</a> widget can be used to access a <a href="widgets/BuildContext-class.html">BuildContext</a> at
+a desired location in the widget subtree.</p>
+<h3 id="finding-the-enclosing-route">Finding the enclosing route</h3>
+<p>In the common case of a modal route, the enclosing route can be obtained
+from inside a build method using <a href="widgets/ModalRoute/of.html">ModalRoute.of</a>. To determine if the
+enclosing route is the active route (e.g. so that controls can be dimmed
+when the route is not active), the <a href="widgets/Route/isCurrent.html">Route.isCurrent</a> property can be checked
+on the returned route.</p>
+<h2 id="state-restoration">State Restoration</h2>
+<p>If provided with a <a href="widgets/Navigator/restorationScopeId.html">restorationScopeId</a> and when surrounded by a valid
+<a href="widgets/RestorationScope-class.html">RestorationScope</a> the <a href="widgets/Navigator-class.html">Navigator</a> will restore its state by recreating
+the current history stack of <a href="widgets/Route-class.html">Route</a>s during state restoration and by
+restoring the internal state of those <a href="widgets/Route-class.html">Route</a>s. However, not all <a href="widgets/Route-class.html">Route</a>s
+on the stack can be restored:</p>
+<ul>
+<li><a href="widgets/Page-class.html">Page</a>-based routes restore their state if <a href="widgets/Page/restorationId.html">Page.restorationId</a> is
+provided.</li>
+<li><a href="widgets/Route-class.html">Route</a>s added with the classic imperative API (<a href="widgets/Navigator/push.html">push</a>, <a href="widgets/Navigator/pushNamed.html">pushNamed</a>, and
+friends) can never restore their state.</li>
+<li>A <a href="widgets/Route-class.html">Route</a> added with the restorable imperative API (<a href="widgets/Navigator/restorablePush.html">restorablePush</a>,
+<a href="widgets/Navigator/restorablePushNamed.html">restorablePushNamed</a>, and all other imperative methods with "restorable"
+in their name) restores its state if all routes below it up to and
+including the first <a href="widgets/Page-class.html">Page</a>-based route below it are restored. If there
+is no <a href="widgets/Page-class.html">Page</a>-based route below it, it only restores its state if all
+routes below it restore theirs.</li>
+</ul>
+<p>If a <a href="widgets/Route-class.html">Route</a> is deemed restorable, the <a href="widgets/Navigator-class.html">Navigator</a> will set its
+<a href="widgets/Route/restorationScopeId.html">Route.restorationScopeId</a> to a non-null value. Routes can use that ID to
+store and restore their own state. As an example, the <a href="widgets/ModalRoute-class.html">ModalRoute</a> will
+use this ID to create a <a href="widgets/RestorationScope-class.html">RestorationScope</a> for its content widgets.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>Navigator</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Navigator" class="callable">
+          <span class="name"><a href="widgets/Navigator/Navigator.html">Navigator</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-pages"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Page-class.html">Page</a></span>&gt;</span></span> <span class="parameter-name">pages</span> = <span class="default-value">const &lt;Page&lt;dynamic&gt;&gt;[]</span>, </span><span class="parameter" id="-param-onPopPage"><span class="type-annotation"><a href="widgets/PopPageCallback.html">PopPageCallback</a>?</span> <span class="parameter-name">onPopPage</span>, </span><span class="parameter" id="-param-initialRoute"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">initialRoute</span>, </span><span class="parameter" id="-param-onGenerateInitialRoutes"><span class="type-annotation"><a href="widgets/RouteListFactory.html">RouteListFactory</a></span> <span class="parameter-name">onGenerateInitialRoutes</span> = <span class="default-value">Navigator.defaultGenerateInitialRoutes</span>, </span><span class="parameter" id="-param-onGenerateRoute"><span class="type-annotation"><a href="widgets/RouteFactory.html">RouteFactory</a>?</span> <span class="parameter-name">onGenerateRoute</span>, </span><span class="parameter" id="-param-onUnknownRoute"><span class="type-annotation"><a href="widgets/RouteFactory.html">RouteFactory</a>?</span> <span class="parameter-name">onUnknownRoute</span>, </span><span class="parameter" id="-param-transitionDelegate"><span class="type-annotation"><a href="widgets/TransitionDelegate-class.html">TransitionDelegate</a></span> <span class="parameter-name">transitionDelegate</span> = <span class="default-value">const DefaultTransitionDelegate&lt;dynamic&gt;()</span>, </span><span class="parameter" id="-param-reportsRouteUpdateToEngine"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">reportsRouteUpdateToEngine</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span> = <span class="default-value">Clip.hardEdge</span>, </span><span class="parameter" id="-param-observers"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/NavigatorObserver-class.html">NavigatorObserver</a></span>&gt;</span></span> <span class="parameter-name">observers</span> = <span class="default-value">const &lt;NavigatorObserver&gt;[]</span>, </span><span class="parameter" id="-param-requestFocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">requestFocus</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-restorationScopeId"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">restorationScopeId</span>, </span><span class="parameter" id="-param-routeTraversalEdgeBehavior"><span class="type-annotation"><a href="widgets/TraversalEdgeBehavior.html">TraversalEdgeBehavior</a></span> <span class="parameter-name">routeTraversalEdgeBehavior</span> = <span class="default-value">kDefaultRouteTraversalEdgeBehavior</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that maintains a stack-based history of child widgets.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="clipBehavior" class="property">
+  <span class="name"><a href="widgets/Navigator/clipBehavior.html">clipBehavior</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Clip.html">Clip</a></span> 
+
+</dt>
+<dd>
+  The content will be clipped (or not) according to this option.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="initialRoute" class="property">
+  <span class="name"><a href="widgets/Navigator/initialRoute.html">initialRoute</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The name of the first route to show.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="observers" class="property">
+  <span class="name"><a href="widgets/Navigator/observers.html">observers</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/NavigatorObserver-class.html">NavigatorObserver</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A list of observers for this navigator.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onGenerateInitialRoutes" class="property">
+  <span class="name"><a href="widgets/Navigator/onGenerateInitialRoutes.html">onGenerateInitialRoutes</a></span>
+  <span class="signature">&#8594; <a href="widgets/RouteListFactory.html">RouteListFactory</a></span> 
+
+</dt>
+<dd>
+  Called when the widget is created to generate the initial list of <a href="widgets/Route-class.html">Route</a>
+objects if <a href="widgets/Navigator/initialRoute.html">initialRoute</a> is not null.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onGenerateRoute" class="property">
+  <span class="name"><a href="widgets/Navigator/onGenerateRoute.html">onGenerateRoute</a></span>
+  <span class="signature">&#8594; <a href="widgets/RouteFactory.html">RouteFactory</a>?</span> 
+
+</dt>
+<dd>
+  Called to generate a route for a given <a href="widgets/RouteSettings-class.html">RouteSettings</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPopPage" class="property">
+  <span class="name"><a href="widgets/Navigator/onPopPage.html">onPopPage</a></span>
+  <span class="signature">&#8594; <a href="widgets/PopPageCallback.html">PopPageCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when <a href="widgets/Navigator/pop.html">pop</a> is invoked but the current <a href="widgets/Route-class.html">Route</a> corresponds to a
+<a href="widgets/Page-class.html">Page</a> found in the <a href="widgets/Navigator/pages.html">pages</a> list.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onUnknownRoute" class="property">
+  <span class="name"><a href="widgets/Navigator/onUnknownRoute.html">onUnknownRoute</a></span>
+  <span class="signature">&#8594; <a href="widgets/RouteFactory.html">RouteFactory</a>?</span> 
+
+</dt>
+<dd>
+  Called when <a href="widgets/Navigator/onGenerateRoute.html">onGenerateRoute</a> fails to generate a route.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="pages" class="property">
+  <span class="name"><a href="widgets/Navigator/pages.html">pages</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Page-class.html">Page</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The list of pages with which to populate the history.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="reportsRouteUpdateToEngine" class="property">
+  <span class="name"><a href="widgets/Navigator/reportsRouteUpdateToEngine.html">reportsRouteUpdateToEngine</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this navigator should report route update message back to the
+engine when the top-most route changes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="requestFocus" class="property">
+  <span class="name"><a href="widgets/Navigator/requestFocus.html">requestFocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether or not the navigator and it's new topmost route should request focus
+when the new route is pushed onto the navigator.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="restorationScopeId" class="property">
+  <span class="name"><a href="widgets/Navigator/restorationScopeId.html">restorationScopeId</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  Restoration ID to save and restore the state of the navigator, including
+its history.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="routeTraversalEdgeBehavior" class="property">
+  <span class="name"><a href="widgets/Navigator/routeTraversalEdgeBehavior.html">routeTraversalEdgeBehavior</a></span>
+  <span class="signature">&#8594; <a href="widgets/TraversalEdgeBehavior.html">TraversalEdgeBehavior</a></span> 
+
+</dt>
+<dd>
+  Controls the transfer of focus beyond the first and the last items of a
+focus scope that defines focus traversal of widgets within a route.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="transitionDelegate" class="property">
+  <span class="name"><a href="widgets/Navigator/transitionDelegate.html">transitionDelegate</a></span>
+  <span class="signature">&#8594; <a href="widgets/TransitionDelegate-class.html">TransitionDelegate</a></span> 
+
+</dt>
+<dd>
+  The delegate used for deciding how routes transition in or off the screen
+during the <a href="widgets/Navigator/pages.html">pages</a> updates.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="widgets/Navigator/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/NavigatorState-class.html">NavigatorState</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="canPop" class="callable">
+  <span class="name"><a href="widgets/Navigator/canPop.html">canPop</a></span><span class="signature">(<wbr><span class="parameter" id="canPop-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Whether the navigator that most tightly encloses the given context can be
+popped.
+  
+
+</dd>
+
+        <dt id="defaultGenerateInitialRoutes" class="callable">
+  <span class="name"><a href="widgets/Navigator/defaultGenerateInitialRoutes.html">defaultGenerateInitialRoutes</a></span><span class="signature">(<wbr><span class="parameter" id="defaultGenerateInitialRoutes-param-navigator"><span class="type-annotation"><a href="widgets/NavigatorState-class.html">NavigatorState</a></span> <span class="parameter-name">navigator</span>, </span><span class="parameter" id="defaultGenerateInitialRoutes-param-initialRouteName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">initialRouteName</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Route-class.html">Route</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Turn a route name into a set of <code>Route</code> objects.
+  
+
+</dd>
+
+        <dt id="maybeOf" class="callable">
+  <span class="name"><a href="widgets/Navigator/maybeOf.html">maybeOf</a></span><span class="signature">(<wbr><span class="parameter" id="maybeOf-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="maybeOf-param-rootNavigator">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">rootNavigator</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/NavigatorState-class.html">NavigatorState</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The state from the closest instance of this class that encloses the given
+context, if any.
+  
+
+</dd>
+
+        <dt id="maybePop" class="callable">
+  <span class="name"><a href="widgets/Navigator/maybePop.html">maybePop</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="maybePop-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="maybePop-param-result">[<span class="type-annotation">T?</span> <span class="parameter-name">result</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Consults the current route's <a href="widgets/Route/popDisposition.html">Route.popDisposition</a> getter or
+<a class="deprecated" href="widgets/Route/willPop.html">Route.willPop</a> method, and acts accordingly, potentially popping the
+route as a result; returns whether the pop request should be considered
+handled.
+  
+
+</dd>
+
+        <dt id="of" class="callable">
+  <span class="name"><a href="widgets/Navigator/of.html">of</a></span><span class="signature">(<wbr><span class="parameter" id="of-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="of-param-rootNavigator">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">rootNavigator</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/NavigatorState-class.html">NavigatorState</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The state from the closest instance of this class that encloses the given
+context.
+  
+
+</dd>
+
+        <dt id="pop" class="callable">
+  <span class="name"><a href="widgets/Navigator/pop.html">pop</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pop-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pop-param-result">[<span class="type-annotation">T?</span> <span class="parameter-name">result</span>]</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Pop the top-most route off the navigator that most tightly encloses the
+given context.
+  
+
+</dd>
+
+        <dt id="popAndPushNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/popAndPushNamed.html">popAndPushNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="popAndPushNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="popAndPushNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="popAndPushNamed-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>, </span><span class="parameter" id="popAndPushNamed-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Pop the current route off the navigator that most tightly encloses the
+given context and push a named route in its place.
+  
+
+</dd>
+
+        <dt id="popUntil" class="callable">
+  <span class="name"><a href="widgets/Navigator/popUntil.html">popUntil</a></span><span class="signature">(<wbr><span class="parameter" id="popUntil-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="popUntil-param-predicate"><span class="type-annotation"><a href="widgets/RoutePredicate.html">RoutePredicate</a></span> <span class="parameter-name">predicate</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Calls <a href="widgets/Navigator/pop.html">pop</a> repeatedly on the navigator that most tightly encloses the
+given context until the predicate returns true.
+  
+
+</dd>
+
+        <dt id="push" class="callable">
+  <span class="name"><a href="widgets/Navigator/push.html">push</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="push-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="push-param-route"><span class="type-annotation"><a href="widgets/Route-class.html">Route</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">route</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push the given route onto the navigator that most tightly encloses the
+given context.
+  
+
+</dd>
+
+        <dt id="pushAndRemoveUntil" class="callable">
+  <span class="name"><a href="widgets/Navigator/pushAndRemoveUntil.html">pushAndRemoveUntil</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pushAndRemoveUntil-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pushAndRemoveUntil-param-newRoute"><span class="type-annotation"><a href="widgets/Route-class.html">Route</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRoute</span>, </span><span class="parameter" id="pushAndRemoveUntil-param-predicate"><span class="type-annotation"><a href="widgets/RoutePredicate.html">RoutePredicate</a></span> <span class="parameter-name">predicate</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push the given route onto the navigator that most tightly encloses the
+given context, and then remove all the previous routes until the
+<code>predicate</code> returns true.
+  
+
+</dd>
+
+        <dt id="pushNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/pushNamed.html">pushNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pushNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pushNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="pushNamed-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push a named route onto the navigator that most tightly encloses the given
+context.
+  
+
+</dd>
+
+        <dt id="pushNamedAndRemoveUntil" class="callable">
+  <span class="name"><a href="widgets/Navigator/pushNamedAndRemoveUntil.html">pushNamedAndRemoveUntil</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pushNamedAndRemoveUntil-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pushNamedAndRemoveUntil-param-newRouteName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">newRouteName</span>, </span><span class="parameter" id="pushNamedAndRemoveUntil-param-predicate"><span class="type-annotation"><a href="widgets/RoutePredicate.html">RoutePredicate</a></span> <span class="parameter-name">predicate</span>, </span><span class="parameter" id="pushNamedAndRemoveUntil-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push the route with the given name onto the navigator that most tightly
+encloses the given context, and then remove all the previous routes until
+the <code>predicate</code> returns true.
+  
+
+</dd>
+
+        <dt id="pushReplacement" class="callable">
+  <span class="name"><a href="widgets/Navigator/pushReplacement.html">pushReplacement</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pushReplacement-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pushReplacement-param-newRoute"><span class="type-annotation"><a href="widgets/Route-class.html">Route</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRoute</span>, </span><span class="parameter" id="pushReplacement-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replace the current route of the navigator that most tightly encloses the
+given context by pushing the given route and then disposing the previous
+route once the new route has finished animating in.
+  
+
+</dd>
+
+        <dt id="pushReplacementNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/pushReplacementNamed.html">pushReplacementNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pushReplacementNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="pushReplacementNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="pushReplacementNamed-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>, </span><span class="parameter" id="pushReplacementNamed-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replace the current route of the navigator that most tightly encloses the
+given context by pushing the route named <code>routeName</code> and then disposing
+the previous route once the new route has finished animating in.
+  
+
+</dd>
+
+        <dt id="removeRoute" class="callable">
+  <span class="name"><a href="widgets/Navigator/removeRoute.html">removeRoute</a></span><span class="signature">(<wbr><span class="parameter" id="removeRoute-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="removeRoute-param-route"><span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">route</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Immediately remove <code>route</code> from the navigator that most tightly encloses
+the given context, and <a href="widgets/Route/dispose.html">Route.dispose</a> it.
+  
+
+</dd>
+
+        <dt id="removeRouteBelow" class="callable">
+  <span class="name"><a href="widgets/Navigator/removeRouteBelow.html">removeRouteBelow</a></span><span class="signature">(<wbr><span class="parameter" id="removeRouteBelow-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="removeRouteBelow-param-anchorRoute"><span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">anchorRoute</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Immediately remove a route from the navigator that most tightly encloses
+the given context, and <a href="widgets/Route/dispose.html">Route.dispose</a> it. The route to be removed is the
+one below the given <code>anchorRoute</code>.
+  
+
+</dd>
+
+        <dt id="replace" class="callable">
+  <span class="name"><a href="widgets/Navigator/replace.html">replace</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="replace-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="replace-param-oldRoute">{<span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">oldRoute</span>, </span><span class="parameter" id="replace-param-newRoute"><span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRoute</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replaces a route on the navigator that most tightly encloses the given
+context with a new route.
+  
+
+</dd>
+
+        <dt id="replaceRouteBelow" class="callable">
+  <span class="name"><a href="widgets/Navigator/replaceRouteBelow.html">replaceRouteBelow</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="replaceRouteBelow-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="replaceRouteBelow-param-anchorRoute">{<span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">anchorRoute</span>, </span><span class="parameter" id="replaceRouteBelow-param-newRoute"><span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRoute</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replaces a route on the navigator that most tightly encloses the given
+context with a new route. The route to be replaced is the one below the
+given <code>anchorRoute</code>.
+  
+
+</dd>
+
+        <dt id="restorablePopAndPushNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePopAndPushNamed.html">restorablePopAndPushNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePopAndPushNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePopAndPushNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="restorablePopAndPushNamed-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>, </span><span class="parameter" id="restorablePopAndPushNamed-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Pop the current route off the navigator that most tightly encloses the
+given context and push a named route in its place.
+  
+
+</dd>
+
+        <dt id="restorablePush" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePush.html">restorablePush</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePush-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePush-param-routeBuilder"><span class="type-annotation"><a href="widgets/RestorableRouteBuilder.html">RestorableRouteBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">routeBuilder</span>, </span><span class="parameter" id="restorablePush-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push a new route onto the navigator that most tightly encloses the
+given context.
+  
+
+</dd>
+
+        <dt id="restorablePushAndRemoveUntil" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePushAndRemoveUntil.html">restorablePushAndRemoveUntil</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePushAndRemoveUntil-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePushAndRemoveUntil-param-newRouteBuilder"><span class="type-annotation"><a href="widgets/RestorableRouteBuilder.html">RestorableRouteBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRouteBuilder</span>, </span><span class="parameter" id="restorablePushAndRemoveUntil-param-predicate"><span class="type-annotation"><a href="widgets/RoutePredicate.html">RoutePredicate</a></span> <span class="parameter-name">predicate</span>, </span><span class="parameter" id="restorablePushAndRemoveUntil-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push a new route onto the navigator that most tightly encloses the
+given context, and then remove all the previous routes until the
+<code>predicate</code> returns true.
+  
+
+</dd>
+
+        <dt id="restorablePushNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePushNamed.html">restorablePushNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePushNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePushNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="restorablePushNamed-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push a named route onto the navigator that most tightly encloses the given
+context.
+  
+
+</dd>
+
+        <dt id="restorablePushNamedAndRemoveUntil" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePushNamedAndRemoveUntil.html">restorablePushNamedAndRemoveUntil</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePushNamedAndRemoveUntil-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePushNamedAndRemoveUntil-param-newRouteName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">newRouteName</span>, </span><span class="parameter" id="restorablePushNamedAndRemoveUntil-param-predicate"><span class="type-annotation"><a href="widgets/RoutePredicate.html">RoutePredicate</a></span> <span class="parameter-name">predicate</span>, </span><span class="parameter" id="restorablePushNamedAndRemoveUntil-param-arguments">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Push the route with the given name onto the navigator that most tightly
+encloses the given context, and then remove all the previous routes until
+the <code>predicate</code> returns true.
+  
+
+</dd>
+
+        <dt id="restorablePushReplacement" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePushReplacement.html">restorablePushReplacement</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePushReplacement-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePushReplacement-param-routeBuilder"><span class="type-annotation"><a href="widgets/RestorableRouteBuilder.html">RestorableRouteBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">routeBuilder</span>, </span><span class="parameter" id="restorablePushReplacement-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>, </span><span class="parameter" id="restorablePushReplacement-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replace the current route of the navigator that most tightly encloses the
+given context by pushing a new route and then disposing the previous
+route once the new route has finished animating in.
+  
+
+</dd>
+
+        <dt id="restorablePushReplacementNamed" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorablePushReplacementNamed.html">restorablePushReplacementNamed</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>, <span class="type-parameter">TO extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorablePushReplacementNamed-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorablePushReplacementNamed-param-routeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">routeName</span>, </span><span class="parameter" id="restorablePushReplacementNamed-param-result">{<span class="type-annotation">TO?</span> <span class="parameter-name">result</span>, </span><span class="parameter" id="restorablePushReplacementNamed-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replace the current route of the navigator that most tightly encloses the
+given context by pushing the route named <code>routeName</code> and then disposing
+the previous route once the new route has finished animating in.
+  
+
+</dd>
+
+        <dt id="restorableReplace" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorableReplace.html">restorableReplace</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorableReplace-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorableReplace-param-oldRoute">{<span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">oldRoute</span>, </span><span class="parameter" id="restorableReplace-param-newRouteBuilder"><span>required</span> <span class="type-annotation"><a href="widgets/RestorableRouteBuilder.html">RestorableRouteBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRouteBuilder</span>, </span><span class="parameter" id="restorableReplace-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replaces a route on the navigator that most tightly encloses the given
+context with a new route.
+  
+
+</dd>
+
+        <dt id="restorableReplaceRouteBelow" class="callable">
+  <span class="name"><a href="widgets/Navigator/restorableReplaceRouteBelow.html">restorableReplaceRouteBelow</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="restorableReplaceRouteBelow-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="restorableReplaceRouteBelow-param-anchorRoute">{<span>required</span> <span class="type-annotation"><a href="widgets/Route-class.html">Route</a></span> <span class="parameter-name">anchorRoute</span>, </span><span class="parameter" id="restorableReplaceRouteBelow-param-newRouteBuilder"><span>required</span> <span class="type-annotation"><a href="widgets/RestorableRouteBuilder.html">RestorableRouteBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">newRouteBuilder</span>, </span><span class="parameter" id="restorableReplaceRouteBelow-param-arguments"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arguments</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Replaces a route on the navigator that most tightly encloses the given
+context with a new route. The route to be replaced is the one below the
+given <code>anchorRoute</code>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="defaultRouteName" class="constant">
+    <span class="name "><a href="widgets/Navigator/defaultRouteName-constant.html">defaultRouteName</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  The name for the default route of the application.
+  
+
+    <div>
+      <span class="signature"><code>&#39;&#47;&#39;</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">Navigator class</li>
+</ol>
+
+
+    <!--<h5>widgets library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

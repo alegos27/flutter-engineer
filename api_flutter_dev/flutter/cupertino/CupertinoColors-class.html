@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CupertinoColors class from the cupertino library, for the Dart programming language.">
+  <title>CupertinoColors class - cupertino library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li class="self-crumb">CupertinoColors class</li>
+  </ol>
+  <div class="self-name">CupertinoColors</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="cupertino&#47;cupertino-library-sidebar.html"
+      data-below-sidebar="cupertino&#47;CupertinoColors-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/cupertino/colors.dart#L40"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">CupertinoColors</span> class 
+    <a href="https://dart.dev/language/classes#abstract-classes" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+    <a href="https://github.com/dart-lang/language/blob/main/accepted/future-releases/class-modifiers/feature-specification.md#class-modifiers" class="feature feature-final" title="This class can neither be extended, implemented, nor mixed in.">final</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A palette of <a href="dart-ui/Color-class.html">Color</a> constants that describe colors commonly used when
+matching the iOS platform aesthetics.</p>
+<h2 id="color-palettes">Color palettes</h2>
+<h3 id="basic-colors">Basic Colors</h3>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_basic_colors.png" alt=""></p>
+<h3 id="active-colors">Active Colors</h3>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_active_colors.png" alt=""></p>
+<h3 id="system-colors">System Colors</h3>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_system_colors_1.png" alt="">
+<img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_system_colors_2.png" alt="">
+<img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_system_colors_3.png" alt=""></p>
+<h3 id="label-colors">Label Colors</h3>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_label_colors.png" alt=""></p>
+<h3 id="background-colors">Background Colors</h3>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino_background_colors.png" alt=""></p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CupertinoColors" class="callable">
+          <span class="name"><a href="cupertino/CupertinoColors/CupertinoColors.html">CupertinoColors</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="activeBlue" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/activeBlue-constant.html">activeBlue</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  iOS 13's default blue color. Used to indicate active elements such as
+buttons, selected tabs and your own chat bubbles.
+  
+
+    <div>
+      <span class="signature"><code>systemBlue</code></span>
+    </div>
+</dd>
+
+        <dt id="activeGreen" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/activeGreen-constant.html">activeGreen</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  iOS 13's default green color. Used to indicate active accents such as
+the switch in its on state and some accent buttons such as the call button
+and Apple Map's 'Go' button.
+  
+
+    <div>
+      <span class="signature"><code>systemGreen</code></span>
+    </div>
+</dd>
+
+        <dt id="activeOrange" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/activeOrange-constant.html">activeOrange</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  iOS 13's orange color.
+  
+
+    <div>
+      <span class="signature"><code>systemOrange</code></span>
+    </div>
+</dd>
+
+        <dt id="black" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/black-constant.html">black</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Opaque black color. Used for texts against light backgrounds.
+  
+
+    <div>
+      <span class="signature"><code><a href="dart-ui/Color/Color.html">Color</a>(0xFF000000)</code></span>
+    </div>
+</dd>
+
+        <dt id="darkBackgroundGray" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/darkBackgroundGray-constant.html">darkBackgroundGray</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Used in iOS 12 for very dark background fills in tables between cell groups
+in dark mode.
+  
+
+    <div>
+      <span class="signature"><code><a href="dart-ui/Color/Color.html">Color</a>(0xFF171717)</code></span>
+    </div>
+</dd>
+
+        <dt id="destructiveRed" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/destructiveRed-constant.html">destructiveRed</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Used for iOS 13 for destructive actions such as the delete actions in
+table view cells and dialogs.
+  
+
+    <div>
+      <span class="signature"><code>systemRed</code></span>
+    </div>
+</dd>
+
+        <dt id="extraLightBackgroundGray" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/extraLightBackgroundGray-constant.html">extraLightBackgroundGray</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Used in iOS 12 for very light background fills in tables between cell groups.
+  
+
+    <div>
+      <span class="signature"><code><a href="dart-ui/Color/Color.html">Color</a>(0xFFEFEFF4)</code></span>
+    </div>
+</dd>
+
+        <dt id="inactiveGray" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/inactiveGray-constant.html">inactiveGray</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  Used in iOS 13 for unselected selectables such as tab bar items in their
+inactive state or de-emphasized subtitles and details text.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightness(debugLabel: &#39;inactiveGray&#39;, color: Color(0xFF999999), darkColor: Color(0xFF757575))</code></span>
+    </div>
+</dd>
+
+        <dt id="label" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/label-constant.html">label</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for text labels containing primary content, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173131-label">UIColor.label</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;label&#39;, color: Color.fromARGB(255, 0, 0, 0), darkColor: Color.fromARGB(255, 255, 255, 255), highContrastColor: Color.fromARGB(255, 0, 0, 0), darkHighContrast…</code></span>
+    </div>
+</dd>
+
+        <dt id="lightBackgroundGray" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/lightBackgroundGray-constant.html">lightBackgroundGray</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Used in iOS 10 for light background fills such as the chat bubble background.
+  
+
+    <div>
+      <span class="signature"><code><a href="dart-ui/Color/Color.html">Color</a>(0xFFE5E5EA)</code></span>
+    </div>
+</dd>
+
+        <dt id="link" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/link-constant.html">link</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for links, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173132-link">UIColor.link</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;link&#39;, color: Color.fromARGB(255, 0, 122, 255), darkColor: Color.fromARGB(255, 9, 132, 255), highContrastColor: Color.fromARGB(255, 0, 122, 255), darkHighCon…</code></span>
+    </div>
+</dd>
+
+        <dt id="opaqueSeparator" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/opaqueSeparator-constant.html">opaqueSeparator</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for borders or divider lines that hide any underlying content,
+equivalent to <a href="https://developer.apple.com/documentation/uikit/uicolor/3173133-opaqueseparator">UIColor.opaqueSeparator</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;opaqueSeparator&#39;, color: Color.fromARGB(255, 198, 198, 200), darkColor: Color.fromARGB(255, 56, 56, 58), highContrastColor: Color.fromARGB(255, 198, 198, 200…</code></span>
+    </div>
+</dd>
+
+        <dt id="placeholderText" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/placeholderText-constant.html">placeholderText</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for placeholder text in controls or text views, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173134-placeholdertext">UIColor.placeholderText</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;placeholderText&#39;, color: Color.fromARGB(76, 60, 60, 67), darkColor: Color.fromARGB(76, 235, 235, 245), highContrastColor: Color.fromARGB(96, 60, 60, 67), dar…</code></span>
+    </div>
+</dd>
+
+        <dt id="quaternaryLabel" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/quaternaryLabel-constant.html">quaternaryLabel</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for text labels containing quaternary content, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173135-quaternarylabel">UIColor.quaternaryLabel</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;quaternaryLabel&#39;, color: Color.fromARGB(45, 60, 60, 67), darkColor: Color.fromARGB(40, 235, 235, 245), highContrastColor: Color.fromARGB(66, 60, 60, 67), dar…</code></span>
+    </div>
+</dd>
+
+        <dt id="quaternarySystemFill" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/quaternarySystemFill-constant.html">quaternarySystemFill</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An overlay fill color for large areas containing complex content, equivalent
+to <a href="https://developer.apple.com/documentation/uikit/uicolor/3255068-quaternarysystemfill">UIColor.quaternarySystemFill</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;quaternarySystemFill&#39;, color: Color.fromARGB(20, 116, 116, 128), darkColor: Color.fromARGB(45, 118, 118, 128), highContrastColor: Color.fromARGB(40, 116, 116…</code></span>
+    </div>
+</dd>
+
+        <dt id="secondaryLabel" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/secondaryLabel-constant.html">secondaryLabel</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for text labels containing secondary content, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173136-secondarylabel">UIColor.secondaryLabel</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;secondaryLabel&#39;, color: Color.fromARGB(153, 60, 60, 67), darkColor: Color.fromARGB(153, 235, 235, 245), highContrastColor: Color.fromARGB(173, 60, 60, 67), d…</code></span>
+    </div>
+</dd>
+
+        <dt id="secondarySystemBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/secondarySystemBackground-constant.html">secondarySystemBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for content layered on top of the main background, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173137-secondarysystembackground">UIColor.secondarySystemBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;secondarySystemBackground&#39;, color: Color.fromARGB(255, 242, 242, 247), darkColor: Color.fromARGB(255, 28, 28, 30), highContrastColor: Color.fromARGB(255, 235…</code></span>
+    </div>
+</dd>
+
+        <dt id="secondarySystemFill" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/secondarySystemFill-constant.html">secondarySystemFill</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An overlay fill color for medium-size shapes, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3255069-secondarysystemfill">UIColor.secondarySystemFill</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;secondarySystemFill&#39;, color: Color.fromARGB(40, 120, 120, 128), darkColor: Color.fromARGB(81, 120, 120, 128), highContrastColor: Color.fromARGB(61, 120, 120,…</code></span>
+    </div>
+</dd>
+
+        <dt id="secondarySystemGroupedBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/secondarySystemGroupedBackground-constant.html">secondarySystemGroupedBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for content layered on top of the main background of your grouped interface,
+equivalent to <a href="https://developer.apple.com/documentation/uikit/uicolor/3173138-secondarysystemgroupedbackground">UIColor.secondarySystemGroupedBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;secondarySystemGroupedBackground&#39;, color: Color.fromARGB(255, 255, 255, 255), darkColor: Color.fromARGB(255, 28, 28, 30), highContrastColor: Color.fromARGB(2…</code></span>
+    </div>
+</dd>
+
+        <dt id="separator" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/separator-constant.html">separator</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for thin borders or divider lines that allows some underlying content to be visible,
+equivalent to <a href="https://developer.apple.com/documentation/uikit/uicolor/3173139-separator">UIColor.separator</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;separator&#39;, color: Color.fromARGB(73, 60, 60, 67), darkColor: Color.fromARGB(153, 84, 84, 88), highContrastColor: Color.fromARGB(94, 60, 60, 67), darkHighCon…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemBackground-constant.html">systemBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for the main background of your interface, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173140-systembackground">UIColor.systemBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;systemBackground&#39;, color: Color.fromARGB(255, 255, 255, 255), darkColor: Color.fromARGB(255, 0, 0, 0), highContrastColor: Color.fromARGB(255, 255, 255, 255),…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemBlue" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemBlue-constant.html">systemBlue</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A blue color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemBlue&#39;, color: Color.fromARGB(255, 0, 122, 255), darkColor: Color.fromARGB(255, 10, 132, 255), highContrastColor: Color.fromAR…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemBrown" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemBrown-constant.html">systemBrown</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A brown color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemBrown&#39;, color: Color.fromARGB(255, 162, 132, 94), darkColor: Color.fromARGB(255, 172, 142, 104), highContrastColor: Color.fro…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemCyan" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemCyan-constant.html">systemCyan</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A cyan color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemCyan&#39;, color: Color.fromARGB(255, 50, 173, 230), darkColor: Color.fromARGB(255, 100, 210, 255), highContrastColor: Color.from…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemFill" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemFill-constant.html">systemFill</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An overlay fill color for thin and small shapes, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3255070-systemfill">UIColor.systemFill</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;systemFill&#39;, color: Color.fromARGB(51, 120, 120, 128), darkColor: Color.fromARGB(91, 120, 120, 128), highContrastColor: Color.fromARGB(71, 120, 120, 128), da…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGreen" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGreen-constant.html">systemGreen</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A green color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGreen&#39;, color: Color.fromARGB(255, 52, 199, 89), darkColor: Color.fromARGB(255, 48, 209, 88), highContrastColor: Color.fromAR…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey-constant.html">systemGrey</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The base grey color.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey&#39;, color: Color.fromARGB(255, 142, 142, 147), darkColor: Color.fromARGB(255, 142, 142, 147), highContrastColor: Color.fro…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey2" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey2-constant.html">systemGrey2</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A second-level shade of grey.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey2&#39;, color: Color.fromARGB(255, 174, 174, 178), darkColor: Color.fromARGB(255, 99, 99, 102), highContrastColor: Color.from…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey3" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey3-constant.html">systemGrey3</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A third-level shade of grey.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey3&#39;, color: Color.fromARGB(255, 199, 199, 204), darkColor: Color.fromARGB(255, 72, 72, 74), highContrastColor: Color.fromA…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey4" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey4-constant.html">systemGrey4</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A fourth-level shade of grey.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey4&#39;, color: Color.fromARGB(255, 209, 209, 214), darkColor: Color.fromARGB(255, 58, 58, 60), highContrastColor: Color.fromA…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey5" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey5-constant.html">systemGrey5</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A fifth-level shade of grey.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey5&#39;, color: Color.fromARGB(255, 229, 229, 234), darkColor: Color.fromARGB(255, 44, 44, 46), highContrastColor: Color.fromA…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGrey6" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGrey6-constant.html">systemGrey6</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A sixth-level shade of grey.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemGrey6&#39;, color: Color.fromARGB(255, 242, 242, 247), darkColor: Color.fromARGB(255, 28, 28, 30), highContrastColor: Color.fromA…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemGroupedBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemGroupedBackground-constant.html">systemGroupedBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for the main background of your grouped interface, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173145-systemgroupedbackground">UIColor.systemGroupedBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;systemGroupedBackground&#39;, color: Color.fromARGB(255, 242, 242, 247), darkColor: Color.fromARGB(255, 0, 0, 0), highContrastColor: Color.fromARGB(255, 235, 235…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemIndigo" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemIndigo-constant.html">systemIndigo</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An indigo color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemIndigo&#39;, color: Color.fromARGB(255, 88, 86, 214), darkColor: Color.fromARGB(255, 94, 92, 230), highContrastColor: Color.fromA…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemMint" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemMint-constant.html">systemMint</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A mint color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemMint&#39;, color: Color.fromARGB(255, 0, 199, 190), darkColor: Color.fromARGB(255, 99, 230, 226), highContrastColor: Color.fromAR…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemOrange" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemOrange-constant.html">systemOrange</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An orange color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemOrange&#39;, color: Color.fromARGB(255, 255, 149, 0), darkColor: Color.fromARGB(255, 255, 159, 10), highContrastColor: Color.from…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemPink" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemPink-constant.html">systemPink</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A pink color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemPink&#39;, color: Color.fromARGB(255, 255, 45, 85), darkColor: Color.fromARGB(255, 255, 55, 95), highContrastColor: Color.fromARG…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemPurple" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemPurple-constant.html">systemPurple</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A purple color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemPurple&#39;, color: Color.fromARGB(255, 175, 82, 222), darkColor: Color.fromARGB(255, 191, 90, 242), highContrastColor: Color.fro…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemRed" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemRed-constant.html">systemRed</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A red color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemRed&#39;, color: Color.fromARGB(255, 255, 59, 48), darkColor: Color.fromARGB(255, 255, 69, 58), highContrastColor: Color.fromARGB…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemTeal" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemTeal-constant.html">systemTeal</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A teal color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemTeal&#39;, color: Color.fromARGB(255, 90, 200, 250), darkColor: Color.fromARGB(255, 100, 210, 255), highContrastColor: Color.from…</code></span>
+    </div>
+</dd>
+
+        <dt id="systemYellow" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/systemYellow-constant.html">systemYellow</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  A yellow color that can adapt to the given <a href="widgets/BuildContext-class.html">BuildContext</a>.
+  
+
+    <div>
+      <span class="signature"><code>CupertinoDynamicColor.withBrightnessAndContrast(debugLabel: &#39;systemYellow&#39;, color: Color.fromARGB(255, 255, 204, 0), darkColor: Color.fromARGB(255, 255, 214, 10), highContrastColor: Color.from…</code></span>
+    </div>
+</dd>
+
+        <dt id="tertiaryLabel" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/tertiaryLabel-constant.html">tertiaryLabel</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for text labels containing tertiary content, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3173153-tertiarylabel">UIColor.tertiaryLabel</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;tertiaryLabel&#39;, color: Color.fromARGB(76, 60, 60, 67), darkColor: Color.fromARGB(76, 235, 235, 245), highContrastColor: Color.fromARGB(96, 60, 60, 67), darkH…</code></span>
+    </div>
+</dd>
+
+        <dt id="tertiarySystemBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/tertiarySystemBackground-constant.html">tertiarySystemBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for content layered on top of secondary backgrounds, equivalent
+to <a href="https://developer.apple.com/documentation/uikit/uicolor/3173154-tertiarysystembackground">UIColor.tertiarySystemBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;tertiarySystemBackground&#39;, color: Color.fromARGB(255, 255, 255, 255), darkColor: Color.fromARGB(255, 44, 44, 46), highContrastColor: Color.fromARGB(255, 255,…</code></span>
+    </div>
+</dd>
+
+        <dt id="tertiarySystemFill" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/tertiarySystemFill-constant.html">tertiarySystemFill</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  An overlay fill color for large shapes, equivalent to
+<a href="https://developer.apple.com/documentation/uikit/uicolor/3255076-tertiarysystemfill">UIColor.tertiarySystemFill</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;tertiarySystemFill&#39;, color: Color.fromARGB(30, 118, 118, 128), darkColor: Color.fromARGB(61, 118, 118, 128), highContrastColor: Color.fromARGB(51, 118, 118, …</code></span>
+    </div>
+</dd>
+
+        <dt id="tertiarySystemGroupedBackground" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/tertiarySystemGroupedBackground-constant.html">tertiarySystemGroupedBackground</a></span>
+  <span class="signature">&#8594; const <a href="cupertino/CupertinoDynamicColor-class.html">CupertinoDynamicColor</a></span>
+  
+
+</dt>
+<dd>
+  The color for content layered on top of secondary backgrounds of your grouped interface,
+equivalent to <a href="https://developer.apple.com/documentation/uikit/uicolor/3173155-tertiarysystemgroupedbackground">UIColor.tertiarySystemGroupedBackground</a>.
+  
+
+    <div>
+      <span class="signature"><code><a href="cupertino/CupertinoDynamicColor/CupertinoDynamicColor.html">CupertinoDynamicColor</a>(debugLabel: &#39;tertiarySystemGroupedBackground&#39;, color: Color.fromARGB(255, 242, 242, 247), darkColor: Color.fromARGB(255, 44, 44, 46), highContrastColor: Color.fromARGB(25…</code></span>
+    </div>
+</dd>
+
+        <dt id="white" class="constant">
+    <span class="name "><a href="cupertino/CupertinoColors/white-constant.html">white</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Color-class.html">Color</a></span>
+  
+
+</dt>
+<dd>
+  Opaque white color. Used for backgrounds and fonts against dark backgrounds.
+  
+
+    <div>
+      <span class="signature"><code><a href="dart-ui/Color/Color.html">Color</a>(0xFFFFFFFF)</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li class="self-crumb">CupertinoColors class</li>
+</ol>
+
+
+    <!--<h5>cupertino library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

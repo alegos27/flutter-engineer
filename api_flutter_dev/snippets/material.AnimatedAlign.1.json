@@ -1,0 +1,13 @@
+{
+    "id": "material.AnimatedAlign.1",
+    "element": "AnimatedAlign",
+    "sourcePath": "lib/src/widgets/implicit_animations.dart",
+    "sourceLine": 888,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following code implements the [AnimatedAlign] widget, using a [curve] of\n[Curves.fastOutSlowIn].",
+    "file": "material.AnimatedAlign.1.dart"
+}

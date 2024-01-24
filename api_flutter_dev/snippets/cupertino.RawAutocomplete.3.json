@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.RawAutocomplete.3",
+    "element": "RawAutocomplete",
+    "sourcePath": "lib/src/widgets/autocomplete.dart",
+    "sourceLine": 146,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This example shows the use of RawAutocomplete in a form.",
+    "file": "cupertino.RawAutocomplete.3.dart"
+}

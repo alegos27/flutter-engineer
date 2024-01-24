@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the LinearGradient class from the painting library, for the Dart programming language.">
+  <title>LinearGradient class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">LinearGradient class</li>
+  </ol>
+  <div class="self-name">LinearGradient</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;painting-library-sidebar.html"
+      data-below-sidebar="painting&#47;LinearGradient-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/gradient.dart#L374"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">LinearGradient</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A 2D linear gradient.</p>
+<iframe src="https://www.youtube.com/embed/gYNTcgZVcWw?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>This class is used by <a href="painting/BoxDecoration-class.html">BoxDecoration</a> to represent linear gradients. This
+abstracts out the arguments to the <a href="dart-ui/Gradient/Gradient.linear.html">ui.Gradient.linear</a> constructor from
+the <code>dart:ui</code> library.</p>
+<p>A gradient has two anchor points, <a href="painting/LinearGradient/begin.html">begin</a> and <a href="painting/LinearGradient/end.html">end</a>. The <a href="painting/LinearGradient/begin.html">begin</a> point
+corresponds to 0.0, and the <a href="painting/LinearGradient/end.html">end</a> point corresponds to 1.0. These points are
+expressed in fractions, so that the same gradient can be reused with varying
+sized boxes without changing the parameters. (This contrasts with <a href="dart-ui/Gradient/Gradient.linear.html">
+ui.Gradient.linear</a>, whose arguments are expressed in logical pixels.)</p>
+<p>The <a href="painting/Gradient/colors.html">colors</a> are described by a list of <a href="dart-ui/Color-class.html">Color</a> objects. There must be at
+least two colors. The <a href="painting/Gradient/stops.html">stops</a> list, if specified, must have the same length
+as <a href="painting/Gradient/colors.html">colors</a>. It specifies fractions of the vector from start to end, between
+0.0 and 1.0, for each color. If it is null, a uniform distribution is
+assumed.</p>
+<p>The region of the canvas before <a href="painting/LinearGradient/begin.html">begin</a> and after <a href="painting/LinearGradient/end.html">end</a> is colored according
+to <a href="painting/LinearGradient/tileMode.html">tileMode</a>.</p>
+<p>Typically this class is used with <a href="painting/BoxDecoration-class.html">BoxDecoration</a>, which does the painting.
+To use a <a href="painting/LinearGradient-class.html">LinearGradient</a> to paint on a canvas directly, see <a href="painting/LinearGradient/createShader.html">createShader</a>.</p>
+<p>
+<a name="painting.LinearGradient.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample draws a picture with a gradient sweeping through different
+colors, by having a <a href="widgets/Container-class.html">Container</a> display a <a href="painting/BoxDecoration-class.html">BoxDecoration</a> with a
+<a href="painting/LinearGradient-class.html">LinearGradient</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'painting.LinearGradient.1');" onclick="fixHref(this, 'painting.LinearGradient.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=painting.LinearGradient.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=painting.LinearGradient.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="painting/RadialGradient-class.html">RadialGradient</a>, which displays a gradient in concentric circles, and
+has an example which shows a different way to use <a href="painting/Gradient-class.html">Gradient</a> objects.</li>
+<li><a href="painting/SweepGradient-class.html">SweepGradient</a>, which displays a gradient in a sweeping arc around a
+center point.</li>
+<li><a href="painting/BoxDecoration-class.html">BoxDecoration</a>, which can take a <a href="painting/LinearGradient-class.html">LinearGradient</a> in its
+<a href="painting/BoxDecoration/gradient.html">BoxDecoration.gradient</a> property.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="painting/Gradient-class.html">Gradient</a></li>
+      <li>LinearGradient</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="LinearGradient" class="callable">
+          <span class="name"><a href="painting/LinearGradient/LinearGradient.html">LinearGradient</a></span><span class="signature">(<span class="parameter" id="-param-begin">{<span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">begin</span> = <span class="default-value">Alignment.centerLeft</span>, </span><span class="parameter" id="-param-end"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">end</span> = <span class="default-value">Alignment.centerRight</span>, </span><span class="parameter" id="-param-colors"><span>required</span> <span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Color-class.html">Color</a></span>&gt;</span></span> <span class="parameter-name">colors</span>, </span><span class="parameter" id="-param-stops"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">stops</span>, </span><span class="parameter" id="-param-tileMode"><span class="type-annotation"><a href="dart-ui/TileMode.html">TileMode</a></span> <span class="parameter-name">tileMode</span> = <span class="default-value">TileMode.clamp</span>, </span><span class="parameter" id="-param-transform"><span class="type-annotation"><a href="painting/GradientTransform-class.html">GradientTransform</a>?</span> <span class="parameter-name">transform</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a linear gradient.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="begin" class="property">
+  <span class="name"><a href="painting/LinearGradient/begin.html">begin</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> 
+
+</dt>
+<dd>
+  The offset at which stop 0.0 of the gradient is placed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="colors" class="property inherited">
+  <span class="name"><a href="painting/Gradient/colors.html">colors</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Color-class.html">Color</a></span>&gt;</span></span> 
+
+</dt>
+<dd class="inherited">
+  The colors the gradient should obtain at each of the stops.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="end" class="property">
+  <span class="name"><a href="painting/LinearGradient/end.html">end</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> 
+
+</dt>
+<dd>
+  The offset at which stop 1.0 of the gradient is placed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="painting/LinearGradient/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stops" class="property inherited">
+  <span class="name"><a href="painting/Gradient/stops.html">stops</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  A list of values from 0.0 to 1.0 that denote fractions along the gradient.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="tileMode" class="property">
+  <span class="name"><a href="painting/LinearGradient/tileMode.html">tileMode</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/TileMode.html">TileMode</a></span> 
+
+</dt>
+<dd>
+  How this gradient should tile the plane beyond in the region before
+<a href="painting/LinearGradient/begin.html">begin</a> and after <a href="painting/LinearGradient/end.html">end</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="transform" class="property inherited">
+  <span class="name"><a href="painting/Gradient/transform.html">transform</a></span>
+  <span class="signature">&#8594; <a href="painting/GradientTransform-class.html">GradientTransform</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The transform, if any, to apply to the gradient.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createShader" class="callable">
+  <span class="name"><a href="painting/LinearGradient/createShader.html">createShader</a></span><span class="signature">(<wbr><span class="parameter" id="createShader-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="createShader-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-ui/Shader-class.html">Shader</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a <a href="dart-ui/Shader-class.html">Shader</a> for this gradient to fill the given rect.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpFrom" class="callable">
+  <span class="name"><a href="painting/LinearGradient/lerpFrom.html">lerpFrom</a></span><span class="signature">(<wbr><span class="parameter" id="lerpFrom-param-a"><span class="type-annotation"><a href="painting/Gradient-class.html">Gradient</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerpFrom-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/Gradient-class.html">Gradient</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from another <a href="painting/Gradient-class.html">Gradient</a> to <code>this</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpTo" class="callable">
+  <span class="name"><a href="painting/LinearGradient/lerpTo.html">lerpTo</a></span><span class="signature">(<wbr><span class="parameter" id="lerpTo-param-b"><span class="type-annotation"><a href="painting/Gradient-class.html">Gradient</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerpTo-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/Gradient-class.html">Gradient</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from <code>this</code> to another <a href="painting/Gradient-class.html">Gradient</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scale" class="callable">
+  <span class="name"><a href="painting/LinearGradient/scale.html">scale</a></span><span class="signature">(<wbr><span class="parameter" id="scale-param-factor"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">factor</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/LinearGradient-class.html">LinearGradient</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a new <a href="painting/LinearGradient-class.html">LinearGradient</a> with its colors scaled by the given factor.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="painting/LinearGradient/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="painting/LinearGradient/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="lerp" class="callable">
+  <span class="name"><a href="painting/LinearGradient/lerp.html">lerp</a></span><span class="signature">(<wbr><span class="parameter" id="lerp-param-a"><span class="type-annotation"><a href="painting/LinearGradient-class.html">LinearGradient</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerp-param-b"><span class="type-annotation"><a href="painting/LinearGradient-class.html">LinearGradient</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerp-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/LinearGradient-class.html">LinearGradient</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolate between two <a href="painting/LinearGradient-class.html">LinearGradient</a>s.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">LinearGradient class</li>
+</ol>
+
+
+    <!--<h5>painting library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

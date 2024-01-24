@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.ScaleTransition.1",
+    "element": "ScaleTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 339,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [ScaleTransition] as seen in the video\nabove:",
+    "file": "cupertino.ScaleTransition.1.dart"
+}

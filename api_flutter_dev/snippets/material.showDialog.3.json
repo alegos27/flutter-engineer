@@ -1,0 +1,13 @@
+{
+    "id": "material.showDialog.3",
+    "element": "showDialog",
+    "sourcePath": "lib/src/material/dialog.dart",
+    "sourceLine": 1401,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This sample demonstrates how to create a restorable Material dialog. This is\naccomplished by enabling state restoration by specifying\n[MaterialApp.restorationScopeId] and using [Navigator.restorablePush] to\npush [DialogRoute] when the button is tapped.\n\n{@macro flutter.widgets.RestorationManager}\n\nIf not null, `traversalEdgeBehavior` argument specifies the transfer of\nfocus beyond the first and the last items of the dialog route. By default,\nuses [TraversalEdgeBehavior.closedLoop], because it's typical for dialogs\nto allow users to cycle through widgets inside it without leaving the\ndialog.",
+    "file": "material.showDialog.3.dart"
+}

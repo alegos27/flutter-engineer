@@ -1,0 +1,13 @@
+{
+    "id": "scrollbar.RawScrollbar.shape.1",
+    "element": "RawScrollbar.shape",
+    "sourcePath": "lib/src/widgets/scrollbar.dart",
+    "sourceLine": 1162,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "scrollbar",
+    "copyright": null,
+    "description": "This is an example of using a [StadiumBorder] for drawing the [shape] of the\nthumb in a [RawScrollbar].",
+    "file": "scrollbar.RawScrollbar.shape.1.dart"
+}

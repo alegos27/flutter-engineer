@@ -1,0 +1,13 @@
+{
+    "id": "material.LinearProgressIndicator.1",
+    "element": "LinearProgressIndicator",
+    "sourcePath": "lib/src/material/progress_indicator.dart",
+    "sourceLine": 279,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a [LinearProgressIndicator] with a changing value.",
+    "file": "material.LinearProgressIndicator.1.dart"
+}

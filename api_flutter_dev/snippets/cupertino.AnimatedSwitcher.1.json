@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AnimatedSwitcher.1",
+    "element": "AnimatedSwitcher",
+    "sourcePath": "lib/src/widgets/animated_switcher.dart",
+    "sourceLine": 105,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample shows a counter that animates the scale of a text widget\nwhenever the value changes.",
+    "file": "cupertino.AnimatedSwitcher.1.dart"
+}

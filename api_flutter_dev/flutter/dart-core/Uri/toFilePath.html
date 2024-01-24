@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the toFilePath method from the Uri class, for the Dart programming language.">
+  <title>toFilePath method - Uri class - dart:core library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+    <li><a href="dart-core/Uri-class.html">Uri</a></li>
+    <li class="self-crumb">toFilePath abstract method</li>
+  </ol>
+  <div class="self-name">toFilePath</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="dart-core&#47;Uri-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">toFilePath</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-core/String-class.html">String</a></span>
+<span class="name ">toFilePath</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="toFilePath-param-windows">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">windows</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Creates a file path from a file URI.</p>
+<p>The returned path has either Windows or non-Windows
+semantics.</p>
+<p>For non-Windows semantics, the slash ("/") is used to separate
+path segments.</p>
+<p>For Windows semantics, the backslash ("\") separator is used to
+separate path segments.</p>
+<p>If the URI is absolute, the path starts with a path separator
+unless Windows semantics is used and the first path segment is a
+drive letter. When Windows semantics is used, a host component in
+the uri in interpreted as a file server and a UNC path is
+returned.</p>
+<p>The default for whether to use Windows or non-Windows semantics
+is determined from the platform Dart is running on. When running in
+the standalone VM, this is detected by the VM based on the
+operating system. When running in a browser, non-Windows semantics
+is always used.</p>
+<p>To override the automatic detection of which semantics to use pass
+a value for <code>windows</code>. Passing <code>true</code> will use Windows
+semantics and passing <code>false</code> will use non-Windows semantics.</p>
+<p>If the URI ends with a slash (i.e. the last path component is
+empty), the returned file path will also end with a slash.</p>
+<p>With Windows semantics, URIs starting with a drive letter cannot
+be relative to the current drive on the designated drive. That is,
+for the URI <code>file:///c:abc</code> calling <code>toFilePath</code> will throw as a
+path segment cannot contain colon on Windows.</p>
+<p>Examples using non-Windows semantics (resulting of calling
+toFilePath in comment):</p>
+<pre class="language-dart"><code class="language-dart">Uri.parse("xxx/yyy");  // xxx/yyy
+Uri.parse("xxx/yyy/");  // xxx/yyy/
+Uri.parse("file:///xxx/yyy");  // /xxx/yyy
+Uri.parse("file:///xxx/yyy/");  // /xxx/yyy/
+Uri.parse("file:///C:");  // /C:
+Uri.parse("file:///C:a");  // /C:a
+</code></pre>
+<p>Examples using Windows semantics (resulting URI in comment):</p>
+<pre class="language-dart"><code class="language-dart">Uri.parse("xxx/yyy");  // xxx\yyy
+Uri.parse("xxx/yyy/");  // xxx\yyy\
+Uri.parse("file:///xxx/yyy");  // \xxx\yyy
+Uri.parse("file:///xxx/yyy/");  // \xxx\yyy\
+Uri.parse("file:///C:/xxx/yyy");  // C:\xxx\yyy
+Uri.parse("file:C:xxx/yyy");  // Throws as a path segment
+                              // cannot contain colon on Windows.
+Uri.parse("file://server/share/file");  // \\server\share\file
+</code></pre>
+<p>If the URI is not a file URI, calling this throws
+<a href="dart-core/UnsupportedError-class.html">UnsupportedError</a>.</p>
+<p>If the URI cannot be converted to a file path, calling this throws
+<a href="dart-core/UnsupportedError-class.html">UnsupportedError</a>.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">&#47;&#47; TODO(lrn): Deprecate and move functionality to File class or similar.
+&#47;&#47; The core libraries should not worry about the platform.
+String toFilePath({bool? windows});</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-core/dart-core-library.html">dart:core</a></li>
+    <li><a href="dart-core/Uri-class.html">Uri</a></li>
+    <li class="self-crumb">toFilePath abstract method</li>
+</ol>
+
+
+    <h5>Uri class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

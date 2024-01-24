@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Vertices class from the dart:ui library, for the Dart programming language.">
+  <title>Vertices class - dart:ui library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+    <li class="self-crumb">Vertices class</li>
+  </ol>
+  <div class="self-name">Vertices</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="dart-ui&#47;dart-ui-library-sidebar.html"
+      data-below-sidebar="dart-ui&#47;Vertices-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">Vertices</span> class 
+    <a href="https://github.com/dart-lang/language/blob/main/accepted/future-releases/class-modifiers/feature-specification.md#class-modifiers" class="feature feature-base" title="This class or mixin can only be extended (not implemented or mixed in).">base</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A set of vertex data used by <a href="dart-ui/Canvas/drawVertices.html">Canvas.drawVertices</a>.</p>
+<p>Vertex data consists of a series of points in the canvas coordinate space.
+Based on the <a href="dart-ui/VertexMode.html">VertexMode</a>, these points are interpreted either as
+independent triangles (<a href="dart-ui/VertexMode.html">VertexMode.triangles</a>), as a sliding window of
+points forming a chain of triangles each sharing one side with the next
+(<a href="dart-ui/VertexMode.html">VertexMode.triangleStrip</a>), or as a fan of triangles with a single shared
+point (<a href="dart-ui/VertexMode.html">VertexMode.triangleFan</a>).</p>
+<p>Each point can be associated with a color. Each triangle is painted as a
+gradient that blends between the three colors at the three points of that
+triangle. If no colors are specified, transparent black is assumed for all
+the points.</p>
+<p>These colors are then blended with the <a href="dart-ui/Paint-class.html">Paint</a> specified in the call to
+<a href="dart-ui/Canvas/drawVertices.html">Canvas.drawVertices</a>. This paint is either a solid color (<a href="dart-ui/Paint/color.html">Paint.color</a>),
+or a bitmap, specified using a shader (<a href="dart-ui/Paint/shader.html">Paint.shader</a>), typically either a
+gradient (<a href="dart-ui/Gradient-class.html">Gradient</a>) or image (<a href="dart-ui/ImageFilter-class.html">ImageFilter</a>). The bitmap uses the same
+coordinate space as the canvas (in the case of an <a href="dart-ui/ImageFilter-class.html">ImageFilter</a>, this is
+notably different than the coordinate space of the source image; the source
+image is tiled according to the filter's configuration, and the image that
+is sampled when painting the triangles is the infinite one after all the
+repeating is applied.)</p>
+<p>Each point in the <a href="dart-ui/Vertices-class.html">Vertices</a> is associated with a specific point on this
+image. Each triangle is painted by sampling points from this image by
+interpolating between the three points of the image corresponding to the
+three points of the triangle.</p>
+<p>The <a href="dart-ui/Vertices/Vertices.html">Vertices.new</a> constructor configures all this using lists of <a href="dart-ui/Offset-class.html">Offset</a>
+and <a href="dart-ui/Color-class.html">Color</a> objects. The <a href="dart-ui/Vertices/Vertices.raw.html">Vertices.raw</a> constructor instead uses
+<a href="dart-typed_data/Float32List-class.html">Float32List</a>, <a href="dart-typed_data/Int32List-class.html">Int32List</a>, and <a href="dart-typed_data/Uint16List-class.html">Uint16List</a> objects, which more closely
+corresponds to the data format used internally and therefore reduces some of
+the conversion overhead. The raw constructor is useful if the data is coming
+from another source (e.g. a file) and can therefore be parsed directly into
+the underlying representation.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Vertices" class="callable">
+          <span class="name"><a href="dart-ui/Vertices/Vertices.html">Vertices</a></span><span class="signature">(<span class="parameter" id="-param-mode"><span class="type-annotation"><a href="dart-ui/VertexMode.html">VertexMode</a></span> <span class="parameter-name">mode</span>, </span><span class="parameter" id="-param-positions"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Offset-class.html">Offset</a></span>&gt;</span></span> <span class="parameter-name">positions</span>, </span><span class="parameter" id="-param-colors">{<span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Color-class.html">Color</a></span>&gt;</span>?</span> <span class="parameter-name">colors</span>, </span><span class="parameter" id="-param-textureCoordinates"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Offset-class.html">Offset</a></span>&gt;</span>?</span> <span class="parameter-name">textureCoordinates</span>, </span><span class="parameter" id="-param-indices"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span>?</span> <span class="parameter-name">indices</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a set of vertex data for use with <a href="dart-ui/Canvas/drawVertices.html">Canvas.drawVertices</a>.
+        </dd>
+        <dt id="Vertices.raw" class="callable">
+          <span class="name"><a href="dart-ui/Vertices/Vertices.raw.html">Vertices.raw</a></span><span class="signature">(<span class="parameter" id="raw-param-mode"><span class="type-annotation"><a href="dart-ui/VertexMode.html">VertexMode</a></span> <span class="parameter-name">mode</span>, </span><span class="parameter" id="raw-param-positions"><span class="type-annotation"><a href="dart-typed_data/Float32List-class.html">Float32List</a></span> <span class="parameter-name">positions</span>, </span><span class="parameter" id="raw-param-colors">{<span class="type-annotation"><a href="dart-typed_data/Int32List-class.html">Int32List</a>?</span> <span class="parameter-name">colors</span>, </span><span class="parameter" id="raw-param-textureCoordinates"><span class="type-annotation"><a href="dart-typed_data/Float32List-class.html">Float32List</a>?</span> <span class="parameter-name">textureCoordinates</span>, </span><span class="parameter" id="raw-param-indices"><span class="type-annotation"><a href="dart-typed_data/Uint16List-class.html">Uint16List</a>?</span> <span class="parameter-name">indices</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a set of vertex data for use with <a href="dart-ui/Canvas/drawVertices.html">Canvas.drawVertices</a>, using the
+encoding expected by the Flutter engine.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="debugDisposed" class="property">
+  <span class="name"><a href="dart-ui/Vertices/debugDisposed.html">debugDisposed</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this reference to the underlying vertex data is <a href="dart-ui/Vertices/dispose.html">dispose</a>d.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="dart-ui/Vertices/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Release the resources used by this object. The object is no longer usable
+after this method is called.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+    <li class="self-crumb">Vertices class</li>
+</ol>
+
+
+    <!--<h5>dart:ui library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

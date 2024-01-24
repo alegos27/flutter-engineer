@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the copyWith method from the TextTheme class, for the Dart programming language.">
+  <title>copyWith method - TextTheme class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/TextTheme-class.html">TextTheme</a></li>
+    <li class="self-crumb">copyWith method</li>
+  </ol>
+  <div class="self-name">copyWith</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;TextTheme-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/text_theme.dart#L423"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">copyWith</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="material/TextTheme-class.html">TextTheme</a></span>
+<span class="name ">copyWith</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="copyWith-param-displayLarge">{<span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">displayLarge</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-displayMedium"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">displayMedium</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-displaySmall"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">displaySmall</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headlineLarge"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headlineLarge</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headlineMedium"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headlineMedium</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headlineSmall"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headlineSmall</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-titleLarge"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleLarge</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-titleMedium"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleMedium</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-titleSmall"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleSmall</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-bodyLarge"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">bodyLarge</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-bodyMedium"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">bodyMedium</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-bodySmall"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">bodySmall</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-labelLarge"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">labelLarge</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-labelMedium"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">labelMedium</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-labelSmall"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">labelSmall</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline1"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use displayLarge instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline1</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline2"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use displayMedium instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline2</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline3"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use displaySmall instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline3</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline4"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use headlineMedium instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline4</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline5"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use headlineSmall instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline5</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-headline6"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use titleLarge instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">headline6</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-subtitle1"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use titleMedium instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">subtitle1</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-subtitle2"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use titleSmall instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">subtitle2</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-bodyText1"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use bodyLarge instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">bodyText1</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-bodyText2"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use bodyMedium instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">bodyText2</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-caption"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use bodySmall instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">caption</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-button"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use labelLarge instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">button</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-overline"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use labelSmall instead. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">overline</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Creates a copy of this text theme but with the given fields replaced with
+the new values.</p>
+<p>Consider using <a href="material/Typography/black.html">Typography.black</a> or <a href="material/Typography/white.html">Typography.white</a>, which implement
+the typography styles in the Material Design specification, as a starting
+point.</p>
+<p>
+<a name="material.TextTheme.copyWith.1"></a>
+<div class="snippet snippet-container anchor-container">
+  
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'material.TextTheme.copyWith.1');" onclick="fixHref(this, 'material.TextTheme.copyWith.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">&#47;&#47;&#47; A Widget that sets the ambient theme&#39;s title text color for its
+&#47;&#47;&#47; descendants, while leaving other ambient theme attributes alone.
+class TitleColorThemeCopy extends StatelessWidget {
+  const TitleColorThemeCopy({super.key, required this.titleColor, required this.child});
+
+  final Color titleColor;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return Theme(
+      data: theme.copyWith(
+        textTheme: theme.textTheme.copyWith(
+          titleLarge: theme.textTheme.titleLarge!.copyWith(
+            color: titleColor,
+          ),
+        ),
+      ),
+      child: child,
+    );
+  }
+}</code></pre>
+  </div>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/TextTheme/merge.html">merge</a> is used instead of <a href="material/TextTheme/copyWith.html">copyWith</a> when you want to merge all
+of the fields of a TextTheme instead of individual fields.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">TextTheme copyWith({
+  TextStyle? displayLarge,
+  TextStyle? displayMedium,
+  TextStyle? displaySmall,
+  TextStyle? headlineLarge,
+  TextStyle? headlineMedium,
+  TextStyle? headlineSmall,
+  TextStyle? titleLarge,
+  TextStyle? titleMedium,
+  TextStyle? titleSmall,
+  TextStyle? bodyLarge,
+  TextStyle? bodyMedium,
+  TextStyle? bodySmall,
+  TextStyle? labelLarge,
+  TextStyle? labelMedium,
+  TextStyle? labelSmall,
+  @Deprecated(
+    &#39;Use displayLarge instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline1,
+  @Deprecated(
+    &#39;Use displayMedium instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline2,
+  @Deprecated(
+    &#39;Use displaySmall instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline3,
+  @Deprecated(
+    &#39;Use headlineMedium instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline4,
+  @Deprecated(
+    &#39;Use headlineSmall instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline5,
+  @Deprecated(
+    &#39;Use titleLarge instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? headline6,
+  @Deprecated(
+    &#39;Use titleMedium instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? subtitle1,
+  @Deprecated(
+    &#39;Use titleSmall instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? subtitle2,
+  @Deprecated(
+    &#39;Use bodyLarge instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? bodyText1,
+  @Deprecated(
+    &#39;Use bodyMedium instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? bodyText2,
+  @Deprecated(
+    &#39;Use bodySmall instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? caption,
+  @Deprecated(
+    &#39;Use labelLarge instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? button,
+  @Deprecated(
+    &#39;Use labelSmall instead. &#39;
+    &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;,
+  )
+  TextStyle? overline,
+}) {
+  assert(
+    (displayLarge == null &amp;&amp; displayMedium == null &amp;&amp; displaySmall == null &amp;&amp; headlineMedium == null &amp;&amp;
+        headlineSmall == null &amp;&amp; titleLarge == null &amp;&amp; titleMedium == null &amp;&amp; titleSmall == null &amp;&amp;
+        bodyLarge == null &amp;&amp; bodyMedium == null &amp;&amp; bodySmall == null &amp;&amp; labelLarge == null &amp;&amp; labelSmall == null) ||
+    (headline1 == null &amp;&amp; headline2 == null &amp;&amp; headline3 == null &amp;&amp; headline4 == null &amp;&amp;
+        headline5 == null &amp;&amp; headline6 == null &amp;&amp; subtitle1 == null &amp;&amp; subtitle2 == null &amp;&amp;
+        bodyText1 == null &amp;&amp; bodyText2 == null &amp;&amp; caption == null &amp;&amp; button == null &amp;&amp; overline == null),
+    &#39;Cannot mix 2018 and 2021 terms in call to TextTheme() constructor.&#39;
+  );
+  return TextTheme(
+    displayLarge: displayLarge ?? headline1 ?? this.displayLarge,
+    displayMedium: displayMedium ?? headline2 ?? this.displayMedium,
+    displaySmall: displaySmall ?? headline3 ?? this.displaySmall,
+    headlineLarge: headlineLarge ?? this.headlineLarge,
+    headlineMedium: headlineMedium ?? headline4 ?? this.headlineMedium,
+    headlineSmall: headlineSmall ?? headline5 ?? this.headlineSmall,
+    titleLarge: titleLarge ?? headline6 ?? this.titleLarge,
+    titleMedium: titleMedium ?? subtitle1 ?? this.titleMedium,
+    titleSmall: titleSmall ?? subtitle2 ?? this.titleSmall,
+    bodyLarge: bodyLarge ?? bodyText1 ?? this.bodyLarge,
+    bodyMedium: bodyMedium ?? bodyText2 ?? this.bodyMedium,
+    bodySmall: bodySmall ?? caption ?? this.bodySmall,
+    labelLarge: labelLarge ?? button ?? this.labelLarge,
+    labelMedium: labelMedium ?? this.labelMedium,
+    labelSmall: labelSmall ?? overline ?? this.labelSmall,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/TextTheme-class.html">TextTheme</a></li>
+    <li class="self-crumb">copyWith method</li>
+</ol>
+
+
+    <h5>TextTheme class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

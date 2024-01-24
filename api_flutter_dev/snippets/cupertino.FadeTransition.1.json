@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.FadeTransition.1",
+    "element": "FadeTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 542,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [FadeTransition] using\nthe Flutter logo:",
+    "file": "cupertino.FadeTransition.1.dart"
+}

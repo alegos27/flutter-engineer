@@ -1,0 +1,13 @@
+{
+    "id": "widgets.LinearGradient.1",
+    "element": "LinearGradient",
+    "sourcePath": "lib/src/painting/gradient.dart",
+    "sourceLine": 375,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This sample draws a picture with a gradient sweeping through different\ncolors, by having a [Container] display a [BoxDecoration] with a\n[LinearGradient].",
+    "file": "widgets.LinearGradient.1.dart"
+}

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AnimatedPadding.1",
+    "element": "AnimatedPadding",
+    "sourcePath": "lib/src/widgets/implicit_animations.dart",
+    "sourceLine": 802,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [AnimatedPadding] widget, using a [curve] of\n[Curves.easeInOut].",
+    "file": "cupertino.AnimatedPadding.1.dart"
+}

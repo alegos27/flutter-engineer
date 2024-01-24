@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the TextTreeConfiguration class from the foundation library, for the Dart programming language.">
+  <title>TextTreeConfiguration class - foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">TextTreeConfiguration class</li>
+  </ol>
+  <div class="self-name">TextTreeConfiguration</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="foundation&#47;foundation-library-sidebar.html"
+      data-below-sidebar="foundation&#47;TextTreeConfiguration-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/foundation/diagnostics.dart#L227"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">TextTreeConfiguration</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Configuration specifying how a particular <a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a> should be
+rendered as text art.</p>
+<p>In release mode, these configurations may be ignored, as diagnostics are
+compacted or truncated to save on binary size.</p>
+<p>See also:</p>
+<ul>
+<li><a href="foundation/sparseTextConfiguration.html">sparseTextConfiguration</a>, which is a typical style.</li>
+<li><a href="foundation/transitionTextConfiguration.html">transitionTextConfiguration</a>, which is an example of a complex tree style.</li>
+<li><a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>, for code using <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a>
+to render text art for arbitrary trees of <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> objects.</li>
+</ul>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="TextTreeConfiguration" class="callable">
+          <span class="name"><a href="foundation/TextTreeConfiguration/TextTreeConfiguration.html">TextTreeConfiguration</a></span><span class="signature">(<span class="parameter" id="-param-prefixLineOne">{<span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span>, </span><span class="parameter" id="-param-prefixOtherLines"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="-param-prefixLastChildLineOne"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLastChildLineOne</span>, </span><span class="parameter" id="-param-prefixOtherLinesRootNode"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixOtherLinesRootNode</span>, </span><span class="parameter" id="-param-linkCharacter"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">linkCharacter</span>, </span><span class="parameter" id="-param-propertyPrefixIfChildren"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">propertyPrefixIfChildren</span>, </span><span class="parameter" id="-param-propertyPrefixNoChildren"><span>required</span> <span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">propertyPrefixNoChildren</span>, </span><span class="parameter" id="-param-lineBreak"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">lineBreak</span> = <span class="default-value">&#39;\n&#39;</span>, </span><span class="parameter" id="-param-lineBreakProperties"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">lineBreakProperties</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-afterName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">afterName</span> = <span class="default-value">&#39;:&#39;</span>, </span><span class="parameter" id="-param-afterDescriptionIfBody"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">afterDescriptionIfBody</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-afterDescription"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">afterDescription</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-beforeProperties"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">beforeProperties</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-afterProperties"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">afterProperties</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-mandatoryAfterProperties"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">mandatoryAfterProperties</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-propertySeparator"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">propertySeparator</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-bodyIndent"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">bodyIndent</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-footer"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">footer</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-showChildren"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">showChildren</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-addBlankLineIfNoChildren"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">addBlankLineIfNoChildren</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-isNameOnOwnLine"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isNameOnOwnLine</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isBlankLineBetweenPropertiesAndChildren"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isBlankLineBetweenPropertiesAndChildren</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-beforeName"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">beforeName</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-suffixLineOne"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">suffixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-mandatoryFooter"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">mandatoryFooter</span> = <span class="default-value">&#39;&#39;</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a configuration object describing how to render a tree as text.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="addBlankLineIfNoChildren" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/addBlankLineIfNoChildren.html">addBlankLineIfNoChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to add a blank line at the end of the output for a node if it has
+no children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="afterDescription" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/afterDescription.html">afterDescription</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Text to add immediately after the description line of a node with
+properties and/or children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="afterDescriptionIfBody" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/afterDescriptionIfBody.html">afterDescriptionIfBody</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Text to add immediately after the description line of a node with
+properties and/or children if the node has a body.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="afterName" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/afterName.html">afterName</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Text added immediately after the name of the node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="afterProperties" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/afterProperties.html">afterProperties</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Optional string to add after the properties of a node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="beforeName" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/beforeName.html">beforeName</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Text added immediately before the name of the node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="beforeProperties" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/beforeProperties.html">beforeProperties</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Optional string to add before the properties of a node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="bodyIndent" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/bodyIndent.html">bodyIndent</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add to all lines of the body of the tree node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="childLinkSpace" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/childLinkSpace.html">childLinkSpace</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Whitespace to draw instead of the childLink character if this node is the
+last child of its parent so no link line is required.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="footer" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/footer.html">footer</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Footer to add as its own line at the end of a non-root node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isBlankLineBetweenPropertiesAndChildren" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/isBlankLineBetweenPropertiesAndChildren.html">isBlankLineBetweenPropertiesAndChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Add a blank line between properties and children if both are present.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isNameOnOwnLine" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/isNameOnOwnLine.html">isNameOnOwnLine</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the name should be displayed on the same line as the description.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="lineBreak" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/lineBreak.html">lineBreak</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Character(s) to use to separate lines.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="lineBreakProperties" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/lineBreakProperties.html">lineBreakProperties</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to place line breaks between properties or to leave all
+properties on one line.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="linkCharacter" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/linkCharacter.html">linkCharacter</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Character to use to draw line linking parent to child.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="mandatoryAfterProperties" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/mandatoryAfterProperties.html">mandatoryAfterProperties</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Mandatory string to add after the properties of a node regardless of
+whether the node has any properties.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="mandatoryFooter" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/mandatoryFooter.html">mandatoryFooter</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Footer to add even for root nodes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="prefixLastChildLineOne" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/prefixLastChildLineOne.html">prefixLastChildLineOne</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add to the first line to display the last child of a node with
+this style.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="prefixLineOne" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/prefixLineOne.html">prefixLineOne</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add to the first line to display a child with this style.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="prefixOtherLines" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/prefixOtherLines.html">prefixOtherLines</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add to other lines to display a child with this style.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="prefixOtherLinesRootNode" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/prefixOtherLinesRootNode.html">prefixOtherLinesRootNode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Additional prefix to add to other lines of a node if this is the root node
+of the tree.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="propertyPrefixIfChildren" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/propertyPrefixIfChildren.html">propertyPrefixIfChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add before each property if the node as children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="propertyPrefixNoChildren" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/propertyPrefixNoChildren.html">propertyPrefixNoChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Prefix to add before each property if the node does not have children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="propertySeparator" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/propertySeparator.html">propertySeparator</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Property separator to add between properties.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="showChildren" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/showChildren.html">showChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the children of a node should be shown.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="suffixLineOne" class="property">
+  <span class="name"><a href="foundation/TextTreeConfiguration/suffixLineOne.html">suffixLineOne</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  Suffix to add to end of the first line to make its length match the footer.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">TextTreeConfiguration class</li>
+</ol>
+
+
+    <!--<h5>foundation library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "material.SliverAnimatedList.1",
+    "element": "SliverAnimatedList",
+    "sourcePath": "lib/src/widgets/animated_scroll_view.dart",
+    "sourceLine": 729,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This sample application uses a [SliverAnimatedList] to create an animated\neffect when items are removed or added to the list.",
+    "file": "material.SliverAnimatedList.1.dart"
+}

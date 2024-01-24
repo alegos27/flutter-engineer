@@ -1,0 +1,13 @@
+{
+    "id": "material.SlideTransition.1",
+    "element": "SlideTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 170,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following code implements the [SlideTransition] as seen in the video\nabove:",
+    "file": "material.SlideTransition.1.dart"
+}

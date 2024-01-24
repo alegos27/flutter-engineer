@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the BidiFormatter class from the intl library, for the Dart programming language.">
+  <title>BidiFormatter class - intl library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="intl/intl-library.html">intl</a></li>
+    <li class="self-crumb">BidiFormatter class</li>
+  </ol>
+  <div class="self-name">BidiFormatter</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="intl&#47;intl-library-sidebar.html"
+      data-below-sidebar="intl&#47;BidiFormatter-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">BidiFormatter</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Bidi stands for Bi-directional text.  According to
+<a href="http://en.wikipedia.org/wiki/Bi-directional_text">Wikipedia</a>:
+Bi-directional text is text containing text in both text directionalities,
+both right-to-left (RTL) and left-to-right (LTR). It generally involves text
+containing different types of alphabets, but may also refer to
+boustrophedon, which is changing text directionality in each row.</p>
+<p>Utility class for formatting display text in a potentially
+opposite-directionality context without garbling layout issues.  Mostly a
+very "slimmed-down" and dart-ified port of the Closure Birectional
+formatting libary. If there is a utility in the Closure library (or ICU, or
+elsewhere) that you would like this formatter to make available, please
+contact the Dart team.</p>
+<p>Provides the following functionality:</p>
+<ol>
+<li>
+<p><em>BiDi Wrapping</em>
+When text in one language is mixed into a document in another, opposite-
+directionality language, e.g. when an English business name is embedded in a
+Hebrew web page, both the inserted string and the text following it may be
+displayed incorrectly unless the inserted string is explicitly separated
+from the surrounding text in a "wrapper" that declares its directionality at
+the start and then resets it back at the end. This wrapping can be done in
+HTML mark-up (e.g. a 'span dir=rtl' tag) or - only in contexts where mark-up
+can not be used - in Unicode BiDi formatting codes (LRE|RLE and PDF).
+Providing such wrapping services is the basic purpose of the BiDi formatter.</p>
+</li>
+<li>
+<p><em>Directionality estimation</em>
+How does one know whether a string about to be inserted into surrounding
+text has the same directionality? Well, in many cases, one knows that this
+must be the case when writing the code doing the insertion, e.g. when a
+localized message is inserted into a localized page. In such cases there is
+no need to involve the BiDi formatter at all. In the remaining cases, e.g.
+when the string is user-entered or comes from a database, the language of
+the string (and thus its directionality) is not known a priori, and must be
+estimated at run-time. The BiDi formatter does this automatically.</p>
+</li>
+<li>
+<p><em>Escaping</em>
+When wrapping plain text - i.e. text that is not already HTML or HTML-
+escaped - in HTML mark-up, the text must first be HTML-escaped to prevent
+XSS attacks and other nasty business. This of course is always true, but the
+escaping cannot be done after the string has already been wrapped in
+mark-up, so the BiDi formatter also serves as a last chance and includes
+escaping services.</p>
+</li>
+</ol>
+<p>Thus, in a single call, the formatter will escape the input string as
+specified, determine its directionality, and wrap it as necessary. It is
+then up to the caller to insert the return value in the output.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="BidiFormatter.LTR" class="callable">
+          <span class="name"><a href="intl/BidiFormatter/BidiFormatter.LTR.html">BidiFormatter.LTR</a></span><span class="signature">(<span class="parameter" id="LTR-param-alwaysSpan">[<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">alwaysSpan</span> = <span class="default-value">false</span>]</span>)</span>
+        </dt>
+        <dd>
+          Create a formatting object with a direction. If <code>alwaysSpan</code> is true we
+should always use a <code>span</code> tag, even when the input directionality is
+neutral or matches the context, so that the DOM structure of the output
+does not depend on the combination of directionalities.
+        </dd>
+        <dt id="BidiFormatter.RTL" class="callable">
+          <span class="name"><a href="intl/BidiFormatter/BidiFormatter.RTL.html">BidiFormatter.RTL</a></span><span class="signature">(<span class="parameter" id="RTL-param-alwaysSpan">[<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">alwaysSpan</span> = <span class="default-value">false</span>]</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+        <dt id="BidiFormatter.UNKNOWN" class="callable">
+          <span class="name"><a href="intl/BidiFormatter/BidiFormatter.UNKNOWN.html">BidiFormatter.UNKNOWN</a></span><span class="signature">(<span class="parameter" id="UNKNOWN-param-alwaysSpan">[<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">alwaysSpan</span> = <span class="default-value">false</span>]</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="contextDirection" class="property">
+  <span class="name"><a href="intl/BidiFormatter/contextDirection.html">contextDirection</a></span>
+  <span class="signature">&#8596; <a href="intl/TextDirection-class.html">TextDirection</a></span> 
+
+</dt>
+<dd>
+  The direction of the surrounding text (the context).
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isRTL" class="property">
+  <span class="name"><a href="intl/BidiFormatter/isRTL.html">isRTL</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Is true if the known context direction for this formatter is RTL.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="estimateDirection" class="callable">
+  <span class="name"><a href="intl/BidiFormatter/estimateDirection.html">estimateDirection</a></span><span class="signature">(<wbr><span class="parameter" id="estimateDirection-param-text"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">text</span>, </span><span class="parameter" id="estimateDirection-param-isHtml">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isHtml</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="intl/TextDirection-class.html">TextDirection</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Estimates the directionality of <code>text</code> using the best known
+general-purpose method (using relative word counts). A
+TextDirection.UNKNOWN return value indicates completely neutral input.
+<code>isHtml</code> is true if <code>text</code> HTML or HTML-escaped.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="wrapWithSpan" class="callable">
+  <span class="name"><a href="intl/BidiFormatter/wrapWithSpan.html">wrapWithSpan</a></span><span class="signature">(<wbr><span class="parameter" id="wrapWithSpan-param-text"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">text</span>, </span><span class="parameter" id="wrapWithSpan-param-isHtml">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isHtml</span> = <span class="default-value">false</span>, </span><span class="parameter" id="wrapWithSpan-param-resetDir"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">resetDir</span> = <span class="default-value">true</span>, </span><span class="parameter" id="wrapWithSpan-param-direction"><span class="type-annotation"><a href="intl/TextDirection-class.html">TextDirection</a>?</span> <span class="parameter-name">direction</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Formats a string of a given (or estimated, if not provided) <code>direction</code>
+for use in HTML output of the context directionality, so an
+opposite-directionality string is neither garbled nor garbles what follows
+it.
+  
+
+</dd>
+
+        <dt id="wrapWithUnicode" class="callable">
+  <span class="name"><a href="intl/BidiFormatter/wrapWithUnicode.html">wrapWithUnicode</a></span><span class="signature">(<wbr><span class="parameter" id="wrapWithUnicode-param-text"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">text</span>, </span><span class="parameter" id="wrapWithUnicode-param-isHtml">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isHtml</span> = <span class="default-value">false</span>, </span><span class="parameter" id="wrapWithUnicode-param-resetDir"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">resetDir</span> = <span class="default-value">true</span>, </span><span class="parameter" id="wrapWithUnicode-param-direction"><span class="type-annotation"><a href="intl/TextDirection-class.html">TextDirection</a>?</span> <span class="parameter-name">direction</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Format <code>text</code> of a known (if specified) or estimated <code>direction</code> for use
+in <em>plain-text</em> output of the context directionality, so an
+opposite-directionality text is neither garbled nor garbles what follows
+it. Unlike wrapWithSpan, this makes use of unicode BiDi formatting
+characters instead of spans for wrapping. The returned string would be
+RLE+text+PDF for RTL text, or LRE+text+PDF for LTR text.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="intl/intl-library.html">intl</a></li>
+    <li class="self-crumb">BidiFormatter class</li>
+</ol>
+
+
+    <!--<h5>intl library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the autofillHints property from the EditableText class, for the Dart programming language.">
+  <title>autofillHints property - EditableText class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/EditableText-class.html">EditableText</a></li>
+    <li class="self-crumb">autofillHints property</li>
+  </ol>
+  <div class="self-name">autofillHints</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;EditableText-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/editable_text.dart#L1702"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-property">autofillHints</span> property 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?
+          <span class="name ">autofillHints</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A list of strings that helps the autofill service identify the type of this
+text input.</p>
+<p>When set to null, this text input will not send its autofill information
+to the platform, preventing it from participating in autofills triggered
+by a different <a href="services/AutofillClient-class.html">AutofillClient</a>, even if they're in the same
+<a href="services/AutofillScope-class.html">AutofillScope</a>. Additionally, on Android and web, setting this to null
+will disable autofill for this text field.</p>
+<p>The minimum platform SDK version that supports Autofill is API level 26
+for Android, and iOS 10.0 for iOS.</p>
+<p>Defaults to an empty list.</p>
+<h3 id="setting-up-ios-autofill">Setting up iOS autofill:</h3>
+<p>To provide the best user experience and ensure your app fully supports
+password autofill on iOS, follow these steps:</p>
+<ul>
+<li>Set up your iOS app's
+<a href="https://developer.apple.com/documentation/safariservices/supporting_associated_domains_in_your_app">associated domains</a>.</li>
+<li>Some autofill hints only work with specific <a href="widgets/EditableText/keyboardType.html">keyboardType</a>s. For example,
+<a href="services/AutofillHints/name-constant.html">AutofillHints.name</a> requires <a href="services/TextInputType/name-constant.html">TextInputType.name</a> and <a href="services/AutofillHints/email-constant.html">AutofillHints.email</a>
+works only with <a href="services/TextInputType/emailAddress-constant.html">TextInputType.emailAddress</a>. Make sure the input field has a
+compatible <a href="widgets/EditableText/keyboardType.html">keyboardType</a>. Empirically, <a href="services/TextInputType/name-constant.html">TextInputType.name</a> works well
+with many autofill hints that are predefined on iOS.</li>
+</ul>
+<h3 id="troubleshooting-autofill">Troubleshooting Autofill</h3>
+<p>Autofill service providers rely heavily on <a href="widgets/EditableText/autofillHints.html">autofillHints</a>. Make sure the
+entries in <a href="widgets/EditableText/autofillHints.html">autofillHints</a> are supported by the autofill service currently
+in use (the name of the service can typically be found in your mobile
+device's system settings).</p>
+<h4 id="autofill-ui-refuses-to-show-up-when-i-tap-on-the-text-field">Autofill UI refuses to show up when I tap on the text field</h4>
+<p>Check the device's system settings and make sure autofill is turned on,
+and there are available credentials stored in the autofill service.</p>
+<ul>
+<li>
+<p>iOS password autofill: Go to Settings -&gt; Password, turn on "Autofill
+Passwords", and add new passwords for testing by pressing the top right
+"+" button. Use an arbitrary "website" if you don't have associated
+domains set up for your app. As long as there's at least one password
+stored, you should be able to see a key-shaped icon in the quick type
+bar on the software keyboard, when a password related field is focused.</p>
+</li>
+<li>
+<p>iOS contact information autofill: iOS seems to pull contact info from
+the Apple ID currently associated with the device. Go to Settings -&gt;
+Apple ID (usually the first entry, or "Sign in to your iPhone" if you
+haven't set up one on the device), and fill out the relevant fields. If
+you wish to test more contact info types, try adding them in Contacts -&gt;
+My Card.</p>
+</li>
+<li>
+<p>Android autofill: Go to Settings -&gt; System -&gt; Languages &amp; input -&gt;
+Autofill service. Enable the autofill service of your choice, and make
+sure there are available credentials associated with your app.</p>
+</li>
+</ul>
+<h4 id="i-called-textinputfinishautofillcontext-but-the-autofill-save">I called <code>TextInput.finishAutofillContext</code> but the autofill save</h4>
+<p>prompt isn't showing</p>
+<ul>
+<li>iOS: iOS may not show a prompt or any other visual indication when it
+saves user password. Go to Settings -&gt; Password and check if your new
+password is saved. Neither saving password nor auto-generating strong
+password works without properly setting up associated domains in your
+app. To set up associated domains, follow the instructions in
+<a href="https://developer.apple.com/documentation/safariservices/supporting_associated_domains_in_your_app">developer.apple.com/documentation/safariservices/supporting_associated_domains_in_your_app</a>.
+For the best results, hint strings need to be understood by the platform's
+autofill service. The common values of hint strings can be found in
+<a href="services/AutofillHints-class.html">AutofillHints</a>, as well as their availability on different platforms.</li>
+</ul>
+<p>If an autofillable input field needs to use a custom hint that translates to
+different strings on different platforms, the easiest way to achieve that
+is to return different hint strings based on the value of
+<a href="foundation/defaultTargetPlatform.html">defaultTargetPlatform</a>.</p>
+<p>Each hint in the list, if not ignored, will be translated to the platform's
+autofill hint type understood by its autofill services:</p>
+<ul>
+<li>
+<p>On iOS, only the first hint in the list is accounted for. The hint will
+be translated to a
+<a href="https://developer.apple.com/documentation/uikit/uitextcontenttype">UITextContentType</a>.</p>
+</li>
+<li>
+<p>On Android, all hints in the list are translated to Android hint strings.</p>
+</li>
+<li>
+<p>On web, only the first hint is accounted for and will be translated to
+an "autocomplete" string.</p>
+</li>
+</ul>
+<p>Providing an autofill hint that is predefined on the platform does not
+automatically grant the input field eligibility for autofill. Ultimately,
+it comes down to the autofill service currently in charge to determine
+whether an input field is suitable for autofill and what the autofill
+candidates are.</p>
+<p>See also:</p>
+<ul>
+<li>
+<p><a href="services/AutofillHints-class.html">AutofillHints</a>, a list of autofill hint strings that is predefined on at
+least one platform.</p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/uikit/uitextcontenttype">UITextContentType</a>,
+the iOS equivalent.</p>
+</li>
+<li>
+<p>Android <a href="https://developer.android.com/reference/android/view/View#setAutofillHints(java.lang.String...)">autofillHints</a>,
+the Android equivalent.</p>
+</li>
+<li>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">autocomplete</a> attribute,
+the web equivalent.</p>
+</li>
+</ul>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final Iterable&lt;String&gt;? autofillHints;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/EditableText-class.html">EditableText</a></li>
+    <li class="self-crumb">autofillHints property</li>
+</ol>
+
+
+    <h5>EditableText class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

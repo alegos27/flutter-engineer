@@ -1,0 +1,13 @@
+{
+    "id": "material.RestorableRouteFuture.1",
+    "element": "RestorableRouteFuture",
+    "sourcePath": "lib/src/widgets/navigator.dart",
+    "sourceLine": 5906,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example uses a [RestorableRouteFuture] in the `_MyHomeState` to push a\nnew `MyCounter` route and to retrieve its return value.",
+    "file": "material.RestorableRouteFuture.1.dart"
+}

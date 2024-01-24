@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the StarBorder class from the painting library, for the Dart programming language.">
+  <title>StarBorder class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">StarBorder class</li>
+  </ol>
+  <div class="self-name">StarBorder</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;painting-library-sidebar.html"
+      data-below-sidebar="painting&#47;StarBorder-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/star_border.dart#L42"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">StarBorder</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A border that fits a star or polygon-shaped border within the rectangle of
+the widget it is applied to.</p>
+<p>Typically used with a <a href="painting/ShapeDecoration-class.html">ShapeDecoration</a> to draw a polygonal or star shaped
+border.</p>
+<p>
+<a name="painting.StarBorder.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example serves both as a usage example, as well as an explorer for
+determining the parameters to use with a <a href="painting/StarBorder-class.html">StarBorder</a>. The resulting code
+can be copied and pasted into your app. A <a href="widgets/Container-class.html">Container</a> is just one widget
+which takes a <a href="painting/ShapeBorder-class.html">ShapeBorder</a>. <a href="material/Dialog-class.html">Dialog</a>s, <a href="material/OutlinedButton-class.html">OutlinedButton</a>s,
+<a href="material/ElevatedButton-class.html">ElevatedButton</a>s, etc. all can be shaped with a <a href="painting/ShapeBorder-class.html">ShapeBorder</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'painting.StarBorder.1');" onclick="fixHref(this, 'painting.StarBorder.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=painting.StarBorder.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=painting.StarBorder.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="painting/BorderSide-class.html">BorderSide</a>, which is used to describe how the edge of the shape is
+ drawn.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="painting/ShapeBorder-class.html">ShapeBorder</a></li>
+        <li><a href="painting/OutlinedBorder-class.html">OutlinedBorder</a></li>
+      <li>StarBorder</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="StarBorder" class="callable">
+          <span class="name"><a href="painting/StarBorder/StarBorder.html">StarBorder</a></span><span class="signature">(<span class="parameter" id="-param-side">{<span class="type-annotation"><a href="painting/BorderSide-class.html">BorderSide</a></span> <span class="parameter-name">side</span> = <span class="default-value">BorderSide.none</span>, </span><span class="parameter" id="-param-points"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">points</span> = <span class="default-value">5</span>, </span><span class="parameter" id="-param-innerRadiusRatio"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">innerRadiusRatio</span> = <span class="default-value">0.4</span>, </span><span class="parameter" id="-param-pointRounding"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">pointRounding</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-valleyRounding"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">valleyRounding</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-rotation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">rotation</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-squash"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">squash</span> = <span class="default-value">0</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a const star-shaped border with the given number <a href="painting/StarBorder/points.html">points</a> on the
+star.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="StarBorder.polygon" class="callable">
+          <span class="name"><a href="painting/StarBorder/StarBorder.polygon.html">StarBorder.polygon</a></span><span class="signature">(<span class="parameter" id="polygon-param-side">{<span class="type-annotation"><a href="painting/BorderSide-class.html">BorderSide</a></span> <span class="parameter-name">side</span> = <span class="default-value">BorderSide.none</span>, </span><span class="parameter" id="polygon-param-sides"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">sides</span> = <span class="default-value">5</span>, </span><span class="parameter" id="polygon-param-pointRounding"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">pointRounding</span> = <span class="default-value">0</span>, </span><span class="parameter" id="polygon-param-rotation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">rotation</span> = <span class="default-value">0</span>, </span><span class="parameter" id="polygon-param-squash"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">squash</span> = <span class="default-value">0</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a const polygon border with the given number of <code>sides</code>.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="dimensions" class="property inherited">
+  <span class="name"><a href="painting/OutlinedBorder/dimensions.html">dimensions</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> 
+
+</dt>
+<dd class="inherited">
+  The widths of the sides of this border represented as an <a href="painting/EdgeInsets-class.html">EdgeInsets</a>.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="painting/StarBorder/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="innerRadiusRatio" class="property">
+  <span class="name"><a href="painting/StarBorder/innerRadiusRatio.html">innerRadiusRatio</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The ratio of the inner radius of a star with the outer radius.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="pointRounding" class="property">
+  <span class="name"><a href="painting/StarBorder/pointRounding.html">pointRounding</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The amount of rounding on the points of stars, or the corners of polygons.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="points" class="property">
+  <span class="name"><a href="painting/StarBorder/points.html">points</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The number of points in this star, or sides on a polygon.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="preferPaintInterior" class="property inherited">
+  <span class="name"><a href="painting/ShapeBorder/preferPaintInterior.html">preferPaintInterior</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Reports whether <a href="painting/ShapeBorder/paintInterior.html">paintInterior</a> is implemented.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="rotation" class="property">
+  <span class="name"><a href="painting/StarBorder/rotation.html">rotation</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The rotation in clockwise degrees around the center of the shape.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="side" class="property inherited">
+  <span class="name"><a href="painting/OutlinedBorder/side.html">side</a></span>
+  <span class="signature">&#8594; <a href="painting/BorderSide-class.html">BorderSide</a></span> 
+
+</dt>
+<dd class="inherited">
+  The border outline's color and weight.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="squash" class="property">
+  <span class="name"><a href="painting/StarBorder/squash.html">squash</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  How much of the aspect ratio of the attached widget to take on.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="valleyRounding" class="property">
+  <span class="name"><a href="painting/StarBorder/valleyRounding.html">valleyRounding</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The amount of rounding of the interior corners of stars.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="add" class="callable inherited">
+  <span class="name"><a href="painting/ShapeBorder/add.html">add</a></span><span class="signature">(<wbr><span class="parameter" id="add-param-other"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a></span> <span class="parameter-name">other</span>, </span><span class="parameter" id="add-param-reversed">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">reversed</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Attempts to create a new object that represents the amalgamation of <code>this</code>
+border and the <code>other</code> border.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="copyWith" class="callable">
+  <span class="name"><a href="painting/StarBorder/copyWith.html">copyWith</a></span><span class="signature">(<wbr><span class="parameter" id="copyWith-param-side">{<span class="type-annotation"><a href="painting/BorderSide-class.html">BorderSide</a>?</span> <span class="parameter-name">side</span>, </span><span class="parameter" id="copyWith-param-points"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">points</span>, </span><span class="parameter" id="copyWith-param-innerRadiusRatio"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">innerRadiusRatio</span>, </span><span class="parameter" id="copyWith-param-pointRounding"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">pointRounding</span>, </span><span class="parameter" id="copyWith-param-valleyRounding"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">valleyRounding</span>, </span><span class="parameter" id="copyWith-param-rotation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">rotation</span>, </span><span class="parameter" id="copyWith-param-squash"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">squash</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="painting/StarBorder-class.html">StarBorder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a copy of this OutlinedBorder that draws its outline with the
+specified <code>side</code>, if <code>side</code> is non-null.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="getInnerPath" class="callable">
+  <span class="name"><a href="painting/StarBorder/getInnerPath.html">getInnerPath</a></span><span class="signature">(<wbr><span class="parameter" id="getInnerPath-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="getInnerPath-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-ui/Path-class.html">Path</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Create a <a href="dart-ui/Path-class.html">Path</a> that describes the inner edge of the border.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="getOuterPath" class="callable">
+  <span class="name"><a href="painting/StarBorder/getOuterPath.html">getOuterPath</a></span><span class="signature">(<wbr><span class="parameter" id="getOuterPath-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="getOuterPath-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-ui/Path-class.html">Path</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Create a <a href="dart-ui/Path-class.html">Path</a> that describes the outer edge of the border.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpFrom" class="callable">
+  <span class="name"><a href="painting/StarBorder/lerpFrom.html">lerpFrom</a></span><span class="signature">(<wbr><span class="parameter" id="lerpFrom-param-a"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerpFrom-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from another <a href="painting/ShapeBorder-class.html">ShapeBorder</a> (possibly of another
+class) to <code>this</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpTo" class="callable">
+  <span class="name"><a href="painting/StarBorder/lerpTo.html">lerpTo</a></span><span class="signature">(<wbr><span class="parameter" id="lerpTo-param-b"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerpTo-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from <code>this</code> to another <a href="painting/ShapeBorder-class.html">ShapeBorder</a> (possibly of
+another class).
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="paint" class="callable">
+  <span class="name"><a href="painting/StarBorder/paint.html">paint</a></span><span class="signature">(<wbr><span class="parameter" id="paint-param-canvas"><span class="type-annotation"><a href="dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span><span class="parameter" id="paint-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="paint-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Paints the border within the given <a href="dart-ui/Rect-class.html">Rect</a> on the given <a href="dart-ui/Canvas-class.html">Canvas</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="paintInterior" class="callable inherited">
+  <span class="name"><a href="painting/ShapeBorder/paintInterior.html">paintInterior</a></span><span class="signature">(<wbr><span class="parameter" id="paintInterior-param-canvas"><span class="type-annotation"><a href="dart-ui/Canvas-class.html">Canvas</a></span> <span class="parameter-name">canvas</span>, </span><span class="parameter" id="paintInterior-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="paintInterior-param-paint"><span class="type-annotation"><a href="dart-ui/Paint-class.html">Paint</a></span> <span class="parameter-name">paint</span>, </span><span class="parameter" id="paintInterior-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Paint a canvas with the appropriate shape.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scale" class="callable">
+  <span class="name"><a href="painting/StarBorder/scale.html">scale</a></span><span class="signature">(<wbr><span class="parameter" id="scale-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a copy of this border, scaled by the factor <code>t</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="painting/StarBorder/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator +" class="callable inherited">
+  <span class="name"><a href="painting/ShapeBorder/operator_plus.html">operator +</a></span><span class="signature">(<wbr><span class="parameter" id="+-param-other"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a new border consisting of the two borders on either side of the
+operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="painting/StarBorder/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">StarBorder class</li>
+</ol>
+
+
+    <!--<h5>painting library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

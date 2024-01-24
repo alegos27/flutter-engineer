@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the showBottomSheet method from the ScaffoldState class, for the Dart programming language.">
+  <title>showBottomSheet method - ScaffoldState class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ScaffoldState-class.html">ScaffoldState</a></li>
+    <li class="self-crumb">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt; method</li>
+  </ol>
+  <div class="self-name">showBottomSheet</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;ScaffoldState-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/scaffold.dart#L2465"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt;</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="material/PersistentBottomSheetController-class.html">PersistentBottomSheetController</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+<span class="name ">showBottomSheet</span>&lt;<wbr><span class="type-parameter">T</span>&gt;(<wbr><ol class="parameter-list"><li><span class="parameter" id="showBottomSheet-param-builder"><span class="type-annotation"><a href="widgets/WidgetBuilder.html">WidgetBuilder</a></span> <span class="parameter-name">builder</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-backgroundColor">{<span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a>?</span> <span class="parameter-name">clipBehavior</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-enableDrag"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableDrag</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-transitionAnimationController"><span class="type-annotation"><a href="animation/AnimationController-class.html">AnimationController</a>?</span> <span class="parameter-name">transitionAnimationController</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Shows a Material Design bottom sheet in the nearest <a href="material/Scaffold-class.html">Scaffold</a>. To show
+a persistent bottom sheet, use the <a href="material/Scaffold/bottomSheet.html">Scaffold.bottomSheet</a>.</p>
+<p>Returns a controller that can be used to close and otherwise manipulate the
+bottom sheet.</p>
+<p>To rebuild the bottom sheet (e.g. if it is stateful), call
+<a href="material/ScaffoldFeatureController/setState.html">PersistentBottomSheetController.setState</a> on the controller returned by
+this method.</p>
+<p>The new bottom sheet becomes a <a href="widgets/LocalHistoryEntry-class.html">LocalHistoryEntry</a> for the enclosing
+<a href="widgets/ModalRoute-class.html">ModalRoute</a> and a back button is added to the app bar of the <a href="material/Scaffold-class.html">Scaffold</a>
+that closes the bottom sheet.</p>
+<p>The <code>transitionAnimationController</code> controls the bottom sheet's entrance and
+exit animations. It's up to the owner of the controller to call
+<a href="animation/AnimationController/dispose.html">AnimationController.dispose</a> when the controller is no longer needed.</p>
+<p>To create a persistent bottom sheet that is not a <a href="widgets/LocalHistoryEntry-class.html">LocalHistoryEntry</a> and
+does not add a back button to the enclosing Scaffold's app bar, use the
+<a href="material/Scaffold/bottomSheet.html">Scaffold.bottomSheet</a> constructor parameter.</p>
+<p>A persistent bottom sheet shows information that supplements the primary
+content of the app. A persistent bottom sheet remains visible even when
+the user interacts with other parts of the app.</p>
+<p>A closely related widget is a modal bottom sheet, which is an alternative
+to a menu or a dialog and prevents the user from interacting with the rest
+of the app. Modal bottom sheets can be created and displayed with the
+<a href="material/showModalBottomSheet.html">showModalBottomSheet</a> function.</p>
+<p>
+<a name="material.ScaffoldState.showBottomSheet.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example demonstrates how to use <a href="material/ScaffoldState/showBottomSheet.html">showBottomSheet</a> to display a
+bottom sheet when a user taps a button. It also demonstrates how to
+close a bottom sheet using the Navigator.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.ScaffoldState.showBottomSheet.1');" onclick="fixHref(this, 'material.ScaffoldState.showBottomSheet.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.ScaffoldState.showBottomSheet.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.ScaffoldState.showBottomSheet.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+
+See also:</p>
+<ul>
+<li><a href="material/BottomSheet-class.html">BottomSheet</a>, which becomes the parent of the widget returned by the
+<code>builder</code>.</li>
+<li><a href="material/ScaffoldState/showBottomSheet.html">showBottomSheet</a>, which calls this method given a <a href="widgets/BuildContext-class.html">BuildContext</a>.</li>
+<li><a href="material/showModalBottomSheet.html">showModalBottomSheet</a>, which can be used to display a modal bottom
+sheet.</li>
+<li><a href="material/Scaffold/of.html">Scaffold.of</a>, for information about how to obtain the <a href="material/ScaffoldState-class.html">ScaffoldState</a>.</li>
+<li>The Material 2 spec at <a href="https://m2.material.io/components/sheets-bottom">m2.material.io/components/sheets-bottom</a>.</li>
+<li>The Material 3 spec at <a href="https://m3.material.io/components/bottom-sheets/overview">m3.material.io/components/bottom-sheets/overview</a>.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">PersistentBottomSheetController&lt;T&gt; showBottomSheet&lt;T&gt;(
+  WidgetBuilder builder, {
+  Color? backgroundColor,
+  double? elevation,
+  ShapeBorder? shape,
+  Clip? clipBehavior,
+  BoxConstraints? constraints,
+  bool? enableDrag,
+  AnimationController? transitionAnimationController,
+}) {
+  assert(() {
+    if (widget.bottomSheet != null) {
+      throw FlutterError(
+        &#39;Scaffold.bottomSheet cannot be specified while a bottom sheet &#39;
+        &#39;displayed with showBottomSheet() is still visible.\n&#39;
+        &#39;Rebuild the Scaffold with a null bottomSheet before calling showBottomSheet().&#39;,
+      );
+    }
+    return true;
+  }());
+  assert(debugCheckHasMediaQuery(context));
+
+  _closeCurrentBottomSheet();
+  final AnimationController controller = (transitionAnimationController ?? BottomSheet.createAnimationController(this))..forward();
+  setState(() {
+    _currentBottomSheet = _buildBottomSheet&lt;T&gt;(
+      builder,
+      isPersistent: false,
+      animationController: controller,
+      backgroundColor: backgroundColor,
+      elevation: elevation,
+      shape: shape,
+      clipBehavior: clipBehavior,
+      constraints: constraints,
+      enableDrag: enableDrag,
+      shouldDisposeAnimationController: transitionAnimationController == null,
+    );
+  });
+  return _currentBottomSheet! as PersistentBottomSheetController&lt;T&gt;;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ScaffoldState-class.html">ScaffoldState</a></li>
+    <li class="self-crumb">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt; method</li>
+</ol>
+
+
+    <h5>ScaffoldState class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SliverAnimatedList.1",
+    "element": "SliverAnimatedList",
+    "sourcePath": "lib/src/widgets/animated_scroll_view.dart",
+    "sourceLine": 729,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample application uses a [SliverAnimatedList] to create an animated\neffect when items are removed or added to the list.",
+    "file": "cupertino.SliverAnimatedList.1.dart"
+}

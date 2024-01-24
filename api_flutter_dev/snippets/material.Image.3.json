@@ -1,0 +1,13 @@
+{
+    "id": "material.Image.3",
+    "element": "Image",
+    "sourcePath": "lib/src/widgets/image.dart",
+    "sourceLine": 333,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "In this example, a variant of [NetworkImage] is created that passes all the\n[ImageConfiguration] information (locale, platform, size, etc) to the server\nusing query arguments in the image URL.",
+    "file": "material.Image.3.dart"
+}

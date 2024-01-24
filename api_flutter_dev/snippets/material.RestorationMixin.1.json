@@ -1,0 +1,13 @@
+{
+    "id": "material.RestorationMixin.1",
+    "element": "RestorationMixin",
+    "sourcePath": "lib/src/widgets/restoration.dart",
+    "sourceLine": 657,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example demonstrates how to make a simple counter app restorable by\nusing the [RestorationMixin] and a [RestorableInt].",
+    "file": "material.RestorationMixin.1.dart"
+}

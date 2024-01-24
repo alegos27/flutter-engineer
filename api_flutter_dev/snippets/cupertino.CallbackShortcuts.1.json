@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.CallbackShortcuts.1",
+    "element": "CallbackShortcuts",
+    "sourcePath": "lib/src/widgets/shortcuts.dart",
+    "sourceLine": 1093,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This example uses the [CallbackShortcuts] widget to add and subtract\nfrom a counter when the up or down arrow keys are pressed.",
+    "file": "cupertino.CallbackShortcuts.1.dart"
+}

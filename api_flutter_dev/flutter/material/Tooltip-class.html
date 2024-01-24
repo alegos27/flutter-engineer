@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Tooltip class from the material library, for the Dart programming language.">
+  <title>Tooltip class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">Tooltip class</li>
+  </ol>
+  <div class="self-name">Tooltip</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;Tooltip-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/tooltip.dart#L149"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">Tooltip</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A Material Design tooltip.</p>
+<p>Tooltips provide text labels which help explain the function of a button or
+other user interface action. Wrap the button in a <a href="material/Tooltip-class.html">Tooltip</a> widget and provide
+a message which will be shown when the widget is long pressed.</p>
+<p>Many widgets, such as <a href="material/IconButton-class.html">IconButton</a>, <a href="material/FloatingActionButton-class.html">FloatingActionButton</a>, and
+<a href="material/PopupMenuButton-class.html">PopupMenuButton</a> have a <code>tooltip</code> property that, when non-null, causes the
+widget to include a <a href="material/Tooltip-class.html">Tooltip</a> in its build.</p>
+<p>Tooltips improve the accessibility of visual widgets by proving a textual
+representation of the widget, which, for example, can be vocalized by a
+screen reader.</p>
+<iframe src="https://www.youtube.com/embed/EeEfD5fI-5Q?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>
+<a name="material.Tooltip.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example show a basic <a href="material/Tooltip-class.html">Tooltip</a> which has a <a href="widgets/Text-class.html">Text</a> as child.
+<a href="material/Tooltip/message.html">message</a> contains your label to be shown by the tooltip when
+the child that Tooltip wraps is hovered over on web or desktop. On mobile,
+the tooltip is shown when the widget is long pressed.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.Tooltip.1');" onclick="fixHref(this, 'material.Tooltip.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.Tooltip.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.Tooltip.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.Tooltip.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This example covers most of the attributes available in Tooltip.
+<code>decoration</code> has been used to give a gradient and borderRadius to Tooltip.
+<code>height</code> has been used to set a specific height of the Tooltip.
+<code>preferBelow</code> is false, the tooltip will prefer showing above <a href="material/Tooltip-class.html">Tooltip</a>'s child widget.
+However, it may show the tooltip below if there's not enough space
+above the widget.
+<code>textStyle</code> has been used to set the font size of the 'message'.
+<code>showDuration</code> accepts a Duration to continue showing the message after the long
+press has been released or the mouse pointer exits the child widget.
+<code>waitDuration</code> accepts a Duration for which a mouse pointer has to hover over the child
+widget before the tooltip is shown.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.Tooltip.2');" onclick="fixHref(this, 'material.Tooltip.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.Tooltip.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.Tooltip.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.Tooltip.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This example shows a rich <a href="material/Tooltip-class.html">Tooltip</a> that specifies the <a href="material/Tooltip/richMessage.html">richMessage</a>
+parameter instead of the <a href="material/Tooltip/message.html">message</a> parameter (only one of these may be
+non-null. Any <a href="painting/InlineSpan-class.html">InlineSpan</a> can be specified for the <a href="material/Tooltip/richMessage.html">richMessage</a> attribute,
+including <a href="widgets/WidgetSpan-class.html">WidgetSpan</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.Tooltip.3');" onclick="fixHref(this, 'material.Tooltip.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.Tooltip.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.Tooltip.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.Tooltip.4"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet4">
+    <div class="snippet-description">
+This example shows how <a href="material/Tooltip-class.html">Tooltip</a> can be shown manually with <a href="material/TooltipTriggerMode.html">TooltipTriggerMode.manual</a>
+by calling the <a href="material/TooltipState/ensureTooltipVisible.html">TooltipState.ensureTooltipVisible</a> function.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.Tooltip.4');" onclick="fixHref(this, 'material.Tooltip.4'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.Tooltip.4 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.Tooltip.4&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://material.io/design/components/tooltips.html">material.io/design/components/tooltips.html</a></li>
+<li><a href="material/TooltipTheme-class.html">TooltipTheme</a> or <a href="material/ThemeData/tooltipTheme.html">ThemeData.tooltipTheme</a></li>
+<li><a href="material/TooltipVisibility-class.html">TooltipVisibility</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>Tooltip</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Tooltip" class="callable">
+          <span class="name"><a href="material/Tooltip/Tooltip.html">Tooltip</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="-param-richMessage"><span class="type-annotation"><a href="painting/InlineSpan-class.html">InlineSpan</a>?</span> <span class="parameter-name">richMessage</span>, </span><span class="parameter" id="-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>, </span><span class="parameter" id="-param-margin"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">margin</span>, </span><span class="parameter" id="-param-verticalOffset"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">verticalOffset</span>, </span><span class="parameter" id="-param-preferBelow"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">preferBelow</span>, </span><span class="parameter" id="-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">excludeFromSemantics</span>, </span><span class="parameter" id="-param-decoration"><span class="type-annotation"><a href="painting/Decoration-class.html">Decoration</a>?</span> <span class="parameter-name">decoration</span>, </span><span class="parameter" id="-param-textStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">textStyle</span>, </span><span class="parameter" id="-param-textAlign"><span class="type-annotation"><a href="dart-ui/TextAlign.html">TextAlign</a>?</span> <span class="parameter-name">textAlign</span>, </span><span class="parameter" id="-param-waitDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a>?</span> <span class="parameter-name">waitDuration</span>, </span><span class="parameter" id="-param-showDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a>?</span> <span class="parameter-name">showDuration</span>, </span><span class="parameter" id="-param-triggerMode"><span class="type-annotation"><a href="material/TooltipTriggerMode.html">TooltipTriggerMode</a>?</span> <span class="parameter-name">triggerMode</span>, </span><span class="parameter" id="-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="-param-onTriggered"><span class="type-annotation"><a href="material/TooltipTriggeredCallback.html">TooltipTriggeredCallback</a>?</span> <span class="parameter-name">onTriggered</span>, </span><span class="parameter" id="-param-child"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">child</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a tooltip.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="child" class="property">
+  <span class="name"><a href="material/Tooltip/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The widget below this widget in the tree.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="decoration" class="property">
+  <span class="name"><a href="material/Tooltip/decoration.html">decoration</a></span>
+  <span class="signature">&#8594; <a href="painting/Decoration-class.html">Decoration</a>?</span> 
+
+</dt>
+<dd>
+  Specifies the tooltip's shape and background color.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableFeedback" class="property">
+  <span class="name"><a href="material/Tooltip/enableFeedback.html">enableFeedback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether the tooltip should provide acoustic and/or haptic feedback.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="excludeFromSemantics" class="property">
+  <span class="name"><a href="material/Tooltip/excludeFromSemantics.html">excludeFromSemantics</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether the tooltip's <a href="material/Tooltip/message.html">message</a> or <a href="material/Tooltip/richMessage.html">richMessage</a> should be excluded from
+the semantics tree.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="height" class="property">
+  <span class="name"><a href="material/Tooltip/height.html">height</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The height of the tooltip's <a href="material/Tooltip/child.html">child</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="margin" class="property">
+  <span class="name"><a href="material/Tooltip/margin.html">margin</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  The empty space that surrounds the tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="message" class="property">
+  <span class="name"><a href="material/Tooltip/message.html">message</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The text to display in the tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTriggered" class="property">
+  <span class="name"><a href="material/Tooltip/onTriggered.html">onTriggered</a></span>
+  <span class="signature">&#8594; <a href="material/TooltipTriggeredCallback.html">TooltipTriggeredCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when the Tooltip is triggered.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="material/Tooltip/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  The amount of space by which to inset the tooltip's <a href="material/Tooltip/child.html">child</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="preferBelow" class="property">
+  <span class="name"><a href="material/Tooltip/preferBelow.html">preferBelow</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether the tooltip defaults to being displayed below the widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="richMessage" class="property">
+  <span class="name"><a href="material/Tooltip/richMessage.html">richMessage</a></span>
+  <span class="signature">&#8594; <a href="painting/InlineSpan-class.html">InlineSpan</a>?</span> 
+
+</dt>
+<dd>
+  The rich text to display in the tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="showDuration" class="property">
+  <span class="name"><a href="material/Tooltip/showDuration.html">showDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a>?</span> 
+
+</dt>
+<dd>
+  The length of time that the tooltip will be shown after a long press is
+released (if triggerMode is <a href="material/TooltipTriggerMode.html">TooltipTriggerMode.longPress</a>) or a tap is
+released (if triggerMode is <a href="material/TooltipTriggerMode.html">TooltipTriggerMode.tap</a>) or mouse pointer
+exits the widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textAlign" class="property">
+  <span class="name"><a href="material/Tooltip/textAlign.html">textAlign</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/TextAlign.html">TextAlign</a>?</span> 
+
+</dt>
+<dd>
+  How the message of the tooltip is aligned horizontally.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textStyle" class="property">
+  <span class="name"><a href="material/Tooltip/textStyle.html">textStyle</a></span>
+  <span class="signature">&#8594; <a href="painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  The style to use for the message of the tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="triggerMode" class="property">
+  <span class="name"><a href="material/Tooltip/triggerMode.html">triggerMode</a></span>
+  <span class="signature">&#8594; <a href="material/TooltipTriggerMode.html">TooltipTriggerMode</a>?</span> 
+
+</dt>
+<dd>
+  The <a href="material/TooltipTriggerMode.html">TooltipTriggerMode</a> that will show the tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="verticalOffset" class="property">
+  <span class="name"><a href="material/Tooltip/verticalOffset.html">verticalOffset</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The vertical gap between the widget and the displayed tooltip.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="waitDuration" class="property">
+  <span class="name"><a href="material/Tooltip/waitDuration.html">waitDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a>?</span> 
+
+</dt>
+<dd>
+  The length of time that a pointer must hover over a tooltip's widget
+before the tooltip will be shown.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="material/Tooltip/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/State-class.html">State</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/Tooltip-class.html">Tooltip</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="material/Tooltip/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="dismissAllToolTips" class="callable">
+  <span class="name"><a href="material/Tooltip/dismissAllToolTips.html">dismissAllToolTips</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Dismiss all of the tooltips that are currently shown on the screen,
+including those with mouse cursors currently hovering over them.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">Tooltip class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SlideTransition.1",
+    "element": "SlideTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 170,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [SlideTransition] as seen in the video\nabove:",
+    "file": "cupertino.SlideTransition.1.dart"
+}

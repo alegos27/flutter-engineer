@@ -1,0 +1,13 @@
+{
+    "id": "material.GridView.4",
+    "element": "GridView",
+    "sourcePath": "lib/src/widgets/scroll_view.dart",
+    "sourceLine": 1905,
+    "channel": "stable",
+    "serial": "4",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a custom [SliverGridDelegate].",
+    "file": "material.GridView.4.dart"
+}

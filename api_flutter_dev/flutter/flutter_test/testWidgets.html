@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the testWidgets function from the flutter_test library, for the Dart programming language.">
+  <title>testWidgets function - flutter_test library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li class="self-crumb">testWidgets function</li>
+  </ol>
+  <div class="self-name">testWidgets</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="flutter_test&#47;flutter_test-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter_test/lib/src/widget_tester.dart#L129"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">testWidgets</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="meta/isTest-constant.html">isTest</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">testWidgets</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="testWidgets-param-description"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">description</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-callback"><span class="type-annotation"><a href="flutter_test/WidgetTesterCallback.html">WidgetTesterCallback</a></span> <span class="parameter-name">callback</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-skip">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">skip</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-timeout"><span class="type-annotation"><a href="test_api.scaffolding/Timeout-class.html">Timeout</a>?</span> <span class="parameter-name">timeout</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-semanticsEnabled"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">semanticsEnabled</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-variant"><span class="type-annotation"><a href="flutter_test/TestVariant-class.html">TestVariant</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a>?</span>&gt;</span></span> <span class="parameter-name">variant</span> = <span class="default-value">const DefaultTestVariant()</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-tags"><span class="type-annotation">dynamic</span> <span class="parameter-name">tags</span>, </span></li>
+<li><span class="parameter" id="testWidgets-param-retry"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">retry</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Runs the <code>callback</code> inside the Flutter test environment.</p>
+<p>Use this function for testing custom <a href="widgets/StatelessWidget-class.html">StatelessWidget</a>s and
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a>s.</p>
+<p>The callback can be asynchronous (using <code>async</code>/<code>await</code> or
+using explicit <a href="dart-async/Future-class.html">Future</a>s).</p>
+<p>The <code>timeout</code> argument specifies the backstop timeout implemented by the
+<code>test</code> package. If set, it should be relatively large (minutes). It defaults
+to ten minutes for tests run by <code>flutter test</code>, and is unlimited for tests
+run by <code>flutter run</code>; specifically, it defaults to
+<a href="flutter_test/TestWidgetsFlutterBinding/defaultTestTimeout.html">TestWidgetsFlutterBinding.defaultTestTimeout</a>.</p>
+<p>If the <code>semanticsEnabled</code> parameter is set to <code>true</code>,
+<a href="flutter_test/WidgetController/ensureSemantics.html">WidgetTester.ensureSemantics</a> will have been called before the tester is
+passed to the <code>callback</code>, and that handle will automatically be disposed
+after the callback is finished. It defaults to true.</p>
+<p>This function uses the <a href="flutter_test/test.html">test</a> function in the test package to
+register the given callback as a test. The callback, when run,
+will be given a new instance of <a href="flutter_test/WidgetTester-class.html">WidgetTester</a>. The <a href="flutter_test/find-constant.html">find</a> object
+provides convenient widget <a href="flutter_test/Finder-class.html">Finder</a>s for use with the
+<a href="flutter_test/WidgetTester-class.html">WidgetTester</a>.</p>
+<p>When the <code>variant</code> argument is set, <a href="flutter_test/testWidgets.html">testWidgets</a> will run the test once for
+each value of the <a href="flutter_test/TestVariant/values.html">TestVariant.values</a>. If <code>variant</code> is not set, the test
+will be run once using the base test environment.</p>
+<p>If the <code>tags</code> are passed, they declare user-defined tags that are implemented by
+the <code>test</code> package.</p>
+<h2 id="sample-code">Sample code</h2>
+<pre class="language-dart"><code class="language-dart">testWidgets('MyWidget', (WidgetTester tester) async {
+  await tester.pumpWidget(const MyWidget());
+  await tester.tap(find.text('Save'));
+  expect(find.text('Success'), findsOneWidget);
+});
+</code></pre>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@isTest
+void testWidgets(
+  String description,
+  WidgetTesterCallback callback, {
+  bool? skip,
+  test_package.Timeout? timeout,
+  bool semanticsEnabled = true,
+  TestVariant&lt;Object?&gt; variant = const DefaultTestVariant(),
+  dynamic tags,
+  int? retry,
+}) {
+  assert(variant.values.isNotEmpty, &#39;There must be at least one value to test in the testing variant.&#39;);
+  final TestWidgetsFlutterBinding binding = TestWidgetsFlutterBinding.ensureInitialized();
+  final WidgetTester tester = WidgetTester._(binding);
+  for (final dynamic value in variant.values) {
+    final String variationDescription = variant.describeValue(value);
+    &#47;&#47; IDEs may make assumptions about the format of this suffix in order to
+    &#47;&#47; support running tests directly from the editor (where they may have
+    &#47;&#47; access to only the test name, provided by the analysis server).
+    &#47;&#47; See https:&#47;&#47;github.com&#47;flutter&#47;flutter&#47;issues&#47;86659.
+    final String combinedDescription = variationDescription.isNotEmpty
+        ? &#39;$description (variant: $variationDescription)&#39;
+        : description;
+    test(
+      combinedDescription,
+      () {
+        tester._testDescription = combinedDescription;
+        SemanticsHandle? semanticsHandle;
+        tester._recordNumberOfSemanticsHandles();
+        if (semanticsEnabled) {
+          semanticsHandle = tester.ensureSemantics();
+        }
+        test_package.addTearDown(binding.postTest);
+        return binding.runTest(
+          () async {
+            binding.reset(); &#47;&#47; TODO(ianh): the binding should just do this itself in _runTest
+            debugResetSemanticsIdCounter();
+            Object? memento;
+            try {
+              memento = await variant.setUp(value);
+              await callback(tester);
+            } finally {
+              await variant.tearDown(value, memento);
+            }
+            semanticsHandle?.dispose();
+          },
+          tester._endOfTestVerifications,
+          description: combinedDescription,
+        );
+      },
+      skip: skip,
+      timeout: timeout ?? binding.defaultTestTimeout,
+      tags: tags,
+      retry: retry,
+    );
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+    <li class="self-crumb">testWidgets function</li>
+</ol>
+
+
+    <h5>flutter_test library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

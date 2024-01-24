@@ -1,0 +1,13 @@
+{
+    "id": "material.Draggable.1",
+    "element": "Draggable",
+    "sourcePath": "lib/src/widgets/drag_target.dart",
+    "sourceLine": 165,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following example has a [Draggable] widget along with a [DragTarget]\nin a row demonstrating an incremented `acceptedData` integer value when\nyou drag the element to the target.",
+    "file": "material.Draggable.1.dart"
+}

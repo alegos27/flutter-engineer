@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Action.overridable constructor from Class Action from the widgets library, for the Dart programming language.">
+  <title>Action.overridable constructor - Action - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/Action-class.html">Action<span class="signature">&lt;<wbr><span class="type-parameter">T extends Intent</span>&gt;</span></a></li>
+    <li class="self-crumb">Action.overridable factory constructor</li>
+  </ol>
+  <div class="self-name">Action.overridable</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;Action-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/actions.dart#L170"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-constructor">Action&lt;<wbr><span class="type-parameter">T extends Intent</span>&gt;.overridable</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">Action&lt;<wbr><span class="type-parameter">T extends Intent</span>&gt;.overridable</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="overridable-param-defaultAction">{<span>required</span> <span class="type-annotation"><a href="widgets/Action-class.html">Action</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">defaultAction</span>, </span></li>
+<li><span class="parameter" id="overridable-param-context"><span>required</span> <span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>}</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates an <a href="widgets/Action-class.html">Action</a> that allows itself to be overridden by the closest
+ancestor <a href="widgets/Action-class.html">Action</a> in the given <code>context</code> that handles the same <a href="widgets/Intent-class.html">Intent</a>,
+if one exists.</p>
+<p>When invoked, the resulting <a href="widgets/Action-class.html">Action</a> tries to find the closest <a href="widgets/Action-class.html">Action</a> in
+the given <code>context</code> that handles the same type of <a href="widgets/Intent-class.html">Intent</a> as the
+<code>defaultAction</code>, then calls its <a href="widgets/Action/invoke.html">Action.invoke</a> method. When no override
+<a href="widgets/Action-class.html">Action</a>s can be found, it invokes the <code>defaultAction</code>.</p>
+<p>An overridable action delegates everything to its override if one exists,
+and has the same behavior as its <code>defaultAction</code> otherwise. For this
+reason, the override has full control over whether and how an <a href="widgets/Intent-class.html">Intent</a>
+should be handled, or a key event should be consumed. An override
+<a href="widgets/Action-class.html">Action</a>'s <a href="widgets/Action/callingAction.html">callingAction</a> property will be set to the <a href="widgets/Action-class.html">Action</a> it
+currently overrides, giving it access to the default behavior. See the
+<a href="widgets/Action/callingAction.html">callingAction</a> property for an example.</p>
+<p>The <code>context</code> argument is the <a href="widgets/BuildContext-class.html">BuildContext</a> to find the override with. It
+is typically a <a href="widgets/BuildContext-class.html">BuildContext</a> above the <a href="widgets/Actions-class.html">Actions</a> widget that contains
+this overridable <a href="widgets/Action-class.html">Action</a>.</p>
+<p>The <code>defaultAction</code> argument is the <a href="widgets/Action-class.html">Action</a> to be invoked where there's
+no ancestor <a href="widgets/Action-class.html">Action</a>s can't be found in <code>context</code> that handle the same
+type of <a href="widgets/Intent-class.html">Intent</a>.</p>
+<p>This is useful for providing a set of default <a href="widgets/Action-class.html">Action</a>s in a leaf widget
+to allow further overriding, or to allow the <a href="widgets/Intent-class.html">Intent</a> to propagate to
+parent widgets that also support this <a href="widgets/Intent-class.html">Intent</a>.</p>
+<p>
+<a name="widgets.Action.overridable.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows how to implement a rudimentary <code>CopyableText</code> widget
+that responds to Ctrl-C by copying its own content to the clipboard.</p>
+<p>if <code>CopyableText</code> is to be provided in a package, developers using the
+widget may want to change how copying is handled. As the author of the
+package, you can enable that by making the corresponding <a href="widgets/Action-class.html">Action</a>
+overridable. In the second part of the code sample, three <code>CopyableText</code>
+widgets are used to build a verification code widget which overrides the
+"copy" action by copying the combined numbers from all three <code>CopyableText</code>
+widgets.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.Action.overridable.1');" onclick="fixHref(this, 'widgets.Action.overridable.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.Action.overridable.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.Action.overridable.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory Action.overridable({
+  required Action&lt;T&gt; defaultAction,
+  required BuildContext context,
+}) {
+  return defaultAction._makeOverridableAction(context);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/Action-class.html">Action<span class="signature">&lt;<wbr><span class="type-parameter">T extends Intent</span>&gt;</span></a></li>
+    <li class="self-crumb">Action.overridable factory constructor</li>
+</ol>
+
+
+    <h5>Action class</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

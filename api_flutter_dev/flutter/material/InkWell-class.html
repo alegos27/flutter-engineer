@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the InkWell class from the material library, for the Dart programming language.">
+  <title>InkWell class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">InkWell class</li>
+  </ol>
+  <div class="self-name">InkWell</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;InkWell-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/ink_well.dart#L1449"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">InkWell</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A rectangular area of a <a href="material/Material-class.html">Material</a> that responds to touch.</p>
+<p>For a variant of this widget that does not clip splashes, see <a href="material/InkResponse-class.html">InkResponse</a>.</p>
+<p>The following diagram shows how an <a href="material/InkWell-class.html">InkWell</a> looks when tapped, when using
+default values.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/material/ink_well.png" alt="The highlight is a rectangle the size of the box."></p>
+<p>The <a href="material/InkWell-class.html">InkWell</a> widget must have a <a href="material/Material-class.html">Material</a> widget as an ancestor. The
+<a href="material/Material-class.html">Material</a> widget is where the ink reactions are actually painted. This
+matches the Material Design premise wherein the <a href="material/Material-class.html">Material</a> is what is
+actually reacting to touches by spreading ink.</p>
+<p>If a Widget uses this class directly, it should include the following line
+at the top of its build function to call <a href="material/debugCheckHasMaterial.html">debugCheckHasMaterial</a>:</p>
+<pre class="language-dart"><code class="language-dart">assert(debugCheckHasMaterial(context));
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="the-ink-splashes-arent-visible">The ink splashes aren't visible!</h3>
+<p>If there is an opaque graphic, e.g. painted using a <a href="widgets/Container-class.html">Container</a>, <a href="widgets/Image-class.html">Image</a>, or
+<a href="widgets/DecoratedBox-class.html">DecoratedBox</a>, between the <a href="material/Material-class.html">Material</a> widget and the <a href="material/InkWell-class.html">InkWell</a> widget, then
+the splash won't be visible because it will be under the opaque graphic.
+This is because ink splashes draw on the underlying <a href="material/Material-class.html">Material</a> itself, as
+if the ink was spreading inside the material.</p>
+<p>The <a href="material/Ink-class.html">Ink</a> widget can be used as a replacement for <a href="widgets/Image-class.html">Image</a>, <a href="widgets/Container-class.html">Container</a>, or
+<a href="widgets/DecoratedBox-class.html">DecoratedBox</a> to ensure that the image or decoration also paints in the
+<a href="material/Material-class.html">Material</a> itself, below the ink.</p>
+<p>If this is not possible for some reason, e.g. because you are using an
+opaque <a href="widgets/CustomPaint-class.html">CustomPaint</a> widget, alternatively consider using a second
+<a href="material/Material-class.html">Material</a> above the opaque widget but below the <a href="material/InkWell-class.html">InkWell</a> (as an
+ancestor to the ink well). The <a href="material/MaterialType.html">MaterialType.transparency</a> material
+kind can be used for this purpose.</p>
+<h3 id="inkwell-isnt-clipping-properly">InkWell isn't clipping properly</h3>
+<p>If you want to clip an InkWell or any <a href="material/Ink-class.html">Ink</a> widgets you need to keep in mind
+that the <a href="material/Material-class.html">Material</a> that the Ink will be printed on is responsible for clipping.
+This means you can't wrap the <a href="material/Ink-class.html">Ink</a> widget in a clipping widget directly,
+since this will leave the <a href="material/Material-class.html">Material</a> not clipped (and by extension the printed
+<a href="material/Ink-class.html">Ink</a> widgets as well).</p>
+<p>An easy solution is to deliberately wrap the <a href="material/Ink-class.html">Ink</a> widgets you want to clip
+in a <a href="material/Material-class.html">Material</a>, and wrap that in a clipping widget instead. See <a href="material/Ink-class.html">Ink</a> for
+an example.</p>
+<h3 id="the-ink-splashes-dont-track-the-size-of-an-animated-container">The ink splashes don't track the size of an animated container</h3>
+<p>If the size of an InkWell's <a href="material/Material-class.html">Material</a> ancestor changes while the InkWell's
+splashes are expanding, you may notice that the splashes aren't clipped
+correctly. This can't be avoided.</p>
+<p>An example of this situation is as follows:</p>
+<p>
+<a name="material.InkWell.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+Tap the container to cause it to grow. Then, tap it again and hold before
+the widget reaches its maximum size to observe the clipped ink splash.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.InkWell.1');" onclick="fixHref(this, 'material.InkWell.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.InkWell.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.InkWell.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>An InkWell's splashes will not properly update to conform to changes if the
+size of its underlying <a href="material/Material-class.html">Material</a>, where the splashes are rendered, changes
+during animation. You should avoid using InkWells within <a href="material/Material-class.html">Material</a> widgets
+that are changing size.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/GestureDetector-class.html">GestureDetector</a>, for listening for gestures without ink splashes.</li>
+<li><a href="material/ElevatedButton-class.html">ElevatedButton</a> and <a href="material/TextButton-class.html">TextButton</a>, two kinds of buttons in Material Design.</li>
+<li><a href="material/InkResponse-class.html">InkResponse</a>, a variant of <a href="material/InkWell-class.html">InkWell</a> that doesn't force a rectangular
+shape on the ink reaction.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatelessWidget-class.html">StatelessWidget</a></li>
+        <li><a href="material/InkResponse-class.html">InkResponse</a></li>
+      <li>InkWell</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="InkWell" class="callable">
+          <span class="name"><a href="material/InkWell/InkWell.html">InkWell</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-child"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">child</span>, </span><span class="parameter" id="-param-onTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onTap</span>, </span><span class="parameter" id="-param-onDoubleTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onDoubleTap</span>, </span><span class="parameter" id="-param-onLongPress"><span class="type-annotation"><a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> <span class="parameter-name">onLongPress</span>, </span><span class="parameter" id="-param-onTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onTapDown</span>, </span><span class="parameter" id="-param-onTapUp"><span class="type-annotation"><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> <span class="parameter-name">onTapUp</span>, </span><span class="parameter" id="-param-onTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onTapCancel</span>, </span><span class="parameter" id="-param-onSecondaryTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onSecondaryTap</span>, </span><span class="parameter" id="-param-onSecondaryTapUp"><span class="type-annotation"><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> <span class="parameter-name">onSecondaryTapUp</span>, </span><span class="parameter" id="-param-onSecondaryTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onSecondaryTapDown</span>, </span><span class="parameter" id="-param-onSecondaryTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onSecondaryTapCancel</span>, </span><span class="parameter" id="-param-onHighlightChanged"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> <span class="parameter-name">onHighlightChanged</span>, </span><span class="parameter" id="-param-onHover"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> <span class="parameter-name">onHover</span>, </span><span class="parameter" id="-param-mouseCursor"><span class="type-annotation"><a href="services/MouseCursor-class.html">MouseCursor</a>?</span> <span class="parameter-name">mouseCursor</span>, </span><span class="parameter" id="-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="-param-overlayColor"><span class="type-annotation"><a href="material/MaterialStateProperty-class.html">MaterialStateProperty</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Color-class.html">Color</a>?</span>&gt;</span>?</span> <span class="parameter-name">overlayColor</span>, </span><span class="parameter" id="-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="-param-splashFactory"><span class="type-annotation"><a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a>?</span> <span class="parameter-name">splashFactory</span>, </span><span class="parameter" id="-param-radius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">radius</span>, </span><span class="parameter" id="-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadius-class.html">BorderRadius</a>?</span> <span class="parameter-name">borderRadius</span>, </span><span class="parameter" id="-param-customBorder"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">customBorder</span>, </span><span class="parameter" id="-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="-param-canRequestFocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">canRequestFocus</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-onFocusChange"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> <span class="parameter-name">onFocusChange</span>, </span><span class="parameter" id="-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-statesController"><span class="type-annotation"><a href="material/MaterialStatesController-class.html">MaterialStatesController</a>?</span> <span class="parameter-name">statesController</span>, </span><span class="parameter" id="-param-hoverDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a>?</span> <span class="parameter-name">hoverDuration</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates an ink well.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="autofocus" class="property inherited">
+  <span class="name"><a href="material/InkResponse/autofocus.html">autofocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  True if this widget will be selected as the initial focus when no other
+node in its scope is currently focused.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="borderRadius" class="property inherited">
+  <span class="name"><a href="material/InkResponse/borderRadius.html">borderRadius</a></span>
+  <span class="signature">&#8594; <a href="painting/BorderRadius-class.html">BorderRadius</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The border radius of the containing rectangle. This is effective only if
+<a href="material/InkResponse/highlightShape.html">highlightShape</a> is <a href="painting/BoxShape.html">BoxShape.rectangle</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="canRequestFocus" class="property inherited">
+  <span class="name"><a href="material/InkResponse/canRequestFocus.html">canRequestFocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  If true, this widget may request the primary focus.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="child" class="property inherited">
+  <span class="name"><a href="material/InkResponse/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The widget below this widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="containedInkWell" class="property inherited">
+  <span class="name"><a href="material/InkResponse/containedInkWell.html">containedInkWell</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether this ink response should be clipped its bounds.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="customBorder" class="property inherited">
+  <span class="name"><a href="material/InkResponse/customBorder.html">customBorder</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The custom clip border.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="enableFeedback" class="property inherited">
+  <span class="name"><a href="material/InkResponse/enableFeedback.html">enableFeedback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether detected gestures should provide acoustic and/or haptic feedback.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="excludeFromSemantics" class="property inherited">
+  <span class="name"><a href="material/InkResponse/excludeFromSemantics.html">excludeFromSemantics</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether to exclude the gestures introduced by this widget from the
+semantics tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="focusColor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/focusColor.html">focusColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The color of the ink response when the parent widget is focused. If this
+property is null then the focus color of the theme,
+<a href="material/ThemeData/focusColor.html">ThemeData.focusColor</a>, will be used.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="focusNode" class="property inherited">
+  <span class="name"><a href="material/InkResponse/focusNode.html">focusNode</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusNode-class.html">FocusNode</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  An optional focus node to use as the focus node for this widget.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="highlightColor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/highlightColor.html">highlightColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The highlight color of the ink response when pressed. If this property is
+null then the highlight color of the theme, <a href="material/ThemeData/highlightColor.html">ThemeData.highlightColor</a>,
+will be used.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="highlightShape" class="property inherited">
+  <span class="name"><a href="material/InkResponse/highlightShape.html">highlightShape</a></span>
+  <span class="signature">&#8594; <a href="painting/BoxShape.html">BoxShape</a></span> 
+
+</dt>
+<dd class="inherited">
+  The shape (e.g., circle, rectangle) to use for the highlight drawn around
+this part of the material when pressed, hovered over, or focused.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hoverColor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/hoverColor.html">hoverColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The color of the ink response when a pointer is hovering over it. If this
+property is null then the hover color of the theme,
+<a href="material/ThemeData/hoverColor.html">ThemeData.hoverColor</a>, will be used.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hoverDuration" class="property inherited">
+  <span class="name"><a href="material/InkResponse/hoverDuration.html">hoverDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The duration of the animation that animates the hover effect.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="mouseCursor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/mouseCursor.html">mouseCursor</a></span>
+  <span class="signature">&#8594; <a href="services/MouseCursor-class.html">MouseCursor</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The cursor for a mouse pointer when it enters or is hovering over the
+widget.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onDoubleTap" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onDoubleTap.html">onDoubleTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user double taps this part of the material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onFocusChange" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onFocusChange.html">onFocusChange</a></span>
+  <span class="signature">&#8594; <a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  Handler called when the focus changes.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onHighlightChanged" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onHighlightChanged.html">onHighlightChanged</a></span>
+  <span class="signature">&#8594; <a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when this part of the material either becomes highlighted or stops
+being highlighted.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onHover" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onHover.html">onHover</a></span>
+  <span class="signature">&#8594; <a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when a pointer enters or exits the ink response area.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onLongPress" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onLongPress.html">onLongPress</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user long-presses on this part of the material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTap" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onSecondaryTap.html">onSecondaryTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user taps this part of the material with a secondary button.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapCancel" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onSecondaryTapCancel.html">onSecondaryTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user cancels a secondary button tap that was started on
+this part of the material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapDown" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onSecondaryTapDown.html">onSecondaryTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user taps down on this part of the material with a
+secondary button.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapUp" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onSecondaryTapUp.html">onSecondaryTapUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user releases a secondary button tap that was started on
+this part of the material. <a href="material/InkResponse/onSecondaryTap.html">onSecondaryTap</a> is called immediately after.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onTap" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onTap.html">onTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user taps this part of the material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onTapCancel" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onTapCancel.html">onTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user cancels a tap that was started on this part of the
+material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onTapDown" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onTapDown.html">onTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user taps down this part of the material.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onTapUp" class="property inherited">
+  <span class="name"><a href="material/InkResponse/onTapUp.html">onTapUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Called when the user releases a tap that was started on this part of the
+material. <a href="material/InkResponse/onTap.html">onTap</a> is called immediately after.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="overlayColor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/overlayColor.html">overlayColor</a></span>
+  <span class="signature">&#8594; <a href="material/MaterialStateProperty-class.html">MaterialStateProperty</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/Color-class.html">Color</a>?</span>&gt;</span>?</span> 
+
+</dt>
+<dd class="inherited">
+  Defines the ink response focus, hover, and splash colors.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="radius" class="property inherited">
+  <span class="name"><a href="material/InkResponse/radius.html">radius</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The radius of the ink splash.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="splashColor" class="property inherited">
+  <span class="name"><a href="material/InkResponse/splashColor.html">splashColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The splash color of the ink response. If this property is null then the
+splash color of the theme, <a href="material/ThemeData/splashColor.html">ThemeData.splashColor</a>, will be used.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="splashFactory" class="property inherited">
+  <span class="name"><a href="material/InkResponse/splashFactory.html">splashFactory</a></span>
+  <span class="signature">&#8594; <a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Defines the appearance of the splash.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="statesController" class="property inherited">
+  <span class="name"><a href="material/InkResponse/statesController.html">statesController</a></span>
+  <span class="signature">&#8594; <a href="material/MaterialStatesController-class.html">MaterialStatesController</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Represents the interactive "state" of this widget in terms of
+a set of <a href="material/MaterialState.html">MaterialState</a>s, like <a href="material/MaterialState.html">MaterialState.pressed</a> and
+<a href="material/MaterialState.html">MaterialState.focused</a>.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable inherited">
+  <span class="name"><a href="material/InkResponse/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/Widget-class.html">Widget</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Describes the part of the user interface represented by this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatelessWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatelessElement-class.html">StatelessElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugCheckContext" class="callable inherited">
+  <span class="name"><a href="material/InkResponse/debugCheckContext.html">debugCheckContext</a></span><span class="signature">(<wbr><span class="parameter" id="debugCheckContext-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Asserts that the given context satisfies the prerequisites for
+this class.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="getRectCallback" class="callable inherited">
+  <span class="name"><a href="material/InkResponse/getRectCallback.html">getRectCallback</a></span><span class="signature">(<wbr><span class="parameter" id="getRectCallback-param-referenceBox"><span class="type-annotation"><a href="rendering/RenderBox-class.html">RenderBox</a></span> <span class="parameter-name">referenceBox</span></span>)
+    <span class="returntype parameter">&#8594; <a href="material/RectCallback.html">RectCallback</a>?</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The rectangle to use for the highlight effect and for clipping
+the splash effects if <a href="material/InkResponse/containedInkWell.html">containedInkWell</a> is true.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">InkWell class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

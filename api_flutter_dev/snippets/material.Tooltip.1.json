@@ -1,0 +1,13 @@
+{
+    "id": "material.Tooltip.1",
+    "element": "Tooltip",
+    "sourcePath": "lib/src/material/tooltip.dart",
+    "sourceLine": 150,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example show a basic [Tooltip] which has a [Text] as child.\n[message] contains your label to be shown by the tooltip when\nthe child that Tooltip wraps is hovered over on web or desktop. On mobile,\nthe tooltip is shown when the widget is long pressed.",
+    "file": "material.Tooltip.1.dart"
+}

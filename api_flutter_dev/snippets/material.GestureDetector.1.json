@@ -1,0 +1,13 @@
+{
+    "id": "material.GestureDetector.1",
+    "element": "GestureDetector",
+    "sourcePath": "lib/src/widgets/gesture_detector.dart",
+    "sourceLine": 211,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example contains a black light bulb wrapped in a [GestureDetector]. It\nturns the light bulb yellow when the \"TURN LIGHT ON\" button is tapped by\nsetting the `_lights` field, and off again when \"TURN LIGHT OFF\" is tapped.",
+    "file": "material.GestureDetector.1.dart"
+}

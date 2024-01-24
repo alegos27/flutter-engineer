@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the showBottomSheet function from the material library, for the Dart programming language.">
+  <title>showBottomSheet function - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt; function</li>
+  </ol>
+  <div class="self-name">showBottomSheet</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/bottom_sheet.dart#L1319"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt;</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="material/PersistentBottomSheetController-class.html">PersistentBottomSheetController</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+<span class="name ">showBottomSheet</span>&lt;<wbr><span class="type-parameter">T</span>&gt;(<wbr><ol class="parameter-list"><li><span class="parameter" id="showBottomSheet-param-context">{<span>required</span> <span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-builder"><span>required</span> <span class="type-annotation"><a href="widgets/WidgetBuilder.html">WidgetBuilder</a></span> <span class="parameter-name">builder</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a>?</span> <span class="parameter-name">clipBehavior</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-enableDrag"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableDrag</span>, </span></li>
+<li><span class="parameter" id="showBottomSheet-param-transitionAnimationController"><span class="type-annotation"><a href="animation/AnimationController-class.html">AnimationController</a>?</span> <span class="parameter-name">transitionAnimationController</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Shows a Material Design bottom sheet in the nearest <a href="material/Scaffold-class.html">Scaffold</a> ancestor. To
+show a persistent bottom sheet, use the <a href="material/Scaffold/bottomSheet.html">Scaffold.bottomSheet</a>.</p>
+<p>Returns a controller that can be used to close and otherwise manipulate the
+bottom sheet.</p>
+<p>The optional <code>backgroundColor</code>, <code>elevation</code>, <code>shape</code>, <code>clipBehavior</code>,
+<code>constraints</code> and <code>transitionAnimationController</code>
+parameters can be passed in to customize the appearance and behavior of
+persistent bottom sheets (see the documentation for these on <a href="material/BottomSheet-class.html">BottomSheet</a>
+for more details).</p>
+<p>The <code>enableDrag</code> parameter specifies whether the bottom sheet can be
+dragged up and down and dismissed by swiping downwards.</p>
+<p>To rebuild the bottom sheet (e.g. if it is stateful), call
+<a href="material/ScaffoldFeatureController/setState.html">PersistentBottomSheetController.setState</a> on the controller returned by
+this method.</p>
+<p>The new bottom sheet becomes a <a href="widgets/LocalHistoryEntry-class.html">LocalHistoryEntry</a> for the enclosing
+<a href="widgets/ModalRoute-class.html">ModalRoute</a> and a back button is added to the app bar of the <a href="material/Scaffold-class.html">Scaffold</a>
+that closes the bottom sheet.</p>
+<p>To create a persistent bottom sheet that is not a <a href="widgets/LocalHistoryEntry-class.html">LocalHistoryEntry</a> and
+does not add a back button to the enclosing Scaffold's app bar, use the
+<a href="material/Scaffold/bottomSheet.html">Scaffold.bottomSheet</a> constructor parameter.</p>
+<p>A closely related widget is a modal bottom sheet, which is an alternative
+to a menu or a dialog and prevents the user from interacting with the rest
+of the app. Modal bottom sheets can be created and displayed with the
+<a href="material/showModalBottomSheet.html">showModalBottomSheet</a> function.</p>
+<p>The <code>context</code> argument is used to look up the <a href="material/Scaffold-class.html">Scaffold</a> for the bottom
+sheet. It is only used when the method is called. Its corresponding widget
+can be safely removed from the tree before the bottom sheet is closed.</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/BottomSheet-class.html">BottomSheet</a>, which becomes the parent of the widget returned by the
+<code>builder</code>.</li>
+<li><a href="material/showModalBottomSheet.html">showModalBottomSheet</a>, which can be used to display a modal bottom
+sheet.</li>
+<li><a href="material/Scaffold/of.html">Scaffold.of</a>, for information about how to obtain the <a href="widgets/BuildContext-class.html">BuildContext</a>.</li>
+<li>The Material 2 spec at <a href="https://m2.material.io/components/sheets-bottom">m2.material.io/components/sheets-bottom</a>.</li>
+<li>The Material 3 spec at <a href="https://m3.material.io/components/bottom-sheets/overview">m3.material.io/components/bottom-sheets/overview</a>.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">PersistentBottomSheetController&lt;T&gt; showBottomSheet&lt;T&gt;({
+  required BuildContext context,
+  required WidgetBuilder builder,
+  Color? backgroundColor,
+  double? elevation,
+  ShapeBorder? shape,
+  Clip? clipBehavior,
+  BoxConstraints? constraints,
+  bool? enableDrag,
+  AnimationController? transitionAnimationController,
+}) {
+  assert(debugCheckHasScaffold(context));
+
+  return Scaffold.of(context).showBottomSheet&lt;T&gt;(
+    builder,
+    backgroundColor: backgroundColor,
+    elevation: elevation,
+    shape: shape,
+    clipBehavior: clipBehavior,
+    constraints: constraints,
+    enableDrag: enableDrag,
+    transitionAnimationController: transitionAnimationController,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showBottomSheet&lt;<wbr><span class="type-parameter">T</span>&gt; function</li>
+</ol>
+
+
+    <h5>material library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

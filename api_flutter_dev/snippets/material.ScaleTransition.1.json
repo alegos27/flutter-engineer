@@ -1,0 +1,13 @@
+{
+    "id": "material.ScaleTransition.1",
+    "element": "ScaleTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 339,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following code implements the [ScaleTransition] as seen in the video\nabove:",
+    "file": "material.ScaleTransition.1.dart"
+}

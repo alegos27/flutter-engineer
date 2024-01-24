@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the DropdownButton class from the material library, for the Dart programming language.">
+  <title>DropdownButton class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">DropdownButton<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+  </ol>
+  <div class="self-name">DropdownButton</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;DropdownButton-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/dropdown.dart#L900"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">DropdownButton&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A Material Design button for selecting from a list of items.</p>
+<p>A dropdown button lets the user select from a number of items. The button
+shows the currently selected item as well as an arrow that opens a menu for
+selecting another item.</p>
+<h2 id="updating-to-dropdownmenu">Updating to <a href="material/DropdownMenu-class.html">DropdownMenu</a></h2>
+<p>There is a Material 3 version of this component,
+<a href="material/DropdownMenu-class.html">DropdownMenu</a> that is preferred for applications that are configured
+for Material 3 (see <a href="material/ThemeData/useMaterial3.html">ThemeData.useMaterial3</a>).
+The <a href="material/DropdownMenu-class.html">DropdownMenu</a> widget's visuals
+are a little bit different, see the Material 3 spec at
+<a href="https://m3.material.io/components/menus/guidelines">m3.material.io/components/menus/guidelines</a> for
+more details.</p>
+<p>The <a href="material/DropdownMenu-class.html">DropdownMenu</a> widget's API is also slightly different.
+To update from <a href="material/DropdownButton-class.html">DropdownButton</a> to <a href="material/DropdownMenu-class.html">DropdownMenu</a>, you will
+need to make the following changes:</p>
+<ol>
+<li>
+<p>Instead of using <a href="material/DropdownButton/items.html">DropdownButton.items</a>, which
+takes a list of <a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a>s, use
+<a href="material/DropdownMenu/dropdownMenuEntries.html">DropdownMenu.dropdownMenuEntries</a>, which
+takes a list of <a href="material/DropdownMenuEntry-class.html">DropdownMenuEntry</a>'s.</p>
+</li>
+<li>
+<p>Instead of using <a href="material/DropdownButton/onChanged.html">DropdownButton.onChanged</a>,
+use <a href="material/DropdownMenu/onSelected.html">DropdownMenu.onSelected</a>, which is also
+a callback that is called when the user selects an entry.</p>
+</li>
+<li>
+<p>In <a href="material/DropdownMenu-class.html">DropdownMenu</a> it is not required to track
+the current selection in your app's state.
+So, instead of tracking the current selection in
+the <a href="material/DropdownButton/value.html">DropdownButton.value</a> property, you can set the
+<a href="material/DropdownMenu/initialSelection.html">DropdownMenu.initialSelection</a> property to the
+item that should be selected before there is any user action.</p>
+</li>
+<li>
+<p>You may also need to make changes to the styling of the
+<a href="material/DropdownMenu-class.html">DropdownMenu</a>, see the properties in the <a href="material/DropdownMenu-class.html">DropdownMenu</a>
+constructor for more details.</p>
+</li>
+</ol>
+<p>See the sample below for an example of migrating
+from <a href="material/DropdownButton-class.html">DropdownButton</a> to <a href="material/DropdownMenu-class.html">DropdownMenu</a>.</p>
+<h2 id="using-dropdownbutton">Using <a href="material/DropdownButton-class.html">DropdownButton</a></h2>
+<iframe src="https://www.youtube.com/embed/ZzQ_PWrFihg?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+               autoplay; 
+               clipboard-write; 
+               encrypted-media; 
+               gyroscope; 
+               picture-in-picture" allowfullscreen="" style="max-width: 560px;
+               max-height: 315px;
+               width: 100%;
+               height: 100%;
+               aspect-ratio: 560 / 315;">
+</iframe>
+<p>One ancestor must be a <a href="material/Material-class.html">Material</a> widget and typically this is
+provided by the app's <a href="material/Scaffold-class.html">Scaffold</a>.</p>
+<p>The type <code>T</code> is the type of the <a href="material/DropdownButton/value.html">value</a> that each dropdown item represents.
+All the entries in a given menu must represent values with consistent types.
+Typically, an enum is used. Each <a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a> in <a href="material/DropdownButton/items.html">items</a> must be
+specialized with that same type argument.</p>
+<p>The <a href="material/DropdownButton/onChanged.html">onChanged</a> callback should update a state variable that defines the
+dropdown's value. It should also call <a href="widgets/State/setState.html">State.setState</a> to rebuild the
+dropdown with the new value.</p>
+<p>
+<a name="material.DropdownButton.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows a <a href="material/DropdownButton-class.html">DropdownButton</a> with a large arrow icon,
+purple text style, and bold purple underline, whose value is one of "One",
+"Two", "Free", or "Four".</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/material/dropdown_button.png" alt="">
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.DropdownButton.1');" onclick="fixHref(this, 'material.DropdownButton.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.DropdownButton.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.DropdownButton.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>If the <a href="material/DropdownButton/onChanged.html">onChanged</a> callback is null or the list of <a href="material/DropdownButton/items.html">items</a> is null
+then the dropdown button will be disabled, i.e. its arrow will be
+displayed in grey and it will not respond to input. A disabled button
+will display the <a href="material/DropdownButton/disabledHint.html">disabledHint</a> widget if it is non-null. However, if
+<a href="material/DropdownButton/disabledHint.html">disabledHint</a> is null and <a href="material/DropdownButton/hint.html">hint</a> is non-null, the <a href="material/DropdownButton/hint.html">hint</a> widget will
+instead be displayed.</p>
+<p>
+<a name="material.DropdownButton.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This sample shows how you would rewrite the above <a href="material/DropdownButton-class.html">DropdownButton</a>
+to use the <a href="material/DropdownMenu-class.html">DropdownMenu</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.DropdownButton.2');" onclick="fixHref(this, 'material.DropdownButton.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.DropdownButton.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.DropdownButton.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/DropdownButtonFormField-class.html">DropdownButtonFormField</a>, which integrates with the <a href="widgets/Form-class.html">Form</a> widget.</li>
+<li><a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a>, the class used to represent the <a href="material/DropdownButton/items.html">items</a>.</li>
+<li><a href="material/DropdownButtonHideUnderline-class.html">DropdownButtonHideUnderline</a>, which prevents its descendant dropdown buttons
+from displaying their underlines.</li>
+<li><a href="material/ElevatedButton-class.html">ElevatedButton</a>, <a href="material/TextButton-class.html">TextButton</a>, ordinary buttons that trigger a single action.</li>
+<li><a href="https://material.io/design/components/menus.html#dropdown-menu">material.io/design/components/menus.html#dropdown-menu</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>DropdownButton</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="DropdownButton" class="callable">
+          <span class="name"><a href="material/DropdownButton/DropdownButton.html">DropdownButton</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-items"><span>required</span> <span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>?</span> <span class="parameter-name">items</span>, </span><span class="parameter" id="-param-selectedItemBuilder"><span class="type-annotation"><a href="material/DropdownButtonBuilder.html">DropdownButtonBuilder</a>?</span> <span class="parameter-name">selectedItemBuilder</span>, </span><span class="parameter" id="-param-value"><span class="type-annotation">T?</span> <span class="parameter-name">value</span>, </span><span class="parameter" id="-param-hint"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">hint</span>, </span><span class="parameter" id="-param-disabledHint"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">disabledHint</span>, </span><span class="parameter" id="-param-onChanged"><span>required</span> <span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span>?</span> <span class="parameter-name">onChanged</span>, </span><span class="parameter" id="-param-onTap"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onTap</span>, </span><span class="parameter" id="-param-elevation"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">elevation</span> = <span class="default-value">8</span>, </span><span class="parameter" id="-param-style"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">style</span>, </span><span class="parameter" id="-param-underline"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">underline</span>, </span><span class="parameter" id="-param-icon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-iconDisabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconDisabledColor</span>, </span><span class="parameter" id="-param-iconEnabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconEnabledColor</span>, </span><span class="parameter" id="-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">iconSize</span> = <span class="default-value">24.0</span>, </span><span class="parameter" id="-param-isDense"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDense</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isExpanded"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isExpanded</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-itemHeight"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">itemHeight</span> = <span class="default-value">kMinInteractiveDimension</span>, </span><span class="parameter" id="-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="-param-focusNode"><span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">focusNode</span>, </span><span class="parameter" id="-param-autofocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autofocus</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-dropdownColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">dropdownColor</span>, </span><span class="parameter" id="-param-menuMaxHeight"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">menuMaxHeight</span>, </span><span class="parameter" id="-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">AlignmentDirectional.centerStart</span>, </span><span class="parameter" id="-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadius-class.html">BorderRadius</a>?</span> <span class="parameter-name">borderRadius</span>, </span><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">padding</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a dropdown button.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="alignment" class="property">
+  <span class="name"><a href="material/DropdownButton/alignment.html">alignment</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> 
+
+</dt>
+<dd>
+  Defines how the hint or the selected item is positioned within the button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="autofocus" class="property">
+  <span class="name"><a href="material/DropdownButton/autofocus.html">autofocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  True if this widget will be selected as the initial focus when no other
+node in its scope is currently focused.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="borderRadius" class="property">
+  <span class="name"><a href="material/DropdownButton/borderRadius.html">borderRadius</a></span>
+  <span class="signature">&#8594; <a href="painting/BorderRadius-class.html">BorderRadius</a>?</span> 
+
+</dt>
+<dd>
+  Defines the corner radii of the menu's rounded rectangle shape.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="disabledHint" class="property">
+  <span class="name"><a href="material/DropdownButton/disabledHint.html">disabledHint</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  A preferred placeholder widget that is displayed when the dropdown is disabled.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dropdownColor" class="property">
+  <span class="name"><a href="material/DropdownButton/dropdownColor.html">dropdownColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The background color of the dropdown.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="elevation" class="property">
+  <span class="name"><a href="material/DropdownButton/elevation.html">elevation</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The z-coordinate at which to place the menu when open.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableFeedback" class="property">
+  <span class="name"><a href="material/DropdownButton/enableFeedback.html">enableFeedback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether detected gestures should provide acoustic and/or haptic feedback.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="focusColor" class="property">
+  <span class="name"><a href="material/DropdownButton/focusColor.html">focusColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color for the button's <a href="material/Material-class.html">Material</a> when it has the input focus.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="focusNode" class="property">
+  <span class="name"><a href="material/DropdownButton/focusNode.html">focusNode</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusNode-class.html">FocusNode</a>?</span> 
+
+</dt>
+<dd>
+  An optional focus node to use as the focus node for this widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hint" class="property">
+  <span class="name"><a href="material/DropdownButton/hint.html">hint</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  A placeholder widget that is displayed by the dropdown button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="icon" class="property">
+  <span class="name"><a href="material/DropdownButton/icon.html">icon</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The widget to use for the drop-down button's icon.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconDisabledColor" class="property">
+  <span class="name"><a href="material/DropdownButton/iconDisabledColor.html">iconDisabledColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color of any <a href="widgets/Icon-class.html">Icon</a> descendant of <a href="material/DropdownButton/icon.html">icon</a> if this button is disabled,
+i.e. if <a href="material/DropdownButton/onChanged.html">onChanged</a> is null.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconEnabledColor" class="property">
+  <span class="name"><a href="material/DropdownButton/iconEnabledColor.html">iconEnabledColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color of any <a href="widgets/Icon-class.html">Icon</a> descendant of <a href="material/DropdownButton/icon.html">icon</a> if this button is enabled,
+i.e. if <a href="material/DropdownButton/onChanged.html">onChanged</a> is defined.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconSize" class="property">
+  <span class="name"><a href="material/DropdownButton/iconSize.html">iconSize</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The size to use for the drop-down button's down arrow icon button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isDense" class="property">
+  <span class="name"><a href="material/DropdownButton/isDense.html">isDense</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Reduce the button's height.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isExpanded" class="property">
+  <span class="name"><a href="material/DropdownButton/isExpanded.html">isExpanded</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Set the dropdown's inner contents to horizontally fill its parent.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="itemHeight" class="property">
+  <span class="name"><a href="material/DropdownButton/itemHeight.html">itemHeight</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  If null, then the menu item heights will vary according to each menu item's
+intrinsic height.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="items" class="property">
+  <span class="name"><a href="material/DropdownButton/items.html">items</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  The list of items the user can select.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="menuMaxHeight" class="property">
+  <span class="name"><a href="material/DropdownButton/menuMaxHeight.html">menuMaxHeight</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The maximum height of the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onChanged" class="property">
+  <span class="name"><a href="material/DropdownButton/onChanged.html">onChanged</a></span>
+  <span class="signature">&#8594; <a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  Called when the user selects an item.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTap" class="property">
+  <span class="name"><a href="material/DropdownButton/onTap.html">onTap</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when the dropdown button is tapped.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="material/DropdownButton/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Padding around the visible portion of the dropdown widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedItemBuilder" class="property">
+  <span class="name"><a href="material/DropdownButton/selectedItemBuilder.html">selectedItemBuilder</a></span>
+  <span class="signature">&#8594; <a href="material/DropdownButtonBuilder.html">DropdownButtonBuilder</a>?</span> 
+
+</dt>
+<dd>
+  A builder to customize the dropdown buttons corresponding to the
+<a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a>s in <a href="material/DropdownButton/items.html">items</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="style" class="property">
+  <span class="name"><a href="material/DropdownButton/style.html">style</a></span>
+  <span class="signature">&#8594; <a href="painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  The text style to use for text in the dropdown button and the dropdown
+menu that appears when you tap the button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="underline" class="property">
+  <span class="name"><a href="material/DropdownButton/underline.html">underline</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The widget to use for drawing the drop-down button's underline.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="value" class="property">
+  <span class="name"><a href="material/DropdownButton/value.html">value</a></span>
+  <span class="signature">&#8594; T?</span> 
+
+</dt>
+<dd>
+  The value of the currently selected <a href="material/DropdownMenuItem-class.html">DropdownMenuItem</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="material/DropdownButton/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/State-class.html">State</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/DropdownButton-class.html">DropdownButton</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">DropdownButton<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

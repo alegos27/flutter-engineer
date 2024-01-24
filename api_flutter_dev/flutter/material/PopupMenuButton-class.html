@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the PopupMenuButton class from the material library, for the Dart programming language.">
+  <title>PopupMenuButton class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">PopupMenuButton<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+  </ol>
+  <div class="self-name">PopupMenuButton</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;PopupMenuButton-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/popup_menu.dart#L1098"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">PopupMenuButton&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Displays a menu when pressed and calls <a href="material/PopupMenuButton/onSelected.html">onSelected</a> when the menu is dismissed
+because an item was selected. The value passed to <a href="material/PopupMenuButton/onSelected.html">onSelected</a> is the value of
+the selected menu item.</p>
+<p>One of <a href="material/PopupMenuButton/child.html">child</a> or <a href="material/PopupMenuButton/icon.html">icon</a> may be provided, but not both. If <a href="material/PopupMenuButton/icon.html">icon</a> is provided,
+then <a href="material/PopupMenuButton-class.html">PopupMenuButton</a> behaves like an <a href="material/IconButton-class.html">IconButton</a>.</p>
+<p>If both are null, then a standard overflow icon is created (depending on the
+platform).</p>
+<p>/// ## Updating to <a href="material/MenuAnchor-class.html">MenuAnchor</a></p>
+<p>There is a Material 3 component,
+<a href="material/MenuAnchor-class.html">MenuAnchor</a> that is preferred for applications that are configured
+for Material 3 (see <a href="material/ThemeData/useMaterial3.html">ThemeData.useMaterial3</a>).
+The <a href="material/MenuAnchor-class.html">MenuAnchor</a> widget's visuals
+are a little bit different, see the Material 3 spec at
+<a href="https://m3.material.io/components/menus/guidelines">m3.material.io/components/menus/guidelines</a> for
+more details.</p>
+<p>The <a href="material/MenuAnchor-class.html">MenuAnchor</a> widget's API is also slightly different.
+<a href="material/MenuAnchor-class.html">MenuAnchor</a>'s were built to be lower level interface for
+creating menus that are displayed from an anchor.</p>
+<p>There are a few steps you would take to migrate from
+<a href="material/PopupMenuButton-class.html">PopupMenuButton</a> to <a href="material/MenuAnchor-class.html">MenuAnchor</a>:</p>
+<ol>
+<li>
+<p>Instead of using the <a href="material/PopupMenuButton/itemBuilder.html">PopupMenuButton.itemBuilder</a> to build
+a list of <a href="material/PopupMenuEntry-class.html">PopupMenuEntry</a>s, you would use the <a href="material/MenuAnchor/menuChildren.html">MenuAnchor.menuChildren</a>
+which takes a list of <a href="widgets/Widget-class.html">Widget</a>s. Usually, you would use a list of
+<a href="material/MenuItemButton-class.html">MenuItemButton</a>s as shown in the example below.</p>
+</li>
+<li>
+<p>Instead of using the <a href="material/PopupMenuButton/onSelected.html">PopupMenuButton.onSelected</a> callback, you would
+set individual callbacks for each of the <a href="material/MenuItemButton-class.html">MenuItemButton</a>s using the
+<a href="material/MenuItemButton/onPressed.html">MenuItemButton.onPressed</a> property.</p>
+</li>
+<li>
+<p>To anchor the <a href="material/MenuAnchor-class.html">MenuAnchor</a> to a widget, you would use the <a href="material/MenuAnchor/builder.html">MenuAnchor.builder</a>
+to return the widget of choice - usually a <a href="material/TextButton-class.html">TextButton</a> or an <a href="material/IconButton-class.html">IconButton</a>.</p>
+</li>
+<li>
+<p>You may want to style the <a href="material/MenuItemButton-class.html">MenuItemButton</a>s, see the <a href="material/MenuItemButton-class.html">MenuItemButton</a>
+documentation for details.</p>
+</li>
+</ol>
+<p>Use the sample below for an example of migrating from <a href="material/PopupMenuButton-class.html">PopupMenuButton</a> to
+<a href="material/MenuAnchor-class.html">MenuAnchor</a>.</p>
+<p>
+<a name="material.PopupMenuButton.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example shows a menu with three items, selecting between an enum's
+values and setting a <code>selectedMenu</code> field based on the selection.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.PopupMenuButton.1');" onclick="fixHref(this, 'material.PopupMenuButton.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.PopupMenuButton.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.PopupMenuButton.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.PopupMenuButton.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This example shows how to migrate the above to a <a href="material/MenuAnchor-class.html">MenuAnchor</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.PopupMenuButton.2');" onclick="fixHref(this, 'material.PopupMenuButton.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.PopupMenuButton.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.PopupMenuButton.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.PopupMenuButton.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This sample shows the creation of a popup menu, as described in:
+https://m3.material.io/components/menus/overview
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.PopupMenuButton.3');" onclick="fixHref(this, 'material.PopupMenuButton.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.PopupMenuButton.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.PopupMenuButton.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/PopupMenuItem-class.html">PopupMenuItem</a>, a popup menu entry for a single value.</li>
+<li><a href="material/PopupMenuDivider-class.html">PopupMenuDivider</a>, a popup menu entry that is just a horizontal line.</li>
+<li><a href="material/CheckedPopupMenuItem-class.html">CheckedPopupMenuItem</a>, a popup menu item with a checkmark.</li>
+<li><a href="material/showMenu.html">showMenu</a>, a method to dynamically show a popup menu at a given location.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>PopupMenuButton</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="PopupMenuButton" class="callable">
+          <span class="name"><a href="material/PopupMenuButton/PopupMenuButton.html">PopupMenuButton</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-itemBuilder"><span>required</span> <span class="type-annotation"><a href="material/PopupMenuItemBuilder.html">PopupMenuItemBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">itemBuilder</span>, </span><span class="parameter" id="-param-initialValue"><span class="type-annotation">T?</span> <span class="parameter-name">initialValue</span>, </span><span class="parameter" id="-param-onOpened"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onOpened</span>, </span><span class="parameter" id="-param-onSelected"><span class="type-annotation"><a href="material/PopupMenuItemSelected.html">PopupMenuItemSelected</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> <span class="parameter-name">onSelected</span>, </span><span class="parameter" id="-param-onCanceled"><span class="type-annotation"><a href="material/PopupMenuCanceled.html">PopupMenuCanceled</a>?</span> <span class="parameter-name">onCanceled</span>, </span><span class="parameter" id="-param-tooltip"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tooltip</span>, </span><span class="parameter" id="-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span><span class="parameter" id="-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="-param-surfaceTintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTintColor</span>, </span><span class="parameter" id="-param-padding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> <span class="parameter-name">padding</span> = <span class="default-value">const EdgeInsets.all(8.0)</span>, </span><span class="parameter" id="-param-child"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">child</span>, </span><span class="parameter" id="-param-splashRadius"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">splashRadius</span>, </span><span class="parameter" id="-param-icon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-iconSize"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">iconSize</span>, </span><span class="parameter" id="-param-offset"><span class="type-annotation"><a href="dart-ui/Offset-class.html">Offset</a></span> <span class="parameter-name">offset</span> = <span class="default-value">Offset.zero</span>, </span><span class="parameter" id="-param-enabled"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enabled</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-iconColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconColor</span>, </span><span class="parameter" id="-param-enableFeedback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableFeedback</span>, </span><span class="parameter" id="-param-constraints"><span class="type-annotation"><a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> <span class="parameter-name">constraints</span>, </span><span class="parameter" id="-param-position"><span class="type-annotation"><a href="material/PopupMenuPosition.html">PopupMenuPosition</a>?</span> <span class="parameter-name">position</span>, </span><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span> = <span class="default-value">Clip.none</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a button that shows a popup menu.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="child" class="property">
+  <span class="name"><a href="material/PopupMenuButton/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  If provided, <a href="material/PopupMenuButton/child.html">child</a> is the widget used for this button
+and the button will utilize an <a href="material/InkWell-class.html">InkWell</a> for taps.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="clipBehavior" class="property">
+  <span class="name"><a href="material/PopupMenuButton/clipBehavior.html">clipBehavior</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Clip.html">Clip</a></span> 
+
+</dt>
+<dd>
+  The content will be clipped (or not) according to this option.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property">
+  <span class="name"><a href="material/PopupMenuButton/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  If provided, the background color used for the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="constraints" class="property">
+  <span class="name"><a href="material/PopupMenuButton/constraints.html">constraints</a></span>
+  <span class="signature">&#8594; <a href="rendering/BoxConstraints-class.html">BoxConstraints</a>?</span> 
+
+</dt>
+<dd>
+  Optional size constraints for the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="elevation" class="property">
+  <span class="name"><a href="material/PopupMenuButton/elevation.html">elevation</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The z-coordinate at which to place the menu when open. This controls the
+size of the shadow below the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enabled" class="property">
+  <span class="name"><a href="material/PopupMenuButton/enabled.html">enabled</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this popup menu button is interactive.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableFeedback" class="property">
+  <span class="name"><a href="material/PopupMenuButton/enableFeedback.html">enableFeedback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd>
+  Whether detected gestures should provide acoustic and/or haptic feedback.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="icon" class="property">
+  <span class="name"><a href="material/PopupMenuButton/icon.html">icon</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  If provided, the <a href="material/PopupMenuButton/icon.html">icon</a> is used for this button
+and the button will behave like an <a href="material/IconButton-class.html">IconButton</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconColor" class="property">
+  <span class="name"><a href="material/PopupMenuButton/iconColor.html">iconColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  If provided, this color is used for the button icon.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconSize" class="property">
+  <span class="name"><a href="material/PopupMenuButton/iconSize.html">iconSize</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  If provided, the size of the <a href="widgets/Icon-class.html">Icon</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="initialValue" class="property">
+  <span class="name"><a href="material/PopupMenuButton/initialValue.html">initialValue</a></span>
+  <span class="signature">&#8594; T?</span> 
+
+</dt>
+<dd>
+  The value of the menu item, if any, that should be highlighted when the menu opens.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="itemBuilder" class="property">
+  <span class="name"><a href="material/PopupMenuButton/itemBuilder.html">itemBuilder</a></span>
+  <span class="signature">&#8594; <a href="material/PopupMenuItemBuilder.html">PopupMenuItemBuilder</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Called when the button is pressed to create the items to show in the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="offset" class="property">
+  <span class="name"><a href="material/PopupMenuButton/offset.html">offset</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Offset-class.html">Offset</a></span> 
+
+</dt>
+<dd>
+  The offset is applied relative to the initial position
+set by the <a href="material/PopupMenuButton/position.html">position</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onCanceled" class="property">
+  <span class="name"><a href="material/PopupMenuButton/onCanceled.html">onCanceled</a></span>
+  <span class="signature">&#8594; <a href="material/PopupMenuCanceled.html">PopupMenuCanceled</a>?</span> 
+
+</dt>
+<dd>
+  Called when the user dismisses the popup menu without selecting an item.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onOpened" class="property">
+  <span class="name"><a href="material/PopupMenuButton/onOpened.html">onOpened</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when the popup menu is shown.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSelected" class="property">
+  <span class="name"><a href="material/PopupMenuButton/onSelected.html">onSelected</a></span>
+  <span class="signature">&#8594; <a href="material/PopupMenuItemSelected.html">PopupMenuItemSelected</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  Called when the user selects a value from the popup menu created by this button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="material/PopupMenuButton/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> 
+
+</dt>
+<dd>
+  Matches IconButton's 8 dps padding by default. In some cases, notably where
+this button appears as the trailing element of a list item, it's useful to be able
+to set the padding to zero.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="position" class="property">
+  <span class="name"><a href="material/PopupMenuButton/position.html">position</a></span>
+  <span class="signature">&#8594; <a href="material/PopupMenuPosition.html">PopupMenuPosition</a>?</span> 
+
+</dt>
+<dd>
+  Whether the popup menu is positioned over or under the popup menu button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shadowColor" class="property">
+  <span class="name"><a href="material/PopupMenuButton/shadowColor.html">shadowColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color used to paint the shadow below the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="shape" class="property">
+  <span class="name"><a href="material/PopupMenuButton/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd>
+  If provided, the shape used for the menu.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="splashRadius" class="property">
+  <span class="name"><a href="material/PopupMenuButton/splashRadius.html">splashRadius</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The splash radius.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="surfaceTintColor" class="property">
+  <span class="name"><a href="material/PopupMenuButton/surfaceTintColor.html">surfaceTintColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color used as an overlay on <a href="material/PopupMenuButton/color.html">color</a> to indicate elevation.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tooltip" class="property">
+  <span class="name"><a href="material/PopupMenuButton/tooltip.html">tooltip</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  Text that describes the action that will occur when the button is pressed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="material/PopupMenuButton/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="material/PopupMenuButtonState-class.html">PopupMenuButtonState</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">PopupMenuButton<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

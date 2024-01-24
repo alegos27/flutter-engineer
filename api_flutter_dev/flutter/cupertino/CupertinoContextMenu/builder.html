@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the builder property from the CupertinoContextMenu class, for the Dart programming language.">
+  <title>builder property - CupertinoContextMenu class - cupertino library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li><a href="cupertino/CupertinoContextMenu-class.html">CupertinoContextMenu</a></li>
+    <li class="self-crumb">builder property</li>
+  </ol>
+  <div class="self-name">builder</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="cupertino&#47;CupertinoContextMenu-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/cupertino/context_menu.dart#L354"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-property">builder</span> property 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="cupertino/CupertinoContextMenuBuilder.html">CupertinoContextMenuBuilder</a>
+          <span class="name ">builder</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A function that returns a widget to be used alternatively from <a href="cupertino/CupertinoContextMenu/child.html">child</a>.</p>
+<p>The widget returned by the function will be shown at all times: when the
+<a href="cupertino/CupertinoContextMenu-class.html">CupertinoContextMenu</a> is closed, when it is in the middle of opening,
+and when it is fully open. This will overwrite the default animation that
+matches the behavior of an iOS 16.0 context menu.</p>
+<p>This builder can be used instead of the child when the intended child has
+a property that would conflict with the default animation, such as a
+border radius or a shadow, or if a more custom animation is needed.</p>
+<p>In addition to the current <a href="widgets/BuildContext-class.html">BuildContext</a>, the function is also called
+with an <a href="animation/Animation-class.html">Animation</a>. The complete animation goes from 0 to 1 when
+the CupertinoContextMenu opens, and from 1 to 0 when it closes, and it can
+be used to animate the widget in sync with this opening and closing.</p>
+<p>The animation works in two stages. The first happens on press and hold of
+the widget from 0 to <a href="cupertino/CupertinoContextMenu/animationOpensAt.html">animationOpensAt</a>, and the second stage for when the
+widget fully opens up to the menu, from <a href="cupertino/CupertinoContextMenu/animationOpensAt.html">animationOpensAt</a> to 1.</p>
+<p>
+<a name="cupertino.CupertinoContextMenu.builder.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+Below is an example of using <a href="cupertino/CupertinoContextMenu/builder.html">builder</a> to show an image tile setup to be
+opened in the default way to match a native iOS 16.0 app. The behavior
+will match what will happen if the simple child image was passed as just
+the <a href="cupertino/CupertinoContextMenu/child.html">child</a> parameter, instead of <a href="cupertino/CupertinoContextMenu/builder.html">builder</a>. This can be manipulated to
+add more customizability to the widget's animation.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'cupertino.CupertinoContextMenu.builder.1');" onclick="fixHref(this, 'cupertino.CupertinoContextMenu.builder.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">CupertinoContextMenu.builder(
+  actions: &lt;Widget&gt;[
+    CupertinoContextMenuAction(
+      child: const Text(&#39;Action one&#39;),
+      onPressed: () {},
+    ),
+  ],
+  builder:(BuildContext context, Animation&lt;double&gt; animation) {
+    final Animation&lt;BorderRadius?&gt; borderRadiusAnimation = BorderRadiusTween(
+      begin: BorderRadius.circular(0.0),
+      end: BorderRadius.circular(CupertinoContextMenu.kOpenBorderRadius),
+    ).animate(
+      CurvedAnimation(
+        parent: animation,
+        curve: Interval(
+          CupertinoContextMenu.animationOpensAt,
+          1.0,
+        ),
+      ),
+     );
+
+    final Animation&lt;Decoration&gt; boxDecorationAnimation = DecorationTween(
+      begin: const BoxDecoration(
+       color: Color(0xFFFFFFFF),
+       boxShadow: &lt;BoxShadow&gt;[],
+      ),
+      end: const BoxDecoration(
+       color: Color(0xFFFFFFFF),
+       boxShadow: CupertinoContextMenu.kEndBoxShadow,
+      ),
+     ).animate(
+       CurvedAnimation(
+        parent: animation,
+        curve: Interval(
+          0.0,
+          CupertinoContextMenu.animationOpensAt,
+        ),
+      ),
+    );
+
+    return Container(
+      decoration:
+        animation.value &lt; CupertinoContextMenu.animationOpensAt ? boxDecorationAnimation.value : null,
+      child: FittedBox(
+        fit: BoxFit.cover,
+        child: ClipRRect(
+          borderRadius: borderRadiusAnimation.value ?? BorderRadius.circular(0.0),
+          child: SizedBox(
+            height: 150,
+            width: 150,
+            child: Image.network(&#39;https:&#47;&#47;flutter.github.io&#47;assets-for-api-docs&#47;assets&#47;widgets&#47;owl-2.jpg&#39;),
+          ),
+        ),
+      ),
+    );
+  },
+)</code></pre>
+  </div>
+</div>
+</p>
+<p>
+<a name="cupertino.CupertinoContextMenu.builder.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+Additionally below is an example of a real world use case for <a href="cupertino/CupertinoContextMenu/builder.html">builder</a>.</p>
+<p>If a widget is passed to the <a href="cupertino/CupertinoContextMenu/child.html">child</a> parameter with properties that
+conflict with the default animation, in this case the border radius,
+unwanted behaviors can arise. Here a boxed shadow will wrap the widget as
+it is expanded. To handle this, a more custom animation and widget can be
+passed to the builder, using values exposed by <a href="cupertino/CupertinoContextMenu-class.html">CupertinoContextMenu</a>,
+like <a href="cupertino/CupertinoContextMenu/kEndBoxShadow-constant.html">CupertinoContextMenu.kEndBoxShadow</a>, to match the native iOS
+animation as close as desired.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'cupertino.CupertinoContextMenu.builder.2');" onclick="fixHref(this, 'cupertino.CupertinoContextMenu.builder.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=cupertino.CupertinoContextMenu.builder.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=cupertino.CupertinoContextMenu.builder.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final CupertinoContextMenuBuilder builder;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li><a href="cupertino/CupertinoContextMenu-class.html">CupertinoContextMenu</a></li>
+    <li class="self-crumb">builder property</li>
+</ol>
+
+
+    <h5>CupertinoContextMenu class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "material.MatrixTransition.1",
+    "element": "MatrixTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 251,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following example implements a [MatrixTransition] with a rotation around\nthe Y axis, with a 3D perspective skew.",
+    "file": "material.MatrixTransition.1.dart"
+}

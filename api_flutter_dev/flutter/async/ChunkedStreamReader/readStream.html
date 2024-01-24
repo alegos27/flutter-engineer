@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the readStream method from the ChunkedStreamReader class, for the Dart programming language.">
+  <title>readStream method - ChunkedStreamReader class - async library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="async/async-library.html">async</a></li>
+    <li><a href="async/ChunkedStreamReader-class.html">ChunkedStreamReader<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">readStream method</li>
+  </ol>
+  <div class="self-name">readStream</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="async&#47;ChunkedStreamReader-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">readStream</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+<span class="name ">readStream</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="readStream-param-size"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">size</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Read next <code>size</code> elements from <em>chunked stream</em> as a sub-stream.</p>
+<p>This will pass-through <em>chunks</em> from the underlying <em>chunked stream</em> until
+<code>size</code> elements have been returned, or end-of-stream has been encountered.</p>
+<p>If end-of-stream is encountered before <code>size</code> elements is read, this
+returns a list with fewer than <code>size</code> elements (indicating end-of-stream).</p>
+<p>If the underlying stream throws, the stream is cancelled, the exception is
+propogated and further read operations will fail.</p>
+<p>If the sub-stream returned from <a href="async/ChunkedStreamReader/readStream.html">readStream</a> is cancelled the remaining
+unread elements up-to <code>size</code> are drained, allowing subsequent
+read-operations to proceed after cancellation.</p>
+<p>Throws, if another read-operation is on-going.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Stream&lt;List&lt;T&gt;&gt; readStream(int size) {
+  RangeError.checkNotNegative(size, &#39;size&#39;);
+  if (_reading) {
+    throw StateError(&#39;Concurrent read operations are not allowed!&#39;);
+  }
+  _reading = true;
+
+  Stream&lt;List&lt;T&gt;&gt; substream() async* {
+    &#47;&#47; While we have data to read
+    while (size &gt; 0) {
+      &#47;&#47; Read something into the buffer, if buffer has been consumed.
+      assert(_offset &lt;= _buffer.length);
+      if (_offset == _buffer.length) {
+        if (!(await _input.moveNext())) {
+          &#47;&#47; Don&#39;t attempt to read more data, as there is no more data.
+          size = 0;
+          _reading = false;
+          break;
+        }
+        _buffer = _input.current;
+        _offset = 0;
+      }
+
+      final remainingBuffer = _buffer.length - _offset;
+      if (remainingBuffer &gt; 0) {
+        if (remainingBuffer &gt;= size) {
+          List&lt;T&gt; output;
+          if (_buffer is Uint8List) {
+            output = Uint8List.sublistView(
+                _buffer as Uint8List, _offset, _offset + size) as List&lt;T&gt;;
+          } else {
+            output = _buffer.sublist(_offset, _offset + size);
+          }
+          _offset += size;
+          size = 0;
+          yield output;
+          _reading = false;
+          break;
+        }
+
+        final output = _offset == 0 ? _buffer : _buffer.sublist(_offset);
+        size -= remainingBuffer;
+        _buffer = _emptyList;
+        _offset = 0;
+        yield output;
+      }
+    }
+  }
+
+  final c = StreamController&lt;List&lt;T&gt;&gt;();
+  c.onListen = () =&gt; c.addStream(substream()).whenComplete(c.close);
+  c.onCancel = () async {
+    while (size &gt; 0) {
+      assert(_offset &lt;= _buffer.length);
+      if (_buffer.length == _offset) {
+        if (!await _input.moveNext()) {
+          size = 0; &#47;&#47; no more data
+          break;
+        }
+        _buffer = _input.current;
+        _offset = 0;
+      }
+
+      final remainingBuffer = _buffer.length - _offset;
+      if (remainingBuffer &gt;= size) {
+        _offset += size;
+        size = 0;
+        break;
+      }
+
+      size -= remainingBuffer;
+      _buffer = _emptyList;
+      _offset = 0;
+    }
+    _reading = false;
+  };
+
+  return c.stream;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="async/async-library.html">async</a></li>
+    <li><a href="async/ChunkedStreamReader-class.html">ChunkedStreamReader<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">readStream method</li>
+</ol>
+
+
+    <h5>ChunkedStreamReader class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

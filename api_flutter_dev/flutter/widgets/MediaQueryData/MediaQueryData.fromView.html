@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MediaQueryData.fromView constructor from Class MediaQueryData from the widgets library, for the Dart programming language.">
+  <title>MediaQueryData.fromView constructor - MediaQueryData - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/MediaQueryData-class.html">MediaQueryData</a></li>
+    <li class="self-crumb">MediaQueryData.fromView constructor</li>
+  </ol>
+  <div class="self-name">MediaQueryData.fromView</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;MediaQueryData-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/media_query.dart#L231"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-constructor">MediaQueryData.fromView</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">MediaQueryData.fromView</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromView-param-view"><span class="type-annotation"><a href="dart-ui/FlutterView-class.html">FlutterView</a></span> <span class="parameter-name">view</span>, </span></li>
+<li><span class="parameter" id="fromView-param-platformData">{<span class="type-annotation"><a href="widgets/MediaQueryData-class.html">MediaQueryData</a>?</span> <span class="parameter-name">platformData</span>}</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Creates data for a <a href="widgets/MediaQuery-class.html">MediaQuery</a> based on the given <code>view</code>.</p>
+<p>If provided, the <code>platformData</code> is used to fill in the platform-specific
+aspects of the newly created <a href="widgets/MediaQueryData-class.html">MediaQueryData</a>. If <code>platformData</code> is null,
+the <code>view</code>'s <a href="dart-ui/PlatformDispatcher-class.html">PlatformDispatcher</a> is consulted to construct the
+platform-specific data.</p>
+<p>Data which is exposed directly on the <a href="dart-ui/FlutterView-class.html">FlutterView</a> is considered
+view-specific. Data which is only exposed via the
+<a href="dart-ui/FlutterView/platformDispatcher.html">FlutterView.platformDispatcher</a> property is considered platform-specific.</p>
+<p>Callers of this method should ensure that they also register for
+notifications so that the <a href="widgets/MediaQueryData-class.html">MediaQueryData</a> can be updated when any data
+used to construct it changes. Notifications to consider are:</p>
+<ul>
+<li><a href="widgets/WidgetsBindingObserver/didChangeMetrics.html">WidgetsBindingObserver.didChangeMetrics</a> or
+<a href="dart-ui/PlatformDispatcher/onMetricsChanged.html">dart:ui.PlatformDispatcher.onMetricsChanged</a>,</li>
+<li><a href="widgets/WidgetsBindingObserver/didChangeAccessibilityFeatures.html">WidgetsBindingObserver.didChangeAccessibilityFeatures</a> or
+<a href="dart-ui/PlatformDispatcher/onAccessibilityFeaturesChanged.html">dart:ui.PlatformDispatcher.onAccessibilityFeaturesChanged</a>,</li>
+<li><a href="widgets/WidgetsBindingObserver/didChangeTextScaleFactor.html">WidgetsBindingObserver.didChangeTextScaleFactor</a> or
+<a href="dart-ui/PlatformDispatcher/onTextScaleFactorChanged.html">dart:ui.PlatformDispatcher.onTextScaleFactorChanged</a>,</li>
+<li><a href="widgets/WidgetsBindingObserver/didChangePlatformBrightness.html">WidgetsBindingObserver.didChangePlatformBrightness</a> or
+<a href="dart-ui/PlatformDispatcher/onPlatformBrightnessChanged.html">dart:ui.PlatformDispatcher.onPlatformBrightnessChanged</a>.</li>
+</ul>
+<p>The last three notifications are only relevant if no <code>platformData</code> is
+provided. If <code>platformData</code> is provided, callers should ensure to call
+this method again when it changes to keep the constructed <a href="widgets/MediaQueryData-class.html">MediaQueryData</a>
+updated.</p>
+<p>In general, <a href="widgets/MediaQuery/of.html">MediaQuery.of</a> is the appropriate way to obtain
+<a href="widgets/MediaQueryData-class.html">MediaQueryData</a> from a widget. This <code>fromView</code> constructor is primarily
+for use in the implementation of the framework itself.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/MediaQuery/fromView.html">MediaQuery.fromView</a>, which constructs <a href="widgets/MediaQueryData-class.html">MediaQueryData</a> from a provided
+<a href="dart-ui/FlutterView-class.html">FlutterView</a>, makes it available to descendant widgets, and sets up
+the appropriate notification listeners to keep the data updated.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">MediaQueryData.fromView(ui.FlutterView view, {MediaQueryData? platformData})
+  : size = view.physicalSize &#47; view.devicePixelRatio,
+    devicePixelRatio = view.devicePixelRatio,
+    _textScaleFactor = 1.0, &#47;&#47; _textScaler is the source of truth.
+    _textScaler = _textScalerFromView(view, platformData),
+    platformBrightness = platformData?.platformBrightness ?? view.platformDispatcher.platformBrightness,
+    padding = EdgeInsets.fromViewPadding(view.padding, view.devicePixelRatio),
+    viewPadding = EdgeInsets.fromViewPadding(view.viewPadding, view.devicePixelRatio),
+    viewInsets = EdgeInsets.fromViewPadding(view.viewInsets, view.devicePixelRatio),
+    systemGestureInsets = EdgeInsets.fromViewPadding(view.systemGestureInsets, view.devicePixelRatio),
+    accessibleNavigation = platformData?.accessibleNavigation ?? view.platformDispatcher.accessibilityFeatures.accessibleNavigation,
+    invertColors = platformData?.invertColors ?? view.platformDispatcher.accessibilityFeatures.invertColors,
+    disableAnimations = platformData?.disableAnimations ?? view.platformDispatcher.accessibilityFeatures.disableAnimations,
+    boldText = platformData?.boldText ?? view.platformDispatcher.accessibilityFeatures.boldText,
+    highContrast = platformData?.highContrast ?? view.platformDispatcher.accessibilityFeatures.highContrast,
+    onOffSwitchLabels = platformData?.onOffSwitchLabels ?? view.platformDispatcher.accessibilityFeatures.onOffSwitchLabels,
+    alwaysUse24HourFormat = platformData?.alwaysUse24HourFormat ?? view.platformDispatcher.alwaysUse24HourFormat,
+    navigationMode = platformData?.navigationMode ?? NavigationMode.traditional,
+    gestureSettings = DeviceGestureSettings.fromView(view),
+    displayFeatures = view.displayFeatures;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/MediaQueryData-class.html">MediaQueryData</a></li>
+    <li class="self-crumb">MediaQueryData.fromView constructor</li>
+</ol>
+
+
+    <h5>MediaQueryData class</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Runtime class from the backend library, for the Dart programming language.">
+  <title>Runtime class - backend library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-test_api_backend/package-test_api_backend-library.html">backend</a></li>
+    <li class="self-crumb">Runtime class</li>
+  </ol>
+  <div class="self-name">Runtime</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-test_api_backend&#47;package-test_api_backend-library-sidebar.html"
+      data-below-sidebar="package-test_api_backend&#47;Runtime-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">Runtime</span> class 
+    <a href="https://github.com/dart-lang/language/blob/main/accepted/future-releases/class-modifiers/feature-specification.md#class-modifiers" class="feature feature-final" title="This class can neither be extended, implemented, nor mixed in.">final</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An enum of all Dart runtimes supported by the test runner.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Runtime" class="callable">
+          <span class="name"><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a></span><span class="signature">(<span class="parameter" id="-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="-param-identifier"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">identifier</span>, </span><span class="parameter" id="-param-defaultCompiler"><span class="type-annotation"><a href="package-test_api_backend/Compiler.html">Compiler</a></span> <span class="parameter-name">defaultCompiler</span>, </span><span class="parameter" id="-param-supportedCompilers"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="package-test_api_backend/Compiler.html">Compiler</a></span>&gt;</span></span> <span class="parameter-name">supportedCompilers</span>, </span><span class="parameter" id="-param-isDartVM">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isDartVM</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isBrowser"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isBrowser</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isJS"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isJS</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isBlink"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isBlink</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isHeadless"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isHeadless</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isWasm"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isWasm</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="Runtime.deserialize" class="callable">
+          <span class="name"><a href="package-test_api_backend/Runtime/Runtime.deserialize.html">Runtime.deserialize</a></span><span class="signature">(<span class="parameter" id="deserialize-param-serialized"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">serialized</span></span>)</span>
+        </dt>
+        <dd>
+          Converts a JSON-safe representation generated by <a href="package-test_api_backend/Runtime/serialize.html">serialize</a> back into a
+<a href="package-test_api_backend/Runtime-class.html">Runtime</a>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="defaultCompiler" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/defaultCompiler.html">defaultCompiler</a></span>
+  <span class="signature">&#8594; <a href="package-test_api_backend/Compiler.html">Compiler</a></span> 
+
+</dt>
+<dd>
+  The default compiler to use with this runtime.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="identifier" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/identifier.html">identifier</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The identifier used to look up the platform.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isBlink" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isBlink.html">isBlink</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform uses the Blink rendering engine.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isBrowser" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isBrowser.html">isBrowser</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform is a browser.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isChild" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isChild.html">isChild</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Returns whether this is a child of another platform.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="isDartVM" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isDartVM.html">isDartVM</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform runs the Dart VM in any capacity.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isHeadless" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isHeadless.html">isHeadless</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform has no visible window.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isJS" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isJS.html">isJS</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform runs Dart compiled to JavaScript.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isWasm" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/isWasm.html">isWasm</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this platform runs Dart compiled to WASM.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="name" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/name.html">name</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  The human-friendly name of the platform.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="parent" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/parent.html">parent</a></span>
+  <span class="signature">&#8594; <a href="package-test_api_backend/Runtime-class.html">Runtime</a>?</span> 
+
+</dt>
+<dd>
+  The parent platform that this is based on, or <code>null</code> if there is no
+parent.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="root" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/root.html">root</a></span>
+  <span class="signature">&#8594; <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span> 
+
+</dt>
+<dd>
+  Returns the platform this is based on, or <a href="package-test_api_backend/Runtime-class.html">this</a> if it's not based on
+anything.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="supportedCompilers" class="property">
+  <span class="name"><a href="package-test_api_backend/Runtime/supportedCompilers.html">supportedCompilers</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="package-test_api_backend/Compiler.html">Compiler</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  All the supported compilers for this runtime.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="extend" class="callable">
+  <span class="name"><a href="package-test_api_backend/Runtime/extend.html">extend</a></span><span class="signature">(<wbr><span class="parameter" id="extend-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="extend-param-identifier"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">identifier</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a child of <a href="package-test_api_backend/Runtime-class.html">this</a> that counts as both this platform's identifier
+and the new <code>identifier</code>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="serialize" class="callable">
+  <span class="name"><a href="package-test_api_backend/Runtime/serialize.html">serialize</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/Object-class.html">Object</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts <a href="package-test_api_backend/Runtime-class.html">this</a> into a JSON-safe object that can be converted back to a
+<a href="package-test_api_backend/Runtime-class.html">Runtime</a> using <a href="package-test_api_backend/Runtime/Runtime.deserialize.html">Runtime.deserialize</a>.
+  
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="package-test_api_backend/Runtime/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="builtIn" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/builtIn-constant.html">builtIn</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  The platforms that are supported by the test runner by default.
+  
+
+    <div>
+      <span class="signature"><code>[Runtime.vm, Runtime.chrome, Runtime.firefox, Runtime.safari, Runtime.internetExplorer, Runtime.edge, Runtime.nodeJS, Runtime.experimentalChromeWasm]</code></span>
+    </div>
+</dd>
+
+        <dt id="chrome" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/chrome-constant.html">chrome</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Google Chrome.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Chrome&#39;, &#39;chrome&#39;, Compiler.dart2js, [Compiler.dart2js], isBrowser: true, isJS: true, isBlink: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="edge" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/edge-constant.html">edge</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Microsoft Edge (based on Chromium).
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Microsoft Edge&#39;, &#39;edge&#39;, Compiler.dart2js, [Compiler.dart2js], isBrowser: true, isJS: true, isBlink: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="experimentalChromeWasm" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/experimentalChromeWasm-constant.html">experimentalChromeWasm</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Google Chrome.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;ExperimentalChromeWasm&#39;, &#39;experimental-chrome-wasm&#39;, Compiler.dart2wasm, [Compiler.dart2wasm], isBrowser: true, isBlink: true, isWasm: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="firefox" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/firefox-constant.html">firefox</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Mozilla Firefox.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Firefox&#39;, &#39;firefox&#39;, Compiler.dart2js, [Compiler.dart2js], isBrowser: true, isJS: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="internetExplorer" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/internetExplorer-constant.html">internetExplorer</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Microsoft Internet Explorer.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Internet Explorer&#39;, &#39;ie&#39;, Compiler.dart2js, [Compiler.dart2js], isBrowser: true, isJS: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="nodeJS" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/nodeJS-constant.html">nodeJS</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  The command-line Node.js VM.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Node.js&#39;, &#39;node&#39;, Compiler.dart2js, [Compiler.dart2js], isJS: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="safari" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/safari-constant.html">safari</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  Apple Safari.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;Safari&#39;, &#39;safari&#39;, Compiler.dart2js, [Compiler.dart2js], isBrowser: true, isJS: true)</code></span>
+    </div>
+</dd>
+
+        <dt id="vm" class="constant">
+    <span class="name "><a href="package-test_api_backend/Runtime/vm-constant.html">vm</a></span>
+  <span class="signature">&#8594; const <a href="package-test_api_backend/Runtime-class.html">Runtime</a></span>
+  
+
+</dt>
+<dd>
+  The command-line Dart VM.
+  
+
+    <div>
+      <span class="signature"><code><a href="package-test_api_backend/Runtime/Runtime.html">Runtime</a>(&#39;VM&#39;, &#39;vm&#39;, Compiler.kernel, [Compiler.kernel, Compiler.source, Compiler.exe], isDartVM: true)</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-test_api_backend/package-test_api_backend-library.html">backend</a></li>
+    <li class="self-crumb">Runtime class</li>
+</ol>
+
+
+    <!--<h5>backend library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

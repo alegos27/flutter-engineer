@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SelectableRegion.3",
+    "element": "SelectableRegion",
+    "sourcePath": "lib/src/widgets/selectable_region.dart",
+    "sourceLine": 205,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample demonstrates how to create a [SelectionContainer] that only\nallows selecting everything or nothing with no partial selection.",
+    "file": "cupertino.SelectableRegion.3.dart"
+}

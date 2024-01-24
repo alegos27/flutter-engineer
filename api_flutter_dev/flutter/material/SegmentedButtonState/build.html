@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the SegmentedButtonState class, for the Dart programming language.">
+  <title>build method - SegmentedButtonState class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/SegmentedButtonState-class.html">SegmentedButtonState<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;SegmentedButtonState-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/segmented_button.dart#L290"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method in a number of different situations. For
+example:</p>
+<ul>
+<li>After calling <a href="widgets/State/initState.html">initState</a>.</li>
+<li>After calling <a href="material/SegmentedButtonState/didUpdateWidget.html">didUpdateWidget</a>.</li>
+<li>After receiving a call to <a href="widgets/State/setState.html">setState</a>.</li>
+<li>After a dependency of this <a href="widgets/State-class.html">State</a> object changes (e.g., an
+<a href="widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by the previous <a href="material/SegmentedButtonState/build.html">build</a> changes).</li>
+<li>After calling <a href="widgets/State/deactivate.html">deactivate</a> and then reinserting the <a href="widgets/State-class.html">State</a> object into
+the tree at another location.</li>
+</ul>
+<p>This method can potentially be called in every frame and should not have
+any side effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor, the
+given <a href="widgets/BuildContext-class.html">BuildContext</a>, and the internal state of this <a href="widgets/State-class.html">State</a> object.</p>
+<p>The given <a href="widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. The
+<a href="widgets/BuildContext-class.html">BuildContext</a> argument is always the same as the <code>context</code> property of
+this <a href="widgets/State-class.html">State</a> object and will remain the same for the lifetime of this
+object. The <a href="widgets/BuildContext-class.html">BuildContext</a> argument is provided redundantly here so that
+this method matches the signature for a <a href="widgets/WidgetBuilder.html">WidgetBuilder</a>.</p>
+<h2 id="design-discussion">Design discussion</h2>
+<h3 id="why-is-the-build-method-on-state-and-not-statefulwidget">Why is the <a href="material/SegmentedButtonState/build.html">build</a> method on <a href="widgets/State-class.html">State</a>, and not <a href="widgets/StatefulWidget-class.html">StatefulWidget</a>?</h3>
+<p>Putting a <code>Widget build(BuildContext context)</code> method on <a href="widgets/State-class.html">State</a> rather
+than putting a <code>Widget build(BuildContext context, State state)</code> method
+on <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> gives developers more flexibility when subclassing
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a>.</p>
+<p>For example, <a href="widgets/AnimatedWidget-class.html">AnimatedWidget</a> is a subclass of <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> that
+introduces an abstract <code>Widget build(BuildContext context)</code> method for its
+subclasses to implement. If <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> already had a <a href="material/SegmentedButtonState/build.html">build</a> method
+that took a <a href="widgets/State-class.html">State</a> argument, <a href="widgets/AnimatedWidget-class.html">AnimatedWidget</a> would be forced to provide
+its <a href="widgets/State-class.html">State</a> object to subclasses even though its <a href="widgets/State-class.html">State</a> object is an
+internal implementation detail of <a href="widgets/AnimatedWidget-class.html">AnimatedWidget</a>.</p>
+<p>Conceptually, <a href="widgets/StatelessWidget-class.html">StatelessWidget</a> could also be implemented as a subclass of
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a> in a similar manner. If the <a href="material/SegmentedButtonState/build.html">build</a> method were on
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a> rather than <a href="widgets/State-class.html">State</a>, that would not be possible anymore.</p>
+<p>Putting the <a href="material/SegmentedButtonState/build.html">build</a> function on <a href="widgets/State-class.html">State</a> rather than <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> also
+helps avoid a category of bugs related to closures implicitly capturing
+<code>this</code>. If you defined a closure in a <a href="material/SegmentedButtonState/build.html">build</a> function on a
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a>, that closure would implicitly capture <code>this</code>, which is
+the current widget instance, and would have the (immutable) fields of that
+instance in scope:</p>
+<pre class="language-dart"><code class="language-dart">// (this is not valid Flutter code)
+class MyButton extends StatefulWidgetX {
+  MyButton({super.key, required this.color});
+
+  final Color color;
+
+  @override
+  Widget build(BuildContext context, State state) {
+    return SpecialWidget(
+      handler: () { print('color: $color'); },
+    );
+  }
+}
+</code></pre>
+<p>For example, suppose the parent builds <code>MyButton</code> with <code>color</code> being blue,
+the <code>$color</code> in the print function refers to blue, as expected. Now,
+suppose the parent rebuilds <code>MyButton</code> with green. The closure created by
+the first build still implicitly refers to the original widget and the
+<code>$color</code> still prints blue even through the widget has been updated to
+green; should that closure outlive its widget, it would print outdated
+information.</p>
+<p>In contrast, with the <a href="material/SegmentedButtonState/build.html">build</a> function on the <a href="widgets/State-class.html">State</a> object, closures
+created during <a href="material/SegmentedButtonState/build.html">build</a> implicitly capture the <a href="widgets/State-class.html">State</a> instance instead of
+the widget instance:</p>
+<pre class="language-dart"><code class="language-dart">class MyButton extends StatefulWidget {
+  const MyButton({super.key, this.color = Colors.teal});
+
+  final Color color;
+  // ...
+}
+
+class MyButtonState extends State&lt;MyButton&gt; {
+  // ...
+  @override
+  Widget build(BuildContext context) {
+    return SpecialWidget(
+      handler: () { print('color: ${widget.color}'); },
+    );
+  }
+}
+</code></pre>
+<p>Now when the parent rebuilds <code>MyButton</code> with green, the closure created by
+the first build still refers to <a href="widgets/State-class.html">State</a> object, which is preserved across
+rebuilds, but the framework has updated that <a href="widgets/State-class.html">State</a> object's <a href="widgets/State/widget.html">widget</a>
+property to refer to the new <code>MyButton</code> instance and <code>${widget.color}</code>
+prints green, as expected.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  final SegmentedButtonThemeData theme = SegmentedButtonTheme.of(context);
+  final SegmentedButtonThemeData defaults = _SegmentedButtonDefaultsM3(context);
+  final TextDirection direction = Directionality.of(context);
+
+  const Set&lt;MaterialState&gt; enabledState = &lt;MaterialState&gt;{};
+  const Set&lt;MaterialState&gt; disabledState = &lt;MaterialState&gt;{ MaterialState.disabled };
+  final Set&lt;MaterialState&gt; currentState = _enabled ? enabledState : disabledState;
+
+  P? effectiveValue&lt;P&gt;(P? Function(ButtonStyle? style) getProperty) {
+    late final P? widgetValue  = getProperty(widget.style);
+    late final P? themeValue   = getProperty(theme.style);
+    late final P? defaultValue = getProperty(defaults.style);
+    return widgetValue ?? themeValue ?? defaultValue;
+  }
+
+  P? resolve&lt;P&gt;(MaterialStateProperty&lt;P&gt;? Function(ButtonStyle? style) getProperty, [Set&lt;MaterialState&gt;? states]) {
+    return effectiveValue(
+      (ButtonStyle? style) =&gt; getProperty(style)?.resolve(states ?? currentState),
+    );
+  }
+
+  ButtonStyle segmentStyleFor(ButtonStyle? style) {
+    return ButtonStyle(
+      textStyle: style?.textStyle,
+      backgroundColor: style?.backgroundColor,
+      foregroundColor: style?.foregroundColor,
+      overlayColor: style?.overlayColor,
+      surfaceTintColor: style?.surfaceTintColor,
+      elevation: style?.elevation,
+      padding: style?.padding,
+      iconColor: style?.iconColor,
+      iconSize: style?.iconSize,
+      shape: const MaterialStatePropertyAll&lt;OutlinedBorder&gt;(RoundedRectangleBorder()),
+      mouseCursor: style?.mouseCursor,
+      visualDensity: style?.visualDensity,
+      tapTargetSize: style?.tapTargetSize,
+      animationDuration: style?.animationDuration,
+      enableFeedback: style?.enableFeedback,
+      alignment: style?.alignment,
+      splashFactory: style?.splashFactory,
+    );
+  }
+
+  final ButtonStyle segmentStyle = segmentStyleFor(widget.style);
+  final ButtonStyle segmentThemeStyle = segmentStyleFor(theme.style).merge(segmentStyleFor(defaults.style));
+  final Widget? selectedIcon = widget.showSelectedIcon
+    ? widget.selectedIcon ?? theme.selectedIcon ?? defaults.selectedIcon
+    : null;
+
+  Widget buttonFor(ButtonSegment&lt;T&gt; segment) {
+    final Widget label = segment.label ?? segment.icon ?? const SizedBox.shrink();
+    final bool segmentSelected = widget.selected.contains(segment.value);
+    final Widget? icon = (segmentSelected &amp;&amp; widget.showSelectedIcon)
+      ? selectedIcon
+      : segment.label != null
+        ? segment.icon
+        : null;
+    final MaterialStatesController controller = statesControllers.putIfAbsent(segment, () =&gt; MaterialStatesController());
+    controller.value = &lt;MaterialState&gt;{
+        if (segmentSelected) MaterialState.selected,
+    };
+
+    final Widget button = icon != null
+      ? TextButton.icon(
+          style: segmentStyle,
+          statesController: controller,
+          onPressed: (_enabled &amp;&amp; segment.enabled) ? () =&gt; _handleOnPressed(segment.value) : null,
+          icon: icon,
+          label: label,
+        )
+      : TextButton(
+          style: segmentStyle,
+          statesController: controller,
+          onPressed: (_enabled &amp;&amp; segment.enabled) ? () =&gt; _handleOnPressed(segment.value) : null,
+          child: label,
+        );
+
+    final Widget buttonWithTooltip = segment.tooltip != null
+      ? Tooltip(
+          message: segment.tooltip,
+          child: button,
+        )
+      : button;
+
+    return MergeSemantics(
+      child: Semantics(
+        checked: segmentSelected,
+        inMutuallyExclusiveGroup: widget.multiSelectionEnabled ? null : true,
+        child: buttonWithTooltip,
+      ),
+    );
+  }
+
+  final OutlinedBorder resolvedEnabledBorder = resolve&lt;OutlinedBorder?&gt;((ButtonStyle? style) =&gt; style?.shape, disabledState) ?? const RoundedRectangleBorder();
+  final OutlinedBorder resolvedDisabledBorder = resolve&lt;OutlinedBorder?&gt;((ButtonStyle? style) =&gt; style?.shape, disabledState)?? const RoundedRectangleBorder();
+  final BorderSide enabledSide = resolve&lt;BorderSide?&gt;((ButtonStyle? style) =&gt; style?.side, enabledState) ?? BorderSide.none;
+  final BorderSide disabledSide = resolve&lt;BorderSide?&gt;((ButtonStyle? style) =&gt; style?.side, disabledState) ?? BorderSide.none;
+  final OutlinedBorder enabledBorder = resolvedEnabledBorder.copyWith(side: enabledSide);
+  final OutlinedBorder disabledBorder = resolvedDisabledBorder.copyWith(side: disabledSide);
+
+  final List&lt;Widget&gt; buttons = widget.segments.map(buttonFor).toList();
+
+  return Material(
+    type: MaterialType.transparency,
+    shape: enabledBorder.copyWith(side: BorderSide.none),
+    elevation: resolve&lt;double?&gt;((ButtonStyle? style) =&gt; style?.elevation)!,
+    shadowColor: resolve&lt;Color?&gt;((ButtonStyle? style) =&gt; style?.shadowColor),
+    surfaceTintColor: resolve&lt;Color?&gt;((ButtonStyle? style) =&gt; style?.surfaceTintColor),
+    child: TextButtonTheme(
+      data: TextButtonThemeData(style: segmentThemeStyle),
+      child: _SegmentedButtonRenderWidget&lt;T&gt;(
+        segments: widget.segments,
+        enabledBorder: _enabled ? enabledBorder : disabledBorder,
+        disabledBorder: disabledBorder,
+        direction: direction,
+        children: buttons,
+      ),
+    ),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/SegmentedButtonState-class.html">SegmentedButtonState<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+
+    <h5>SegmentedButtonState class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

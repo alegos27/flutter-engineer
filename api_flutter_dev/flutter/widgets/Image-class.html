@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Image class from the widgets library, for the Dart programming language.">
+  <title>Image class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">Image class</li>
+  </ol>
+  <div class="self-name">Image</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="widgets&#47;Image-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/image.dart#L332"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">Image</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A widget that displays an image.</p>
+<iframe src="https://www.youtube.com/embed/7oIAs-0G4mw?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>Several constructors are provided for the various ways that an image can be
+specified:</p>
+<ul>
+<li><a href="widgets/Image/Image.html">Image.new</a>, for obtaining an image from an <a href="painting/ImageProvider-class.html">ImageProvider</a>.</li>
+<li><a href="widgets/Image/Image.asset.html">Image.asset</a>, for obtaining an image from an <a href="services/AssetBundle-class.html">AssetBundle</a>
+using a key.</li>
+<li><a href="widgets/Image/Image.network.html">Image.network</a>, for obtaining an image from a URL.</li>
+<li><a href="widgets/Image/Image.file.html">Image.file</a>, for obtaining an image from a <a href="dart-io/File-class.html">File</a>.</li>
+<li><a href="widgets/Image/Image.memory.html">Image.memory</a>, for obtaining an image from a <a href="dart-typed_data/Uint8List-class.html">Uint8List</a>.</li>
+</ul>
+<p>The following image formats are supported: JPEG, PNG, GIF, Animated GIF, WebP, Animated WebP, BMP, and WBMP. Additional
+formats may be supported by the underlying platform. Flutter will
+attempt to call platform API to decode unrecognized formats, and if the
+platform API supports decoding the image Flutter will be able to render it.</p>
+<p>To automatically perform pixel-density-aware asset resolution, specify the
+image using an <a href="painting/AssetImage-class.html">AssetImage</a> and make sure that a <a href="material/MaterialApp-class.html">MaterialApp</a>, <a href="widgets/WidgetsApp-class.html">WidgetsApp</a>,
+or <a href="widgets/MediaQuery-class.html">MediaQuery</a> widget exists above the <a href="widgets/Image-class.html">Image</a> widget in the widget tree.</p>
+<p>The image is painted using <a href="painting/paintImage.html">paintImage</a>, which describes the meanings of the
+various fields on this class in more detail.</p>
+<p>
+<a name="widgets.Image.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The default constructor can be used with any <a href="painting/ImageProvider-class.html">ImageProvider</a>, such as a
+<a href="painting/NetworkImage-class.html">NetworkImage</a>, to display an image from the internet.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg" alt="An image of an owl displayed by the image widget">
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'widgets.Image.1');" onclick="fixHref(this, 'widgets.Image.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">const Image(
+  image: NetworkImage(&#39;https:&#47;&#47;flutter.github.io&#47;assets-for-api-docs&#47;assets&#47;widgets&#47;owl.jpg&#39;),
+)</code></pre>
+  </div>
+</div>
+</p>
+<p>
+<a name="widgets.Image.2"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The <a href="widgets/Image-class.html">Image</a> Widget also provides several constructors to display different
+types of images for convenience. In this example, use the <a href="widgets/Image/Image.network.html">Image.network</a>
+constructor to display an image from the internet.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg" alt="An image of an owl displayed by the image widget using the shortcut constructor">
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'widgets.Image.2');" onclick="fixHref(this, 'widgets.Image.2'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">Image.network(&#39;https:&#47;&#47;flutter.github.io&#47;assets-for-api-docs&#47;assets&#47;widgets&#47;owl-2.jpg&#39;)</code></pre>
+  </div>
+</div>
+</p>
+<h2 id="memory-usage">Memory usage</h2>
+<p>The image is stored in memory in uncompressed form (so that it can be
+rendered). Large images will use a lot of memory: a 4K image (3840×2160)
+will use over 30MB of RAM (assuming 32 bits per pixel).</p>
+<p>This problem is exacerbated by the images being cached in the <a href="painting/ImageCache-class.html">ImageCache</a>,
+so large images can use memory for even longer than they are displayed.</p>
+<p>The <a href="widgets/Image/Image.asset.html">Image.asset</a>, <a href="widgets/Image/Image.network.html">Image.network</a>, <a href="widgets/Image/Image.file.html">Image.file</a>, and <a href="widgets/Image/Image.memory.html">Image.memory</a>
+constructors allow a custom decode size to be specified through <code>cacheWidth</code>
+and <code>cacheHeight</code> parameters. The engine will then decode and store the
+image at the specified size, instead of the image's natural size.</p>
+<p>This can significantly reduce the memory usage. For example, a 4K image that
+will be rendered at only 384×216 pixels (one-tenth the horizontal and
+vertical dimensions) would only use 330KB if those dimensions are specified
+using the <code>cacheWidth</code> and <code>cacheHeight</code> parameters, a 100-fold reduction in
+memory usage.</p>
+<h3 id="web-considerations">Web considerations</h3>
+<p>In the case where a network image is used on the Web platform, the
+<code>cacheWidth</code> and <code>cacheHeight</code> parameters are only supported when the
+application is running with the CanvasKit renderer. When the application is
+using the HTML renderer, the web engine delegates image decoding of network
+images to the Web, which does not support custom decode sizes.</p>
+<h2 id="custom-image-providers">Custom image providers</h2>
+<p>
+<a name="widgets.Image.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+In this example, a variant of <a href="painting/NetworkImage-class.html">NetworkImage</a> is created that passes all the
+<a href="painting/ImageConfiguration-class.html">ImageConfiguration</a> information (locale, platform, size, etc) to the server
+using query arguments in the image URL.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.Image.3');" onclick="fixHref(this, 'widgets.Image.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.Image.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.Image.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/Icon-class.html">Icon</a>, which shows an image from a font.</li>
+<li><a href="material/Ink/Ink.image.html">Ink.image</a>, which is the preferred way to show an image in a
+material application (especially if the image is in a <a href="material/Material-class.html">Material</a> and will
+have an <a href="material/InkWell-class.html">InkWell</a> on top of it).</li>
+<li><a href="dart-ui/Image-class.html">Image</a>, the class in the <a href="dart-ui/dart-ui-library.html">dart:ui</a> library.</li>
+<li>Cookbook: <a href="https://flutter.dev/docs/cookbook/images/network-image">Display images from the internet</a></li>
+<li>Cookbook: <a href="https://flutter.dev/docs/cookbook/images/cached-images">Work with cached images</a></li>
+<li>Cookbook: <a href="https://flutter.dev/docs/cookbook/images/fading-in-images">Fade in images with a placeholder</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>Image</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Image" class="callable">
+          <span class="name"><a href="widgets/Image/Image.html">Image</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-image"><span>required</span> <span class="type-annotation"><a href="painting/ImageProvider-class.html">ImageProvider</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">image</span>, </span><span class="parameter" id="-param-frameBuilder"><span class="type-annotation"><a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> <span class="parameter-name">frameBuilder</span>, </span><span class="parameter" id="-param-loadingBuilder"><span class="type-annotation"><a href="widgets/ImageLoadingBuilder.html">ImageLoadingBuilder</a>?</span> <span class="parameter-name">loadingBuilder</span>, </span><span class="parameter" id="-param-errorBuilder"><span class="type-annotation"><a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-width"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-opacity"><span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">opacity</span>, </span><span class="parameter" id="-param-colorBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">Alignment.center</span>, </span><span class="parameter" id="-param-repeat"><span class="type-annotation"><a href="painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="-param-centerSlice"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">centerSlice</span>, </span><span class="parameter" id="-param-matchTextDirection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-gaplessPlayback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">gaplessPlayback</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-isAntiAlias"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAntiAlias</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-filterQuality"><span class="type-annotation"><a href="dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that displays an image.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="Image.asset" class="callable">
+          <span class="name"><a href="widgets/Image/Image.asset.html">Image.asset</a></span><span class="signature">(<span class="parameter" id="asset-param-name"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">name</span>, </span><span class="parameter" id="asset-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="asset-param-bundle"><span class="type-annotation"><a href="services/AssetBundle-class.html">AssetBundle</a>?</span> <span class="parameter-name">bundle</span>, </span><span class="parameter" id="asset-param-frameBuilder"><span class="type-annotation"><a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> <span class="parameter-name">frameBuilder</span>, </span><span class="parameter" id="asset-param-errorBuilder"><span class="type-annotation"><a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="asset-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="asset-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="asset-param-scale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">scale</span>, </span><span class="parameter" id="asset-param-width"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="asset-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="asset-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="asset-param-opacity"><span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">opacity</span>, </span><span class="parameter" id="asset-param-colorBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="asset-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="asset-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">Alignment.center</span>, </span><span class="parameter" id="asset-param-repeat"><span class="type-annotation"><a href="painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="asset-param-centerSlice"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">centerSlice</span>, </span><span class="parameter" id="asset-param-matchTextDirection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>, </span><span class="parameter" id="asset-param-gaplessPlayback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">gaplessPlayback</span> = <span class="default-value">false</span>, </span><span class="parameter" id="asset-param-isAntiAlias"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAntiAlias</span> = <span class="default-value">false</span>, </span><span class="parameter" id="asset-param-package"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">package</span>, </span><span class="parameter" id="asset-param-filterQuality"><span class="type-annotation"><a href="dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>, </span><span class="parameter" id="asset-param-cacheWidth"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheWidth</span>, </span><span class="parameter" id="asset-param-cacheHeight"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheHeight</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that displays an <a href="painting/ImageStream-class.html">ImageStream</a> obtained from an asset
+bundle. The key for the image is given by the <code>name</code> argument.
+        </dd>
+        <dt id="Image.file" class="callable">
+          <span class="name"><a href="widgets/Image/Image.file.html">Image.file</a></span><span class="signature">(<span class="parameter" id="file-param-file"><span class="type-annotation"><a href="dart-io/File-class.html">File</a></span> <span class="parameter-name">file</span>, </span><span class="parameter" id="file-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="file-param-scale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span> = <span class="default-value">1.0</span>, </span><span class="parameter" id="file-param-frameBuilder"><span class="type-annotation"><a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> <span class="parameter-name">frameBuilder</span>, </span><span class="parameter" id="file-param-errorBuilder"><span class="type-annotation"><a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="file-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="file-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="file-param-width"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="file-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="file-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="file-param-opacity"><span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">opacity</span>, </span><span class="parameter" id="file-param-colorBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="file-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="file-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">Alignment.center</span>, </span><span class="parameter" id="file-param-repeat"><span class="type-annotation"><a href="painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="file-param-centerSlice"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">centerSlice</span>, </span><span class="parameter" id="file-param-matchTextDirection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>, </span><span class="parameter" id="file-param-gaplessPlayback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">gaplessPlayback</span> = <span class="default-value">false</span>, </span><span class="parameter" id="file-param-isAntiAlias"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAntiAlias</span> = <span class="default-value">false</span>, </span><span class="parameter" id="file-param-filterQuality"><span class="type-annotation"><a href="dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>, </span><span class="parameter" id="file-param-cacheWidth"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheWidth</span>, </span><span class="parameter" id="file-param-cacheHeight"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheHeight</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that displays an <a href="painting/ImageStream-class.html">ImageStream</a> obtained from a <a href="dart-io/File-class.html">File</a>.
+        </dd>
+        <dt id="Image.memory" class="callable">
+          <span class="name"><a href="widgets/Image/Image.memory.html">Image.memory</a></span><span class="signature">(<span class="parameter" id="memory-param-bytes"><span class="type-annotation"><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">bytes</span>, </span><span class="parameter" id="memory-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="memory-param-scale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span> = <span class="default-value">1.0</span>, </span><span class="parameter" id="memory-param-frameBuilder"><span class="type-annotation"><a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> <span class="parameter-name">frameBuilder</span>, </span><span class="parameter" id="memory-param-errorBuilder"><span class="type-annotation"><a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="memory-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="memory-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="memory-param-width"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="memory-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="memory-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="memory-param-opacity"><span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">opacity</span>, </span><span class="parameter" id="memory-param-colorBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="memory-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="memory-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">Alignment.center</span>, </span><span class="parameter" id="memory-param-repeat"><span class="type-annotation"><a href="painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="memory-param-centerSlice"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">centerSlice</span>, </span><span class="parameter" id="memory-param-matchTextDirection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>, </span><span class="parameter" id="memory-param-gaplessPlayback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">gaplessPlayback</span> = <span class="default-value">false</span>, </span><span class="parameter" id="memory-param-isAntiAlias"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAntiAlias</span> = <span class="default-value">false</span>, </span><span class="parameter" id="memory-param-filterQuality"><span class="type-annotation"><a href="dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>, </span><span class="parameter" id="memory-param-cacheWidth"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheWidth</span>, </span><span class="parameter" id="memory-param-cacheHeight"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheHeight</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that displays an <a href="painting/ImageStream-class.html">ImageStream</a> obtained from a <a href="dart-typed_data/Uint8List-class.html">Uint8List</a>.
+        </dd>
+        <dt id="Image.network" class="callable">
+          <span class="name"><a href="widgets/Image/Image.network.html">Image.network</a></span><span class="signature">(<span class="parameter" id="network-param-src"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">src</span>, </span><span class="parameter" id="network-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="network-param-scale"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">scale</span> = <span class="default-value">1.0</span>, </span><span class="parameter" id="network-param-frameBuilder"><span class="type-annotation"><a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> <span class="parameter-name">frameBuilder</span>, </span><span class="parameter" id="network-param-loadingBuilder"><span class="type-annotation"><a href="widgets/ImageLoadingBuilder.html">ImageLoadingBuilder</a>?</span> <span class="parameter-name">loadingBuilder</span>, </span><span class="parameter" id="network-param-errorBuilder"><span class="type-annotation"><a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> <span class="parameter-name">errorBuilder</span>, </span><span class="parameter" id="network-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="network-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="network-param-width"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">width</span>, </span><span class="parameter" id="network-param-height"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">height</span>, </span><span class="parameter" id="network-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="network-param-opacity"><span class="type-annotation"><a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> <span class="parameter-name">opacity</span>, </span><span class="parameter" id="network-param-colorBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">colorBlendMode</span>, </span><span class="parameter" id="network-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a>?</span> <span class="parameter-name">fit</span>, </span><span class="parameter" id="network-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> <span class="parameter-name">alignment</span> = <span class="default-value">Alignment.center</span>, </span><span class="parameter" id="network-param-repeat"><span class="type-annotation"><a href="painting/ImageRepeat.html">ImageRepeat</a></span> <span class="parameter-name">repeat</span> = <span class="default-value">ImageRepeat.noRepeat</span>, </span><span class="parameter" id="network-param-centerSlice"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">centerSlice</span>, </span><span class="parameter" id="network-param-matchTextDirection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">matchTextDirection</span> = <span class="default-value">false</span>, </span><span class="parameter" id="network-param-gaplessPlayback"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">gaplessPlayback</span> = <span class="default-value">false</span>, </span><span class="parameter" id="network-param-filterQuality"><span class="type-annotation"><a href="dart-ui/FilterQuality.html">FilterQuality</a></span> <span class="parameter-name">filterQuality</span> = <span class="default-value">FilterQuality.low</span>, </span><span class="parameter" id="network-param-isAntiAlias"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isAntiAlias</span> = <span class="default-value">false</span>, </span><span class="parameter" id="network-param-headers"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>, </span><span class="parameter" id="network-param-cacheWidth"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheWidth</span>, </span><span class="parameter" id="network-param-cacheHeight"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">cacheHeight</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that displays an <a href="painting/ImageStream-class.html">ImageStream</a> obtained from the network.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="alignment" class="property">
+  <span class="name"><a href="widgets/Image/alignment.html">alignment</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a></span> 
+
+</dt>
+<dd>
+  How to align the image within its bounds.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="centerSlice" class="property">
+  <span class="name"><a href="widgets/Image/centerSlice.html">centerSlice</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Rect-class.html">Rect</a>?</span> 
+
+</dt>
+<dd>
+  The center slice for a nine-patch image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property">
+  <span class="name"><a href="widgets/Image/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  If non-null, this color is blended with each image pixel using <a href="widgets/Image/colorBlendMode.html">colorBlendMode</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="colorBlendMode" class="property">
+  <span class="name"><a href="widgets/Image/colorBlendMode.html">colorBlendMode</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/BlendMode.html">BlendMode</a>?</span> 
+
+</dt>
+<dd>
+  Used to combine <a href="widgets/Image/color.html">color</a> with this image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="errorBuilder" class="property">
+  <span class="name"><a href="widgets/Image/errorBuilder.html">errorBuilder</a></span>
+  <span class="signature">&#8594; <a href="widgets/ImageErrorWidgetBuilder.html">ImageErrorWidgetBuilder</a>?</span> 
+
+</dt>
+<dd>
+  A builder function that is called if an error occurs during image loading.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="excludeFromSemantics" class="property">
+  <span class="name"><a href="widgets/Image/excludeFromSemantics.html">excludeFromSemantics</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to exclude this image from semantics.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="filterQuality" class="property">
+  <span class="name"><a href="widgets/Image/filterQuality.html">filterQuality</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/FilterQuality.html">FilterQuality</a></span> 
+
+</dt>
+<dd>
+  The rendering quality of the image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="fit" class="property">
+  <span class="name"><a href="widgets/Image/fit.html">fit</a></span>
+  <span class="signature">&#8594; <a href="painting/BoxFit.html">BoxFit</a>?</span> 
+
+</dt>
+<dd>
+  How to inscribe the image into the space allocated during layout.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="frameBuilder" class="property">
+  <span class="name"><a href="widgets/Image/frameBuilder.html">frameBuilder</a></span>
+  <span class="signature">&#8594; <a href="widgets/ImageFrameBuilder.html">ImageFrameBuilder</a>?</span> 
+
+</dt>
+<dd>
+  A builder function responsible for creating the widget that represents
+this image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="gaplessPlayback" class="property">
+  <span class="name"><a href="widgets/Image/gaplessPlayback.html">gaplessPlayback</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to continue showing the old image (true), or briefly show nothing
+(false), when the image provider changes. The default value is false.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="height" class="property">
+  <span class="name"><a href="widgets/Image/height.html">height</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  If non-null, require the image to have this height (in logical pixels).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="image" class="property">
+  <span class="name"><a href="widgets/Image/image.html">image</a></span>
+  <span class="signature">&#8594; <a href="painting/ImageProvider-class.html">ImageProvider</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The image to display.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isAntiAlias" class="property">
+  <span class="name"><a href="widgets/Image/isAntiAlias.html">isAntiAlias</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to paint the image with anti-aliasing.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="loadingBuilder" class="property">
+  <span class="name"><a href="widgets/Image/loadingBuilder.html">loadingBuilder</a></span>
+  <span class="signature">&#8594; <a href="widgets/ImageLoadingBuilder.html">ImageLoadingBuilder</a>?</span> 
+
+</dt>
+<dd>
+  A builder that specifies the widget to display to the user while an image
+is still loading.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="matchTextDirection" class="property">
+  <span class="name"><a href="widgets/Image/matchTextDirection.html">matchTextDirection</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to paint the image in the direction of the <a href="dart-ui/TextDirection.html">TextDirection</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="opacity" class="property">
+  <span class="name"><a href="widgets/Image/opacity.html">opacity</a></span>
+  <span class="signature">&#8594; <a href="animation/Animation-class.html">Animation</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/double-class.html">double</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  If non-null, the value from the <a href="animation/Animation-class.html">Animation</a> is multiplied with the opacity
+of each image pixel before painting onto the canvas.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="repeat" class="property">
+  <span class="name"><a href="widgets/Image/repeat.html">repeat</a></span>
+  <span class="signature">&#8594; <a href="painting/ImageRepeat.html">ImageRepeat</a></span> 
+
+</dt>
+<dd>
+  How to paint any portions of the layout bounds not covered by the image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="semanticLabel" class="property">
+  <span class="name"><a href="widgets/Image/semanticLabel.html">semanticLabel</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  A Semantic description of the image.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="width" class="property">
+  <span class="name"><a href="widgets/Image/width.html">width</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  If non-null, require the image to have this width (in logical pixels).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="widgets/Image/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/State-class.html">State</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Image-class.html">Image</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="widgets/Image/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">Image class</li>
+</ol>
+
+
+    <!--<h5>widgets library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

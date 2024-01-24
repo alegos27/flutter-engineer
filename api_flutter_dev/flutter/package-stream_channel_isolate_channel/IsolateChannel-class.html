@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the IsolateChannel class from the isolate_channel library, for the Dart programming language.">
+  <title>IsolateChannel class - isolate_channel library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-stream_channel_isolate_channel/package-stream_channel_isolate_channel-library.html">isolate_channel</a></li>
+    <li class="self-crumb">IsolateChannel<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+  </ol>
+  <div class="self-name">IsolateChannel</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-stream_channel_isolate_channel&#47;package-stream_channel_isolate_channel-library-sidebar.html"
+      data-below-sidebar="package-stream_channel_isolate_channel&#47;IsolateChannel-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">IsolateChannel&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a> that communicates over a <a href="dart-isolate/ReceivePort-class.html">ReceivePort</a>/<a href="dart-isolate/SendPort-class.html">SendPort</a> pair,
+presumably with another isolate.</p>
+<p>The remote endpoint doesn't necessarily need to be running an
+<a href="package-stream_channel_isolate_channel/IsolateChannel-class.html">IsolateChannel</a>. This can be used with any two ports, although the
+<a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a> semantics mean that this class will treat them as being
+paired (for example, closing the <a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> will cause the <a href="package-stream_channel_isolate_channel/IsolateChannel/stream.html">stream</a> to stop
+emitting events).</p>
+<p>The underlying isolate ports have no notion of closing connections. This
+means that <a href="package-stream_channel_isolate_channel/IsolateChannel/stream.html">stream</a> won't close unless <a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> is closed, and that closing
+<a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> won't cause the remote endpoint to close. Users should take care to
+ensure that they always close the <a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> of every <a href="package-stream_channel_isolate_channel/IsolateChannel-class.html">IsolateChannel</a> they use
+to avoid leaving dangling <a href="dart-isolate/ReceivePort-class.html">ReceivePort</a>s.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="package-stream_channel_stream_channel/StreamChannelMixin-class.html">StreamChannelMixin</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
+      <li>IsolateChannel</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="IsolateChannel" class="callable">
+          <span class="name"><a href="package-stream_channel_isolate_channel/IsolateChannel/IsolateChannel.html">IsolateChannel</a></span><span class="signature">(<span class="parameter" id="-param-receivePort"><span class="type-annotation"><a href="dart-isolate/ReceivePort-class.html">ReceivePort</a></span> <span class="parameter-name">receivePort</span>, </span><span class="parameter" id="-param-sendPort"><span class="type-annotation"><a href="dart-isolate/SendPort-class.html">SendPort</a></span> <span class="parameter-name">sendPort</span></span>)</span>
+        </dt>
+        <dd>
+          Creates a stream channel that receives messages from <code>receivePort</code> and
+sends them over <code>sendPort</code>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="IsolateChannel.connectReceive" class="callable">
+          <span class="name"><a href="package-stream_channel_isolate_channel/IsolateChannel/IsolateChannel.connectReceive.html">IsolateChannel.connectReceive</a></span><span class="signature">(<span class="parameter" id="connectReceive-param-receivePort"><span class="type-annotation"><a href="dart-isolate/ReceivePort-class.html">ReceivePort</a></span> <span class="parameter-name">receivePort</span></span>)</span>
+        </dt>
+        <dd>
+          Connects to a remote channel that was created with
+<a href="package-stream_channel_isolate_channel/IsolateChannel/IsolateChannel.connectSend.html">IsolateChannel.connectSend</a>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="IsolateChannel.connectSend" class="callable">
+          <span class="name"><a href="package-stream_channel_isolate_channel/IsolateChannel/IsolateChannel.connectSend.html">IsolateChannel.connectSend</a></span><span class="signature">(<span class="parameter" id="connectSend-param-sendPort"><span class="type-annotation"><a href="dart-isolate/SendPort-class.html">SendPort</a></span> <span class="parameter-name">sendPort</span></span>)</span>
+        </dt>
+        <dd>
+          Connects to a remote channel that was created with
+<a href="package-stream_channel_isolate_channel/IsolateChannel/IsolateChannel.connectReceive.html">IsolateChannel.connectReceive</a>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sink" class="property">
+  <span class="name"><a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a></span>
+  <span class="signature">&#8594; <a href="dart-async/StreamSink-class.html">StreamSink</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The sink for sending values to the other endpoint.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="stream" class="property">
+  <span class="name"><a href="package-stream_channel_isolate_channel/IsolateChannel/stream.html">stream</a></span>
+  <span class="signature">&#8594; <a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The single-subscription stream that emits values from the other endpoint.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="cast" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/cast.html">cast</a></span><span class="signature">&lt;<wbr><span class="type-parameter">S</span>&gt;</span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">S</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a copy of this with the generic type coerced to <code>S</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="changeSink" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/changeSink.html">changeSink</a></span><span class="signature">(<wbr><span class="parameter" id="changeSink-param-change"><span class="type-annotation"><a href="dart-async/StreamSink-class.html">StreamSink</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">change</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="dart-async/StreamSink-class.html">StreamSink</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span></span>)</span>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a copy of this with <a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> replaced by <code>change</code>'s return
+value.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="changeStream" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/changeStream.html">changeStream</a></span><span class="signature">(<wbr><span class="parameter" id="changeStream-param-change"><span class="type-annotation"><a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">change</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span></span>)</span>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a copy of this with <a href="package-stream_channel_isolate_channel/IsolateChannel/stream.html">stream</a> replaced by <code>change</code>'s return
+value.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pipe" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/pipe.html">pipe</a></span><span class="signature">(<wbr><span class="parameter" id="pipe-param-other"><span class="type-annotation"><a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Connects this to <code>other</code>, so that any values emitted by either are sent
+directly to the other.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="transform" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/transform.html">transform</a></span><span class="signature">&lt;<wbr><span class="type-parameter">S</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="transform-param-transformer"><span class="type-annotation"><a href="package-stream_channel_stream_channel/StreamChannelTransformer-class.html">StreamChannelTransformer</a><span class="signature">&lt;<wbr><span class="type-parameter">S</span>, <span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">transformer</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">S</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Transforms this using <code>transformer</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="transformSink" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/transformSink.html">transformSink</a></span><span class="signature">(<wbr><span class="parameter" id="transformSink-param-transformer"><span class="type-annotation"><a href="async/StreamSinkTransformer-class.html">StreamSinkTransformer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">transformer</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Transforms only the <a href="package-stream_channel_isolate_channel/IsolateChannel/sink.html">sink</a> component of this using <code>transformer</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="transformStream" class="callable inherited">
+  <span class="name"><a href="package-stream_channel_stream_channel/StreamChannelMixin/transformStream.html">transformStream</a></span><span class="signature">(<wbr><span class="parameter" id="transformStream-param-transformer"><span class="type-annotation"><a href="dart-async/StreamTransformer-class.html">StreamTransformer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">transformer</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Transforms only the <a href="package-stream_channel_isolate_channel/IsolateChannel/stream.html">stream</a> component of this using <code>transformer</code>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-stream_channel_isolate_channel/package-stream_channel_isolate_channel-library.html">isolate_channel</a></li>
+    <li class="self-crumb">IsolateChannel<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class</li>
+</ol>
+
+
+    <!--<h5>isolate_channel library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

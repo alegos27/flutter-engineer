@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.Table.1",
+    "element": "Table",
+    "sourcePath": "lib/src/widgets/table.dart",
+    "sourceLine": 114,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample shows a [Table] with borders, multiple types of column widths\nand different vertical cell alignments.",
+    "file": "cupertino.Table.1.dart"
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the putIfAbsent method from the ImageCache class, for the Dart programming language.">
+  <title>putIfAbsent method - ImageCache class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li><a href="painting/ImageCache-class.html">ImageCache</a></li>
+    <li class="self-crumb">putIfAbsent method</li>
+  </ol>
+  <div class="self-name">putIfAbsent</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;ImageCache-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/image_cache.dart#L322"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">putIfAbsent</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a>?</span>
+<span class="name ">putIfAbsent</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="putIfAbsent-param-key"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">key</span>, </span></li>
+<li><span class="parameter" id="putIfAbsent-param-loader"><span class="type-annotation"><a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a></span> <span class="parameter-name">loader</span>(<ol class="parameter-list"></ol>
+), </span></li>
+<li><span class="parameter" id="putIfAbsent-param-onError">{<span class="type-annotation"><a href="painting/ImageErrorListener.html">ImageErrorListener</a>?</span> <span class="parameter-name">onError</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns the previously cached <a href="painting/ImageStream-class.html">ImageStream</a> for the given key, if available;
+if not, calls the given callback to obtain it first. In either case, the
+key is moved to the 'most recently used' position.</p>
+<p>In the event that the loader throws an exception, it will be caught only if
+<code>onError</code> is also provided. When an exception is caught resolving an image,
+no completers are cached and <code>null</code> is returned instead of a new
+completer.</p>
+<p>Images that are larger than <a href="painting/ImageCache/maximumSizeBytes.html">maximumSizeBytes</a> are not cached, and do not
+cause other images in the cache to be evicted.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">ImageStreamCompleter? putIfAbsent(Object key, ImageStreamCompleter Function() loader, { ImageErrorListener? onError }) {
+  TimelineTask? debugTimelineTask;
+  if (!kReleaseMode) {
+    debugTimelineTask = TimelineTask()..start(
+      &#39;ImageCache.putIfAbsent&#39;,
+      arguments: &lt;String, dynamic&gt;{
+        &#39;key&#39;: key.toString(),
+      },
+    );
+  }
+  ImageStreamCompleter? result = _pendingImages[key]?.completer;
+  &#47;&#47; Nothing needs to be done because the image hasn&#39;t loaded yet.
+  if (result != null) {
+    if (!kReleaseMode) {
+      debugTimelineTask!.finish(arguments: &lt;String, dynamic&gt;{&#39;result&#39;: &#39;pending&#39;});
+    }
+    return result;
+  }
+  &#47;&#47; Remove the provider from the list so that we can move it to the
+  &#47;&#47; recently used position below.
+  &#47;&#47; Don&#39;t use _touch here, which would trigger a check on cache size that is
+  &#47;&#47; not needed since this is just moving an existing cache entry to the head.
+  final _CachedImage? image = _cache.remove(key);
+  if (image != null) {
+    if (!kReleaseMode) {
+      debugTimelineTask!.finish(arguments: &lt;String, dynamic&gt;{&#39;result&#39;: &#39;keepAlive&#39;});
+    }
+    &#47;&#47; The image might have been keptAlive but had no listeners (so not live).
+    &#47;&#47; Make sure the cache starts tracking it as live again.
+    _trackLiveImage(
+      key,
+      image.completer,
+      image.sizeBytes,
+    );
+    _cache[key] = image;
+    return image.completer;
+  }
+
+  final _LiveImage? liveImage = _liveImages[key];
+  if (liveImage != null) {
+    _touch(
+      key,
+      _CachedImage(
+        liveImage.completer,
+        sizeBytes: liveImage.sizeBytes,
+      ),
+      debugTimelineTask,
+    );
+    if (!kReleaseMode) {
+      debugTimelineTask!.finish(arguments: &lt;String, dynamic&gt;{&#39;result&#39;: &#39;keepAlive&#39;});
+    }
+    return liveImage.completer;
+  }
+
+  try {
+    result = loader();
+    _trackLiveImage(key, result, null);
+  } catch (error, stackTrace) {
+    if (!kReleaseMode) {
+      debugTimelineTask!.finish(arguments: &lt;String, dynamic&gt;{
+        &#39;result&#39;: &#39;error&#39;,
+        &#39;error&#39;: error.toString(),
+        &#39;stackTrace&#39;: stackTrace.toString(),
+      });
+    }
+    if (onError != null) {
+      onError(error, stackTrace);
+      return null;
+    } else {
+      rethrow;
+    }
+  }
+
+  if (!kReleaseMode) {
+    debugTimelineTask!.start(&#39;listener&#39;);
+  }
+  &#47;&#47; A multi-frame provider may call the listener more than once. We need do make
+  &#47;&#47; sure that some cleanup works won&#39;t run multiple times, such as finishing the
+  &#47;&#47; tracing task or removing the listeners
+  bool listenedOnce = false;
+
+  &#47;&#47; We shouldn&#39;t use the _pendingImages map if the cache is disabled, but we
+  &#47;&#47; will have to listen to the image at least once so we don&#39;t leak it in
+  &#47;&#47; the live image tracking.
+  final bool trackPendingImage = maximumSize &gt; 0 &amp;&amp; maximumSizeBytes &gt; 0;
+  late _PendingImage pendingImage;
+  void listener(ImageInfo? info, bool syncCall) {
+    int? sizeBytes;
+    if (info != null) {
+      sizeBytes = info.sizeBytes;
+      info.dispose();
+    }
+    final _CachedImage image = _CachedImage(
+      result!,
+      sizeBytes: sizeBytes,
+    );
+
+    _trackLiveImage(key, result, sizeBytes);
+
+    &#47;&#47; Only touch if the cache was enabled when resolve was initially called.
+    if (trackPendingImage) {
+      _touch(key, image, debugTimelineTask);
+    } else {
+      image.dispose();
+    }
+
+    _pendingImages.remove(key);
+    if (!listenedOnce) {
+      pendingImage.removeListener();
+    }
+    if (!kReleaseMode &amp;&amp; !listenedOnce) {
+      debugTimelineTask!
+        ..finish(arguments: &lt;String, dynamic&gt;{
+          &#39;syncCall&#39;: syncCall,
+          &#39;sizeInBytes&#39;: sizeBytes,
+        })
+        ..finish(arguments: &lt;String, dynamic&gt;{
+          &#39;currentSizeBytes&#39;: currentSizeBytes,
+          &#39;currentSize&#39;: currentSize,
+        });
+    }
+    listenedOnce = true;
+  }
+
+  final ImageStreamListener streamListener = ImageStreamListener(listener);
+  pendingImage = _PendingImage(result, streamListener);
+  if (trackPendingImage) {
+    _pendingImages[key] = pendingImage;
+  }
+  &#47;&#47; Listener is removed in [_PendingImage.removeListener].
+  result.addListener(streamListener);
+
+  return result;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li><a href="painting/ImageCache-class.html">ImageCache</a></li>
+    <li class="self-crumb">putIfAbsent method</li>
+</ol>
+
+
+    <h5>ImageCache class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

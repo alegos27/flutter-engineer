@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ThemeData class from the material library, for the Dart programming language.">
+  <title>ThemeData class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">ThemeData class</li>
+  </ol>
+  <div class="self-name">ThemeData</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;ThemeData-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/theme_data.dart#L197"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">ThemeData</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Defines the configuration of the overall visual <a href="material/Theme-class.html">Theme</a> for a <a href="material/MaterialApp-class.html">MaterialApp</a>
+or a widget subtree within the app.</p>
+<p>The <a href="material/MaterialApp-class.html">MaterialApp</a> theme property can be used to configure the appearance
+of the entire app. Widget subtrees within an app can override the app's
+theme by including a <a href="material/Theme-class.html">Theme</a> widget at the top of the subtree.</p>
+<p>Widgets whose appearance should align with the overall theme can obtain the
+current theme's configuration with <a href="material/Theme/of.html">Theme.of</a>. Material components typically
+depend exclusively on the <a href="material/ThemeData/colorScheme.html">colorScheme</a> and <a href="material/ThemeData/textTheme.html">textTheme</a>. These properties
+are guaranteed to have non-null values.</p>
+<p>The static <a href="material/Theme/of.html">Theme.of</a> method finds the <a href="material/ThemeData-class.html">ThemeData</a> value specified for the
+nearest <a href="widgets/BuildContext-class.html">BuildContext</a> ancestor. This lookup is inexpensive, essentially
+just a single HashMap access. It can sometimes be a little confusing
+because <a href="material/Theme/of.html">Theme.of</a> can not see a <a href="material/Theme-class.html">Theme</a> widget that is defined in the
+current build method's context. To overcome that, create a new custom widget
+for the subtree that appears below the new <a href="material/Theme-class.html">Theme</a>, or insert a widget
+that creates a new BuildContext, like <a href="widgets/Builder-class.html">Builder</a>.</p>
+<p>
+<a name="material.ThemeData.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example demonstrates how a typical <a href="material/MaterialApp-class.html">MaterialApp</a> specifies
+and uses a custom <a href="material/Theme-class.html">Theme</a>. The theme's <a href="material/ColorScheme-class.html">ColorScheme</a> is based on a
+single "seed" color and configures itself to match the platform's
+current light or dark color configuration. The theme overrides the
+default configuration of <a href="material/FloatingActionButton-class.html">FloatingActionButton</a> to show how to
+customize the appearance a class of components.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.ThemeData.1');" onclick="fixHref(this, 'material.ThemeData.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.ThemeData.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.ThemeData.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See <a href="https://material.io/design/color/">material.io/design/color/</a> for
+more discussion on how to pick the right colors.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+  <dt>Mixed in types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></li>
+    </ul>
+  </dd>
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="meta/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ThemeData" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.html">ThemeData</a></span><span class="signature">(<span class="parameter" id="-param-applyElevationOverlayColor">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">applyElevationOverlayColor</span>, </span><span class="parameter" id="-param-cupertinoOverrideTheme"><span class="type-annotation"><a href="cupertino/NoDefaultCupertinoThemeData-class.html">NoDefaultCupertinoThemeData</a>?</span> <span class="parameter-name">cupertinoOverrideTheme</span>, </span><span class="parameter" id="-param-extensions"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/ThemeExtension-class.html">ThemeExtension</a></span>&gt;</span>?</span> <span class="parameter-name">extensions</span>, </span><span class="parameter" id="-param-inputDecorationTheme"><span class="type-annotation"><a href="material/InputDecorationTheme-class.html">InputDecorationTheme</a>?</span> <span class="parameter-name">inputDecorationTheme</span>, </span><span class="parameter" id="-param-materialTapTargetSize"><span class="type-annotation"><a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a>?</span> <span class="parameter-name">materialTapTargetSize</span>, </span><span class="parameter" id="-param-pageTransitionsTheme"><span class="type-annotation"><a href="material/PageTransitionsTheme-class.html">PageTransitionsTheme</a>?</span> <span class="parameter-name">pageTransitionsTheme</span>, </span><span class="parameter" id="-param-platform"><span class="type-annotation"><a href="foundation/TargetPlatform.html">TargetPlatform</a>?</span> <span class="parameter-name">platform</span>, </span><span class="parameter" id="-param-scrollbarTheme"><span class="type-annotation"><a href="material/ScrollbarThemeData-class.html">ScrollbarThemeData</a>?</span> <span class="parameter-name">scrollbarTheme</span>, </span><span class="parameter" id="-param-splashFactory"><span class="type-annotation"><a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a>?</span> <span class="parameter-name">splashFactory</span>, </span><span class="parameter" id="-param-useMaterial3"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>, </span><span class="parameter" id="-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="-param-brightness"><span class="type-annotation"><a href="dart-ui/Brightness.html">Brightness</a>?</span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="-param-canvasColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">canvasColor</span>, </span><span class="parameter" id="-param-cardColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">cardColor</span>, </span><span class="parameter" id="-param-colorScheme"><span class="type-annotation"><a href="material/ColorScheme-class.html">ColorScheme</a>?</span> <span class="parameter-name">colorScheme</span>, </span><span class="parameter" id="-param-colorSchemeSeed"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">colorSchemeSeed</span>, </span><span class="parameter" id="-param-dialogBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">dialogBackgroundColor</span>, </span><span class="parameter" id="-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="-param-dividerColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">dividerColor</span>, </span><span class="parameter" id="-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="-param-hintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hintColor</span>, </span><span class="parameter" id="-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="-param-indicatorColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">indicatorColor</span>, </span><span class="parameter" id="-param-primaryColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColor</span>, </span><span class="parameter" id="-param-primaryColorDark"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColorDark</span>, </span><span class="parameter" id="-param-primaryColorLight"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColorLight</span>, </span><span class="parameter" id="-param-primarySwatch"><span class="type-annotation"><a href="material/MaterialColor-class.html">MaterialColor</a>?</span> <span class="parameter-name">primarySwatch</span>, </span><span class="parameter" id="-param-scaffoldBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">scaffoldBackgroundColor</span>, </span><span class="parameter" id="-param-secondaryHeaderColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">secondaryHeaderColor</span>, </span><span class="parameter" id="-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="-param-unselectedWidgetColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">unselectedWidgetColor</span>, </span><span class="parameter" id="-param-fontFamily"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">fontFamily</span>, </span><span class="parameter" id="-param-fontFamilyFallback"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">fontFamilyFallback</span>, </span><span class="parameter" id="-param-package"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">package</span>, </span><span class="parameter" id="-param-iconTheme"><span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a>?</span> <span class="parameter-name">iconTheme</span>, </span><span class="parameter" id="-param-primaryIconTheme"><span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a>?</span> <span class="parameter-name">primaryIconTheme</span>, </span><span class="parameter" id="-param-primaryTextTheme"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a>?</span> <span class="parameter-name">primaryTextTheme</span>, </span><span class="parameter" id="-param-textTheme"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a>?</span> <span class="parameter-name">textTheme</span>, </span><span class="parameter" id="-param-typography"><span class="type-annotation"><a href="material/Typography-class.html">Typography</a>?</span> <span class="parameter-name">typography</span>, </span><span class="parameter" id="-param-actionIconTheme"><span class="type-annotation"><a href="material/ActionIconThemeData-class.html">ActionIconThemeData</a>?</span> <span class="parameter-name">actionIconTheme</span>, </span><span class="parameter" id="-param-appBarTheme"><span class="type-annotation"><a href="material/AppBarTheme-class.html">AppBarTheme</a>?</span> <span class="parameter-name">appBarTheme</span>, </span><span class="parameter" id="-param-badgeTheme"><span class="type-annotation"><a href="material/BadgeThemeData-class.html">BadgeThemeData</a>?</span> <span class="parameter-name">badgeTheme</span>, </span><span class="parameter" id="-param-bannerTheme"><span class="type-annotation"><a href="material/MaterialBannerThemeData-class.html">MaterialBannerThemeData</a>?</span> <span class="parameter-name">bannerTheme</span>, </span><span class="parameter" id="-param-bottomAppBarTheme"><span class="type-annotation"><a href="material/BottomAppBarTheme-class.html">BottomAppBarTheme</a>?</span> <span class="parameter-name">bottomAppBarTheme</span>, </span><span class="parameter" id="-param-bottomNavigationBarTheme"><span class="type-annotation"><a href="material/BottomNavigationBarThemeData-class.html">BottomNavigationBarThemeData</a>?</span> <span class="parameter-name">bottomNavigationBarTheme</span>, </span><span class="parameter" id="-param-bottomSheetTheme"><span class="type-annotation"><a href="material/BottomSheetThemeData-class.html">BottomSheetThemeData</a>?</span> <span class="parameter-name">bottomSheetTheme</span>, </span><span class="parameter" id="-param-buttonBarTheme"><span class="type-annotation"><a href="material/ButtonBarThemeData-class.html">ButtonBarThemeData</a>?</span> <span class="parameter-name">buttonBarTheme</span>, </span><span class="parameter" id="-param-buttonTheme"><span class="type-annotation"><a href="material/ButtonThemeData-class.html">ButtonThemeData</a>?</span> <span class="parameter-name">buttonTheme</span>, </span><span class="parameter" id="-param-cardTheme"><span class="type-annotation"><a href="material/CardTheme-class.html">CardTheme</a>?</span> <span class="parameter-name">cardTheme</span>, </span><span class="parameter" id="-param-checkboxTheme"><span class="type-annotation"><a href="material/CheckboxThemeData-class.html">CheckboxThemeData</a>?</span> <span class="parameter-name">checkboxTheme</span>, </span><span class="parameter" id="-param-chipTheme"><span class="type-annotation"><a href="material/ChipThemeData-class.html">ChipThemeData</a>?</span> <span class="parameter-name">chipTheme</span>, </span><span class="parameter" id="-param-dataTableTheme"><span class="type-annotation"><a href="material/DataTableThemeData-class.html">DataTableThemeData</a>?</span> <span class="parameter-name">dataTableTheme</span>, </span><span class="parameter" id="-param-datePickerTheme"><span class="type-annotation"><a href="material/DatePickerThemeData-class.html">DatePickerThemeData</a>?</span> <span class="parameter-name">datePickerTheme</span>, </span><span class="parameter" id="-param-dialogTheme"><span class="type-annotation"><a href="material/DialogTheme-class.html">DialogTheme</a>?</span> <span class="parameter-name">dialogTheme</span>, </span><span class="parameter" id="-param-dividerTheme"><span class="type-annotation"><a href="material/DividerThemeData-class.html">DividerThemeData</a>?</span> <span class="parameter-name">dividerTheme</span>, </span><span class="parameter" id="-param-drawerTheme"><span class="type-annotation"><a href="material/DrawerThemeData-class.html">DrawerThemeData</a>?</span> <span class="parameter-name">drawerTheme</span>, </span><span class="parameter" id="-param-dropdownMenuTheme"><span class="type-annotation"><a href="material/DropdownMenuThemeData-class.html">DropdownMenuThemeData</a>?</span> <span class="parameter-name">dropdownMenuTheme</span>, </span><span class="parameter" id="-param-elevatedButtonTheme"><span class="type-annotation"><a href="material/ElevatedButtonThemeData-class.html">ElevatedButtonThemeData</a>?</span> <span class="parameter-name">elevatedButtonTheme</span>, </span><span class="parameter" id="-param-expansionTileTheme"><span class="type-annotation"><a href="material/ExpansionTileThemeData-class.html">ExpansionTileThemeData</a>?</span> <span class="parameter-name">expansionTileTheme</span>, </span><span class="parameter" id="-param-filledButtonTheme"><span class="type-annotation"><a href="material/FilledButtonThemeData-class.html">FilledButtonThemeData</a>?</span> <span class="parameter-name">filledButtonTheme</span>, </span><span class="parameter" id="-param-floatingActionButtonTheme"><span class="type-annotation"><a href="material/FloatingActionButtonThemeData-class.html">FloatingActionButtonThemeData</a>?</span> <span class="parameter-name">floatingActionButtonTheme</span>, </span><span class="parameter" id="-param-iconButtonTheme"><span class="type-annotation"><a href="material/IconButtonThemeData-class.html">IconButtonThemeData</a>?</span> <span class="parameter-name">iconButtonTheme</span>, </span><span class="parameter" id="-param-listTileTheme"><span class="type-annotation"><a href="material/ListTileThemeData-class.html">ListTileThemeData</a>?</span> <span class="parameter-name">listTileTheme</span>, </span><span class="parameter" id="-param-menuBarTheme"><span class="type-annotation"><a href="material/MenuBarThemeData-class.html">MenuBarThemeData</a>?</span> <span class="parameter-name">menuBarTheme</span>, </span><span class="parameter" id="-param-menuButtonTheme"><span class="type-annotation"><a href="material/MenuButtonThemeData-class.html">MenuButtonThemeData</a>?</span> <span class="parameter-name">menuButtonTheme</span>, </span><span class="parameter" id="-param-menuTheme"><span class="type-annotation"><a href="material/MenuThemeData-class.html">MenuThemeData</a>?</span> <span class="parameter-name">menuTheme</span>, </span><span class="parameter" id="-param-navigationBarTheme"><span class="type-annotation"><a href="material/NavigationBarThemeData-class.html">NavigationBarThemeData</a>?</span> <span class="parameter-name">navigationBarTheme</span>, </span><span class="parameter" id="-param-navigationDrawerTheme"><span class="type-annotation"><a href="material/NavigationDrawerThemeData-class.html">NavigationDrawerThemeData</a>?</span> <span class="parameter-name">navigationDrawerTheme</span>, </span><span class="parameter" id="-param-navigationRailTheme"><span class="type-annotation"><a href="material/NavigationRailThemeData-class.html">NavigationRailThemeData</a>?</span> <span class="parameter-name">navigationRailTheme</span>, </span><span class="parameter" id="-param-outlinedButtonTheme"><span class="type-annotation"><a href="material/OutlinedButtonThemeData-class.html">OutlinedButtonThemeData</a>?</span> <span class="parameter-name">outlinedButtonTheme</span>, </span><span class="parameter" id="-param-popupMenuTheme"><span class="type-annotation"><a href="material/PopupMenuThemeData-class.html">PopupMenuThemeData</a>?</span> <span class="parameter-name">popupMenuTheme</span>, </span><span class="parameter" id="-param-progressIndicatorTheme"><span class="type-annotation"><a href="material/ProgressIndicatorThemeData-class.html">ProgressIndicatorThemeData</a>?</span> <span class="parameter-name">progressIndicatorTheme</span>, </span><span class="parameter" id="-param-radioTheme"><span class="type-annotation"><a href="material/RadioThemeData-class.html">RadioThemeData</a>?</span> <span class="parameter-name">radioTheme</span>, </span><span class="parameter" id="-param-searchBarTheme"><span class="type-annotation"><a href="material/SearchBarThemeData-class.html">SearchBarThemeData</a>?</span> <span class="parameter-name">searchBarTheme</span>, </span><span class="parameter" id="-param-searchViewTheme"><span class="type-annotation"><a href="material/SearchViewThemeData-class.html">SearchViewThemeData</a>?</span> <span class="parameter-name">searchViewTheme</span>, </span><span class="parameter" id="-param-segmentedButtonTheme"><span class="type-annotation"><a href="material/SegmentedButtonThemeData-class.html">SegmentedButtonThemeData</a>?</span> <span class="parameter-name">segmentedButtonTheme</span>, </span><span class="parameter" id="-param-sliderTheme"><span class="type-annotation"><a href="material/SliderThemeData-class.html">SliderThemeData</a>?</span> <span class="parameter-name">sliderTheme</span>, </span><span class="parameter" id="-param-snackBarTheme"><span class="type-annotation"><a href="material/SnackBarThemeData-class.html">SnackBarThemeData</a>?</span> <span class="parameter-name">snackBarTheme</span>, </span><span class="parameter" id="-param-switchTheme"><span class="type-annotation"><a href="material/SwitchThemeData-class.html">SwitchThemeData</a>?</span> <span class="parameter-name">switchTheme</span>, </span><span class="parameter" id="-param-tabBarTheme"><span class="type-annotation"><a href="material/TabBarTheme-class.html">TabBarTheme</a>?</span> <span class="parameter-name">tabBarTheme</span>, </span><span class="parameter" id="-param-textButtonTheme"><span class="type-annotation"><a href="material/TextButtonThemeData-class.html">TextButtonThemeData</a>?</span> <span class="parameter-name">textButtonTheme</span>, </span><span class="parameter" id="-param-textSelectionTheme"><span class="type-annotation"><a href="material/TextSelectionThemeData-class.html">TextSelectionThemeData</a>?</span> <span class="parameter-name">textSelectionTheme</span>, </span><span class="parameter" id="-param-timePickerTheme"><span class="type-annotation"><a href="material/TimePickerThemeData-class.html">TimePickerThemeData</a>?</span> <span class="parameter-name">timePickerTheme</span>, </span><span class="parameter" id="-param-toggleButtonsTheme"><span class="type-annotation"><a href="material/ToggleButtonsThemeData-class.html">ToggleButtonsThemeData</a>?</span> <span class="parameter-name">toggleButtonsTheme</span>, </span><span class="parameter" id="-param-tooltipTheme"><span class="type-annotation"><a href="material/TooltipThemeData-class.html">TooltipThemeData</a>?</span> <span class="parameter-name">tooltipTheme</span>, </span><span class="parameter" id="-param-toggleableActiveColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;No longer used by the framework, please remove any reference to it. &#39; &#39;For more information, consult the migration guide at &#39; &#39;https:&#47;&#47;flutter.dev&#47;docs&#47;release&#47;breaking-changes&#47;toggleable-active-color#migration-guide. &#39; &#39;This feature was deprecated after v3.4.0-19.0.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">toggleableActiveColor</span>, </span><span class="parameter" id="-param-selectedRowColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;No longer used by the framework, please remove any reference to it. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">selectedRowColor</span>, </span><span class="parameter" id="-param-errorColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use colorScheme.error instead. &#39; &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">errorColor</span>, </span><span class="parameter" id="-param-backgroundColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use colorScheme.background instead. &#39; &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="-param-bottomAppBarColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use BottomAppBarTheme.color instead. &#39; &#39;This feature was deprecated after v3.3.0-0.6.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">bottomAppBarColor</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a <a href="material/ThemeData-class.html">ThemeData</a> that's used to configure a <a href="material/Theme-class.html">Theme</a>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ThemeData.dark" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.dark.html">ThemeData.dark</a></span><span class="signature">(<span class="parameter" id="dark-param-useMaterial3">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>}</span>)</span>
+        </dt>
+        <dd>
+          A default dark theme.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ThemeData.fallback" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.fallback.html">ThemeData.fallback</a></span><span class="signature">(<span class="parameter" id="fallback-param-useMaterial3">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>}</span>)</span>
+        </dt>
+        <dd>
+          The default color theme. Same as <a href="material/ThemeData/ThemeData.light.html">ThemeData.light</a>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ThemeData.from" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.from.html">ThemeData.from</a></span><span class="signature">(<span class="parameter" id="from-param-colorScheme">{<span>required</span> <span class="type-annotation"><a href="material/ColorScheme-class.html">ColorScheme</a></span> <span class="parameter-name">colorScheme</span>, </span><span class="parameter" id="from-param-textTheme"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a>?</span> <span class="parameter-name">textTheme</span>, </span><span class="parameter" id="from-param-useMaterial3"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a <a href="material/ThemeData-class.html">ThemeData</a> based on the colors in the given <code>colorScheme</code> and
+text styles of the optional <code>textTheme</code>.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ThemeData.light" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.light.html">ThemeData.light</a></span><span class="signature">(<span class="parameter" id="light-param-useMaterial3">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>}</span>)</span>
+        </dt>
+        <dd>
+          A default light theme.
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ThemeData.raw" class="callable">
+          <span class="name"><a href="material/ThemeData/ThemeData.raw.html">ThemeData.raw</a></span><span class="signature">(<span class="parameter" id="raw-param-applyElevationOverlayColor">{<span>required</span> <span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">applyElevationOverlayColor</span>, </span><span class="parameter" id="raw-param-cupertinoOverrideTheme"><span>required</span> <span class="type-annotation"><a href="cupertino/NoDefaultCupertinoThemeData-class.html">NoDefaultCupertinoThemeData</a>?</span> <span class="parameter-name">cupertinoOverrideTheme</span>, </span><span class="parameter" id="raw-param-extensions"><span>required</span> <span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>, <span class="type-parameter"><a href="material/ThemeExtension-class.html">ThemeExtension</a></span>&gt;</span></span> <span class="parameter-name">extensions</span>, </span><span class="parameter" id="raw-param-inputDecorationTheme"><span>required</span> <span class="type-annotation"><a href="material/InputDecorationTheme-class.html">InputDecorationTheme</a></span> <span class="parameter-name">inputDecorationTheme</span>, </span><span class="parameter" id="raw-param-materialTapTargetSize"><span>required</span> <span class="type-annotation"><a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a></span> <span class="parameter-name">materialTapTargetSize</span>, </span><span class="parameter" id="raw-param-pageTransitionsTheme"><span>required</span> <span class="type-annotation"><a href="material/PageTransitionsTheme-class.html">PageTransitionsTheme</a></span> <span class="parameter-name">pageTransitionsTheme</span>, </span><span class="parameter" id="raw-param-platform"><span>required</span> <span class="type-annotation"><a href="foundation/TargetPlatform.html">TargetPlatform</a></span> <span class="parameter-name">platform</span>, </span><span class="parameter" id="raw-param-scrollbarTheme"><span>required</span> <span class="type-annotation"><a href="material/ScrollbarThemeData-class.html">ScrollbarThemeData</a></span> <span class="parameter-name">scrollbarTheme</span>, </span><span class="parameter" id="raw-param-splashFactory"><span>required</span> <span class="type-annotation"><a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a></span> <span class="parameter-name">splashFactory</span>, </span><span class="parameter" id="raw-param-useMaterial3"><span>required</span> <span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useMaterial3</span>, </span><span class="parameter" id="raw-param-visualDensity"><span>required</span> <span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a></span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="raw-param-canvasColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">canvasColor</span>, </span><span class="parameter" id="raw-param-cardColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">cardColor</span>, </span><span class="parameter" id="raw-param-colorScheme"><span>required</span> <span class="type-annotation"><a href="material/ColorScheme-class.html">ColorScheme</a></span> <span class="parameter-name">colorScheme</span>, </span><span class="parameter" id="raw-param-dialogBackgroundColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">dialogBackgroundColor</span>, </span><span class="parameter" id="raw-param-disabledColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="raw-param-dividerColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">dividerColor</span>, </span><span class="parameter" id="raw-param-focusColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="raw-param-highlightColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="raw-param-hintColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">hintColor</span>, </span><span class="parameter" id="raw-param-hoverColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="raw-param-indicatorColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">indicatorColor</span>, </span><span class="parameter" id="raw-param-primaryColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">primaryColor</span>, </span><span class="parameter" id="raw-param-primaryColorDark"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">primaryColorDark</span>, </span><span class="parameter" id="raw-param-primaryColorLight"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">primaryColorLight</span>, </span><span class="parameter" id="raw-param-scaffoldBackgroundColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">scaffoldBackgroundColor</span>, </span><span class="parameter" id="raw-param-secondaryHeaderColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">secondaryHeaderColor</span>, </span><span class="parameter" id="raw-param-shadowColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="raw-param-splashColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="raw-param-unselectedWidgetColor"><span>required</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">unselectedWidgetColor</span>, </span><span class="parameter" id="raw-param-iconTheme"><span>required</span> <span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a></span> <span class="parameter-name">iconTheme</span>, </span><span class="parameter" id="raw-param-primaryIconTheme"><span>required</span> <span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a></span> <span class="parameter-name">primaryIconTheme</span>, </span><span class="parameter" id="raw-param-primaryTextTheme"><span>required</span> <span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a></span> <span class="parameter-name">primaryTextTheme</span>, </span><span class="parameter" id="raw-param-textTheme"><span>required</span> <span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a></span> <span class="parameter-name">textTheme</span>, </span><span class="parameter" id="raw-param-typography"><span>required</span> <span class="type-annotation"><a href="material/Typography-class.html">Typography</a></span> <span class="parameter-name">typography</span>, </span><span class="parameter" id="raw-param-actionIconTheme"><span>required</span> <span class="type-annotation"><a href="material/ActionIconThemeData-class.html">ActionIconThemeData</a>?</span> <span class="parameter-name">actionIconTheme</span>, </span><span class="parameter" id="raw-param-appBarTheme"><span>required</span> <span class="type-annotation"><a href="material/AppBarTheme-class.html">AppBarTheme</a></span> <span class="parameter-name">appBarTheme</span>, </span><span class="parameter" id="raw-param-badgeTheme"><span>required</span> <span class="type-annotation"><a href="material/BadgeThemeData-class.html">BadgeThemeData</a></span> <span class="parameter-name">badgeTheme</span>, </span><span class="parameter" id="raw-param-bannerTheme"><span>required</span> <span class="type-annotation"><a href="material/MaterialBannerThemeData-class.html">MaterialBannerThemeData</a></span> <span class="parameter-name">bannerTheme</span>, </span><span class="parameter" id="raw-param-bottomAppBarTheme"><span>required</span> <span class="type-annotation"><a href="material/BottomAppBarTheme-class.html">BottomAppBarTheme</a></span> <span class="parameter-name">bottomAppBarTheme</span>, </span><span class="parameter" id="raw-param-bottomNavigationBarTheme"><span>required</span> <span class="type-annotation"><a href="material/BottomNavigationBarThemeData-class.html">BottomNavigationBarThemeData</a></span> <span class="parameter-name">bottomNavigationBarTheme</span>, </span><span class="parameter" id="raw-param-bottomSheetTheme"><span>required</span> <span class="type-annotation"><a href="material/BottomSheetThemeData-class.html">BottomSheetThemeData</a></span> <span class="parameter-name">bottomSheetTheme</span>, </span><span class="parameter" id="raw-param-buttonBarTheme"><span>required</span> <span class="type-annotation"><a href="material/ButtonBarThemeData-class.html">ButtonBarThemeData</a></span> <span class="parameter-name">buttonBarTheme</span>, </span><span class="parameter" id="raw-param-buttonTheme"><span>required</span> <span class="type-annotation"><a href="material/ButtonThemeData-class.html">ButtonThemeData</a></span> <span class="parameter-name">buttonTheme</span>, </span><span class="parameter" id="raw-param-cardTheme"><span>required</span> <span class="type-annotation"><a href="material/CardTheme-class.html">CardTheme</a></span> <span class="parameter-name">cardTheme</span>, </span><span class="parameter" id="raw-param-checkboxTheme"><span>required</span> <span class="type-annotation"><a href="material/CheckboxThemeData-class.html">CheckboxThemeData</a></span> <span class="parameter-name">checkboxTheme</span>, </span><span class="parameter" id="raw-param-chipTheme"><span>required</span> <span class="type-annotation"><a href="material/ChipThemeData-class.html">ChipThemeData</a></span> <span class="parameter-name">chipTheme</span>, </span><span class="parameter" id="raw-param-dataTableTheme"><span>required</span> <span class="type-annotation"><a href="material/DataTableThemeData-class.html">DataTableThemeData</a></span> <span class="parameter-name">dataTableTheme</span>, </span><span class="parameter" id="raw-param-datePickerTheme"><span>required</span> <span class="type-annotation"><a href="material/DatePickerThemeData-class.html">DatePickerThemeData</a></span> <span class="parameter-name">datePickerTheme</span>, </span><span class="parameter" id="raw-param-dialogTheme"><span>required</span> <span class="type-annotation"><a href="material/DialogTheme-class.html">DialogTheme</a></span> <span class="parameter-name">dialogTheme</span>, </span><span class="parameter" id="raw-param-dividerTheme"><span>required</span> <span class="type-annotation"><a href="material/DividerThemeData-class.html">DividerThemeData</a></span> <span class="parameter-name">dividerTheme</span>, </span><span class="parameter" id="raw-param-drawerTheme"><span>required</span> <span class="type-annotation"><a href="material/DrawerThemeData-class.html">DrawerThemeData</a></span> <span class="parameter-name">drawerTheme</span>, </span><span class="parameter" id="raw-param-dropdownMenuTheme"><span>required</span> <span class="type-annotation"><a href="material/DropdownMenuThemeData-class.html">DropdownMenuThemeData</a></span> <span class="parameter-name">dropdownMenuTheme</span>, </span><span class="parameter" id="raw-param-elevatedButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/ElevatedButtonThemeData-class.html">ElevatedButtonThemeData</a></span> <span class="parameter-name">elevatedButtonTheme</span>, </span><span class="parameter" id="raw-param-expansionTileTheme"><span>required</span> <span class="type-annotation"><a href="material/ExpansionTileThemeData-class.html">ExpansionTileThemeData</a></span> <span class="parameter-name">expansionTileTheme</span>, </span><span class="parameter" id="raw-param-filledButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/FilledButtonThemeData-class.html">FilledButtonThemeData</a></span> <span class="parameter-name">filledButtonTheme</span>, </span><span class="parameter" id="raw-param-floatingActionButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/FloatingActionButtonThemeData-class.html">FloatingActionButtonThemeData</a></span> <span class="parameter-name">floatingActionButtonTheme</span>, </span><span class="parameter" id="raw-param-iconButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/IconButtonThemeData-class.html">IconButtonThemeData</a></span> <span class="parameter-name">iconButtonTheme</span>, </span><span class="parameter" id="raw-param-listTileTheme"><span>required</span> <span class="type-annotation"><a href="material/ListTileThemeData-class.html">ListTileThemeData</a></span> <span class="parameter-name">listTileTheme</span>, </span><span class="parameter" id="raw-param-menuBarTheme"><span>required</span> <span class="type-annotation"><a href="material/MenuBarThemeData-class.html">MenuBarThemeData</a></span> <span class="parameter-name">menuBarTheme</span>, </span><span class="parameter" id="raw-param-menuButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/MenuButtonThemeData-class.html">MenuButtonThemeData</a></span> <span class="parameter-name">menuButtonTheme</span>, </span><span class="parameter" id="raw-param-menuTheme"><span>required</span> <span class="type-annotation"><a href="material/MenuThemeData-class.html">MenuThemeData</a></span> <span class="parameter-name">menuTheme</span>, </span><span class="parameter" id="raw-param-navigationBarTheme"><span>required</span> <span class="type-annotation"><a href="material/NavigationBarThemeData-class.html">NavigationBarThemeData</a></span> <span class="parameter-name">navigationBarTheme</span>, </span><span class="parameter" id="raw-param-navigationDrawerTheme"><span>required</span> <span class="type-annotation"><a href="material/NavigationDrawerThemeData-class.html">NavigationDrawerThemeData</a></span> <span class="parameter-name">navigationDrawerTheme</span>, </span><span class="parameter" id="raw-param-navigationRailTheme"><span>required</span> <span class="type-annotation"><a href="material/NavigationRailThemeData-class.html">NavigationRailThemeData</a></span> <span class="parameter-name">navigationRailTheme</span>, </span><span class="parameter" id="raw-param-outlinedButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/OutlinedButtonThemeData-class.html">OutlinedButtonThemeData</a></span> <span class="parameter-name">outlinedButtonTheme</span>, </span><span class="parameter" id="raw-param-popupMenuTheme"><span>required</span> <span class="type-annotation"><a href="material/PopupMenuThemeData-class.html">PopupMenuThemeData</a></span> <span class="parameter-name">popupMenuTheme</span>, </span><span class="parameter" id="raw-param-progressIndicatorTheme"><span>required</span> <span class="type-annotation"><a href="material/ProgressIndicatorThemeData-class.html">ProgressIndicatorThemeData</a></span> <span class="parameter-name">progressIndicatorTheme</span>, </span><span class="parameter" id="raw-param-radioTheme"><span>required</span> <span class="type-annotation"><a href="material/RadioThemeData-class.html">RadioThemeData</a></span> <span class="parameter-name">radioTheme</span>, </span><span class="parameter" id="raw-param-searchBarTheme"><span>required</span> <span class="type-annotation"><a href="material/SearchBarThemeData-class.html">SearchBarThemeData</a></span> <span class="parameter-name">searchBarTheme</span>, </span><span class="parameter" id="raw-param-searchViewTheme"><span>required</span> <span class="type-annotation"><a href="material/SearchViewThemeData-class.html">SearchViewThemeData</a></span> <span class="parameter-name">searchViewTheme</span>, </span><span class="parameter" id="raw-param-segmentedButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/SegmentedButtonThemeData-class.html">SegmentedButtonThemeData</a></span> <span class="parameter-name">segmentedButtonTheme</span>, </span><span class="parameter" id="raw-param-sliderTheme"><span>required</span> <span class="type-annotation"><a href="material/SliderThemeData-class.html">SliderThemeData</a></span> <span class="parameter-name">sliderTheme</span>, </span><span class="parameter" id="raw-param-snackBarTheme"><span>required</span> <span class="type-annotation"><a href="material/SnackBarThemeData-class.html">SnackBarThemeData</a></span> <span class="parameter-name">snackBarTheme</span>, </span><span class="parameter" id="raw-param-switchTheme"><span>required</span> <span class="type-annotation"><a href="material/SwitchThemeData-class.html">SwitchThemeData</a></span> <span class="parameter-name">switchTheme</span>, </span><span class="parameter" id="raw-param-tabBarTheme"><span>required</span> <span class="type-annotation"><a href="material/TabBarTheme-class.html">TabBarTheme</a></span> <span class="parameter-name">tabBarTheme</span>, </span><span class="parameter" id="raw-param-textButtonTheme"><span>required</span> <span class="type-annotation"><a href="material/TextButtonThemeData-class.html">TextButtonThemeData</a></span> <span class="parameter-name">textButtonTheme</span>, </span><span class="parameter" id="raw-param-textSelectionTheme"><span>required</span> <span class="type-annotation"><a href="material/TextSelectionThemeData-class.html">TextSelectionThemeData</a></span> <span class="parameter-name">textSelectionTheme</span>, </span><span class="parameter" id="raw-param-timePickerTheme"><span>required</span> <span class="type-annotation"><a href="material/TimePickerThemeData-class.html">TimePickerThemeData</a></span> <span class="parameter-name">timePickerTheme</span>, </span><span class="parameter" id="raw-param-toggleButtonsTheme"><span>required</span> <span class="type-annotation"><a href="material/ToggleButtonsThemeData-class.html">ToggleButtonsThemeData</a></span> <span class="parameter-name">toggleButtonsTheme</span>, </span><span class="parameter" id="raw-param-tooltipTheme"><span>required</span> <span class="type-annotation"><a href="material/TooltipThemeData-class.html">TooltipThemeData</a></span> <span class="parameter-name">tooltipTheme</span>, </span><span class="parameter" id="raw-param-toggleableActiveColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;No longer used by the framework, please remove any reference to it. &#39; &#39;For more information, consult the migration guide at &#39; &#39;https:&#47;&#47;flutter.dev&#47;docs&#47;release&#47;breaking-changes&#47;toggleable-active-color#migration-guide. &#39; &#39;This feature was deprecated after v3.4.0-19.0.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">toggleableActiveColor</span>, </span><span class="parameter" id="raw-param-selectedRowColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;No longer used by the framework, please remove any reference to it. &#39; &#39;This feature was deprecated after v3.1.0-0.0.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">selectedRowColor</span>, </span><span class="parameter" id="raw-param-errorColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use colorScheme.error instead. &#39; &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">errorColor</span>, </span><span class="parameter" id="raw-param-backgroundColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use colorScheme.background instead. &#39; &#39;This feature was deprecated after v3.3.0-0.5.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="raw-param-bottomAppBarColor"><span>@<a href="dart-core/Deprecated-class.html">Deprecated</a>(&#39;Use BottomAppBarTheme.color instead. &#39; &#39;This feature was deprecated after v3.3.0-0.6.pre.&#39;)</span> <span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">bottomAppBarColor</span>}</span>)</span>
+        </dt>
+        <dd>
+          Create a <a href="material/ThemeData-class.html">ThemeData</a> given a set of exact values. Most values must be
+specified. They all must also be non-null except for
+<a href="material/ThemeData/cupertinoOverrideTheme.html">cupertinoOverrideTheme</a>, and deprecated members.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="actionIconTheme" class="property">
+  <span class="name"><a href="material/ThemeData/actionIconTheme.html">actionIconTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ActionIconThemeData-class.html">ActionIconThemeData</a>?</span> 
+
+</dt>
+<dd>
+  A theme for customizing icons of <a href="material/BackButtonIcon-class.html">BackButtonIcon</a>, <a href="material/CloseButtonIcon-class.html">CloseButtonIcon</a>,
+<a href="material/DrawerButtonIcon-class.html">DrawerButtonIcon</a>, or <a href="material/EndDrawerButtonIcon-class.html">EndDrawerButtonIcon</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="appBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/appBarTheme.html">appBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/AppBarTheme-class.html">AppBarTheme</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, elevation, brightness, iconTheme and
+textTheme of <a href="material/AppBar-class.html">AppBar</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="applyElevationOverlayColor" class="property">
+  <span class="name"><a href="material/ThemeData/applyElevationOverlayColor.html">applyElevationOverlayColor</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Apply a semi-transparent overlay color on Material surfaces to indicate
+elevation for dark themes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="backgroundColor" class="property">
+  <span class="name"><a class="deprecated" href="material/ThemeData/backgroundColor.html">backgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  Obsolete property that was unused by the framework.
+Use <a href="material/ColorScheme/background.html">ColorScheme.background</a> instead.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="badgeTheme" class="property">
+  <span class="name"><a href="material/ThemeData/badgeTheme.html">badgeTheme</a></span>
+  <span class="signature">&#8594; <a href="material/BadgeThemeData-class.html">BadgeThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color of <a href="material/Badge-class.html">Badge</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="bannerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/bannerTheme.html">bannerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/MaterialBannerThemeData-class.html">MaterialBannerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color and text style of a <a href="material/MaterialBanner-class.html">MaterialBanner</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="bottomAppBarColor" class="property">
+  <span class="name"><a class="deprecated" href="material/ThemeData/bottomAppBarColor.html">bottomAppBarColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The default color of the <a href="material/BottomAppBar-class.html">BottomAppBar</a>.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="bottomAppBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/bottomAppBarTheme.html">bottomAppBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/BottomAppBarTheme-class.html">BottomAppBarTheme</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the shape, elevation, and color of a <a href="material/BottomAppBar-class.html">BottomAppBar</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="bottomNavigationBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/bottomNavigationBarTheme.html">bottomNavigationBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/BottomNavigationBarThemeData-class.html">BottomNavigationBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/BottomNavigationBar-class.html">BottomNavigationBar</a>
+widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="bottomSheetTheme" class="property">
+  <span class="name"><a href="material/ThemeData/bottomSheetTheme.html">bottomSheetTheme</a></span>
+  <span class="signature">&#8594; <a href="material/BottomSheetThemeData-class.html">BottomSheetThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, elevation, and shape of a bottom sheet.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="brightness" class="property">
+  <span class="name"><a href="material/ThemeData/brightness.html">brightness</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Brightness.html">Brightness</a></span> 
+
+</dt>
+<dd>
+  The overall theme brightness.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="buttonBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/buttonBarTheme.html">buttonBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ButtonBarThemeData-class.html">ButtonBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/ButtonBar-class.html">ButtonBar</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="buttonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/buttonTheme.html">buttonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ButtonThemeData-class.html">ButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  Defines the default configuration of button widgets, like <a href="material/DropdownButton-class.html">DropdownButton</a>
+and <a href="material/ButtonBar-class.html">ButtonBar</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="canvasColor" class="property">
+  <span class="name"><a href="material/ThemeData/canvasColor.html">canvasColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The default color of <a href="material/MaterialType.html">MaterialType.canvas</a> <a href="material/Material-class.html">Material</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="cardColor" class="property">
+  <span class="name"><a href="material/ThemeData/cardColor.html">cardColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color of <a href="material/Material-class.html">Material</a> when it is used as a <a href="material/Card-class.html">Card</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="cardTheme" class="property">
+  <span class="name"><a href="material/ThemeData/cardTheme.html">cardTheme</a></span>
+  <span class="signature">&#8594; <a href="material/CardTheme-class.html">CardTheme</a></span> 
+
+</dt>
+<dd>
+  The colors and styles used to render <a href="material/Card-class.html">Card</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="checkboxTheme" class="property">
+  <span class="name"><a href="material/ThemeData/checkboxTheme.html">checkboxTheme</a></span>
+  <span class="signature">&#8594; <a href="material/CheckboxThemeData-class.html">CheckboxThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/Checkbox-class.html">Checkbox</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="chipTheme" class="property">
+  <span class="name"><a href="material/ThemeData/chipTheme.html">chipTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ChipThemeData-class.html">ChipThemeData</a></span> 
+
+</dt>
+<dd>
+  The colors and styles used to render <a href="material/Chip-class.html">Chip</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="colorScheme" class="property">
+  <span class="name"><a href="material/ThemeData/colorScheme.html">colorScheme</a></span>
+  <span class="signature">&#8594; <a href="material/ColorScheme-class.html">ColorScheme</a></span> 
+
+</dt>
+<dd>
+  A set of 30 colors based on the
+<a href="https://m3.material.io/styles/color/the-color-system/color-roles">Material spec</a>
+that can be used to configure the color properties of most components.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="cupertinoOverrideTheme" class="property">
+  <span class="name"><a href="material/ThemeData/cupertinoOverrideTheme.html">cupertinoOverrideTheme</a></span>
+  <span class="signature">&#8594; <a href="cupertino/NoDefaultCupertinoThemeData-class.html">NoDefaultCupertinoThemeData</a>?</span> 
+
+</dt>
+<dd>
+  Components of the <a href="cupertino/CupertinoThemeData-class.html">CupertinoThemeData</a> to override from the Material
+<a href="material/ThemeData-class.html">ThemeData</a> adaptation.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dataTableTheme" class="property">
+  <span class="name"><a href="material/ThemeData/dataTableTheme.html">dataTableTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DataTableThemeData-class.html">DataTableThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/DataTable-class.html">DataTable</a>
+widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="datePickerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/datePickerTheme.html">datePickerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DatePickerThemeData-class.html">DatePickerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/DatePickerDialog-class.html">DatePickerDialog</a>
+widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dialogBackgroundColor" class="property">
+  <span class="name"><a href="material/ThemeData/dialogBackgroundColor.html">dialogBackgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The background color of <a href="material/Dialog-class.html">Dialog</a> elements.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dialogTheme" class="property">
+  <span class="name"><a href="material/ThemeData/dialogTheme.html">dialogTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DialogTheme-class.html">DialogTheme</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the shape of a dialog.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="disabledColor" class="property">
+  <span class="name"><a href="material/ThemeData/disabledColor.html">disabledColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color used for widgets that are inoperative, regardless of
+their state. For example, a disabled checkbox (which may be
+checked or unchecked).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dividerColor" class="property">
+  <span class="name"><a href="material/ThemeData/dividerColor.html">dividerColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color of <a href="material/Divider-class.html">Divider</a>s and <a href="material/PopupMenuDivider-class.html">PopupMenuDivider</a>s, also used
+between <a href="material/ListTile-class.html">ListTile</a>s, between rows in <a href="material/DataTable-class.html">DataTable</a>s, and so forth.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dividerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/dividerTheme.html">dividerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DividerThemeData-class.html">DividerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, thickness, and indents of <a href="material/Divider-class.html">Divider</a>s,
+<a href="material/VerticalDivider-class.html">VerticalDivider</a>s, etc.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="drawerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/drawerTheme.html">drawerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DrawerThemeData-class.html">DrawerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/Drawer-class.html">Drawer</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dropdownMenuTheme" class="property">
+  <span class="name"><a href="material/ThemeData/dropdownMenuTheme.html">dropdownMenuTheme</a></span>
+  <span class="signature">&#8594; <a href="material/DropdownMenuThemeData-class.html">DropdownMenuThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/DropdownMenu-class.html">DropdownMenu</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="elevatedButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/elevatedButtonTheme.html">elevatedButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ElevatedButtonThemeData-class.html">ElevatedButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and internal layout of
+<a href="material/ElevatedButton-class.html">ElevatedButton</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="errorColor" class="property">
+  <span class="name"><a class="deprecated" href="material/ThemeData/errorColor.html">errorColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  Obsolete property that was used for input validation errors, e.g. in
+<a href="material/TextField-class.html">TextField</a> fields. Use <a href="material/ColorScheme/error.html">ColorScheme.error</a> instead.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="expansionTileTheme" class="property">
+  <span class="name"><a href="material/ThemeData/expansionTileTheme.html">expansionTileTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ExpansionTileThemeData-class.html">ExpansionTileThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the visual properties of <a href="material/ExpansionTile-class.html">ExpansionTile</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="extensions" class="property">
+  <span class="name"><a href="material/ThemeData/extensions.html">extensions</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>, <span class="type-parameter"><a href="material/ThemeExtension-class.html">ThemeExtension</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Arbitrary additions to this theme.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="filledButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/filledButtonTheme.html">filledButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/FilledButtonThemeData-class.html">FilledButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and internal layout of
+<a href="material/FilledButton-class.html">FilledButton</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="floatingActionButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/floatingActionButtonTheme.html">floatingActionButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/FloatingActionButtonThemeData-class.html">FloatingActionButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the shape, elevation, and color of a
+<a href="material/FloatingActionButton-class.html">FloatingActionButton</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="focusColor" class="property">
+  <span class="name"><a href="material/ThemeData/focusColor.html">focusColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The focus color used indicate that a component has the input focus.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="material/ThemeData/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="highlightColor" class="property">
+  <span class="name"><a href="material/ThemeData/highlightColor.html">highlightColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The highlight color used during ink splash animations or to
+indicate an item in a menu is selected.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hintColor" class="property">
+  <span class="name"><a href="material/ThemeData/hintColor.html">hintColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color to use for hint text or placeholder text, e.g. in
+<a href="material/TextField-class.html">TextField</a> fields.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hoverColor" class="property">
+  <span class="name"><a href="material/ThemeData/hoverColor.html">hoverColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The hover color used to indicate when a pointer is hovering over a
+component.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/iconButtonTheme.html">iconButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/IconButtonThemeData-class.html">IconButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and internal layout of
+<a href="material/IconButton-class.html">IconButton</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconTheme" class="property">
+  <span class="name"><a href="material/ThemeData/iconTheme.html">iconTheme</a></span>
+  <span class="signature">&#8594; <a href="widgets/IconThemeData-class.html">IconThemeData</a></span> 
+
+</dt>
+<dd>
+  An icon theme that contrasts with the card and canvas colors.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="indicatorColor" class="property">
+  <span class="name"><a href="material/ThemeData/indicatorColor.html">indicatorColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color of the selected tab indicator in a tab bar.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="inputDecorationTheme" class="property">
+  <span class="name"><a href="material/ThemeData/inputDecorationTheme.html">inputDecorationTheme</a></span>
+  <span class="signature">&#8594; <a href="material/InputDecorationTheme-class.html">InputDecorationTheme</a></span> 
+
+</dt>
+<dd>
+  The default <a href="material/InputDecoration-class.html">InputDecoration</a> values for <a href="material/InputDecorator-class.html">InputDecorator</a>, <a href="material/TextField-class.html">TextField</a>,
+and <a href="material/TextFormField-class.html">TextFormField</a> are based on this theme.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="listTileTheme" class="property">
+  <span class="name"><a href="material/ThemeData/listTileTheme.html">listTileTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ListTileThemeData-class.html">ListTileThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance of <a href="material/ListTile-class.html">ListTile</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="materialTapTargetSize" class="property">
+  <span class="name"><a href="material/ThemeData/materialTapTargetSize.html">materialTapTargetSize</a></span>
+  <span class="signature">&#8594; <a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a></span> 
+
+</dt>
+<dd>
+  Configures the hit test size of certain Material widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="menuBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/menuBarTheme.html">menuBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/MenuBarThemeData-class.html">MenuBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, shape, elevation, and other <a href="material/MenuStyle-class.html">MenuStyle</a>
+aspects of the menu bar created by the <a href="material/MenuBar-class.html">MenuBar</a> widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="menuButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/menuButtonTheme.html">menuButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/MenuButtonThemeData-class.html">MenuButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, shape, elevation, and text style of
+cascading menu buttons created by <a href="material/SubmenuButton-class.html">SubmenuButton</a> or <a href="material/MenuItemButton-class.html">MenuItemButton</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="menuTheme" class="property">
+  <span class="name"><a href="material/ThemeData/menuTheme.html">menuTheme</a></span>
+  <span class="signature">&#8594; <a href="material/MenuThemeData-class.html">MenuThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, shape, elevation, and other <a href="material/MenuStyle-class.html">MenuStyle</a>
+attributes of menus created by the <a href="material/SubmenuButton-class.html">SubmenuButton</a> widget.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="navigationBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/navigationBarTheme.html">navigationBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/NavigationBarThemeData-class.html">NavigationBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the background color, text style, and icon themes
+of a <a href="material/NavigationBar-class.html">NavigationBar</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="navigationDrawerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/navigationDrawerTheme.html">navigationDrawerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/NavigationDrawerThemeData-class.html">NavigationDrawerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the background color, text style, and icon themes
+of a <a href="material/NavigationDrawer-class.html">NavigationDrawer</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="navigationRailTheme" class="property">
+  <span class="name"><a href="material/ThemeData/navigationRailTheme.html">navigationRailTheme</a></span>
+  <span class="signature">&#8594; <a href="material/NavigationRailThemeData-class.html">NavigationRailThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the background color, elevation, text style, and
+icon themes of a <a href="material/NavigationRail-class.html">NavigationRail</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="outlinedButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/outlinedButtonTheme.html">outlinedButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/OutlinedButtonThemeData-class.html">OutlinedButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and internal layout of
+<a href="material/OutlinedButton-class.html">OutlinedButton</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="pageTransitionsTheme" class="property">
+  <span class="name"><a href="material/ThemeData/pageTransitionsTheme.html">pageTransitionsTheme</a></span>
+  <span class="signature">&#8594; <a href="material/PageTransitionsTheme-class.html">PageTransitionsTheme</a></span> 
+
+</dt>
+<dd>
+  Default <a href="material/MaterialPageRoute-class.html">MaterialPageRoute</a> transitions per <a href="foundation/TargetPlatform.html">TargetPlatform</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="platform" class="property">
+  <span class="name"><a href="material/ThemeData/platform.html">platform</a></span>
+  <span class="signature">&#8594; <a href="foundation/TargetPlatform.html">TargetPlatform</a></span> 
+
+</dt>
+<dd>
+  The platform the material widgets should adapt to target.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="popupMenuTheme" class="property">
+  <span class="name"><a href="material/ThemeData/popupMenuTheme.html">popupMenuTheme</a></span>
+  <span class="signature">&#8594; <a href="material/PopupMenuThemeData-class.html">PopupMenuThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the color, shape, elevation, and text style of
+popup menus.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="primaryColor" class="property">
+  <span class="name"><a href="material/ThemeData/primaryColor.html">primaryColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The background color for major parts of the app (toolbars, tab bars, etc)
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="primaryColorDark" class="property">
+  <span class="name"><a href="material/ThemeData/primaryColorDark.html">primaryColorDark</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  A darker version of the <a href="material/ThemeData/primaryColor.html">primaryColor</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="primaryColorLight" class="property">
+  <span class="name"><a href="material/ThemeData/primaryColorLight.html">primaryColorLight</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  A lighter version of the <a href="material/ThemeData/primaryColor.html">primaryColor</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="primaryIconTheme" class="property">
+  <span class="name"><a href="material/ThemeData/primaryIconTheme.html">primaryIconTheme</a></span>
+  <span class="signature">&#8594; <a href="widgets/IconThemeData-class.html">IconThemeData</a></span> 
+
+</dt>
+<dd>
+  An icon theme that contrasts with the primary color.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="primaryTextTheme" class="property">
+  <span class="name"><a href="material/ThemeData/primaryTextTheme.html">primaryTextTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TextTheme-class.html">TextTheme</a></span> 
+
+</dt>
+<dd>
+  A text theme that contrasts with the primary color.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="progressIndicatorTheme" class="property">
+  <span class="name"><a href="material/ThemeData/progressIndicatorTheme.html">progressIndicatorTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ProgressIndicatorThemeData-class.html">ProgressIndicatorThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/ProgressIndicator-class.html">ProgressIndicator</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="radioTheme" class="property">
+  <span class="name"><a href="material/ThemeData/radioTheme.html">radioTheme</a></span>
+  <span class="signature">&#8594; <a href="material/RadioThemeData-class.html">RadioThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/Radio-class.html">Radio</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scaffoldBackgroundColor" class="property">
+  <span class="name"><a href="material/ThemeData/scaffoldBackgroundColor.html">scaffoldBackgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The default color of the <a href="material/Material-class.html">Material</a> that underlies the <a href="material/Scaffold-class.html">Scaffold</a>. The
+background color for a typical material app or a page within the app.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="scrollbarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/scrollbarTheme.html">scrollbarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ScrollbarThemeData-class.html">ScrollbarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the colors, thickness, and shape of <a href="material/Scrollbar-class.html">Scrollbar</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="searchBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/searchBarTheme.html">searchBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SearchBarThemeData-class.html">SearchBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/SearchBar-class.html">SearchBar</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="searchViewTheme" class="property">
+  <span class="name"><a href="material/ThemeData/searchViewTheme.html">searchViewTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SearchViewThemeData-class.html">SearchViewThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of search views created by <a href="material/SearchAnchor-class.html">SearchAnchor</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="secondaryHeaderColor" class="property">
+  <span class="name"><a href="material/ThemeData/secondaryHeaderColor.html">secondaryHeaderColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color of the header of a <a href="material/PaginatedDataTable-class.html">PaginatedDataTable</a> when there are selected rows.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="segmentedButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/segmentedButtonTheme.html">segmentedButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SegmentedButtonThemeData-class.html">SegmentedButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/SegmentedButton-class.html">SegmentedButton</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="selectedRowColor" class="property">
+  <span class="name"><a class="deprecated" href="material/ThemeData/selectedRowColor.html">selectedRowColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color used to highlight selected rows.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="shadowColor" class="property">
+  <span class="name"><a href="material/ThemeData/shadowColor.html">shadowColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color that the <a href="material/Material-class.html">Material</a> widget uses to draw elevation shadows.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="sliderTheme" class="property">
+  <span class="name"><a href="material/ThemeData/sliderTheme.html">sliderTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SliderThemeData-class.html">SliderThemeData</a></span> 
+
+</dt>
+<dd>
+  The colors and shapes used to render <a href="material/Slider-class.html">Slider</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="snackBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/snackBarTheme.html">snackBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SnackBarThemeData-class.html">SnackBarThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing colors, shape, elevation, and behavior of a <a href="material/SnackBar-class.html">SnackBar</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="splashColor" class="property">
+  <span class="name"><a href="material/ThemeData/splashColor.html">splashColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color of ink splashes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="splashFactory" class="property">
+  <span class="name"><a href="material/ThemeData/splashFactory.html">splashFactory</a></span>
+  <span class="signature">&#8594; <a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a></span> 
+
+</dt>
+<dd>
+  Defines the appearance of ink splashes produces by <a href="material/InkWell-class.html">InkWell</a>
+and <a href="material/InkResponse-class.html">InkResponse</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="switchTheme" class="property">
+  <span class="name"><a href="material/ThemeData/switchTheme.html">switchTheme</a></span>
+  <span class="signature">&#8594; <a href="material/SwitchThemeData-class.html">SwitchThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/Switch-class.html">Switch</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tabBarTheme" class="property">
+  <span class="name"><a href="material/ThemeData/tabBarTheme.html">tabBarTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TabBarTheme-class.html">TabBarTheme</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the size, shape, and color of the tab bar indicator.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textButtonTheme" class="property">
+  <span class="name"><a href="material/ThemeData/textButtonTheme.html">textButtonTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TextButtonThemeData-class.html">TextButtonThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and internal layout of
+<a href="material/TextButton-class.html">TextButton</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textSelectionTheme" class="property">
+  <span class="name"><a href="material/ThemeData/textSelectionTheme.html">textSelectionTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TextSelectionThemeData-class.html">TextSelectionThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of <a href="material/TextField-class.html">TextField</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textTheme" class="property">
+  <span class="name"><a href="material/ThemeData/textTheme.html">textTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TextTheme-class.html">TextTheme</a></span> 
+
+</dt>
+<dd>
+  Text with a color that contrasts with the card and canvas colors.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="timePickerTheme" class="property">
+  <span class="name"><a href="material/ThemeData/timePickerTheme.html">timePickerTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TimePickerThemeData-class.html">TimePickerThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the appearance and layout of time picker widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="toggleableActiveColor" class="property">
+  <span class="name"><a class="deprecated" href="material/ThemeData/toggleableActiveColor.html">toggleableActiveColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color used to highlight the active states of toggleable widgets like
+<a href="material/Switch-class.html">Switch</a>, <a href="material/Radio-class.html">Radio</a>, and <a href="material/Checkbox-class.html">Checkbox</a>.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="toggleButtonsTheme" class="property">
+  <span class="name"><a href="material/ThemeData/toggleButtonsTheme.html">toggleButtonsTheme</a></span>
+  <span class="signature">&#8594; <a href="material/ToggleButtonsThemeData-class.html">ToggleButtonsThemeData</a></span> 
+
+</dt>
+<dd>
+  Defines the default configuration of <a href="material/ToggleButtons-class.html">ToggleButtons</a> widgets.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tooltipTheme" class="property">
+  <span class="name"><a href="material/ThemeData/tooltipTheme.html">tooltipTheme</a></span>
+  <span class="signature">&#8594; <a href="material/TooltipThemeData-class.html">TooltipThemeData</a></span> 
+
+</dt>
+<dd>
+  A theme for customizing the visual properties of <a href="material/Tooltip-class.html">Tooltip</a>s.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="typography" class="property">
+  <span class="name"><a href="material/ThemeData/typography.html">typography</a></span>
+  <span class="signature">&#8594; <a href="material/Typography-class.html">Typography</a></span> 
+
+</dt>
+<dd>
+  The color and geometry <a href="material/TextTheme-class.html">TextTheme</a> values used to configure <a href="material/ThemeData/textTheme.html">textTheme</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="unselectedWidgetColor" class="property">
+  <span class="name"><a href="material/ThemeData/unselectedWidgetColor.html">unselectedWidgetColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a></span> 
+
+</dt>
+<dd>
+  The color used for widgets in their inactive (but enabled)
+state. For example, an unchecked checkbox. See also <a href="material/ThemeData/disabledColor.html">disabledColor</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="useMaterial3" class="property">
+  <span class="name"><a href="material/ThemeData/useMaterial3.html">useMaterial3</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  A temporary flag that can be used to opt-out of Material 3 features.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="visualDensity" class="property">
+  <span class="name"><a href="material/ThemeData/visualDensity.html">visualDensity</a></span>
+  <span class="signature">&#8594; <a href="material/VisualDensity-class.html">VisualDensity</a></span> 
+
+</dt>
+<dd>
+  The density value for specifying the compactness of various UI components.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="copyWith" class="callable">
+  <span class="name"><a href="material/ThemeData/copyWith.html">copyWith</a></span><span class="signature">(<wbr><span class="parameter" id="copyWith-param-applyElevationOverlayColor">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">applyElevationOverlayColor</span>, </span><span class="parameter" id="copyWith-param-cupertinoOverrideTheme"><span class="type-annotation"><a href="cupertino/NoDefaultCupertinoThemeData-class.html">NoDefaultCupertinoThemeData</a>?</span> <span class="parameter-name">cupertinoOverrideTheme</span>, </span><span class="parameter" id="copyWith-param-extensions"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/ThemeExtension-class.html">ThemeExtension</a></span>&gt;</span>?</span> <span class="parameter-name">extensions</span>, </span><span class="parameter" id="copyWith-param-inputDecorationTheme"><span class="type-annotation"><a href="material/InputDecorationTheme-class.html">InputDecorationTheme</a>?</span> <span class="parameter-name">inputDecorationTheme</span>, </span><span class="parameter" id="copyWith-param-materialTapTargetSize"><span class="type-annotation"><a href="material/MaterialTapTargetSize.html">MaterialTapTargetSize</a>?</span> <span class="parameter-name">materialTapTargetSize</span>, </span><span class="parameter" id="copyWith-param-pageTransitionsTheme"><span class="type-annotation"><a href="material/PageTransitionsTheme-class.html">PageTransitionsTheme</a>?</span> <span class="parameter-name">pageTransitionsTheme</span>, </span><span class="parameter" id="copyWith-param-platform"><span class="type-annotation"><a href="foundation/TargetPlatform.html">TargetPlatform</a>?</span> <span class="parameter-name">platform</span>, </span><span class="parameter" id="copyWith-param-scrollbarTheme"><span class="type-annotation"><a href="material/ScrollbarThemeData-class.html">ScrollbarThemeData</a>?</span> <span class="parameter-name">scrollbarTheme</span>, </span><span class="parameter" id="copyWith-param-splashFactory"><span class="type-annotation"><a href="material/InteractiveInkFeatureFactory-class.html">InteractiveInkFeatureFactory</a>?</span> <span class="parameter-name">splashFactory</span>, </span><span class="parameter" id="copyWith-param-visualDensity"><span class="type-annotation"><a href="material/VisualDensity-class.html">VisualDensity</a>?</span> <span class="parameter-name">visualDensity</span>, </span><span class="parameter" id="copyWith-param-brightness"><span class="type-annotation"><a href="dart-ui/Brightness.html">Brightness</a>?</span> <span class="parameter-name">brightness</span>, </span><span class="parameter" id="copyWith-param-canvasColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">canvasColor</span>, </span><span class="parameter" id="copyWith-param-cardColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">cardColor</span>, </span><span class="parameter" id="copyWith-param-colorScheme"><span class="type-annotation"><a href="material/ColorScheme-class.html">ColorScheme</a>?</span> <span class="parameter-name">colorScheme</span>, </span><span class="parameter" id="copyWith-param-dialogBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">dialogBackgroundColor</span>, </span><span class="parameter" id="copyWith-param-disabledColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">disabledColor</span>, </span><span class="parameter" id="copyWith-param-dividerColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">dividerColor</span>, </span><span class="parameter" id="copyWith-param-focusColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">focusColor</span>, </span><span class="parameter" id="copyWith-param-highlightColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">highlightColor</span>, </span><span class="parameter" id="copyWith-param-hintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hintColor</span>, </span><span class="parameter" id="copyWith-param-hoverColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">hoverColor</span>, </span><span class="parameter" id="copyWith-param-indicatorColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">indicatorColor</span>, </span><span class="parameter" id="copyWith-param-primaryColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColor</span>, </span><span class="parameter" id="copyWith-param-primaryColorDark"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColorDark</span>, </span><span class="parameter" id="copyWith-param-primaryColorLight"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryColorLight</span>, </span><span class="parameter" id="copyWith-param-scaffoldBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">scaffoldBackgroundColor</span>, </span><span class="parameter" id="copyWith-param-secondaryHeaderColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">secondaryHeaderColor</span>, </span><span class="parameter" id="copyWith-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="copyWith-param-splashColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">splashColor</span>, </span><span class="parameter" id="copyWith-param-unselectedWidgetColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">unselectedWidgetColor</span>, </span><span class="parameter" id="copyWith-param-iconTheme"><span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a>?</span> <span class="parameter-name">iconTheme</span>, </span><span class="parameter" id="copyWith-param-primaryIconTheme"><span class="type-annotation"><a href="widgets/IconThemeData-class.html">IconThemeData</a>?</span> <span class="parameter-name">primaryIconTheme</span>, </span><span class="parameter" id="copyWith-param-primaryTextTheme"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a>?</span> <span class="parameter-name">primaryTextTheme</span>, </span><span class="parameter" id="copyWith-param-textTheme"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a>?</span> <span class="parameter-name">textTheme</span>, </span><span class="parameter" id="copyWith-param-typography"><span class="type-annotation"><a href="material/Typography-class.html">Typography</a>?</span> <span class="parameter-name">typography</span>, </span><span class="parameter" id="copyWith-param-actionIconTheme"><span class="type-annotation"><a href="material/ActionIconThemeData-class.html">ActionIconThemeData</a>?</span> <span class="parameter-name">actionIconTheme</span>, </span><span class="parameter" id="copyWith-param-appBarTheme"><span class="type-annotation"><a href="material/AppBarTheme-class.html">AppBarTheme</a>?</span> <span class="parameter-name">appBarTheme</span>, </span><span class="parameter" id="copyWith-param-badgeTheme"><span class="type-annotation"><a href="material/BadgeThemeData-class.html">BadgeThemeData</a>?</span> <span class="parameter-name">badgeTheme</span>, </span><span class="parameter" id="copyWith-param-bannerTheme"><span class="type-annotation"><a href="material/MaterialBannerThemeData-class.html">MaterialBannerThemeData</a>?</span> <span class="parameter-name">bannerTheme</span>, </span><span class="parameter" id="copyWith-param-bottomAppBarTheme"><span class="type-annotation"><a href="material/BottomAppBarTheme-class.html">BottomAppBarTheme</a>?</span> <span class="parameter-name">bottomAppBarTheme</span>, </span><span class="parameter" id="copyWith-param-bottomNavigationBarTheme"><span class="type-annotation"><a href="material/BottomNavigationBarThemeData-class.html">BottomNavigationBarThemeData</a>?</span> <span class="parameter-name">bottomNavigationBarTheme</span>, </span><span class="parameter" id="copyWith-param-bottomSheetTheme"><span class="type-annotation"><a href="material/BottomSheetThemeData-class.html">BottomSheetThemeData</a>?</span> <span class="parameter-name">bottomSheetTheme</span>, </span><span class="parameter" id="copyWith-param-buttonBarTheme"><span class="type-annotation"><a href="material/ButtonBarThemeData-class.html">ButtonBarThemeData</a>?</span> <span class="parameter-name">buttonBarTheme</span>, </span><span class="parameter" id="copyWith-param-buttonTheme"><span class="type-annotation"><a href="material/ButtonThemeData-class.html">ButtonThemeData</a>?</span> <span class="parameter-name">buttonTheme</span>, </span><span class="parameter" id="copyWith-param-cardTheme"><span class="type-annotation"><a href="material/CardTheme-class.html">CardTheme</a>?</span> <span class="parameter-name">cardTheme</span>, </span><span class="parameter" id="copyWith-param-checkboxTheme"><span class="type-annotation"><a href="material/CheckboxThemeData-class.html">CheckboxThemeData</a>?</span> <span class="parameter-name">checkboxTheme</span>, </span><span class="parameter" id="copyWith-param-chipTheme"><span class="type-annotation"><a href="material/ChipThemeData-class.html">ChipThemeData</a>?</span> <span class="parameter-name">chipTheme</span>, </span><span class="parameter" id="copyWith-param-dataTableTheme"><span class="type-annotation"><a href="material/DataTableThemeData-class.html">DataTableThemeData</a>?</span> <span class="parameter-name">dataTableTheme</span>, </span><span class="parameter" id="copyWith-param-datePickerTheme"><span class="type-annotation"><a href="material/DatePickerThemeData-class.html">DatePickerThemeData</a>?</span> <span class="parameter-name">datePickerTheme</span>, </span><span class="parameter" id="copyWith-param-dialogTheme"><span class="type-annotation"><a href="material/DialogTheme-class.html">DialogTheme</a>?</span> <span class="parameter-name">dialogTheme</span>, </span><span class="parameter" id="copyWith-param-dividerTheme"><span class="type-annotation"><a href="material/DividerThemeData-class.html">DividerThemeData</a>?</span> <span class="parameter-name">dividerTheme</span>, </span><span class="parameter" id="copyWith-param-drawerTheme"><span class="type-annotation"><a href="material/DrawerThemeData-class.html">DrawerThemeData</a>?</span> <span class="parameter-name">drawerTheme</span>, </span><span class="parameter" id="copyWith-param-dropdownMenuTheme"><span class="type-annotation"><a href="material/DropdownMenuThemeData-class.html">DropdownMenuThemeData</a>?</span> <span class="parameter-name">dropdownMenuTheme</span>, </span><span class="parameter" id="copyWith-param-elevatedButtonTheme"><span class="type-annotation"><a href="material/ElevatedButtonThemeData-class.html">ElevatedButtonThemeData</a>?</span> <span class="parameter-name">elevatedButtonTheme</span>, </span><span class="parameter" id="copyWith-param-expansionTileTheme"><span class="type-annotation"><a href="material/ExpansionTileThemeData-class.html">ExpansionTileThemeData</a>?</span> <span class="parameter-name">expansionTileTheme</span>, </span><span class="parameter" id="copyWith-param-filledButtonTheme"><span class="type-annotation"><a href="material/FilledButtonThemeData-class.html">FilledButtonThemeData</a>?</span> <span class="parameter-name">filledButtonTheme</span>, </span><span class="parameter" id="copyWith-param-floatingActionButtonTheme"><span class="type-annotation"><a href="material/FloatingActionButtonThemeData-class.html">FloatingActionButtonThemeData</a>?</span> <span class="parameter-name">floatingActionButtonTheme</span>, </span><span class="parameter" id="copyWith-param-iconButtonTheme"><span class="type-annotation"><a href="material/IconButtonThemeData-class.html">IconButtonThemeData</a>?</span> <span class="parameter-name">iconButtonTheme</span>, </span><span class="parameter" id="copyWith-param-listTileTheme"><span class="type-annotation"><a href="material/ListTileThemeData-class.html">ListTileThemeData</a>?</span> <span class="parameter-name">listTileTheme</span>, </span><span class="parameter" id="copyWith-param-menuBarTheme"><span class="type-annotation"><a href="material/MenuBarThemeData-class.html">MenuBarThemeData</a>?</span> <span class="parameter-name">menuBarTheme</span>, </span><span class="parameter" id="copyWith-param-menuButtonTheme"><span class="type-annotation"><a href="material/MenuButtonThemeData-class.html">MenuButtonThemeData</a>?</span> <span class="parameter-name">menuButtonTheme</span>, </span><span class="parameter" id="copyWith-param-menuTheme"><span class="type-annotation"><a href="material/MenuThemeData-class.html">MenuThemeData</a>?</span> <span class="parameter-name">menuTheme</span>, </span><span class="parameter" id="copyWith-param-navigationBarTheme"><span class="type-annotation"><a href="material/NavigationBarThemeData-class.html">NavigationBarThemeData</a>?</span> <span class="parameter-name">navigationBarTheme</span>, </span><span class="parameter" id="copyWith-param-navigationDrawerTheme"><span class="type-annotation"><a href="material/NavigationDrawerThemeData-class.html">NavigationDrawerThemeData</a>?</span> <span class="parameter-name">navigationDrawerTheme</span>, </span><span class="parameter" id="copyWith-param-navigationRailTheme"><span class="type-annotation"><a href="material/NavigationRailThemeData-class.html">NavigationRailThemeData</a>?</span> <span class="parameter-name">navigationRailTheme</span>, </span><span class="parameter" id="copyWith-param-outlinedButtonTheme"><span class="type-annotation"><a href="material/OutlinedButtonThemeData-class.html">OutlinedButtonThemeData</a>?</span> <span class="parameter-name">outlinedButtonTheme</span>, </span><span class="parameter" id="copyWith-param-popupMenuTheme"><span class="type-annotation"><a href="material/PopupMenuThemeData-class.html">PopupMenuThemeData</a>?</span> <span class="parameter-name">popupMenuTheme</span>, </span><span class="parameter" id="copyWith-param-progressIndicatorTheme"><span class="type-annotation"><a href="material/ProgressIndicatorThemeData-class.html">ProgressIndicatorThemeData</a>?</span> <span class="parameter-name">progressIndicatorTheme</span>, </span><span class="parameter" id="copyWith-param-radioTheme"><span class="type-annotation"><a href="material/RadioThemeData-class.html">RadioThemeData</a>?</span> <span class="parameter-name">radioTheme</span>, </span><span class="parameter" id="copyWith-param-searchBarTheme"><span class="type-annotation"><a href="material/SearchBarThemeData-class.html">SearchBarThemeData</a>?</span> <span class="parameter-name">searchBarTheme</span>, </span><span class="parameter" id="copyWith-param-searchViewTheme"><span class="type-annotation"><a href="material/SearchViewThemeData-class.html">SearchViewThemeData</a>?</span> <span class="parameter-name">searchViewTheme</span>, </span><span class="parameter" id="copyWith-param-segmentedButtonTheme"><span class="type-annotation"><a href="material/SegmentedButtonThemeData-class.html">SegmentedButtonThemeData</a>?</span> <span class="parameter-name">segmentedButtonTheme</span>, </span><span class="parameter" id="copyWith-param-sliderTheme"><span class="type-annotation"><a href="material/SliderThemeData-class.html">SliderThemeData</a>?</span> <span class="parameter-name">sliderTheme</span>, </span><span class="parameter" id="copyWith-param-snackBarTheme"><span class="type-annotation"><a href="material/SnackBarThemeData-class.html">SnackBarThemeData</a>?</span> <span class="parameter-name">snackBarTheme</span>, </span><span class="parameter" id="copyWith-param-switchTheme"><span class="type-annotation"><a href="material/SwitchThemeData-class.html">SwitchThemeData</a>?</span> <span class="parameter-name">switchTheme</span>, </span><span class="parameter" id="copyWith-param-tabBarTheme"><span class="type-annotation"><a href="material/TabBarTheme-class.html">TabBarTheme</a>?</span> <span class="parameter-name">tabBarTheme</span>, </span><span class="parameter" id="copyWith-param-textButtonTheme"><span class="type-annotation"><a href="material/TextButtonThemeData-class.html">TextButtonThemeData</a>?</span> <span class="parameter-name">textButtonTheme</span>, </span><span class="parameter" id="copyWith-param-textSelectionTheme"><span class="type-annotation"><a href="material/TextSelectionThemeData-class.html">TextSelectionThemeData</a>?</span> <span class="parameter-name">textSelectionTheme</span>, </span><span class="parameter" id="copyWith-param-timePickerTheme"><span class="type-annotation"><a href="material/TimePickerThemeData-class.html">TimePickerThemeData</a>?</span> <span class="parameter-name">timePickerTheme</span>, </span><span class="parameter" id="copyWith-param-toggleButtonsTheme"><span class="type-annotation"><a href="material/ToggleButtonsThemeData-class.html">ToggleButtonsThemeData</a>?</span> <span class="parameter-name">toggleButtonsTheme</span>, </span><span class="parameter" id="copyWith-param-tooltipTheme"><span class="type-annotation"><a href="material/TooltipThemeData-class.html">TooltipThemeData</a>?</span> <span class="parameter-name">tooltipTheme</span>, </span><span class="parameter" id="copyWith-param-toggleableActiveColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">toggleableActiveColor</span>, </span><span class="parameter" id="copyWith-param-selectedRowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">selectedRowColor</span>, </span><span class="parameter" id="copyWith-param-errorColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">errorColor</span>, </span><span class="parameter" id="copyWith-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="copyWith-param-bottomAppBarColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">bottomAppBarColor</span>, </span><span class="parameter" id="copyWith-param-useMaterial3"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">useMaterial3</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="material/ThemeData-class.html">ThemeData</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Caches localized themes to speed up the <a href="material/ThemeData/localize.html">localize</a> method.
+Creates a copy of this theme but with the given fields replaced with the new values.
+  
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="material/ThemeData/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="extension" class="callable">
+  <span class="name"><a href="material/ThemeData/extension.html">extension</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; T?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Used to obtain a particular <a href="material/ThemeExtension-class.html">ThemeExtension</a> from <a href="material/ThemeData/extensions.html">extensions</a>.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A brief description of this object, usually just the <a href="dart-core/Object/runtimeType.html">runtimeType</a> and the
+<a href="material/ThemeData/hashCode.html">hashCode</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="material/ThemeData/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="estimateBrightnessForColor" class="callable">
+  <span class="name"><a href="material/ThemeData/estimateBrightnessForColor.html">estimateBrightnessForColor</a></span><span class="signature">(<wbr><span class="parameter" id="estimateBrightnessForColor-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a></span> <span class="parameter-name">color</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-ui/Brightness.html">Brightness</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Determines whether the given <a href="dart-ui/Color-class.html">Color</a> is <a href="dart-ui/Brightness.html">Brightness.light</a> or
+<a href="dart-ui/Brightness.html">Brightness.dark</a>.
+  
+
+</dd>
+
+        <dt id="lerp" class="callable">
+  <span class="name"><a href="material/ThemeData/lerp.html">lerp</a></span><span class="signature">(<wbr><span class="parameter" id="lerp-param-a"><span class="type-annotation"><a href="material/ThemeData-class.html">ThemeData</a></span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerp-param-b"><span class="type-annotation"><a href="material/ThemeData-class.html">ThemeData</a></span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerp-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="material/ThemeData-class.html">ThemeData</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolate between two themes.
+  
+
+</dd>
+
+        <dt id="localize" class="callable">
+  <span class="name"><a href="material/ThemeData/localize.html">localize</a></span><span class="signature">(<wbr><span class="parameter" id="localize-param-baseTheme"><span class="type-annotation"><a href="material/ThemeData-class.html">ThemeData</a></span> <span class="parameter-name">baseTheme</span>, </span><span class="parameter" id="localize-param-localTextGeometry"><span class="type-annotation"><a href="material/TextTheme-class.html">TextTheme</a></span> <span class="parameter-name">localTextGeometry</span></span>)
+    <span class="returntype parameter">&#8594; <a href="material/ThemeData-class.html">ThemeData</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a new theme built by merging the text geometry provided by the
+<code>localTextGeometry</code> theme with the <code>baseTheme</code>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">ThemeData class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

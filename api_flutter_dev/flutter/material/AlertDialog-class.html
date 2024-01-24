@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the AlertDialog class from the material library, for the Dart programming language.">
+  <title>AlertDialog class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">AlertDialog class</li>
+  </ol>
+  <div class="self-name">AlertDialog</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;AlertDialog-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/dialog.dart#L359"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">AlertDialog</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A Material Design alert dialog.</p>
+<p>An alert dialog (also known as a basic dialog) informs the user about
+situations that require acknowledgment. An alert dialog has an optional
+title and an optional list of actions. The title is displayed above the
+content and the actions are displayed below the content.</p>
+<iframe src="https://www.youtube.com/embed/75CsnyRXf5I?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>For dialogs that offer the user a choice between several options, consider
+using a <a href="material/SimpleDialog-class.html">SimpleDialog</a>.</p>
+<p>Typically passed as the child widget to <a href="material/showDialog.html">showDialog</a>, which displays the
+dialog.</p>
+<div style="position: relative;">
+<div id="animation_1_play_button_" onclick="var animation_1 = document.getElementById('animation_1');
+if (animation_1.paused) {
+animation_1.play();
+this.style.display = 'none';
+} else {
+animation_1.pause();
+this.style.display = 'block';
+}" style="position:absolute;
+width:350px;
+height:622px;
+z-index:100000;
+background-position: center;
+background-repeat: no-repeat;
+background-image: url(static-assets/play_button.svg);">
+</div>
+<video id="animation_1" style="width:350px; height:622px;" onclick="var animation_1_play_button_ = document.getElementById('animation_1_play_button_');
+if (this.paused) {
+this.play();
+animation_1_play_button_.style.display = 'none';
+} else {
+this.pause();
+animation_1_play_button_.style.display = 'block';
+}" loop="">
+<source src="https://flutter.github.io/assets-for-api-docs/assets/material/alert_dialog.mp4" type="video/mp4">
+</video>
+</div>
+<p>
+<a name="material.AlertDialog.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+This snippet shows a method in a <a href="widgets/State-class.html">State</a> which, when called, displays a dialog box
+and returns a <a href="dart-async/Future-class.html">Future</a> that completes when the dialog is dismissed.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'material.AlertDialog.1');" onclick="fixHref(this, 'material.AlertDialog.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">Future&lt;void&gt; _showMyDialog() async {
+  return showDialog&lt;void&gt;(
+    context: context,
+    barrierDismissible: false, &#47;&#47; user must tap button!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text(&#39;AlertDialog Title&#39;),
+        content: const SingleChildScrollView(
+          child: ListBody(
+            children: &lt;Widget&gt;[
+              Text(&#39;This is a demo alert dialog.&#39;),
+              Text(&#39;Would you like to approve of this message?&#39;),
+            ],
+          ),
+        ),
+        actions: &lt;Widget&gt;[
+          TextButton(
+            child: const Text(&#39;Approve&#39;),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
+}</code></pre>
+  </div>
+</div>
+</p>
+<p>
+<a name="material.AlertDialog.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This demo shows a <a href="material/TextButton-class.html">TextButton</a> which when pressed, calls <a href="material/showDialog.html">showDialog</a>. When called, this method
+displays a Material dialog above the current contents of the app and returns
+a <a href="dart-async/Future-class.html">Future</a> that completes when the dialog is dismissed.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.AlertDialog.2');" onclick="fixHref(this, 'material.AlertDialog.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.AlertDialog.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.AlertDialog.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.AlertDialog.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This sample shows the creation of <a href="material/AlertDialog-class.html">AlertDialog</a>, as described in:
+https://m3.material.io/components/dialogs/overview
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.AlertDialog.3');" onclick="fixHref(this, 'material.AlertDialog.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.AlertDialog.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.AlertDialog.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<h2 id="alert-dialogs-and-scrolling">Alert dialogs and scrolling</h2>
+<p>By default, alert dialogs size themselves to contain their children.</p>
+<p>If the content is too large to fit on the screen vertically, the dialog will
+display the title and actions, and let the <em><a href="material/AlertDialog/content.html">content</a></em> overflow. This is
+rarely desired. Consider using a scrolling widget for <a href="material/AlertDialog/content.html">content</a>, such as
+<a href="widgets/SingleChildScrollView-class.html">SingleChildScrollView</a>, to avoid overflow.</p>
+<p>Because the dialog attempts to size itself to the contents, the <a href="material/AlertDialog/content.html">content</a>
+must support reporting its intrinsic dimensions. In particular, this means
+that lazily-rendered widgets such as <a href="widgets/ListView-class.html">ListView</a>, <a href="widgets/GridView-class.html">GridView</a>, and
+<a href="widgets/CustomScrollView-class.html">CustomScrollView</a>, will not work in an <a href="material/AlertDialog-class.html">AlertDialog</a> unless they are
+wrapped in a widget that forces a particular size (e.g. a <a href="widgets/SizedBox-class.html">SizedBox</a>).</p>
+<p>For finer-grained control over the sizing of a dialog, consider using
+<a href="material/Dialog-class.html">Dialog</a> directly.</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/SimpleDialog-class.html">SimpleDialog</a>, which handles the scrolling of the contents but has no <a href="material/AlertDialog/actions.html">actions</a>.</li>
+<li><a href="material/Dialog-class.html">Dialog</a>, on which <a href="material/AlertDialog-class.html">AlertDialog</a> and <a href="material/SimpleDialog-class.html">SimpleDialog</a> are based.</li>
+<li><a href="cupertino/CupertinoAlertDialog-class.html">CupertinoAlertDialog</a>, an iOS-styled alert dialog.</li>
+<li><a href="material/showDialog.html">showDialog</a>, which actually displays the dialog and returns its result.</li>
+<li><a href="https://material.io/design/components/dialogs.html#alert-dialog">material.io/design/components/dialogs.html#alert-dialog</a></li>
+<li><a href="https://m3.material.io/components/dialogs">m3.material.io/components/dialogs</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatelessWidget-class.html">StatelessWidget</a></li>
+      <li>AlertDialog</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="AlertDialog" class="callable">
+          <span class="name"><a href="material/AlertDialog/AlertDialog.html">AlertDialog</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-icon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="-param-iconPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">iconPadding</span>, </span><span class="parameter" id="-param-iconColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconColor</span>, </span><span class="parameter" id="-param-title"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-titlePadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">titlePadding</span>, </span><span class="parameter" id="-param-titleTextStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleTextStyle</span>, </span><span class="parameter" id="-param-content"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">content</span>, </span><span class="parameter" id="-param-contentPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">contentPadding</span>, </span><span class="parameter" id="-param-contentTextStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">contentTextStyle</span>, </span><span class="parameter" id="-param-actions"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span>?</span> <span class="parameter-name">actions</span>, </span><span class="parameter" id="-param-actionsPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">actionsPadding</span>, </span><span class="parameter" id="-param-actionsAlignment"><span class="type-annotation"><a href="rendering/MainAxisAlignment.html">MainAxisAlignment</a>?</span> <span class="parameter-name">actionsAlignment</span>, </span><span class="parameter" id="-param-actionsOverflowAlignment"><span class="type-annotation"><a href="widgets/OverflowBarAlignment.html">OverflowBarAlignment</a>?</span> <span class="parameter-name">actionsOverflowAlignment</span>, </span><span class="parameter" id="-param-actionsOverflowDirection"><span class="type-annotation"><a href="painting/VerticalDirection.html">VerticalDirection</a>?</span> <span class="parameter-name">actionsOverflowDirection</span>, </span><span class="parameter" id="-param-actionsOverflowButtonSpacing"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">actionsOverflowButtonSpacing</span>, </span><span class="parameter" id="-param-buttonPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">buttonPadding</span>, </span><span class="parameter" id="-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span><span class="parameter" id="-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="-param-surfaceTintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTintColor</span>, </span><span class="parameter" id="-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="-param-insetPadding"><span class="type-annotation"><a href="painting/EdgeInsets-class.html">EdgeInsets</a></span> <span class="parameter-name">insetPadding</span> = <span class="default-value">_defaultInsetPadding</span>, </span><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span> = <span class="default-value">Clip.none</span>, </span><span class="parameter" id="-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="-param-scrollable"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">scrollable</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates an alert dialog.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+        <dt id="AlertDialog.adaptive" class="callable">
+          <span class="name"><a href="material/AlertDialog/AlertDialog.adaptive.html">AlertDialog.adaptive</a></span><span class="signature">(<span class="parameter" id="adaptive-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="adaptive-param-icon"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">icon</span>, </span><span class="parameter" id="adaptive-param-iconPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">iconPadding</span>, </span><span class="parameter" id="adaptive-param-iconColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconColor</span>, </span><span class="parameter" id="adaptive-param-title"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">title</span>, </span><span class="parameter" id="adaptive-param-titlePadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">titlePadding</span>, </span><span class="parameter" id="adaptive-param-titleTextStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">titleTextStyle</span>, </span><span class="parameter" id="adaptive-param-content"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">content</span>, </span><span class="parameter" id="adaptive-param-contentPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">contentPadding</span>, </span><span class="parameter" id="adaptive-param-contentTextStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">contentTextStyle</span>, </span><span class="parameter" id="adaptive-param-actions"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span>?</span> <span class="parameter-name">actions</span>, </span><span class="parameter" id="adaptive-param-actionsPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">actionsPadding</span>, </span><span class="parameter" id="adaptive-param-actionsAlignment"><span class="type-annotation"><a href="rendering/MainAxisAlignment.html">MainAxisAlignment</a>?</span> <span class="parameter-name">actionsAlignment</span>, </span><span class="parameter" id="adaptive-param-actionsOverflowAlignment"><span class="type-annotation"><a href="widgets/OverflowBarAlignment.html">OverflowBarAlignment</a>?</span> <span class="parameter-name">actionsOverflowAlignment</span>, </span><span class="parameter" id="adaptive-param-actionsOverflowDirection"><span class="type-annotation"><a href="painting/VerticalDirection.html">VerticalDirection</a>?</span> <span class="parameter-name">actionsOverflowDirection</span>, </span><span class="parameter" id="adaptive-param-actionsOverflowButtonSpacing"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">actionsOverflowButtonSpacing</span>, </span><span class="parameter" id="adaptive-param-buttonPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">buttonPadding</span>, </span><span class="parameter" id="adaptive-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="adaptive-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">elevation</span>, </span><span class="parameter" id="adaptive-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="adaptive-param-surfaceTintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTintColor</span>, </span><span class="parameter" id="adaptive-param-semanticLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">semanticLabel</span>, </span><span class="parameter" id="adaptive-param-insetPadding"><span class="type-annotation"><a href="painting/EdgeInsets-class.html">EdgeInsets</a></span> <span class="parameter-name">insetPadding</span>, </span><span class="parameter" id="adaptive-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span>, </span><span class="parameter" id="adaptive-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="adaptive-param-alignment"><span class="type-annotation"><a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> <span class="parameter-name">alignment</span>, </span><span class="parameter" id="adaptive-param-scrollable"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">scrollable</span>, </span><span class="parameter" id="adaptive-param-scrollController"><span class="type-annotation"><a href="widgets/ScrollController-class.html">ScrollController</a>?</span> <span class="parameter-name">scrollController</span>, </span><span class="parameter" id="adaptive-param-actionScrollController"><span class="type-annotation"><a href="widgets/ScrollController-class.html">ScrollController</a>?</span> <span class="parameter-name">actionScrollController</span>, </span><span class="parameter" id="adaptive-param-insetAnimationDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">insetAnimationDuration</span>, </span><span class="parameter" id="adaptive-param-insetAnimationCurve"><span class="type-annotation"><a href="animation/Curve-class.html">Curve</a></span> <span class="parameter-name">insetAnimationCurve</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates an adaptive <a href="material/AlertDialog-class.html">AlertDialog</a> based on whether the target platform is
+iOS or macOS, following Material design's
+<a href="https://material.io/design/platform-guidance/cross-platform-adaptation.html">Cross-platform guidelines</a>.
+            <div class="constructor-modifier features">const</div>
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="actions" class="property">
+  <span class="name"><a href="material/AlertDialog/actions.html">actions</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  The (optional) set of actions that are displayed at the bottom of the
+dialog with an <a href="widgets/OverflowBar-class.html">OverflowBar</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="actionsAlignment" class="property">
+  <span class="name"><a href="material/AlertDialog/actionsAlignment.html">actionsAlignment</a></span>
+  <span class="signature">&#8594; <a href="rendering/MainAxisAlignment.html">MainAxisAlignment</a>?</span> 
+
+</dt>
+<dd>
+  Defines the horizontal layout of the <a href="material/AlertDialog/actions.html">actions</a> according to the same
+rules as for <a href="widgets/Flex/mainAxisAlignment.html">Row.mainAxisAlignment</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="actionsOverflowAlignment" class="property">
+  <span class="name"><a href="material/AlertDialog/actionsOverflowAlignment.html">actionsOverflowAlignment</a></span>
+  <span class="signature">&#8594; <a href="widgets/OverflowBarAlignment.html">OverflowBarAlignment</a>?</span> 
+
+</dt>
+<dd>
+  The horizontal alignment of <a href="material/AlertDialog/actions.html">actions</a> within the vertical
+"overflow" layout.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="actionsOverflowButtonSpacing" class="property">
+  <span class="name"><a href="material/AlertDialog/actionsOverflowButtonSpacing.html">actionsOverflowButtonSpacing</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The spacing between <a href="material/AlertDialog/actions.html">actions</a> when the <a href="widgets/OverflowBar-class.html">OverflowBar</a> switches to a column
+layout because the actions don't fit horizontally.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="actionsOverflowDirection" class="property">
+  <span class="name"><a href="material/AlertDialog/actionsOverflowDirection.html">actionsOverflowDirection</a></span>
+  <span class="signature">&#8594; <a href="painting/VerticalDirection.html">VerticalDirection</a>?</span> 
+
+</dt>
+<dd>
+  The vertical direction of <a href="material/AlertDialog/actions.html">actions</a> if the children overflow
+horizontally.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="actionsPadding" class="property">
+  <span class="name"><a href="material/AlertDialog/actionsPadding.html">actionsPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Padding around the set of <a href="material/AlertDialog/actions.html">actions</a> at the bottom of the dialog.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="alignment" class="property">
+  <span class="name"><a href="material/AlertDialog/alignment.html">alignment</a></span>
+  <span class="signature">&#8594; <a href="painting/AlignmentGeometry-class.html">AlignmentGeometry</a>?</span> 
+
+</dt>
+<dd>
+  How to align the <a href="material/Dialog-class.html">Dialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="backgroundColor" class="property">
+  <span class="name"><a href="material/AlertDialog/backgroundColor.html">backgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The background color of the surface of this <a href="material/Dialog-class.html">Dialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="buttonPadding" class="property">
+  <span class="name"><a href="material/AlertDialog/buttonPadding.html">buttonPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  The padding that surrounds each button in <a href="material/AlertDialog/actions.html">actions</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="clipBehavior" class="property">
+  <span class="name"><a href="material/AlertDialog/clipBehavior.html">clipBehavior</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Clip.html">Clip</a></span> 
+
+</dt>
+<dd>
+  Controls how the contents of the dialog are clipped (or not) to the given
+<a href="material/AlertDialog/shape.html">shape</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="content" class="property">
+  <span class="name"><a href="material/AlertDialog/content.html">content</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The (optional) content of the dialog is displayed in the center of the
+dialog in a lighter font.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="contentPadding" class="property">
+  <span class="name"><a href="material/AlertDialog/contentPadding.html">contentPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Padding around the content.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="contentTextStyle" class="property">
+  <span class="name"><a href="material/AlertDialog/contentTextStyle.html">contentTextStyle</a></span>
+  <span class="signature">&#8594; <a href="painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  Style for the text in the <a href="material/AlertDialog/content.html">content</a> of this <a href="material/AlertDialog-class.html">AlertDialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="elevation" class="property">
+  <span class="name"><a href="material/AlertDialog/elevation.html">elevation</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd>
+  The z-coordinate of this <a href="material/Dialog-class.html">Dialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="icon" class="property">
+  <span class="name"><a href="material/AlertDialog/icon.html">icon</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  An optional icon to display at the top of the dialog.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconColor" class="property">
+  <span class="name"><a href="material/AlertDialog/iconColor.html">iconColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  Color for the <a href="widgets/Icon-class.html">Icon</a> in the <a href="material/AlertDialog/icon.html">icon</a> of this <a href="material/AlertDialog-class.html">AlertDialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="iconPadding" class="property">
+  <span class="name"><a href="material/AlertDialog/iconPadding.html">iconPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Padding around the <a href="material/AlertDialog/icon.html">icon</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="insetPadding" class="property">
+  <span class="name"><a href="material/AlertDialog/insetPadding.html">insetPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsets-class.html">EdgeInsets</a></span> 
+
+</dt>
+<dd>
+  The amount of padding added to <a href="widgets/MediaQueryData/viewInsets.html">MediaQueryData.viewInsets</a> on the outside
+of the dialog. This defines the minimum space between the screen's edges
+and the dialog.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scrollable" class="property">
+  <span class="name"><a href="material/AlertDialog/scrollable.html">scrollable</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Determines whether the <a href="material/AlertDialog/title.html">title</a> and <a href="material/AlertDialog/content.html">content</a> widgets are wrapped in a
+scrollable.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="semanticLabel" class="property">
+  <span class="name"><a href="material/AlertDialog/semanticLabel.html">semanticLabel</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The semantic label of the dialog used by accessibility frameworks to
+announce screen transitions when the dialog is opened and closed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="shadowColor" class="property">
+  <span class="name"><a href="material/AlertDialog/shadowColor.html">shadowColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color used to paint a drop shadow under the dialog's <a href="material/Material-class.html">Material</a>,
+which reflects the dialog's <a href="material/AlertDialog/elevation.html">elevation</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="shape" class="property">
+  <span class="name"><a href="material/AlertDialog/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd>
+  The shape of this dialog's border.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="surfaceTintColor" class="property">
+  <span class="name"><a href="material/AlertDialog/surfaceTintColor.html">surfaceTintColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color used as a surface tint overlay on the dialog's background color,
+which reflects the dialog's <a href="material/AlertDialog/elevation.html">elevation</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="title" class="property">
+  <span class="name"><a href="material/AlertDialog/title.html">title</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The (optional) title of the dialog is displayed in a large font at the top
+of the dialog, below the (optional) <a href="material/AlertDialog/icon.html">icon</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="titlePadding" class="property">
+  <span class="name"><a href="material/AlertDialog/titlePadding.html">titlePadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Padding around the title.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="titleTextStyle" class="property">
+  <span class="name"><a href="material/AlertDialog/titleTextStyle.html">titleTextStyle</a></span>
+  <span class="signature">&#8594; <a href="painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  Style for the text in the <a href="material/AlertDialog/title.html">title</a> of this <a href="material/AlertDialog-class.html">AlertDialog</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable">
+  <span class="name"><a href="material/AlertDialog/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/Widget-class.html">Widget</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Describes the part of the user interface represented by this widget.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatelessWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatelessElement-class.html">StatelessElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">AlertDialog class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

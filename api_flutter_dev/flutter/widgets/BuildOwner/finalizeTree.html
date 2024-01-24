@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the finalizeTree method from the BuildOwner class, for the Dart programming language.">
+  <title>finalizeTree method - BuildOwner class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/BuildOwner-class.html">BuildOwner</a></li>
+    <li class="self-crumb">finalizeTree method</li>
+  </ol>
+  <div class="self-name">finalizeTree</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;BuildOwner-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/framework.dart#L3160"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">finalizeTree</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">finalizeTree</span>(<wbr>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Complete the element build pass by unmounting any elements that are no
+longer active.</p>
+<p>This is called by <a href="widgets/WidgetsBinding/drawFrame.html">WidgetsBinding.drawFrame</a>.</p>
+<p>In debug mode, this also runs some sanity checks, for example checking for
+duplicate global keys.</p>
+<p>After the current call stack unwinds, a microtask that notifies listeners
+about changes to global keys will run.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@pragma(&#39;vm:notify-debugger-on-exception&#39;)
+void finalizeTree() {
+  if (!kReleaseMode) {
+    FlutterTimeline.startSync(&#39;FINALIZE TREE&#39;);
+  }
+  try {
+    lockState(_inactiveElements._unmountAll); &#47;&#47; this unregisters the GlobalKeys
+    assert(() {
+      try {
+        _debugVerifyGlobalKeyReservation();
+        _debugVerifyIllFatedPopulation();
+        if (_debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans != null &amp;&amp;
+            _debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans!.isNotEmpty) {
+          final Set&lt;GlobalKey&gt; keys = HashSet&lt;GlobalKey&gt;();
+          for (final Element element in _debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans!.keys) {
+            if (element._lifecycleState != _ElementLifecycle.defunct) {
+              keys.addAll(_debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans![element]!);
+            }
+          }
+          if (keys.isNotEmpty) {
+            final Map&lt;String, int&gt; keyStringCount = HashMap&lt;String, int&gt;();
+            for (final String key in keys.map&lt;String&gt;((GlobalKey key) =&gt; key.toString())) {
+              if (keyStringCount.containsKey(key)) {
+                keyStringCount.update(key, (int value) =&gt; value + 1);
+              } else {
+                keyStringCount[key] = 1;
+              }
+            }
+            final List&lt;String&gt; keyLabels = &lt;String&gt;[];
+            keyStringCount.forEach((String key, int count) {
+              if (count == 1) {
+                keyLabels.add(key);
+              } else {
+                keyLabels.add(&#39;$key ($count different affected keys had this toString representation)&#39;);
+              }
+            });
+            final Iterable&lt;Element&gt; elements = _debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans!.keys;
+            final Map&lt;String, int&gt; elementStringCount = HashMap&lt;String, int&gt;();
+            for (final String element in elements.map&lt;String&gt;((Element element) =&gt; element.toString())) {
+              if (elementStringCount.containsKey(element)) {
+                elementStringCount.update(element, (int value) =&gt; value + 1);
+              } else {
+                elementStringCount[element] = 1;
+              }
+            }
+            final List&lt;String&gt; elementLabels = &lt;String&gt;[];
+            elementStringCount.forEach((String element, int count) {
+              if (count == 1) {
+                elementLabels.add(element);
+              } else {
+                elementLabels.add(&#39;$element ($count different affected elements had this toString representation)&#39;);
+              }
+            });
+            assert(keyLabels.isNotEmpty);
+            final String the = keys.length == 1 ? &#39; the&#39; : &#39;&#39;;
+            final String s = keys.length == 1 ? &#39;&#39; : &#39;s&#39;;
+            final String were = keys.length == 1 ? &#39;was&#39; : &#39;were&#39;;
+            final String their = keys.length == 1 ? &#39;its&#39; : &#39;their&#39;;
+            final String respective = elementLabels.length == 1 ? &#39;&#39; : &#39; respective&#39;;
+            final String those = keys.length == 1 ? &#39;that&#39; : &#39;those&#39;;
+            final String s2 = elementLabels.length == 1 ? &#39;&#39; : &#39;s&#39;;
+            final String those2 = elementLabels.length == 1 ? &#39;that&#39; : &#39;those&#39;;
+            final String they = elementLabels.length == 1 ? &#39;it&#39; : &#39;they&#39;;
+            final String think = elementLabels.length == 1 ? &#39;thinks&#39; : &#39;think&#39;;
+            final String are = elementLabels.length == 1 ? &#39;is&#39; : &#39;are&#39;;
+            &#47;&#47; TODO(jacobr): make this error more structured to better expose which widgets had problems.
+            throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+              ErrorSummary(&#39;Duplicate GlobalKey$s detected in widget tree.&#39;),
+              &#47;&#47; TODO(jacobr): refactor this code so the elements are clickable
+              &#47;&#47; in GUI debug tools.
+              ErrorDescription(
+                &#39;The following GlobalKey$s $were specified multiple times in the widget tree. This will lead to &#39;
+                &#39;parts of the widget tree being truncated unexpectedly, because the second time a key is seen, &#39;
+                &#39;the previous instance is moved to the new location. The key$s $were:\n&#39;
+                &#39;- ${keyLabels.join(&quot;\n  &quot;)}\n&#39;
+                &#39;This was determined by noticing that after$the widget$s with the above global key$s $were moved &#39;
+                &#39;out of $their$respective previous parent$s2, $those2 previous parent$s2 never updated during this frame, meaning &#39;
+                &#39;that $they either did not update at all or updated before the widget$s $were moved, in either case &#39;
+                &#39;implying that $they still $think that $they should have a child with $those global key$s.\n&#39;
+                &#39;The specific parent$s2 that did not update after having one or more children forcibly removed &#39;
+                &#39;due to GlobalKey reparenting $are:\n&#39;
+                &#39;- ${elementLabels.join(&quot;\n  &quot;)}&#39;
+                &#39;\nA GlobalKey can only be specified on one widget at a time in the widget tree.&#39;,
+              ),
+            ]);
+          }
+        }
+      } finally {
+        _debugElementsThatWillNeedToBeRebuiltDueToGlobalKeyShenanigans?.clear();
+      }
+      return true;
+    }());
+  } catch (e, stack) {
+    &#47;&#47; Catching the exception directly to avoid activating the ErrorWidget.
+    &#47;&#47; Since the tree is in a broken state, adding the ErrorWidget would
+    &#47;&#47; cause more exceptions.
+    _reportException(ErrorSummary(&#39;while finalizing the widget tree&#39;), e, stack);
+  } finally {
+    if (!kReleaseMode) {
+      FlutterTimeline.finishSync();
+    }
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/BuildOwner-class.html">BuildOwner</a></li>
+    <li class="self-crumb">finalizeTree method</li>
+</ol>
+
+
+    <h5>BuildOwner class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

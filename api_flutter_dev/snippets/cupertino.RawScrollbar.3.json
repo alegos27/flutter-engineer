@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.RawScrollbar.3",
+    "element": "RawScrollbar",
+    "sourcePath": "lib/src/widgets/scrollbar.dart",
+    "sourceLine": 956,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample shows how to disable the default Scrollbar for a [Scrollable]\nwidget to avoid duplicate Scrollbars when running on desktop platforms.",
+    "file": "cupertino.RawScrollbar.3.dart"
+}

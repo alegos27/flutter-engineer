@@ -1,0 +1,13 @@
+{
+    "id": "material.MouseRegion.1",
+    "element": "MouseRegion",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 6480,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example makes a [Container] react to being entered by a mouse\npointer, showing a count of the number of entries and exits.",
+    "file": "material.MouseRegion.1.dart"
+}

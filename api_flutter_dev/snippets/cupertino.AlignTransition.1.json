@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AlignTransition.1",
+    "element": "AlignTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 914,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [AlignTransition] as seen in the video\nabove:",
+    "file": "cupertino.AlignTransition.1.dart"
+}

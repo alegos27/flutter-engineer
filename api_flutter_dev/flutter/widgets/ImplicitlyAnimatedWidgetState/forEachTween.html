@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the forEachTween method from the ImplicitlyAnimatedWidgetState class, for the Dart programming language.">
+  <title>forEachTween method - ImplicitlyAnimatedWidgetState class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/ImplicitlyAnimatedWidgetState-class.html">ImplicitlyAnimatedWidgetState<span class="signature">&lt;<wbr><span class="type-parameter">T extends ImplicitlyAnimatedWidget</span>&gt;</span></a></li>
+    <li class="self-crumb">forEachTween abstract method</li>
+  </ol>
+  <div class="self-name">forEachTween</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;ImplicitlyAnimatedWidgetState-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/implicit_animations.dart#L515"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">forEachTween</span> abstract method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="meta/protected-constant.html">protected</a></li>
+    </ol>
+  </div>
+
+<span class="returntype">void</span>
+<span class="name ">forEachTween</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="forEachTween-param-visitor"><span class="type-annotation"><a href="widgets/TweenVisitor.html">TweenVisitor</a></span> <span class="parameter-name">visitor</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Visits each tween controlled by this state with the specified <code>visitor</code>
+function.</p>
+<h3 id="subclass-responsibility">Subclass responsibility</h3>
+<p>Properties to be animated are represented by <a href="animation/Tween-class.html">Tween</a> member variables in
+the state. For each such tween, <a href="widgets/ImplicitlyAnimatedWidgetState/forEachTween.html">forEachTween</a> implementations are
+expected to call <code>visitor</code> with the appropriate arguments and store the
+result back into the member variable. The arguments to <code>visitor</code> are as
+follows:</p>
+<p>The <code>tween</code> argument should contain the current tween value. This will
+initially be null when the state is first initialized.</p>
+<p>The <code>targetValue</code> argument should contain the value toward which the state
+is animating. For instance, if the state is animating its widget's
+opacity value, then this argument should contain the widget's current
+opacity value.</p>
+<p>The <code>constructor</code> argument should contain a function that takes a value
+(the widget's value being animated) and returns a tween beginning at that
+value.</p>
+<h3 id="when-this-method-will-be-called">When this method will be called</h3>
+<p><a href="widgets/ImplicitlyAnimatedWidgetState/forEachTween.html">forEachTween</a> is initially called during <a href="widgets/ImplicitlyAnimatedWidgetState/initState.html">initState</a>. It is expected that
+the visitor's <code>tween</code> argument will be set to null, causing the visitor to
+call its <code>constructor</code> argument to construct the tween for the first time.
+The resulting tween will have its <code>begin</code> value set to the target value
+and will have its <code>end</code> value set to null. The animation will not be
+started.</p>
+<p>When this state's <a href="widgets/State/widget.html">widget</a> is updated (thus triggering the
+<a href="widgets/ImplicitlyAnimatedWidgetState/didUpdateWidget.html">didUpdateWidget</a> method to be called), <a href="widgets/ImplicitlyAnimatedWidgetState/forEachTween.html">forEachTween</a> will be called
+again to check if the target value has changed. If the target value has
+changed, signaling that the <a href="widgets/ImplicitlyAnimatedWidgetState/animation.html">animation</a> should start, then the visitor
+will update the tween's <code>start</code> and <code>end</code> values accordingly, and the
+animation will be started.</p>
+<h3 id="other-member-variables">Other member variables</h3>
+<p>Subclasses that contain properties based on tweens created by
+<a href="widgets/ImplicitlyAnimatedWidgetState/forEachTween.html">forEachTween</a> should override <a href="widgets/ImplicitlyAnimatedWidgetState/didUpdateTweens.html">didUpdateTweens</a> to update those
+properties. Dependent properties should not be updated within
+<a href="widgets/ImplicitlyAnimatedWidgetState/forEachTween.html">forEachTween</a>.</p>
+<p>
+<a name="widgets.ImplicitlyAnimatedWidgetState.forEachTween.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+This sample implements an implicitly animated widget's <code>State</code>.
+The widget animates between colors whenever <code>widget.targetColor</code>
+changes.
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'widgets.ImplicitlyAnimatedWidgetState.forEachTween.1');" onclick="fixHref(this, 'widgets.ImplicitlyAnimatedWidgetState.forEachTween.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">class MyWidgetState extends AnimatedWidgetBaseState&lt;MyWidget&gt; {
+  ColorTween? _colorTween;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      &#39;Hello World&#39;,
+      &#47;&#47; Computes the value of the text color at any given time.
+      style: TextStyle(color: _colorTween?.evaluate(animation)),
+    );
+  }
+
+  @override
+  void forEachTween(TweenVisitor&lt;dynamic&gt; visitor) {
+    &#47;&#47; Update the tween using the provided visitor function.
+    _colorTween = visitor(
+      &#47;&#47; The latest tween value. Can be `null`.
+      _colorTween,
+      &#47;&#47; The color value toward which we are animating.
+      widget.targetColor,
+      &#47;&#47; A function that takes a color value and returns a tween
+      &#47;&#47; beginning at that value.
+      (dynamic value) =&gt; ColorTween(begin: value as Color?),
+    ) as ColorTween?;
+
+    &#47;&#47; We could have more tweens than one by using the visitor
+    &#47;&#47; multiple times.
+  }
+}</code></pre>
+  </div>
+</div>
+</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@protected
+void forEachTween(TweenVisitor&lt;dynamic&gt; visitor);</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/ImplicitlyAnimatedWidgetState-class.html">ImplicitlyAnimatedWidgetState<span class="signature">&lt;<wbr><span class="type-parameter">T extends ImplicitlyAnimatedWidget</span>&gt;</span></a></li>
+    <li class="self-crumb">forEachTween abstract method</li>
+</ol>
+
+
+    <h5>ImplicitlyAnimatedWidgetState class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "material.RawAutocomplete.2",
+    "element": "RawAutocomplete",
+    "sourcePath": "lib/src/widgets/autocomplete.dart",
+    "sourceLine": 146,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example is similar to the previous example, but it uses a custom T data\ntype instead of directly using String.",
+    "file": "material.RawAutocomplete.2.dart"
+}

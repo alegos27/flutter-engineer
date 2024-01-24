@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the geometryOf method from the Scaffold class, for the Dart programming language.">
+  <title>geometryOf method - Scaffold class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/Scaffold-class.html">Scaffold</a></li>
+    <li class="self-crumb">geometryOf static method</li>
+  </ol>
+  <div class="self-name">geometryOf</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;Scaffold-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/scaffold.dart#L1980"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">geometryOf</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="foundation/ValueListenable-class.html">ValueListenable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/ScaffoldGeometry-class.html">ScaffoldGeometry</a></span>&gt;</span></span>
+<span class="name ">geometryOf</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="geometryOf-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns a <a href="foundation/ValueListenable-class.html">ValueListenable</a> for the <code>ScaffoldGeometry</code> for the closest
+<a href="material/Scaffold-class.html">Scaffold</a> ancestor of the given context.</p>
+<p>The <a href="foundation/ValueListenable/value.html">ValueListenable.value</a> is only available at paint time.</p>
+<p>Notifications are guaranteed to be sent before the first paint pass
+with the new geometry, but there is no guarantee whether a build or
+layout passes are going to happen between the notification and the next
+paint pass.</p>
+<p>The closest <a href="material/Scaffold-class.html">Scaffold</a> ancestor for the context might change, e.g when
+an element is moved from one scaffold to another. For <a href="widgets/StatefulWidget-class.html">StatefulWidget</a>s
+using this listenable, a change of the <a href="material/Scaffold-class.html">Scaffold</a> ancestor will
+trigger a <a href="widgets/State/didChangeDependencies.html">State.didChangeDependencies</a>.</p>
+<p>A typical pattern for listening to the scaffold geometry would be to
+call <a href="material/Scaffold/geometryOf.html">Scaffold.geometryOf</a> in <a href="widgets/State/didChangeDependencies.html">State.didChangeDependencies</a>, compare the
+return value with the previous listenable, if it has changed, unregister
+the listener, and register a listener to the new <code>ScaffoldGeometry</code>
+listenable.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static ValueListenable&lt;ScaffoldGeometry&gt; geometryOf(BuildContext context) {
+  final _ScaffoldScope? scaffoldScope = context.dependOnInheritedWidgetOfExactType&lt;_ScaffoldScope&gt;();
+  if (scaffoldScope == null) {
+    throw FlutterError.fromParts(&lt;DiagnosticsNode&gt;[
+      ErrorSummary(
+        &#39;Scaffold.geometryOf() called with a context that does not contain a Scaffold.&#39;,
+      ),
+      ErrorDescription(
+        &#39;This usually happens when the context provided is from the same StatefulWidget as that &#39;
+        &#39;whose build function actually creates the Scaffold widget being sought.&#39;,
+      ),
+      ErrorHint(
+        &#39;There are several ways to avoid this problem. The simplest is to use a Builder to get a &#39;
+        &#39;context that is &quot;under&quot; the Scaffold. For an example of this, please see the &#39;
+        &#39;documentation for Scaffold.of():\n&#39;
+        &#39;  https:&#47;&#47;api.flutter.dev&#47;flutter&#47;material&#47;Scaffold&#47;of.html&#39;,
+      ),
+      ErrorHint(
+        &#39;A more efficient solution is to split your build function into several widgets. This &#39;
+        &#39;introduces a new context from which you can obtain the Scaffold. In this solution, &#39;
+        &#39;you would have an outer widget that creates the Scaffold populated by instances of &#39;
+        &#39;your new inner widgets, and then in these inner widgets you would use Scaffold.geometryOf().&#39;,
+      ),
+      context.describeElement(&#39;The context used was&#39;),
+    ]);
+  }
+  return scaffoldScope.geometryNotifier;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/Scaffold-class.html">Scaffold</a></li>
+    <li class="self-crumb">geometryOf static method</li>
+</ol>
+
+
+    <h5>Scaffold class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

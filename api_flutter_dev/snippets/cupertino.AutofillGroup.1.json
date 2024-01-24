@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AutofillGroup.1",
+    "element": "AutofillGroup",
+    "sourcePath": "lib/src/widgets/autofill.dart",
+    "sourceLine": 66,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "An example form with autofillable fields grouped into different\n[AutofillGroup]s.",
+    "file": "cupertino.AutofillGroup.1.dart"
+}

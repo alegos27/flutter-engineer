@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the builder property from the MaterialApp class, for the Dart programming language.">
+  <title>builder property - MaterialApp class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/MaterialApp-class.html">MaterialApp</a></li>
+    <li class="self-crumb">builder property</li>
+  </ol>
+  <div class="self-name">builder</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;MaterialApp-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/app.dart#L372"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-property">builder</span> property 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="widgets/TransitionBuilder.html">TransitionBuilder</a>?
+          <span class="name ">builder</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A builder for inserting widgets above the <a href="widgets/Navigator-class.html">Navigator</a> or - when the
+<a href="widgets/WidgetsApp/WidgetsApp.router.html">WidgetsApp.router</a> constructor is used - above the <a href="widgets/Router-class.html">Router</a> but below the
+other widgets created by the <a href="widgets/WidgetsApp-class.html">WidgetsApp</a> widget, or for replacing the
+<a href="widgets/Navigator-class.html">Navigator</a>/<a href="widgets/Router-class.html">Router</a> entirely.</p>
+<p>For example, from the <a href="widgets/BuildContext-class.html">BuildContext</a> passed to this method, the
+<a href="widgets/Directionality-class.html">Directionality</a>, <a href="widgets/Localizations-class.html">Localizations</a>, <a href="widgets/DefaultTextStyle-class.html">DefaultTextStyle</a>, <a href="widgets/MediaQuery-class.html">MediaQuery</a>, etc,
+are all available. They can also be overridden in a way that impacts all
+the routes in the <a href="widgets/Navigator-class.html">Navigator</a> or <a href="widgets/Router-class.html">Router</a>.</p>
+<p>This is rarely useful, but can be used in applications that wish to
+override those defaults, e.g. to force the application into right-to-left
+mode despite being in English, or to override the <a href="widgets/MediaQuery-class.html">MediaQuery</a> metrics
+(e.g. to leave a gap for advertisements shown by a plugin from OEM code).</p>
+<p>For specifically overriding the <a href="material/MaterialApp/title.html">title</a> with a value based on the
+<a href="widgets/Localizations-class.html">Localizations</a>, consider <a href="material/MaterialApp/onGenerateTitle.html">onGenerateTitle</a> instead.</p>
+<p>The <a href="material/MaterialApp/builder.html">builder</a> callback is passed two arguments, the <a href="widgets/BuildContext-class.html">BuildContext</a> (as
+<code>context</code>) and a <a href="widgets/Navigator-class.html">Navigator</a> or <a href="widgets/Router-class.html">Router</a> widget (as <code>child</code>).</p>
+<p>If no routes are provided to the regular <a href="widgets/WidgetsApp-class.html">WidgetsApp</a> constructor using
+<a href="material/MaterialApp/home.html">home</a>, <a href="material/MaterialApp/routes.html">routes</a>, <a href="material/MaterialApp/onGenerateRoute.html">onGenerateRoute</a>, or <a href="material/MaterialApp/onUnknownRoute.html">onUnknownRoute</a>, the <code>child</code> will
+be null, and it is the responsibility of the <a href="material/MaterialApp/builder.html">builder</a> to provide the
+application's routing machinery.</p>
+<p>If routes <em>are</em> provided to the regular <a href="widgets/WidgetsApp-class.html">WidgetsApp</a> constructor using one
+or more of those properties or if the <a href="widgets/WidgetsApp/WidgetsApp.router.html">WidgetsApp.router</a> constructor is
+used, then <code>child</code> is not null, and the returned value should include the
+<code>child</code> in the widget subtree; if it does not, then the application will
+have no <a href="widgets/Navigator-class.html">Navigator</a> or <a href="widgets/Router-class.html">Router</a> and the routing related properties (i.e.
+<a href="material/MaterialApp/navigatorKey.html">navigatorKey</a>, <a href="material/MaterialApp/home.html">home</a>, <a href="material/MaterialApp/routes.html">routes</a>, <a href="material/MaterialApp/onGenerateRoute.html">onGenerateRoute</a>, <a href="material/MaterialApp/onUnknownRoute.html">onUnknownRoute</a>,
+<a href="material/MaterialApp/initialRoute.html">initialRoute</a>, <a href="material/MaterialApp/navigatorObservers.html">navigatorObservers</a>, <a href="material/MaterialApp/routeInformationProvider.html">routeInformationProvider</a>,
+<a href="material/MaterialApp/backButtonDispatcher.html">backButtonDispatcher</a>, <a href="material/MaterialApp/routerDelegate.html">routerDelegate</a>, and <a href="material/MaterialApp/routeInformationParser.html">routeInformationParser</a>)
+are ignored.</p>
+<p>If <a href="material/MaterialApp/builder.html">builder</a> is null, it is as if a builder was specified that returned
+the <code>child</code> directly. If it is null, routes must be provided using one of
+the other properties listed above.</p>
+<p>Unless a <a href="widgets/Navigator-class.html">Navigator</a> is provided, either implicitly from <a href="material/MaterialApp/builder.html">builder</a> being
+null, or by a <a href="material/MaterialApp/builder.html">builder</a> including its <code>child</code> argument, or by a <a href="material/MaterialApp/builder.html">builder</a>
+explicitly providing a <a href="widgets/Navigator-class.html">Navigator</a> of its own, or by the <a href="material/MaterialApp/routerDelegate.html">routerDelegate</a>
+building one, widgets and APIs such as <a href="widgets/Hero-class.html">Hero</a>, <a href="widgets/Navigator/push.html">Navigator.push</a> and
+<a href="widgets/Navigator/pop.html">Navigator.pop</a>, will not function.</p>
+<p>Material specific features such as <a href="material/showDialog.html">showDialog</a> and <a href="material/showMenu.html">showMenu</a>, and widgets
+such as <a href="material/Tooltip-class.html">Tooltip</a>, <a href="material/PopupMenuButton-class.html">PopupMenuButton</a>, also require a <a href="widgets/Navigator-class.html">Navigator</a> to properly
+function.</p>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final TransitionBuilder? builder;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/MaterialApp-class.html">MaterialApp</a></li>
+    <li class="self-crumb">builder property</li>
+</ol>
+
+
+    <h5>MaterialApp class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.DecoratedSliver.1",
+    "element": "DecoratedSliver",
+    "sourcePath": "lib/src/widgets/decorated_sliver.dart",
+    "sourceLine": 41,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample shows a radial gradient that draws a moon on a night sky:",
+    "file": "cupertino.DecoratedSliver.1.dart"
+}

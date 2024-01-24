@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SelectableRegion.4",
+    "element": "SelectableRegion",
+    "sourcePath": "lib/src/widgets/selectable_region.dart",
+    "sourceLine": 205,
+    "channel": "stable",
+    "serial": "4",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample demonstrates how to disable selection for a Text in a Column.",
+    "file": "cupertino.SelectableRegion.4.dart"
+}

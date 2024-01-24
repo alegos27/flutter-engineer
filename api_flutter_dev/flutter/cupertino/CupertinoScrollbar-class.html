@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the CupertinoScrollbar class from the cupertino library, for the Dart programming language.">
+  <title>CupertinoScrollbar class - cupertino library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li class="self-crumb">CupertinoScrollbar class</li>
+  </ol>
+  <div class="self-name">CupertinoScrollbar</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="cupertino&#47;cupertino-library-sidebar.html"
+      data-below-sidebar="cupertino&#47;CupertinoScrollbar-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/cupertino/scrollbar.dart#L68"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">CupertinoScrollbar</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An iOS style scrollbar.</p>
+<p>To add a scrollbar to a <a href="widgets/ScrollView-class.html">ScrollView</a>, wrap the scroll view widget in
+a <a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a> widget.</p>
+<iframe src="https://www.youtube.com/embed/DbkIQSvwnZc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>A scrollbar thumb indicates which portion of a <a href="widgets/ScrollView-class.html">ScrollView</a> is actually
+visible.</p>
+<p>By default, the thumb will fade in and out as the child scroll view
+scrolls. When <a href="widgets/RawScrollbar/thumbVisibility.html">thumbVisibility</a> is true, the scrollbar thumb will remain
+visible without the fade animation. This requires that the <a href="widgets/ScrollController-class.html">ScrollController</a>
+associated with the Scrollable widget is provided to <a href="widgets/RawScrollbar/controller.html">controller</a>, or that
+the <a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a> is being used by that Scrollable widget.</p>
+<p>If the scrollbar is wrapped around multiple <a href="widgets/ScrollView-class.html">ScrollView</a>s, it only responds to
+the nearest ScrollView and shows the corresponding scrollbar thumb by default.
+The <a href="widgets/RawScrollbar/notificationPredicate.html">notificationPredicate</a> allows the ability to customize which
+<a href="widgets/ScrollNotification-class.html">ScrollNotification</a>s the Scrollbar should listen to.</p>
+<p>If the child <a href="widgets/ScrollView-class.html">ScrollView</a> is infinitely long, the <a href="widgets/RawScrollbar-class.html">RawScrollbar</a> will not be
+painted. In this case, the scrollbar cannot accurately represent the
+relative location of the visible area, or calculate the accurate delta to
+apply when dragging on the thumb or tapping on the track.</p>
+<h3 id="interaction">Interaction</h3>
+<p>Scrollbars are interactive and can use the <a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a> if
+a <a href="widgets/RawScrollbar/controller.html">controller</a> is not set. Interactive Scrollbar thumbs can be dragged along
+the main axis of the <a href="widgets/ScrollView-class.html">ScrollView</a> to change the <a href="widgets/ScrollPosition-class.html">ScrollPosition</a>. Tapping
+along the track exclusive of the thumb will trigger a
+<a href="widgets/ScrollIncrementType.html">ScrollIncrementType.page</a> based on the relative position to the thumb.</p>
+<p>When using the <a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a>, it must not be attached to more
+than one <a href="widgets/ScrollPosition-class.html">ScrollPosition</a>. <a href="widgets/ScrollView-class.html">ScrollView</a>s that have not been provided a
+<a href="widgets/ScrollController-class.html">ScrollController</a> and have a <a href="widgets/ScrollView/scrollDirection.html">ScrollView.scrollDirection</a> of
+<a href="painting/Axis.html">Axis.vertical</a> will automatically attach their ScrollPosition to the
+PrimaryScrollController. Provide a unique ScrollController to each
+<a href="widgets/Scrollable-class.html">Scrollable</a> in this case to prevent having multiple ScrollPositions
+attached to the PrimaryScrollController.</p>
+<p>
+<a name="cupertino.RawScrollbar.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows an app with two scrollables in the same route. Since by
+default, there is one <a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a> per route, and they both have a
+scroll direction of <a href="painting/Axis.html">Axis.vertical</a>, they would both try to attach to that
+controller on mobile platforms. The <a href="material/Scrollbar-class.html">Scrollbar</a> cannot support multiple
+positions attached to the same controller, so one <a href="widgets/ListView-class.html">ListView</a>, and its
+<a href="material/Scrollbar-class.html">Scrollbar</a> have been provided a unique <a href="widgets/ScrollController-class.html">ScrollController</a>. Desktop
+platforms do not automatically attach to the PrimaryScrollController,
+requiring <a href="widgets/ScrollView/primary.html">ScrollView.primary</a> to be true instead in order to use the
+PrimaryScrollController.</p>
+<p>Alternatively, a new PrimaryScrollController could be created above one of
+the <a href="widgets/ListView-class.html">ListView</a>s.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'cupertino.RawScrollbar.1');" onclick="fixHref(this, 'cupertino.RawScrollbar.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=cupertino.RawScrollbar.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=cupertino.RawScrollbar.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<h3 id="automatic-scrollbars-on-desktop-platforms">Automatic Scrollbars on Desktop Platforms</h3>
+<p>Scrollbars are added to most <a href="widgets/Scrollable-class.html">Scrollable</a> widgets by default on
+<a href="flutter_test/TargetPlatformVariant/TargetPlatformVariant.desktop.html">TargetPlatformVariant.desktop</a> platforms. This is done through
+<a href="widgets/ScrollBehavior/buildScrollbar.html">ScrollBehavior.buildScrollbar</a> as part of an app's
+<a href="widgets/ScrollConfiguration-class.html">ScrollConfiguration</a>. Scrollables that do not use the
+<a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a> or have a <a href="widgets/ScrollController-class.html">ScrollController</a> provided to them
+will receive a unique ScrollController for use with the Scrollbar. In this
+case, only one Scrollable can be using the PrimaryScrollController, unless
+<a href="widgets/RawScrollbar/interactive.html">interactive</a> is false. To prevent <a href="painting/Axis.html">Axis.vertical</a> Scrollables from using
+the PrimaryScrollController, set <a href="widgets/ScrollView/primary.html">ScrollView.primary</a> to false. Scrollable
+widgets that do not have automatically applied Scrollbars include</p>
+<ul>
+<li><a href="widgets/EditableText-class.html">EditableText</a></li>
+<li><a href="widgets/ListWheelScrollView-class.html">ListWheelScrollView</a></li>
+<li><a href="widgets/PageView-class.html">PageView</a></li>
+<li><a href="widgets/NestedScrollView-class.html">NestedScrollView</a></li>
+<li><a href="material/DropdownButton-class.html">DropdownButton</a></li>
+</ul>
+<p>Default Scrollbars can be disabled for the whole app by setting a
+<a href="widgets/ScrollBehavior-class.html">ScrollBehavior</a> with <code>scrollbars</code> set to false.</p>
+<p>
+<a name="cupertino.RawScrollbar.2"></a>
+<div class="snippet snippet-container anchor-container">
+  
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'cupertino.RawScrollbar.2');" onclick="fixHref(this, 'cupertino.RawScrollbar.2'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">MaterialApp(
+  scrollBehavior: const MaterialScrollBehavior()
+    .copyWith(scrollbars: false),
+  home: Scaffold(
+    appBar: AppBar(title: const Text(&#39;Home&#39;)),
+  ),
+)</code></pre>
+  </div>
+</div>
+</p>
+<p>
+<a name="cupertino.RawScrollbar.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This sample shows how to disable the default Scrollbar for a <a href="widgets/Scrollable-class.html">Scrollable</a>
+widget to avoid duplicate Scrollbars when running on desktop platforms.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'cupertino.RawScrollbar.3');" onclick="fixHref(this, 'cupertino.RawScrollbar.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=cupertino.RawScrollbar.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=cupertino.RawScrollbar.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>When dragging a <a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a> thumb, the thickness and radius will
+animate from <a href="widgets/RawScrollbar/thickness.html">thickness</a> and <a href="widgets/RawScrollbar/radius.html">radius</a> to <a href="cupertino/CupertinoScrollbar/thicknessWhileDragging.html">thicknessWhileDragging</a> and
+<a href="cupertino/CupertinoScrollbar/radiusWhileDragging.html">radiusWhileDragging</a>, respectively.</p>
+<p>
+<a name="cupertino.CupertinoScrollbar.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows a <a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a> that fades in and out of view as scrolling occurs.
+The scrollbar will fade into view as the user scrolls, and fade out when scrolling stops.
+The <code>thickness</code> of the scrollbar will animate from 6 pixels to the <code>thicknessWhileDragging</code> of 10
+when it is dragged by the user. The <code>radius</code> of the scrollbar thumb corners will animate from 34
+to the <code>radiusWhileDragging</code> of 0 when the scrollbar is being dragged by the user.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'cupertino.CupertinoScrollbar.1');" onclick="fixHref(this, 'cupertino.CupertinoScrollbar.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=cupertino.CupertinoScrollbar.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=cupertino.CupertinoScrollbar.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="cupertino.CupertinoScrollbar.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+When <a href="widgets/RawScrollbar/thumbVisibility.html">thumbVisibility</a> is true, the scrollbar thumb will remain visible without the
+fade animation. This requires that a <a href="widgets/ScrollController-class.html">ScrollController</a> is provided to controller,
+or that the <a href="widgets/PrimaryScrollController-class.html">PrimaryScrollController</a> is available.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'cupertino.CupertinoScrollbar.2');" onclick="fixHref(this, 'cupertino.CupertinoScrollbar.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=cupertino.CupertinoScrollbar.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=cupertino.CupertinoScrollbar.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/ListView-class.html">ListView</a>, which displays a linear, scrollable list of children.</li>
+<li><a href="widgets/GridView-class.html">GridView</a>, which displays a 2 dimensional, scrollable array of children.</li>
+<li><a href="material/Scrollbar-class.html">Scrollbar</a>, a Material Design scrollbar.</li>
+<li><a href="widgets/RawScrollbar-class.html">RawScrollbar</a>, a basic scrollbar that fades in and out, extended
+by this class to add more animations and behaviors.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+        <li><a href="widgets/RawScrollbar-class.html">RawScrollbar</a></li>
+      <li>CupertinoScrollbar</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="CupertinoScrollbar" class="callable">
+          <span class="name"><a href="cupertino/CupertinoScrollbar/CupertinoScrollbar.html">CupertinoScrollbar</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-child"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">child</span>, </span><span class="parameter" id="-param-controller"><span class="type-annotation"><a href="widgets/ScrollController-class.html">ScrollController</a>?</span> <span class="parameter-name">controller</span>, </span><span class="parameter" id="-param-thumbVisibility"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">thumbVisibility</span>, </span><span class="parameter" id="-param-thickness"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">thickness</span> = <span class="default-value">defaultThickness</span>, </span><span class="parameter" id="-param-thicknessWhileDragging"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">thicknessWhileDragging</span> = <span class="default-value">defaultThicknessWhileDragging</span>, </span><span class="parameter" id="-param-radius"><span class="type-annotation"><a href="dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">radius</span> = <span class="default-value">defaultRadius</span>, </span><span class="parameter" id="-param-radiusWhileDragging"><span class="type-annotation"><a href="dart-ui/Radius-class.html">Radius</a></span> <span class="parameter-name">radiusWhileDragging</span> = <span class="default-value">defaultRadiusWhileDragging</span>, </span><span class="parameter" id="-param-notificationPredicate"><span class="type-annotation"><a href="widgets/ScrollNotificationPredicate.html">ScrollNotificationPredicate</a>?</span> <span class="parameter-name">notificationPredicate</span>, </span><span class="parameter" id="-param-scrollbarOrientation"><span class="type-annotation"><a href="widgets/ScrollbarOrientation.html">ScrollbarOrientation</a>?</span> <span class="parameter-name">scrollbarOrientation</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates an iOS style scrollbar that wraps the given <a href="widgets/RawScrollbar/child.html">child</a>.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="child" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a></span> 
+
+</dt>
+<dd class="inherited">
+  The widget below this widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="controller" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/controller.html">controller</a></span>
+  <span class="signature">&#8594; <a href="widgets/ScrollController-class.html">ScrollController</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="widgets/ScrollController-class.html">ScrollController</a> used to implement Scrollbar dragging.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="crossAxisMargin" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/crossAxisMargin.html">crossAxisMargin</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd class="inherited">
+  Distance from the scrollbar thumb's side to the nearest cross axis edge
+in logical pixels.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="fadeDuration" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/fadeDuration.html">fadeDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-core/Duration-class.html">Duration</a> of the fade animation.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="interactive" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/interactive.html">interactive</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Whether the Scrollbar should be interactive and respond to dragging on the
+thumb, or tapping in the track area.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="mainAxisMargin" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/mainAxisMargin.html">mainAxisMargin</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd class="inherited">
+  Distance from the scrollbar thumb's start or end to the nearest edge of
+the viewport in logical pixels. It affects the amount of available
+paint area.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="minOverscrollLength" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/minOverscrollLength.html">minOverscrollLength</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The preferred smallest size the scrollbar thumb can shrink to when viewport is
+overscrolled.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="minThumbLength" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/minThumbLength.html">minThumbLength</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd class="inherited">
+  The preferred smallest size the scrollbar thumb can shrink to when the total
+scrollable extent is large, the current visible viewport is small, and the
+viewport is not overscrolled.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="notificationPredicate" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/notificationPredicate.html">notificationPredicate</a></span>
+  <span class="signature">&#8594; <a href="widgets/ScrollNotificationPredicate.html">ScrollNotificationPredicate</a></span> 
+
+</dt>
+<dd class="inherited">
+  A check that specifies whether a <a href="widgets/ScrollNotification-class.html">ScrollNotification</a> should be
+handled by this widget.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="padding" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsets-class.html">EdgeInsets</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The insets by which the scrollbar thumb and track should be padded.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pressDuration" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/pressDuration.html">pressDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-core/Duration-class.html">Duration</a> of time that a LongPress will trigger the drag gesture of
+the scrollbar thumb.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="radius" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/radius.html">radius</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Radius-class.html">Radius</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-ui/Radius-class.html">Radius</a> of the scrollbar thumb's rounded rectangle corners.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="radiusWhileDragging" class="property">
+  <span class="name"><a href="cupertino/CupertinoScrollbar/radiusWhileDragging.html">radiusWhileDragging</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Radius-class.html">Radius</a></span> 
+
+</dt>
+<dd>
+  The radius of the scrollbar edges when the scrollbar is being dragged by
+the user.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scrollbarOrientation" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/scrollbarOrientation.html">scrollbarOrientation</a></span>
+  <span class="signature">&#8594; <a href="widgets/ScrollbarOrientation.html">ScrollbarOrientation</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Dictates the orientation of the scrollbar.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shape" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/OutlinedBorder-class.html">OutlinedBorder</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="painting/OutlinedBorder-class.html">OutlinedBorder</a> of the scrollbar's thumb.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="thickness" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/thickness.html">thickness</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The thickness of the scrollbar in the cross axis of the scrollable.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="thicknessWhileDragging" class="property">
+  <span class="name"><a href="cupertino/CupertinoScrollbar/thicknessWhileDragging.html">thicknessWhileDragging</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The thickness of the scrollbar when it's being dragged by the user.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="thumbColor" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/thumbColor.html">thumbColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The color of the scrollbar thumb.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="thumbVisibility" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/thumbVisibility.html">thumbVisibility</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Indicates that the scrollbar thumb should be visible, even when a scroll
+is not underway.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="timeToFade" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/timeToFade.html">timeToFade</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a></span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-core/Duration-class.html">Duration</a> of time until the fade animation begins.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trackBorderColor" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/trackBorderColor.html">trackBorderColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The color of the scrollbar track's border.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trackColor" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/trackColor.html">trackColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The color of the scrollbar track.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trackRadius" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/trackRadius.html">trackRadius</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Radius-class.html">Radius</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  The <a href="dart-ui/Radius-class.html">Radius</a> of the scrollbar track's rounded rectangle corners.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="trackVisibility" class="property inherited">
+  <span class="name"><a href="widgets/RawScrollbar/trackVisibility.html">trackVisibility</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Indicates that the scrollbar track should be visible.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="cupertino/CupertinoScrollbar/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/RawScrollbarState-class.html">RawScrollbarState</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="defaultRadius" class="constant">
+    <span class="name "><a href="cupertino/CupertinoScrollbar/defaultRadius-constant.html">defaultRadius</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  Default value for <a href="widgets/RawScrollbar/radius.html">radius</a> if it's not specified in <a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a>.
+  
+
+    <div>
+      <span class="signature"><code>Radius.circular(1.5)</code></span>
+    </div>
+</dd>
+
+        <dt id="defaultRadiusWhileDragging" class="constant">
+    <span class="name "><a href="cupertino/CupertinoScrollbar/defaultRadiusWhileDragging-constant.html">defaultRadiusWhileDragging</a></span>
+  <span class="signature">&#8594; const <a href="dart-ui/Radius-class.html">Radius</a></span>
+  
+
+</dt>
+<dd>
+  Default value for <a href="cupertino/CupertinoScrollbar/radiusWhileDragging.html">radiusWhileDragging</a> if it's not specified in
+<a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a>.
+  
+
+    <div>
+      <span class="signature"><code>Radius.circular(4.0)</code></span>
+    </div>
+</dd>
+
+        <dt id="defaultThickness" class="constant">
+    <span class="name "><a href="cupertino/CupertinoScrollbar/defaultThickness-constant.html">defaultThickness</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  Default value for <a href="widgets/RawScrollbar/thickness.html">thickness</a> if it's not specified in <a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a>.
+  
+
+    <div>
+      <span class="signature"><code>3</code></span>
+    </div>
+</dd>
+
+        <dt id="defaultThicknessWhileDragging" class="constant">
+    <span class="name "><a href="cupertino/CupertinoScrollbar/defaultThicknessWhileDragging-constant.html">defaultThicknessWhileDragging</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  Default value for <a href="cupertino/CupertinoScrollbar/thicknessWhileDragging.html">thicknessWhileDragging</a> if it's not specified in
+<a href="cupertino/CupertinoScrollbar-class.html">CupertinoScrollbar</a>.
+  
+
+    <div>
+      <span class="signature"><code>8.0</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+    <li class="self-crumb">CupertinoScrollbar class</li>
+</ol>
+
+
+    <!--<h5>cupertino library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.NestedScrollViewState.1",
+    "element": "NestedScrollViewState",
+    "sourcePath": "lib/src/widgets/nested_scroll_view.dart",
+    "sourceLine": 380,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "[NestedScrollViewState] can be obtained using a [GlobalKey].\nUsing the following setup, you can access the inner scroll controller\nusing `globalKey.currentState.innerController`.",
+    "file": "cupertino.NestedScrollViewState.1.dart"
+}

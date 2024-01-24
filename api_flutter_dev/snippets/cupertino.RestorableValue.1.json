@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.RestorableValue.1",
+    "element": "RestorableValue",
+    "sourcePath": "lib/src/widgets/restoration_properties.dart",
+    "sourceLine": 70,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "A [StatefulWidget] that has a restorable [int] property.",
+    "file": "cupertino.RestorableValue.1.dart"
+}

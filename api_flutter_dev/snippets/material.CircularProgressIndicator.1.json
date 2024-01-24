@@ -1,0 +1,13 @@
+{
+    "id": "material.CircularProgressIndicator.1",
+    "element": "CircularProgressIndicator",
+    "sourcePath": "lib/src/material/progress_indicator.dart",
+    "sourceLine": 555,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a [CircularProgressIndicator] with a changing value.",
+    "file": "material.CircularProgressIndicator.1.dart"
+}

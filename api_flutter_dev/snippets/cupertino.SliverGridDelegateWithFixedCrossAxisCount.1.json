@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SliverGridDelegateWithFixedCrossAxisCount.1",
+    "element": "SliverGridDelegateWithFixedCrossAxisCount",
+    "sourcePath": "lib/src/rendering/sliver_grid.dart",
+    "sourceLine": 336,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "Here is an example using the [childAspectRatio] property. On a device with a\nscreen width of 800.0, it creates a GridView with each tile with a width of\n200.0 and a height of 100.0.",
+    "file": "cupertino.SliverGridDelegateWithFixedCrossAxisCount.1.dart"
+}

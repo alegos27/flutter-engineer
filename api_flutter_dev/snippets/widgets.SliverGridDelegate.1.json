@@ -1,0 +1,13 @@
+{
+    "id": "widgets.SliverGridDelegate.1",
+    "element": "SliverGridDelegate",
+    "sourcePath": "lib/src/rendering/sliver_grid.dart",
+    "sourceLine": 284,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This example shows how a [SliverGridDelegate] returns a [SliverGridLayout]\nconfigured based on the provided [SliverConstraints] in [getLayout].",
+    "file": "widgets.SliverGridDelegate.1.dart"
+}

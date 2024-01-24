@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AnimatedPositioned.1",
+    "element": "AnimatedPositioned",
+    "sourcePath": "lib/src/widgets/implicit_animations.dart",
+    "sourceLine": 1020,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following example transitions an AnimatedPositioned\nbetween two states. It adjusts the `height`, `width`, and\n[Positioned] properties when tapped.",
+    "file": "cupertino.AnimatedPositioned.1.dart"
+}

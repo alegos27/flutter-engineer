@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the SliverMainAxisGroup class from the widgets library, for the Dart programming language.">
+  <title>SliverMainAxisGroup class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">SliverMainAxisGroup class</li>
+  </ol>
+  <div class="self-name">SliverMainAxisGroup</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="widgets&#47;SliverMainAxisGroup-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/sliver.dart#L1631"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">SliverMainAxisGroup</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A sliver that places multiple sliver children in a linear array along
+the main axis, one after another.</p>
+<h2 id="layout-algorithm">Layout algorithm</h2>
+<p><em>This section describes how the framework causes <a href="rendering/RenderSliverMainAxisGroup-class.html">RenderSliverMainAxisGroup</a>
+to position its children.</em></p>
+<p>Layout for a <a href="rendering/RenderSliverMainAxisGroup-class.html">RenderSliverMainAxisGroup</a> has four steps:</p>
+<ol>
+<li>Keep track of an offset variable which is the total <a href="rendering/SliverGeometry/scrollExtent.html">SliverGeometry.scrollExtent</a>
+of the slivers laid out so far.</li>
+<li>To determine the constraints for the next sliver child to layout, calculate the
+amount of paint extent occupied from 0.0 to the offset variable and subtract this from
+<a href="rendering/SliverConstraints/remainingPaintExtent.html">SliverConstraints.remainingPaintExtent</a> minus to use as the child's
+<a href="rendering/SliverConstraints/remainingPaintExtent.html">SliverConstraints.remainingPaintExtent</a>. For the <a href="rendering/SliverConstraints/scrollOffset.html">SliverConstraints.scrollOffset</a>,
+take the provided constraint's value and subtract out the offset variable, using
+0.0 if negative.</li>
+<li>Once we finish laying out all the slivers, this offset variable represents
+the total <a href="rendering/SliverGeometry/scrollExtent.html">SliverGeometry.scrollExtent</a> of the sliver group. Since it is possible
+for specialized slivers to try to paint itself outside of the bounds of the
+sliver group's scroll extent (see <a href="widgets/SliverPersistentHeader-class.html">SliverPersistentHeader</a>), we must do a
+second pass to set a <a href="rendering/SliverPhysicalParentData/paintOffset.html">SliverPhysicalParentData.paintOffset</a> to make sure it
+is within the bounds of the sliver group.</li>
+<li>Finally, set the <a href="rendering/RenderSliver/geometry.html">RenderSliverMainAxisGroup.geometry</a> with the total
+<a href="rendering/SliverGeometry/scrollExtent.html">SliverGeometry.scrollExtent</a>, <a href="rendering/SliverGeometry/paintExtent.html">SliverGeometry.paintExtent</a> calculated from
+the constraints and <a href="rendering/SliverGeometry/scrollExtent.html">SliverGeometry.scrollExtent</a>, and <a href="rendering/SliverGeometry/maxPaintExtent.html">SliverGeometry.maxPaintExtent</a>.</li>
+</ol>
+<p>
+<a name="widgets.SliverMainAxisGroup.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+In this sample the <a href="widgets/CustomScrollView-class.html">CustomScrollView</a> renders a <a href="widgets/SliverMainAxisGroup-class.html">SliverMainAxisGroup</a> and a
+<a href="widgets/SliverToBoxAdapter-class.html">SliverToBoxAdapter</a> with some content. The <a href="widgets/SliverMainAxisGroup-class.html">SliverMainAxisGroup</a> renders a
+<a href="material/SliverAppBar-class.html">SliverAppBar</a>, <a href="widgets/SliverList-class.html">SliverList</a>, and <a href="widgets/SliverToBoxAdapter-class.html">SliverToBoxAdapter</a>. Notice that when the
+<a href="widgets/SliverMainAxisGroup-class.html">SliverMainAxisGroup</a> goes out of view, so does the pinned <a href="material/SliverAppBar-class.html">SliverAppBar</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.SliverMainAxisGroup.1');" onclick="fixHref(this, 'widgets.SliverMainAxisGroup.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.SliverMainAxisGroup.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.SliverMainAxisGroup.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/SliverPersistentHeader-class.html">SliverPersistentHeader</a>, which is a <a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a> which may require
+adjustment to its <a href="rendering/SliverPhysicalParentData/paintOffset.html">SliverPhysicalParentData.paintOffset</a> to make it fit
+within the computed <a href="rendering/SliverGeometry/scrollExtent.html">SliverGeometry.scrollExtent</a> of the <a href="widgets/SliverMainAxisGroup-class.html">SliverMainAxisGroup</a>.</li>
+<li><a href="widgets/SliverCrossAxisGroup-class.html">SliverCrossAxisGroup</a>, which is the <a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a> for laying out
+multiple slivers along the cross axis.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a></li>
+        <li><a href="widgets/MultiChildRenderObjectWidget-class.html">MultiChildRenderObjectWidget</a></li>
+      <li>SliverMainAxisGroup</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="SliverMainAxisGroup" class="callable">
+          <span class="name"><a href="widgets/SliverMainAxisGroup/SliverMainAxisGroup.html">SliverMainAxisGroup</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-slivers"><span>required</span> <span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span></span> <span class="parameter-name">slivers</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a sliver that places sliver children in a linear array along
+the main axis.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="children" class="property inherited">
+  <span class="name"><a href="widgets/MultiChildRenderObjectWidget/children.html">children</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span></span> 
+
+</dt>
+<dd class="inherited">
+  The widgets below this widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/MultiChildRenderObjectWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/MultiChildRenderObjectElement-class.html">MultiChildRenderObjectElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  RenderObjectWidgets always inflate to a <a href="widgets/RenderObjectElement-class.html">RenderObjectElement</a> subclass.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createRenderObject" class="callable">
+  <span class="name"><a href="widgets/SliverMainAxisGroup/createRenderObject.html">createRenderObject</a></span><span class="signature">(<wbr><span class="parameter" id="createRenderObject-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="rendering/RenderSliverMainAxisGroup-class.html">RenderSliverMainAxisGroup</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates an instance of the <a href="rendering/RenderObject-class.html">RenderObject</a> class that this
+<a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a> represents, using the configuration described by this
+<a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="didUnmountRenderObject" class="callable inherited">
+  <span class="name"><a href="widgets/RenderObjectWidget/didUnmountRenderObject.html">didUnmountRenderObject</a></span><span class="signature">(<wbr><span class="parameter" id="didUnmountRenderObject-param-renderObject"><span>covariant</span> <span class="type-annotation"><a href="rendering/RenderObject-class.html">RenderObject</a></span> <span class="parameter-name">renderObject</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A render object previously associated with this widget has been removed
+from the tree. The given <a href="rendering/RenderObject-class.html">RenderObject</a> will be of the same type as
+returned by this object's <a href="widgets/SliverMainAxisGroup/createRenderObject.html">createRenderObject</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="updateRenderObject" class="callable inherited">
+  <span class="name"><a href="widgets/RenderObjectWidget/updateRenderObject.html">updateRenderObject</a></span><span class="signature">(<wbr><span class="parameter" id="updateRenderObject-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="updateRenderObject-param-renderObject"><span>covariant</span> <span class="type-annotation"><a href="rendering/RenderObject-class.html">RenderObject</a></span> <span class="parameter-name">renderObject</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Copies the configuration described by this <a href="widgets/RenderObjectWidget-class.html">RenderObjectWidget</a> to the
+given <a href="rendering/RenderObject-class.html">RenderObject</a>, which will be of the same type as returned by this
+object's <a href="widgets/SliverMainAxisGroup/createRenderObject.html">createRenderObject</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">SliverMainAxisGroup class</li>
+</ol>
+
+
+    <!--<h5>widgets library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.ContextMenuController.1",
+    "element": "ContextMenuController",
+    "sourcePath": "lib/src/widgets/context_menu_controller.dart",
+    "sourceLine": 28,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This example shows how to use a GestureDetector to show a context menu\nanywhere in a widget subtree that receives a right click or long press.",
+    "file": "cupertino.ContextMenuController.1.dart"
+}

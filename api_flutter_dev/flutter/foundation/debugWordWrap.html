@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the debugWordWrap function from the foundation library, for the Dart programming language.">
+  <title>debugWordWrap function - foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">debugWordWrap function</li>
+  </ol>
+  <div class="self-name">debugWordWrap</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="foundation&#47;foundation-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/foundation/print.dart#L123"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">debugWordWrap</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+<span class="name ">debugWordWrap</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="debugWordWrap-param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span></li>
+<li><span class="parameter" id="debugWordWrap-param-width"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">width</span>, </span></li>
+<li><span class="parameter" id="debugWordWrap-param-wrapIndent">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">wrapIndent</span> = <span class="default-value">&#39;&#39;</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Wraps the given string at the given width.</p>
+<p>The <code>message</code> should not contain newlines (<code>\n</code>, U+000A). Strings that may
+contain newlines should be <a href="dart-core/String/split.html">String.split</a> before being wrapped.</p>
+<p>Wrapping occurs at space characters (U+0020). Lines that start with an
+octothorpe ("#", U+0023) are not wrapped (so for example, Dart stack traces
+won't be wrapped).</p>
+<p>Subsequent lines attempt to duplicate the indentation of the first line, for
+example if the first line starts with multiple spaces. In addition, if a
+<code>wrapIndent</code> argument is provided, each line after the first is prefixed by
+that string.</p>
+<p>This is not suitable for use with arbitrary Unicode text. For example, it
+doesn't implement UAX #14, can't handle ideographic text, doesn't hyphenate,
+and so forth. It is only intended for formatting error messages.</p>
+<p>The default <a href="foundation/debugPrint.html">debugPrint</a> implementation uses this for its line wrapping.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Iterable&lt;String&gt; debugWordWrap(String message, int width, { String wrapIndent = &#39;&#39; }) {
+  if (message.length &lt; width || message.trimLeft()[0] == &#39;#&#39;) {
+    return &lt;String&gt;[message];
+  }
+  final List&lt;String&gt; wrapped = &lt;String&gt;[];
+  final Match prefixMatch = _indentPattern.matchAsPrefix(message)!;
+  final String prefix = wrapIndent + &#39; &#39; * prefixMatch.group(0)!.length;
+  int start = 0;
+  int startForLengthCalculations = 0;
+  bool addPrefix = false;
+  int index = prefix.length;
+  _WordWrapParseMode mode = _WordWrapParseMode.inSpace;
+  late int lastWordStart;
+  int? lastWordEnd;
+  while (true) {
+    switch (mode) {
+      case _WordWrapParseMode.inSpace: &#47;&#47; at start of break point (or start of line); can&#39;t break until next break
+        while ((index &lt; message.length) &amp;&amp; (message[index] == &#39; &#39;)) {
+          index += 1;
+        }
+        lastWordStart = index;
+        mode = _WordWrapParseMode.inWord;
+      case _WordWrapParseMode.inWord: &#47;&#47; looking for a good break point
+        while ((index &lt; message.length) &amp;&amp; (message[index] != &#39; &#39;)) {
+          index += 1;
+        }
+        mode = _WordWrapParseMode.atBreak;
+      case _WordWrapParseMode.atBreak: &#47;&#47; at start of break point
+        if ((index - startForLengthCalculations &gt; width) || (index == message.length)) {
+          &#47;&#47; we are over the width line, so break
+          if ((index - startForLengthCalculations &lt;= width) || (lastWordEnd == null)) {
+            &#47;&#47; we should use this point, because either it doesn&#39;t actually go over the
+            &#47;&#47; end (last line), or it does, but there was no earlier break point
+            lastWordEnd = index;
+          }
+          if (addPrefix) {
+            wrapped.add(prefix + message.substring(start, lastWordEnd));
+          } else {
+            wrapped.add(message.substring(start, lastWordEnd));
+            addPrefix = true;
+          }
+          if (lastWordEnd &gt;= message.length) {
+            return wrapped;
+          }
+          &#47;&#47; just yielded a line
+          if (lastWordEnd == index) {
+            &#47;&#47; we broke at current position
+            &#47;&#47; eat all the spaces, then set our start point
+            while ((index &lt; message.length) &amp;&amp; (message[index] == &#39; &#39;)) {
+              index += 1;
+            }
+            start = index;
+            mode = _WordWrapParseMode.inWord;
+          } else {
+            &#47;&#47; we broke at the previous break point, and we&#39;re at the start of a new one
+            assert(lastWordStart &gt; lastWordEnd);
+            start = lastWordStart;
+            mode = _WordWrapParseMode.atBreak;
+          }
+          startForLengthCalculations = start - prefix.length;
+          assert(addPrefix);
+          lastWordEnd = null;
+        } else {
+          &#47;&#47; save this break point, we&#39;re not yet over the line width
+          lastWordEnd = index;
+          &#47;&#47; skip to the end of this break point
+          mode = _WordWrapParseMode.inSpace;
+        }
+    }
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="foundation/foundation-library.html">foundation</a></li>
+    <li class="self-crumb">debugWordWrap function</li>
+</ol>
+
+
+    <h5>foundation library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

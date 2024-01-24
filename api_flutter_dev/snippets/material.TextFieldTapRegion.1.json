@@ -1,0 +1,13 @@
+{
+    "id": "material.TextFieldTapRegion.1",
+    "element": "TextFieldTapRegion",
+    "sourcePath": "lib/src/widgets/tap_region.dart",
+    "sourceLine": 577,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows how to use a [TextFieldTapRegion] to wrap a set of\n\"spinner\" buttons that increment and decrement a value in the text field\nwithout causing the text field to lose keyboard focus.\n\nThis example includes a generic `SpinnerField<T>` class that you can copy/paste\ninto your own project and customize.",
+    "file": "material.TextFieldTapRegion.1.dart"
+}

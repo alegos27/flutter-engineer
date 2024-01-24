@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AppLifecycleListener.1",
+    "element": "AppLifecycleListener",
+    "sourcePath": "lib/src/widgets/app_lifecycle_listener.dart",
+    "sourceLine": 62,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This example shows how an application can listen to changes in the\napplication state.",
+    "file": "cupertino.AppLifecycleListener.1.dart"
+}

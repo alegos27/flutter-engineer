@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="foundation library API docs, for the Dart programming language.">
+  <title>foundation library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li class="self-crumb">foundation library</li>
+  </ol>
+  <div class="self-name">foundation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar=""
+      data-below-sidebar="foundation&#47;foundation-library-sidebar.html">
+      
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/foundation.dart#L10"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-library">foundation</span> library 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Core Flutter framework primitives.</p>
+<p>The features defined in this library are the lowest-level utility
+classes and functions used by all the other layers of the Flutter
+framework.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="AbstractNode">
+  <span class="name deprecated"><a class="deprecated" href="foundation/AbstractNode-class.html">AbstractNode</a></span> 
+
+</dt>
+<dd>
+  Deprecated. Unused by the framework and will be removed in a future version
+of Flutter. If needed, inline any required functionality of this class
+directly in the subclass.
+</dd>
+
+        <dt id="AggregatedTimedBlock">
+  <span class="name "><a href="foundation/AggregatedTimedBlock-class.html">AggregatedTimedBlock</a></span> 
+
+</dt>
+<dd>
+  Aggregates multiple <a href="foundation/TimedBlock-class.html">TimedBlock</a> objects that share a <a href="foundation/AggregatedTimedBlock/name.html">name</a>.
+</dd>
+
+        <dt id="AggregatedTimings">
+  <span class="name "><a href="foundation/AggregatedTimings-class.html">AggregatedTimings</a></span> 
+
+</dt>
+<dd>
+  Provides aggregated results for timings collected by <a href="foundation/FlutterTimeline-class.html">FlutterTimeline</a>.
+</dd>
+
+        <dt id="BindingBase">
+  <span class="name "><a href="foundation/BindingBase-class.html">BindingBase</a></span> 
+
+</dt>
+<dd>
+  Base class for mixins that provide singleton services.
+</dd>
+
+        <dt id="BitField">
+  <span class="name "><a href="foundation/BitField-class.html">BitField</a><span class="signature">&lt;<wbr><span class="type-parameter">T extends dynamic</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A BitField over an enum (or other class whose values implement "index").
+Only the first 62 values of the enum can be used as indices.
+</dd>
+
+        <dt id="ByteData">
+  <span class="name "><a href="dart-typed_data/ByteData-class.html">ByteData</a></span> 
+
+</dt>
+<dd>
+  A fixed-length, random-access sequence of bytes that also provides random
+and unaligned access to the fixed-width integers and floating point
+numbers represented by those bytes.
+</dd>
+
+        <dt id="CachingIterable">
+  <span class="name "><a href="foundation/CachingIterable-class.html">CachingIterable</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A lazy caching version of <a href="dart-core/Iterable-class.html">Iterable</a>.
+</dd>
+
+        <dt id="Category">
+  <span class="name "><a href="foundation/Category-class.html">Category</a></span> 
+
+</dt>
+<dd>
+  A category with which to annotate a class, for documentation
+purposes.
+</dd>
+
+        <dt id="ChangeNotifier">
+  <span class="name "><a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a></span> 
+
+</dt>
+<dd>
+  A class that can be extended or mixed in that provides a change notification
+API using <a href="dart-ui/VoidCallback.html">VoidCallback</a> for notifications.
+</dd>
+
+        <dt id="DiagnosticableNode">
+  <span class="name "><a href="foundation/DiagnosticableNode-class.html">DiagnosticableNode</a><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> that lazily calls the associated <a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a> <a href="foundation/DiagnosticableNode/value.html">value</a>
+to implement <a href="foundation/DiagnosticableNode/getChildren.html">getChildren</a> and <a href="foundation/DiagnosticableNode/getProperties.html">getProperties</a>.
+</dd>
+
+        <dt id="DiagnosticableTree">
+  <span class="name "><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></span> 
+
+</dt>
+<dd>
+  A base class for providing string and <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> debug
+representations describing the properties and children of an object.
+</dd>
+
+        <dt id="DiagnosticableTreeNode">
+  <span class="name "><a href="foundation/DiagnosticableTreeNode-class.html">DiagnosticableTreeNode</a></span> 
+
+</dt>
+<dd>
+  <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> for an instance of <a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a>.
+</dd>
+
+        <dt id="DiagnosticPropertiesBuilder">
+  <span class="name "><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> 
+
+</dt>
+<dd>
+  Builder to accumulate properties and configuration used to assemble a
+<a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> from a <a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a> object.
+</dd>
+
+        <dt id="DiagnosticsBlock">
+  <span class="name "><a href="foundation/DiagnosticsBlock-class.html">DiagnosticsBlock</a></span> 
+
+</dt>
+<dd>
+  <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> that exists mainly to provide a container for other
+diagnostics that typically lacks a meaningful value of its own.
+</dd>
+
+        <dt id="DiagnosticsNode">
+  <span class="name "><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span> 
+
+</dt>
+<dd>
+  Defines diagnostics data for a <a href="foundation/DiagnosticsNode/value.html">value</a>.
+</dd>
+
+        <dt id="DiagnosticsProperty">
+  <span class="name "><a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Property with a <a href="foundation/DiagnosticsProperty/value.html">value</a> of type <code>T</code>.
+</dd>
+
+        <dt id="DiagnosticsSerializationDelegate">
+  <span class="name "><a href="foundation/DiagnosticsSerializationDelegate-class.html">DiagnosticsSerializationDelegate</a></span> 
+
+</dt>
+<dd>
+  A delegate that configures how a hierarchy of <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a>s should be
+serialized.
+</dd>
+
+        <dt id="DiagnosticsStackTrace">
+  <span class="name "><a href="foundation/DiagnosticsStackTrace-class.html">DiagnosticsStackTrace</a></span> 
+
+</dt>
+<dd>
+  Diagnostic with a <a href="dart-core/StackTrace-class.html">StackTrace</a> <a href="foundation/DiagnosticsBlock/value.html">value</a> suitable for displaying stack traces
+as part of a <a href="foundation/FlutterError-class.html">FlutterError</a> object.
+</dd>
+
+        <dt id="DocumentationIcon">
+  <span class="name "><a href="foundation/DocumentationIcon-class.html">DocumentationIcon</a></span> 
+
+</dt>
+<dd>
+  A class annotation to provide a URL to an image that represents the class.
+</dd>
+
+        <dt id="DoubleProperty">
+  <span class="name "><a href="foundation/DoubleProperty-class.html">DoubleProperty</a></span> 
+
+</dt>
+<dd>
+  Property describing a <a href="dart-core/double-class.html">double</a> <a href="foundation/DiagnosticsProperty/value.html">value</a> with an optional <a href="foundation/DoubleProperty/unit.html">unit</a> of measurement.
+</dd>
+
+        <dt id="Endian">
+  <span class="name "><a href="dart-typed_data/Endian-class.html">Endian</a></span> 
+
+</dt>
+<dd>
+  Describes endianness to be used when accessing or updating a
+sequence of bytes.
+</dd>
+
+        <dt id="EnumProperty">
+  <span class="name "><a href="foundation/EnumProperty-class.html">EnumProperty</a><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Enum-class.html">Enum</a>?</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  <a href="foundation/DiagnosticsProperty-class.html">DiagnosticsProperty</a> that has an <a href="dart-core/Enum-class.html">Enum</a> as value.
+</dd>
+
+        <dt id="ErrorDescription">
+  <span class="name "><a href="foundation/ErrorDescription-class.html">ErrorDescription</a></span> 
+
+</dt>
+<dd>
+  An explanation of the problem and its cause, any information that may help
+track down the problem, background information, etc.
+</dd>
+
+        <dt id="ErrorHint">
+  <span class="name "><a href="foundation/ErrorHint-class.html">ErrorHint</a></span> 
+
+</dt>
+<dd>
+  An <a href="foundation/ErrorHint-class.html">ErrorHint</a> provides specific, non-obvious advice that may be applicable.
+</dd>
+
+        <dt id="ErrorSpacer">
+  <span class="name "><a href="foundation/ErrorSpacer-class.html">ErrorSpacer</a></span> 
+
+</dt>
+<dd>
+  An <a href="foundation/ErrorSpacer-class.html">ErrorSpacer</a> creates an empty <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a>, that can be used to
+tune the spacing between other <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> objects.
+</dd>
+
+        <dt id="ErrorSummary">
+  <span class="name "><a href="foundation/ErrorSummary-class.html">ErrorSummary</a></span> 
+
+</dt>
+<dd>
+  A short (one line) description of the problem that was detected.
+</dd>
+
+        <dt id="Factory">
+  <span class="name "><a href="foundation/Factory-class.html">Factory</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A factory interface that also reports the type of the created objects.
+</dd>
+
+        <dt id="FlagProperty">
+  <span class="name "><a href="foundation/FlagProperty-class.html">FlagProperty</a></span> 
+
+</dt>
+<dd>
+  Property where the description is either <a href="foundation/FlagProperty/ifTrue.html">ifTrue</a> or <a href="foundation/FlagProperty/ifFalse.html">ifFalse</a> depending on
+whether <a href="foundation/DiagnosticsProperty/value.html">value</a> is true or false.
+</dd>
+
+        <dt id="FlagsSummary">
+  <span class="name "><a href="foundation/FlagsSummary-class.html">FlagsSummary</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A summary of multiple properties, indicating whether each of them is present
+(non-null) or absent (null).
+</dd>
+
+        <dt id="Float32List">
+  <span class="name "><a href="dart-typed_data/Float32List-class.html">Float32List</a></span> 
+
+</dt>
+<dd>
+  A fixed-length list of IEEE 754 single-precision binary floating-point
+numbers that is viewable as a <a href="dart-typed_data/TypedData-class.html">TypedData</a>.
+</dd>
+
+        <dt id="Float64List">
+  <span class="name "><a href="dart-typed_data/Float64List-class.html">Float64List</a></span> 
+
+</dt>
+<dd>
+  A fixed-length list of IEEE 754 double-precision binary floating-point
+numbers  that is viewable as a <a href="dart-typed_data/TypedData-class.html">TypedData</a>.
+</dd>
+
+        <dt id="FlutterErrorDetails">
+  <span class="name "><a href="foundation/FlutterErrorDetails-class.html">FlutterErrorDetails</a></span> 
+
+</dt>
+<dd>
+  Class for information provided to <a href="foundation/FlutterExceptionHandler.html">FlutterExceptionHandler</a> callbacks.
+</dd>
+
+        <dt id="FlutterTimeline">
+  <span class="name "><a href="foundation/FlutterTimeline-class.html">FlutterTimeline</a></span> 
+
+</dt>
+<dd>
+  Measures how long blocks of code take to run.
+</dd>
+
+        <dt id="HashedObserverList">
+  <span class="name "><a href="foundation/HashedObserverList-class.html">HashedObserverList</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A list optimized for the observer pattern, but for larger numbers of observers.
+</dd>
+
+        <dt id="HttpClientResponse">
+  <span class="name "><a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a></span> 
+
+</dt>
+<dd>
+  HTTP response for a client connection.
+</dd>
+
+        <dt id="Int32List">
+  <span class="name "><a href="dart-typed_data/Int32List-class.html">Int32List</a></span> 
+
+</dt>
+<dd>
+  A fixed-length list of 32-bit signed integers that is viewable as a
+<a href="dart-typed_data/TypedData-class.html">TypedData</a>.
+</dd>
+
+        <dt id="Int64List">
+  <span class="name "><a href="dart-typed_data/Int64List-class.html">Int64List</a></span> 
+
+</dt>
+<dd>
+  A fixed-length list of 64-bit signed integers that is viewable as a
+<a href="dart-typed_data/TypedData-class.html">TypedData</a>.
+</dd>
+
+        <dt id="IntProperty">
+  <span class="name "><a href="foundation/IntProperty-class.html">IntProperty</a></span> 
+
+</dt>
+<dd>
+  An int valued property with an optional unit the value is measured in.
+</dd>
+
+        <dt id="IterableProperty">
+  <span class="name "><a href="foundation/IterableProperty-class.html">IterableProperty</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Property with an <code>Iterable&lt;T&gt;</code> <a href="foundation/DiagnosticsProperty/value.html">value</a> that can be displayed with
+different <a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a> for custom rendering.
+</dd>
+
+        <dt id="Key">
+  <span class="name "><a href="foundation/Key-class.html">Key</a></span> 
+
+</dt>
+<dd>
+  A <a href="foundation/Key-class.html">Key</a> is an identifier for <a href="widgets/Widget-class.html">Widget</a>s, <a href="widgets/Element-class.html">Element</a>s and <a href="semantics/SemanticsNode-class.html">SemanticsNode</a>s.
+</dd>
+
+        <dt id="LicenseEntry">
+  <span class="name "><a href="foundation/LicenseEntry-class.html">LicenseEntry</a></span> 
+
+</dt>
+<dd>
+  A license that covers part of the application's software or assets, to show
+in an interface such as the <a href="material/LicensePage-class.html">LicensePage</a>.
+</dd>
+
+        <dt id="LicenseEntryWithLineBreaks">
+  <span class="name "><a href="foundation/LicenseEntryWithLineBreaks-class.html">LicenseEntryWithLineBreaks</a></span> 
+
+</dt>
+<dd>
+  Variant of <a href="foundation/LicenseEntry-class.html">LicenseEntry</a> for licenses that separate paragraphs with blank
+lines and that hard-wrap text within paragraphs. Lines that begin with one
+or more space characters are also assumed to introduce new paragraphs,
+unless they start with the same number of spaces as the previous line, in
+which case it's assumed they are a continuation of an indented paragraph.
+</dd>
+
+        <dt id="LicenseParagraph">
+  <span class="name "><a href="foundation/LicenseParagraph-class.html">LicenseParagraph</a></span> 
+
+</dt>
+<dd>
+  A string that represents one paragraph in a <a href="foundation/LicenseEntry-class.html">LicenseEntry</a>.
+</dd>
+
+        <dt id="LicenseRegistry">
+  <span class="name "><a href="foundation/LicenseRegistry-class.html">LicenseRegistry</a></span> 
+
+</dt>
+<dd>
+  A registry for packages to add licenses to, so that they can be displayed
+together in an interface such as the <a href="material/LicensePage-class.html">LicensePage</a>.
+</dd>
+
+        <dt id="Listenable">
+  <span class="name "><a href="foundation/Listenable-class.html">Listenable</a></span> 
+
+</dt>
+<dd>
+  An object that maintains a list of listeners.
+</dd>
+
+        <dt id="LocalKey">
+  <span class="name "><a href="foundation/LocalKey-class.html">LocalKey</a></span> 
+
+</dt>
+<dd>
+  A key that is not a <a href="widgets/GlobalKey-class.html">GlobalKey</a>.
+</dd>
+
+        <dt id="MemoryAllocations">
+  <span class="name "><a href="foundation/MemoryAllocations-class.html">MemoryAllocations</a></span> 
+
+</dt>
+<dd>
+  An interface for listening to object lifecycle events.
+</dd>
+
+        <dt id="MessageProperty">
+  <span class="name "><a href="foundation/MessageProperty-class.html">MessageProperty</a></span> 
+
+</dt>
+<dd>
+  Debugging message displayed like a property.
+</dd>
+
+        <dt id="ObjectCreated">
+  <span class="name "><a href="foundation/ObjectCreated-class.html">ObjectCreated</a></span> 
+
+</dt>
+<dd>
+  An event that describes creation of an object.
+</dd>
+
+        <dt id="ObjectDisposed">
+  <span class="name "><a href="foundation/ObjectDisposed-class.html">ObjectDisposed</a></span> 
+
+</dt>
+<dd>
+  An event that describes disposal of an object.
+</dd>
+
+        <dt id="ObjectEvent">
+  <span class="name "><a href="foundation/ObjectEvent-class.html">ObjectEvent</a></span> 
+
+</dt>
+<dd>
+  A lifecycle event of an object.
+</dd>
+
+        <dt id="ObjectFlagProperty">
+  <span class="name "><a href="foundation/ObjectFlagProperty-class.html">ObjectFlagProperty</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A property where the important diagnostic information is primarily whether
+the <a href="foundation/DiagnosticsProperty/value.html">value</a> is present (non-null) or absent (null), rather than the actual
+value of the property itself.
+</dd>
+
+        <dt id="ObserverList">
+  <span class="name "><a href="foundation/ObserverList-class.html">ObserverList</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A list optimized for the observer pattern when there are small numbers of
+observers.
+</dd>
+
+        <dt id="PartialStackFrame">
+  <span class="name "><a href="foundation/PartialStackFrame-class.html">PartialStackFrame</a></span> 
+
+</dt>
+<dd>
+  Partial information from a stack frame for stack filtering purposes.
+</dd>
+
+        <dt id="PercentProperty">
+  <span class="name "><a href="foundation/PercentProperty-class.html">PercentProperty</a></span> 
+
+</dt>
+<dd>
+  Property which clamps a <a href="dart-core/double-class.html">double</a> to between 0 and 1 and formats it as a
+percentage.
+</dd>
+
+        <dt id="PersistentHashMap">
+  <span class="name "><a href="foundation/PersistentHashMap-class.html">PersistentHashMap</a><span class="signature">&lt;<wbr><span class="type-parameter">K extends <a href="dart-core/Object-class.html">Object</a></span>, <span class="type-parameter">V</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A collection of key/value pairs which provides efficient retrieval of
+value by key.
+</dd>
+
+        <dt id="PlatformDispatcher">
+  <span class="name "><a href="dart-ui/PlatformDispatcher-class.html">PlatformDispatcher</a></span> 
+
+</dt>
+<dd>
+  Platform event dispatcher singleton.
+</dd>
+
+        <dt id="ReadBuffer">
+  <span class="name "><a href="foundation/ReadBuffer-class.html">ReadBuffer</a></span> 
+
+</dt>
+<dd>
+  Read-only buffer for reading sequentially from a <a href="dart-typed_data/ByteData-class.html">ByteData</a> instance.
+</dd>
+
+        <dt id="RepetitiveStackFrameFilter">
+  <span class="name "><a href="foundation/RepetitiveStackFrameFilter-class.html">RepetitiveStackFrameFilter</a></span> 
+
+</dt>
+<dd>
+  A <a href="foundation/StackFilter-class.html">StackFilter</a> that filters based on repeating lists of
+<a href="foundation/PartialStackFrame-class.html">PartialStackFrame</a>s.
+</dd>
+
+        <dt id="SingletonFlutterWindow">
+  <span class="name deprecated"><a class="deprecated" href="dart-ui/SingletonFlutterWindow-class.html">SingletonFlutterWindow</a></span> 
+
+</dt>
+<dd>
+  Deprecated. Will be removed in a future version of Flutter.
+</dd>
+
+        <dt id="StackFilter">
+  <span class="name "><a href="foundation/StackFilter-class.html">StackFilter</a></span> 
+
+</dt>
+<dd>
+  A class that filters stack frames for additional filtering on
+<a href="foundation/FlutterError/defaultStackFilter.html">FlutterError.defaultStackFilter</a>.
+</dd>
+
+        <dt id="StackFrame">
+  <span class="name "><a href="foundation/StackFrame-class.html">StackFrame</a></span> 
+
+</dt>
+<dd>
+  A object representation of a frame from a stack trace.
+</dd>
+
+        <dt id="StringProperty">
+  <span class="name "><a href="foundation/StringProperty-class.html">StringProperty</a></span> 
+
+</dt>
+<dd>
+  Property which encloses its string <a href="foundation/DiagnosticsProperty/value.html">value</a> in quotes.
+</dd>
+
+        <dt id="Summary">
+  <span class="name "><a href="foundation/Summary-class.html">Summary</a></span> 
+
+</dt>
+<dd>
+  An annotation that provides a short description of a class for use
+in an index.
+</dd>
+
+        <dt id="SynchronousFuture">
+  <span class="name "><a href="foundation/SynchronousFuture-class.html">SynchronousFuture</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A <a href="dart-async/Future-class.html">Future</a> whose <a href="foundation/SynchronousFuture/then.html">then</a> implementation calls the callback immediately.
+</dd>
+
+        <dt id="TextTreeConfiguration">
+  <span class="name "><a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration specifying how a particular <a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a> should be
+rendered as text art.
+</dd>
+
+        <dt id="TextTreeRenderer">
+  <span class="name "><a href="foundation/TextTreeRenderer-class.html">TextTreeRenderer</a></span> 
+
+</dt>
+<dd>
+  Renderer that creates ASCII art representations of trees of
+<a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> objects.
+</dd>
+
+        <dt id="TimedBlock">
+  <span class="name "><a href="foundation/TimedBlock-class.html">TimedBlock</a></span> 
+
+</dt>
+<dd>
+  Provides <a href="foundation/TimedBlock/start.html">start</a>, <a href="foundation/TimedBlock/end.html">end</a>, and <a href="foundation/TimedBlock/duration.html">duration</a> of a named block of code, timed by
+<a href="foundation/FlutterTimeline-class.html">FlutterTimeline</a>.
+</dd>
+
+        <dt id="Uint8List">
+  <span class="name "><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></span> 
+
+</dt>
+<dd>
+  A fixed-length list of 8-bit unsigned integers.
+</dd>
+
+        <dt id="Unicode">
+  <span class="name "><a href="foundation/Unicode-class.html">Unicode</a></span> 
+
+</dt>
+<dd>
+  Constants for useful Unicode characters.
+</dd>
+
+        <dt id="UniqueKey">
+  <span class="name "><a href="foundation/UniqueKey-class.html">UniqueKey</a></span> 
+
+</dt>
+<dd>
+  A key that is only equal to itself.
+</dd>
+
+        <dt id="ValueKey">
+  <span class="name "><a href="foundation/ValueKey-class.html">ValueKey</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A key that uses a value of a particular type to identify itself.
+</dd>
+
+        <dt id="ValueListenable">
+  <span class="name "><a href="foundation/ValueListenable-class.html">ValueListenable</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An interface for subclasses of <a href="foundation/Listenable-class.html">Listenable</a> that expose a <a href="foundation/ValueListenable/value.html">value</a>.
+</dd>
+
+        <dt id="ValueNotifier">
+  <span class="name "><a href="foundation/ValueNotifier-class.html">ValueNotifier</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A <a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a> that holds a single value.
+</dd>
+
+        <dt id="WriteBuffer">
+  <span class="name "><a href="foundation/WriteBuffer-class.html">WriteBuffer</a></span> 
+
+</dt>
+<dd>
+  Write-only buffer for incrementally building a <a href="dart-typed_data/ByteData-class.html">ByteData</a> instance.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="mixins">
+      <h2>Mixins</h2>
+
+      <dl>
+        <dt id="Diagnosticable">
+  <span class="name "><a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></span> 
+
+</dt>
+<dd>
+  A mixin class for providing string and <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> debug
+representations describing the properties of an object.
+</dd>
+
+        <dt id="DiagnosticableTreeMixin">
+  <span class="name "><a href="foundation/DiagnosticableTreeMixin-mixin.html">DiagnosticableTreeMixin</a></span> 
+
+</dt>
+<dd>
+  A mixin that helps dump string and <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> representations of trees.
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="factory" class="constant">
+    <span class="name "><a href="meta/factory-constant.html">factory</a></span>
+  <span class="signature">&#8594; const _Factory</span>
+  
+
+</dt>
+<dd>
+  Used to annotate an instance or static method <code>m</code>. Indicates that <code>m</code> must
+either be abstract or must return a newly allocated object or <code>null</code>. In
+addition, every method that either implements or overrides <code>m</code> is implicitly
+annotated with this same annotation.
+  
+
+    <div>
+      <span class="signature"><code>_Factory()</code></span>
+    </div>
+</dd>
+
+        <dt id="immutable" class="constant">
+    <span class="name "><a href="meta/immutable-constant.html">immutable</a></span>
+  <span class="signature">&#8594; const <a href="meta/Immutable-class.html">Immutable</a></span>
+  
+
+</dt>
+<dd>
+  Used to annotate a class <code>C</code>. Indicates that <code>C</code> and all subtypes of <code>C</code>
+must be immutable.
+  
+
+    <div>
+      <span class="signature"><code><a href="meta/Immutable/Immutable.html">Immutable</a>()</code></span>
+    </div>
+</dd>
+
+        <dt id="kDebugMode" class="constant">
+    <span class="name "><a href="foundation/kDebugMode-constant.html">kDebugMode</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  A constant that is true if the application was compiled in debug mode.
+  
+
+    <div>
+      <span class="signature"><code>!kReleaseMode &amp;&amp; !kProfileMode</code></span>
+    </div>
+</dd>
+
+        <dt id="kFlutterMemoryAllocationsEnabled" class="constant">
+    <span class="name "><a href="foundation/kFlutterMemoryAllocationsEnabled-constant.html">kFlutterMemoryAllocationsEnabled</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  If true, Flutter objects dispatch the memory allocation events.
+  
+
+    <div>
+      <span class="signature"><code>_kMemoryAllocations || kDebugMode</code></span>
+    </div>
+</dd>
+
+        <dt id="kIsWeb" class="constant">
+    <span class="name "><a href="foundation/kIsWeb-constant.html">kIsWeb</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  A constant that is true if the application was compiled to run on the web.
+  
+
+    <div>
+      <span class="signature"><code>bool.fromEnvironment(&#39;dart.library.js_util&#39;)</code></span>
+    </div>
+</dd>
+
+        <dt id="kMaxUnsignedSMI" class="constant">
+    <span class="name "><a href="foundation/kMaxUnsignedSMI-constant.html">kMaxUnsignedSMI</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  The largest SMI value.
+  
+
+    <div>
+      <span class="signature"><code>bitfield.kMaxUnsignedSMI</code></span>
+    </div>
+</dd>
+
+        <dt id="kNoDefaultValue" class="constant">
+    <span class="name "><a href="foundation/kNoDefaultValue-constant.html">kNoDefaultValue</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/Object-class.html">Object</a></span>
+  
+
+</dt>
+<dd>
+  Marker object indicating that a <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> has no default value.
+  
+
+    <div>
+      <span class="signature"><code>_NoDefaultValue()</code></span>
+    </div>
+</dd>
+
+        <dt id="kProfileMode" class="constant">
+    <span class="name "><a href="foundation/kProfileMode-constant.html">kProfileMode</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  A constant that is true if the application was compiled in profile mode.
+  
+
+    <div>
+      <span class="signature"><code>bool.fromEnvironment(&#39;dart.vm.profile&#39;)</code></span>
+    </div>
+</dd>
+
+        <dt id="kReleaseMode" class="constant">
+    <span class="name "><a href="foundation/kReleaseMode-constant.html">kReleaseMode</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  A constant that is true if the application was compiled in release mode.
+  
+
+    <div>
+      <span class="signature"><code>bool.fromEnvironment(&#39;dart.vm.product&#39;)</code></span>
+    </div>
+</dd>
+
+        <dt id="mustCallSuper" class="constant">
+    <span class="name "><a href="meta/mustCallSuper-constant.html">mustCallSuper</a></span>
+  <span class="signature">&#8594; const _MustCallSuper</span>
+  
+
+</dt>
+<dd>
+  Used to annotate an instance member (method, getter, setter, operator, or
+field) <code>m</code>. Indicates that every invocation of a member that overrides <code>m</code>
+must also invoke <code>m</code>. In addition, every method that overrides <code>m</code> is
+implicitly annotated with this same annotation.
+  
+
+    <div>
+      <span class="signature"><code>_MustCallSuper()</code></span>
+    </div>
+</dd>
+
+        <dt id="nonVirtual" class="constant">
+    <span class="name "><a href="meta/nonVirtual-constant.html">nonVirtual</a></span>
+  <span class="signature">&#8594; const _NonVirtual</span>
+  
+
+</dt>
+<dd>
+  Used to annotate an instance member (method, getter, setter, operator, or
+field) <code>m</code> in a class <code>C</code> or mixin <code>M</code>. Indicates that <code>m</code> should not be
+overridden in any classes that extend or mixin <code>C</code> or <code>M</code>.
+  
+
+    <div>
+      <span class="signature"><code>_NonVirtual()</code></span>
+    </div>
+</dd>
+
+        <dt id="optionalTypeArgs" class="constant">
+    <span class="name "><a href="meta/optionalTypeArgs-constant.html">optionalTypeArgs</a></span>
+  <span class="signature">&#8594; const _OptionalTypeArgs</span>
+  
+
+</dt>
+<dd>
+  Used to annotate a class, mixin, extension, function, method, or typedef
+declaration <code>C</code>. Indicates that any type arguments declared on <code>C</code> are to
+be treated as optional.
+  
+
+    <div>
+      <span class="signature"><code>_OptionalTypeArgs()</code></span>
+    </div>
+</dd>
+
+        <dt id="precisionErrorTolerance" class="constant">
+    <span class="name "><a href="foundation/precisionErrorTolerance-constant.html">precisionErrorTolerance</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  The epsilon of tolerable double precision error.
+  
+
+    <div>
+      <span class="signature"><code>1e-10</code></span>
+    </div>
+</dd>
+
+        <dt id="protected" class="constant">
+    <span class="name "><a href="meta/protected-constant.html">protected</a></span>
+  <span class="signature">&#8594; const _Protected</span>
+  
+
+</dt>
+<dd>
+  Used to annotate an instance member in a class or mixin which is meant to
+be visible only within the declaring library, and to other instance members
+of the class or mixin, and their subtypes.
+  
+
+    <div>
+      <span class="signature"><code>_Protected()</code></span>
+    </div>
+</dd>
+
+        <dt id="required" class="constant">
+    <span class="name "><a href="meta/required-constant.html">required</a></span>
+  <span class="signature">&#8594; const <a href="meta/Required-class.html">Required</a></span>
+  
+
+</dt>
+<dd>
+  Used to annotate a named parameter <code>p</code> in a method or function <code>f</code>.
+Indicates that every invocation of <code>f</code> must include an argument
+corresponding to <code>p</code>, despite the fact that <code>p</code> would otherwise be an
+optional parameter.
+  
+
+    <div>
+      <span class="signature"><code><a href="meta/Required/Required.html">Required</a>()</code></span>
+    </div>
+</dd>
+
+        <dt id="visibleForTesting" class="constant">
+    <span class="name "><a href="meta/visibleForTesting-constant.html">visibleForTesting</a></span>
+  <span class="signature">&#8594; const _VisibleForTesting</span>
+  
+
+</dt>
+<dd>
+  Used to annotate a declaration that was made public, so that it is more
+visible than otherwise necessary, to make code testable.
+  
+
+    <div>
+      <span class="signature"><code>_VisibleForTesting()</code></span>
+    </div>
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="activeDevToolsServerAddress" class="property">
+  <span class="name"><a href="foundation/activeDevToolsServerAddress.html">activeDevToolsServerAddress</a></span>
+  <span class="signature">&#8596; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The address for the active DevTools server used for debugging this
+application.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="connectedVmServiceUri" class="property">
+  <span class="name"><a href="foundation/connectedVmServiceUri.html">connectedVmServiceUri</a></span>
+  <span class="signature">&#8596; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  The uri for the connected vm service protocol.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="dashedTextConfiguration" class="property">
+  <span class="name"><a href="foundation/dashedTextConfiguration.html">dashedTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Identical to <a href="foundation/sparseTextConfiguration.html">sparseTextConfiguration</a> except that the lines connecting
+parent to children are dashed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="debugBrightnessOverride" class="property">
+  <span class="name"><a href="foundation/debugBrightnessOverride.html">debugBrightnessOverride</a></span>
+  <span class="signature">&#8596; <a href="dart-ui/Brightness.html">Brightness</a>?</span> 
+
+</dt>
+<dd>
+  A setting that can be used to override the platform <a href="dart-ui/Brightness.html">Brightness</a> exposed
+from <a href="foundation/BindingBase/platformDispatcher.html">BindingBase.platformDispatcher</a>.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="debugDefaultTargetPlatformOverride" class="property">
+  <span class="name"><a href="foundation/debugDefaultTargetPlatformOverride.html">debugDefaultTargetPlatformOverride</a></span>
+  <span class="signature">&#8596; <a href="foundation/TargetPlatform.html">TargetPlatform</a>?</span> 
+
+</dt>
+<dd>
+  Override the <a href="foundation/defaultTargetPlatform.html">defaultTargetPlatform</a>.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="debugDoublePrecision" class="property">
+  <span class="name"><a href="foundation/debugDoublePrecision.html">debugDoublePrecision</a></span>
+  <span class="signature">&#8596; <a href="dart-core/int-class.html">int</a>?</span> 
+
+</dt>
+<dd>
+  Configure <a href="foundation/debugFormatDouble.html">debugFormatDouble</a> using <a href="dart-core/num/toStringAsPrecision.html">num.toStringAsPrecision</a>.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="debugInstrumentationEnabled" class="property">
+  <span class="name"><a href="foundation/debugInstrumentationEnabled.html">debugInstrumentationEnabled</a></span>
+  <span class="signature">&#8596; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Boolean value indicating whether <a href="foundation/debugInstrumentAction.html">debugInstrumentAction</a> will instrument
+actions in debug builds.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="debugPrint" class="property">
+  <span class="name"><a href="foundation/debugPrint.html">debugPrint</a></span>
+  <span class="signature">&#8596; <a href="foundation/DebugPrintCallback.html">DebugPrintCallback</a></span> 
+
+</dt>
+<dd>
+  Prints a message to the console, which you can access using the "flutter"
+tool's "logs" command ("flutter logs").
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="debugPrintDone" class="property">
+  <span class="name"><a href="foundation/debugPrintDone.html">debugPrintDone</a></span>
+  <span class="signature">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A Future that resolves when there is no longer any buffered content being
+printed by <a href="foundation/debugPrintThrottled.html">debugPrintThrottled</a> (which is the default implementation for
+<a href="foundation/debugPrint.html">debugPrint</a>, which is used to report errors to the console).
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="defaultTargetPlatform" class="property">
+  <span class="name"><a href="foundation/defaultTargetPlatform.html">defaultTargetPlatform</a></span>
+  <span class="signature">&#8594; <a href="foundation/TargetPlatform.html">TargetPlatform</a></span> 
+
+</dt>
+<dd>
+  The <a href="foundation/TargetPlatform.html">TargetPlatform</a> that matches the platform on which the framework is
+currently executing.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="denseTextConfiguration" class="property">
+  <span class="name"><a href="foundation/denseTextConfiguration.html">denseTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Dense text tree configuration that minimizes horizontal whitespace.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="errorPropertyTextConfiguration" class="property">
+  <span class="name"><a href="foundation/errorPropertyTextConfiguration.html">errorPropertyTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Render the name on a line followed by the body and properties on the next
+line omitting the children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="errorTextConfiguration" class="property">
+  <span class="name"><a href="foundation/errorTextConfiguration.html">errorTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration that draws a box around a node ignoring the connection to the
+parents.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="flatTextConfiguration" class="property">
+  <span class="name"><a href="foundation/flatTextConfiguration.html">flatTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Whitespace only configuration where children are not indented.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isCanvasKit" class="property">
+  <span class="name"><a href="foundation/isCanvasKit.html">isCanvasKit</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Returns true if the application is using CanvasKit.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="shallowTextConfiguration" class="property">
+  <span class="name"><a href="foundation/shallowTextConfiguration.html">shallowTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Render a node on multiple lines omitting children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="singleLineTextConfiguration" class="property">
+  <span class="name"><a href="foundation/singleLineTextConfiguration.html">singleLineTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Render a node as a single line omitting children.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="sparseTextConfiguration" class="property">
+  <span class="name"><a href="foundation/sparseTextConfiguration.html">sparseTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Default text tree configuration.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="transitionTextConfiguration" class="property">
+  <span class="name"><a href="foundation/transitionTextConfiguration.html">transitionTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Configuration that draws a box around a leaf node.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="whitespaceTextConfiguration" class="property">
+  <span class="name"><a href="foundation/whitespaceTextConfiguration.html">whitespaceTextConfiguration</a></span>
+  <span class="signature">&#8594; <a href="foundation/TextTreeConfiguration-class.html">TextTreeConfiguration</a></span> 
+
+</dt>
+<dd>
+  Whitespace only configuration where children are consistently indented
+two spaces.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="binarySearch" class="callable">
+  <span class="name"><a href="foundation/binarySearch.html">binarySearch</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Comparable-class.html">Comparable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>&gt;</span></span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="binarySearch-param-sortedList"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">sortedList</span>, </span><span class="parameter" id="binarySearch-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/int-class.html">int</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the position of <code>value</code> in the <code>sortedList</code>, if it exists.
+  
+
+</dd>
+
+        <dt id="clampDouble" class="callable">
+  <span class="name"><a href="dart-ui/clampDouble.html">clampDouble</a></span><span class="signature">(<wbr><span class="parameter" id="clampDouble-param-x"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">x</span>, </span><span class="parameter" id="clampDouble-param-min"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">min</span>, </span><span class="parameter" id="clampDouble-param-max"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">max</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/double-class.html">double</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Same as <a href="dart-core/num/clamp.html">num.clamp</a> but optimized for a non-null <a href="dart-core/double-class.html">double</a>.
+  
+
+</dd>
+
+        <dt id="compute" class="callable">
+  <span class="name"><a href="foundation/compute.html">compute</a></span><span class="signature">&lt;<wbr><span class="type-parameter">M</span>, <span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="compute-param-callback"><span class="type-annotation"><a href="foundation/ComputeCallback.html">ComputeCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>, <span class="type-parameter">R</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="compute-param-message"><span class="type-annotation">M</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="compute-param-debugLabel">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">debugLabel</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Asynchronously runs the given <code>callback</code> - with the provided <code>message</code> -
+in the background and completes with the result.
+  
+
+</dd>
+
+        <dt id="consolidateHttpClientResponseBytes" class="callable">
+  <span class="name"><a href="foundation/consolidateHttpClientResponseBytes.html">consolidateHttpClientResponseBytes</a></span><span class="signature">(<wbr><span class="parameter" id="consolidateHttpClientResponseBytes-param-response"><span class="type-annotation"><a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a></span> <span class="parameter-name">response</span>, </span><span class="parameter" id="consolidateHttpClientResponseBytes-param-autoUncompress">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autoUncompress</span> = <span class="default-value">true</span>, </span><span class="parameter" id="consolidateHttpClientResponseBytes-param-onBytesReceived"><span class="type-annotation"><a href="foundation/BytesReceivedCallback.html">BytesReceivedCallback</a>?</span> <span class="parameter-name">onBytesReceived</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-typed_data/Uint8List-class.html">Uint8List</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Efficiently converts the response body of an <a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a> into a
+<a href="dart-typed_data/Uint8List-class.html">Uint8List</a>.
+  
+
+</dd>
+
+        <dt id="debugAssertAllFoundationVarsUnset" class="callable">
+  <span class="name"><a href="foundation/debugAssertAllFoundationVarsUnset.html">debugAssertAllFoundationVarsUnset</a></span><span class="signature">(<wbr><span class="parameter" id="debugAssertAllFoundationVarsUnset-param-reason"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">reason</span>, </span><span class="parameter" id="debugAssertAllFoundationVarsUnset-param-debugPrintOverride">{<span class="type-annotation"><a href="foundation/DebugPrintCallback.html">DebugPrintCallback</a></span> <span class="parameter-name">debugPrintOverride</span> = <span class="default-value">debugPrintThrottled</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns true if none of the foundation library debug variables have been
+changed.
+  
+
+</dd>
+
+        <dt id="debugFormatDouble" class="callable">
+  <span class="name"><a href="foundation/debugFormatDouble.html">debugFormatDouble</a></span><span class="signature">(<wbr><span class="parameter" id="debugFormatDouble-param-value"><span class="type-annotation"><a href="dart-core/double-class.html">double</a>?</span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Formats a double to have standard formatting.
+  
+
+</dd>
+
+        <dt id="debugInstrumentAction" class="callable">
+  <span class="name"><a href="foundation/debugInstrumentAction.html">debugInstrumentAction</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="debugInstrumentAction-param-description"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">description</span>, </span><span class="parameter" id="debugInstrumentAction-param-action"><span class="type-annotation"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">action</span>()</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Runs the specified <code>action</code>, timing how long the action takes in debug
+builds when <a href="foundation/debugInstrumentationEnabled.html">debugInstrumentationEnabled</a> is true.
+  
+
+</dd>
+
+        <dt id="debugPrintStack" class="callable">
+  <span class="name"><a href="foundation/debugPrintStack.html">debugPrintStack</a></span><span class="signature">(<wbr><span class="parameter" id="debugPrintStack-param-stackTrace">{<span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a>?</span> <span class="parameter-name">stackTrace</span>, </span><span class="parameter" id="debugPrintStack-param-label"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">label</span>, </span><span class="parameter" id="debugPrintStack-param-maxFrames"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maxFrames</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Dump the stack to the console using <a href="foundation/debugPrint.html">debugPrint</a> and
+<a href="foundation/FlutterError/defaultStackFilter.html">FlutterError.defaultStackFilter</a>.
+  
+
+</dd>
+
+        <dt id="debugPrintSynchronously" class="callable">
+  <span class="name"><a href="foundation/debugPrintSynchronously.html">debugPrintSynchronously</a></span><span class="signature">(<wbr><span class="parameter" id="debugPrintSynchronously-param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="debugPrintSynchronously-param-wrapWidth">{<span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">wrapWidth</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Alternative implementation of <a href="foundation/debugPrint.html">debugPrint</a> that does not throttle.
+Used by tests.
+  
+
+</dd>
+
+        <dt id="debugPrintThrottled" class="callable">
+  <span class="name"><a href="foundation/debugPrintThrottled.html">debugPrintThrottled</a></span><span class="signature">(<wbr><span class="parameter" id="debugPrintThrottled-param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="debugPrintThrottled-param-wrapWidth">{<span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">wrapWidth</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Implementation of <a href="foundation/debugPrint.html">debugPrint</a> that throttles messages. This avoids dropping
+messages on platforms that rate-limit their logging (for example, Android).
+  
+
+</dd>
+
+        <dt id="debugWordWrap" class="callable">
+  <span class="name"><a href="foundation/debugWordWrap.html">debugWordWrap</a></span><span class="signature">(<wbr><span class="parameter" id="debugWordWrap-param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="debugWordWrap-param-width"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">width</span>, </span><span class="parameter" id="debugWordWrap-param-wrapIndent">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">wrapIndent</span> = <span class="default-value">&#39;&#39;</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Wraps the given string at the given width.
+  
+
+</dd>
+
+        <dt id="describeEnum" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="foundation/describeEnum.html">describeEnum</a></span><span class="signature">(<wbr><span class="parameter" id="describeEnum-param-enumEntry"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">enumEntry</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a short description of an enum value.
+  
+
+</dd>
+
+        <dt id="describeIdentity" class="callable">
+  <span class="name"><a href="foundation/describeIdentity.html">describeIdentity</a></span><span class="signature">(<wbr><span class="parameter" id="describeIdentity-param-object"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a summary of the runtime type and hash code of <code>object</code>.
+  
+
+</dd>
+
+        <dt id="lerpDuration" class="callable">
+  <span class="name"><a href="foundation/lerpDuration.html">lerpDuration</a></span><span class="signature">(<wbr><span class="parameter" id="lerpDuration-param-a"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerpDuration-param-b"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerpDuration-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/Duration-class.html">Duration</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolate between two <code>Duration</code>s.
+  
+
+</dd>
+
+        <dt id="listEquals" class="callable">
+  <span class="name"><a href="foundation/listEquals.html">listEquals</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="listEquals-param-a"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="listEquals-param-b"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> <span class="parameter-name">b</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Compares two lists for element-by-element equality.
+  
+
+</dd>
+
+        <dt id="mapEquals" class="callable">
+  <span class="name"><a href="foundation/mapEquals.html">mapEquals</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">U</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="mapEquals-param-a"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">U</span>&gt;</span>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="mapEquals-param-b"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">U</span>&gt;</span>?</span> <span class="parameter-name">b</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Compares two maps for element-by-element equality.
+  
+
+</dd>
+
+        <dt id="mergeSort" class="callable">
+  <span class="name"><a href="foundation/mergeSort.html">mergeSort</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="mergeSort-param-list"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">list</span>, </span><span class="parameter" id="mergeSort-param-start">{<span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">start</span> = <span class="default-value">0</span>, </span><span class="parameter" id="mergeSort-param-end"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">end</span>, </span><span class="parameter" id="mergeSort-param-compare"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">compare</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span>, </span><span class="parameter" id="param-"><span class="type-annotation">T</span></span>)?}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Sorts a list between <code>start</code> (inclusive) and <code>end</code> (exclusive) using the
+merge sort algorithm.
+  
+
+</dd>
+
+        <dt id="objectRuntimeType" class="callable">
+  <span class="name"><a href="foundation/objectRuntimeType.html">objectRuntimeType</a></span><span class="signature">(<wbr><span class="parameter" id="objectRuntimeType-param-object"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span>, </span><span class="parameter" id="objectRuntimeType-param-optimizedValue"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">optimizedValue</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Framework code should use this method in favor of calling <code>toString</code> on
+<a href="dart-core/Object/runtimeType.html">Object.runtimeType</a>.
+  
+
+</dd>
+
+        <dt id="setEquals" class="callable">
+  <span class="name"><a href="foundation/setEquals.html">setEquals</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="setEquals-param-a"><span class="type-annotation"><a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="setEquals-param-b"><span class="type-annotation"><a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span>?</span> <span class="parameter-name">b</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Compares two sets for element-by-element equality.
+  
+
+</dd>
+
+        <dt id="shortHash" class="callable">
+  <span class="name"><a href="foundation/shortHash.html">shortHash</a></span><span class="signature">(<wbr><span class="parameter" id="shortHash-param-object"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">object</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a 5 character long hexadecimal string generated from
+<a href="dart-core/Object/hashCode.html">Object.hashCode</a>'s 20 least-significant bits.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+
+      <dl>
+        <dt id="Brightness">
+  <span class="name "><a href="dart-ui/Brightness.html">Brightness</a></span> 
+
+</dt>
+<dd>
+  Describes the contrast of a theme or color palette.
+</dd>
+
+        <dt id="DiagnosticLevel">
+  <span class="name "><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> 
+
+</dt>
+<dd>
+  The various priority levels used to filter which diagnostics are shown and
+omitted.
+</dd>
+
+        <dt id="DiagnosticsTreeStyle">
+  <span class="name "><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a></span> 
+
+</dt>
+<dd>
+  Styles for displaying a node in a <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a> tree.
+</dd>
+
+        <dt id="FoundationServiceExtensions">
+  <span class="name "><a href="foundation/FoundationServiceExtensions.html">FoundationServiceExtensions</a></span> 
+
+</dt>
+<dd>
+  Service extension constants for the foundation library.
+</dd>
+
+        <dt id="TargetPlatform">
+  <span class="name "><a href="foundation/TargetPlatform.html">TargetPlatform</a></span> 
+
+</dt>
+<dd>
+  The platform that user interaction should adapt to target.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl>
+          
+  <dt id="AsyncCallback" class="callable">
+    <span class="name"><a href="foundation/AsyncCallback.html">AsyncCallback</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span> Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature of callbacks that have no arguments and return no data, but that
+return a <a href="dart-async/Future-class.html">Future</a> to indicate when their work is complete.
+    
+
+  </dd>
+
+          
+  <dt id="AsyncValueGetter" class="callable">
+    <span class="name"><a href="foundation/AsyncValueGetter.html">AsyncValueGetter</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that are to asynchronously report a value on demand.
+    
+
+  </dd>
+
+          
+  <dt id="AsyncValueSetter" class="callable">
+    <span class="name"><a href="foundation/AsyncValueSetter.html">AsyncValueSetter</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that report that a value has been set and return a
+<a href="dart-async/Future-class.html">Future</a> that completes when the value has been saved.
+    
+
+  </dd>
+
+          
+  <dt id="BytesReceivedCallback" class="callable">
+    <span class="name"><a href="foundation/BytesReceivedCallback.html">BytesReceivedCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-cumulative"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">cumulative</span>, </span><span class="parameter" id="param-total"><span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">total</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for getting notified when chunks of bytes are received while
+consolidating the bytes of an <a href="dart-io/HttpClientResponse-class.html">HttpClientResponse</a> into a <a href="dart-typed_data/Uint8List-class.html">Uint8List</a>.
+    
+
+  </dd>
+
+          
+  <dt id="ComputeCallback" class="callable">
+    <span class="name"><a href="foundation/ComputeCallback.html">ComputeCallback</a></span>&lt;<wbr><span class="type-parameter">M</span>, <span class="type-parameter">R</span>&gt;<span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-message"><span class="type-annotation">M</span> <span class="parameter-name">message</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for the callback passed to <a href="foundation/compute.html">compute</a>.
+    
+
+  </dd>
+
+          
+  <dt id="ComputeImpl" class="callable">
+    <span class="name"><a href="foundation/ComputeImpl.html">ComputeImpl</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span> Function&lt;<wbr><span class="type-parameter">M</span>, <span class="type-parameter">R</span>&gt;<span class="signature">(<span class="parameter" id="param-callback"><span class="type-annotation"><a href="foundation/ComputeCallback.html">ComputeCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">M</span>, <span class="type-parameter">R</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="param-message"><span class="type-annotation">M</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-debugLabel">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">debugLabel</span>}</span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    The signature of <a href="foundation/compute.html">compute</a>, which spawns an isolate, runs <code>callback</code> on
+that isolate, passes it <code>message</code>, and (eventually) returns the value
+returned by <code>callback</code>.
+    
+
+  </dd>
+
+          
+  <dt id="ComputePropertyValueCallback" class="callable">
+    <span class="name"><a href="foundation/ComputePropertyValueCallback.html">ComputePropertyValueCallback</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= T? Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for computing the value of a property.
+    
+
+  </dd>
+
+          
+  <dt id="DebugPrintCallback" class="callable">
+    <span class="name"><a href="foundation/DebugPrintCallback.html">DebugPrintCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-message"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">message</span>, </span><span class="parameter" id="param-wrapWidth">{<span class="type-annotation"><a href="dart-core/int-class.html">int</a>?</span> <span class="parameter-name">wrapWidth</span>}</span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for <a href="foundation/debugPrint.html">debugPrint</a> implementations.
+    
+
+  </dd>
+
+          
+  <dt id="DiagnosticPropertiesTransformer" class="callable">
+    <span class="name"><a href="foundation/DiagnosticPropertiesTransformer.html">DiagnosticPropertiesTransformer</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-properties"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span> <span class="parameter-name">properties</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for <a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a> transformer.
+    
+
+  </dd>
+
+          
+  <dt id="FlutterExceptionHandler" class="callable">
+    <span class="name"><a href="foundation/FlutterExceptionHandler.html">FlutterExceptionHandler</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-details"><span class="type-annotation"><a href="foundation/FlutterErrorDetails-class.html">FlutterErrorDetails</a></span> <span class="parameter-name">details</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for <a href="foundation/FlutterError/onError.html">FlutterError.onError</a> handler.
+    
+
+  </dd>
+
+          
+  <dt id="InformationCollector" class="callable">
+    <span class="name"><a href="foundation/InformationCollector.html">InformationCollector</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span> Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for <a href="foundation/FlutterErrorDetails/informationCollector.html">FlutterErrorDetails.informationCollector</a> callback
+and other callbacks that collect information describing an error.
+    
+
+  </dd>
+
+          
+  <dt id="IterableFilter" class="callable">
+    <span class="name"><a href="foundation/IterableFilter.html">IterableFilter</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-input"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">input</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that filter an iterable.
+    
+
+  </dd>
+
+          
+  <dt id="LicenseEntryCollector" class="callable">
+    <span class="name"><a href="foundation/LicenseEntryCollector.html">LicenseEntryCollector</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/LicenseEntry-class.html">LicenseEntry</a></span>&gt;</span> Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks passed to <a href="foundation/LicenseRegistry/addLicense.html">LicenseRegistry.addLicense</a>.
+    
+
+  </dd>
+
+          
+  <dt id="ObjectEventListener" class="callable">
+    <span class="name"><a href="foundation/ObjectEventListener.html">ObjectEventListener</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-"><span class="type-annotation"><a href="foundation/ObjectEvent-class.html">ObjectEvent</a></span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    A listener of <a href="foundation/ObjectEvent-class.html">ObjectEvent</a>.
+    
+
+  </dd>
+
+          
+  <dt id="ServiceExtensionCallback" class="callable">
+    <span class="name"><a href="foundation/ServiceExtensionCallback.html">ServiceExtensionCallback</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>&gt;</span> Function<span class="signature">(<span class="parameter" id="param-parameters"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">parameters</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for service extensions.
+    
+
+  </dd>
+
+          
+  <dt id="StackTraceDemangler" class="callable">
+    <span class="name"><a href="foundation/StackTraceDemangler.html">StackTraceDemangler</a></span><span class="signature">
+      <span class="returntype parameter">= <a href="dart-core/StackTrace-class.html">StackTrace</a> Function<span class="signature">(<span class="parameter" id="param-details"><span class="type-annotation"><a href="dart-core/StackTrace-class.html">StackTrace</a></span> <span class="parameter-name">details</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for a function that demangles <a href="dart-core/StackTrace-class.html">StackTrace</a> objects into a format
+that can be parsed by <a href="foundation/StackFrame-class.html">StackFrame</a>.
+    
+
+  </dd>
+
+          
+  <dt id="ValueChanged" class="callable">
+    <span class="name"><a href="foundation/ValueChanged.html">ValueChanged</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that report that an underlying value has changed.
+    
+
+  </dd>
+
+          
+  <dt id="ValueGetter" class="callable">
+    <span class="name"><a href="foundation/ValueGetter.html">ValueGetter</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= T Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that are to report a value on demand.
+    
+
+  </dd>
+
+          
+  <dt id="ValueSetter" class="callable">
+    <span class="name"><a href="foundation/ValueSetter.html">ValueSetter</a></span>&lt;<wbr><span class="type-parameter">T</span>&gt;<span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature for callbacks that report that a value has been set.
+    
+
+  </dd>
+
+          
+  <dt id="VoidCallback" class="callable">
+    <span class="name"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span><span class="signature">
+      <span class="returntype parameter">= void Function<span class="signature">()</span></span>
+    </span>
+    
+
+  </dt>
+  <dd>
+    Signature of callbacks that have no arguments and return no data.
+    
+
+  </dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="exceptions">
+      <h2>Exceptions / Errors</h2>
+
+      <dl>
+        <dt id="FlutterError">
+  <span class="name "><a href="foundation/FlutterError-class.html">FlutterError</a></span> 
+
+</dt>
+<dd>
+  Error class used to report Flutter-specific assertion failures and
+contract violations.
+</dd>
+
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li class="self-crumb">foundation library</li>
+</ol>
+
+
+    <h5><span class="package-name">Flutter</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="animation/animation-library.html">animation</a></li>
+      <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+      <li><a href="foundation/foundation-library.html">foundation</a></li>
+      <li><a href="gestures/gestures-library.html">gestures</a></li>
+      <li><a href="material/material-library.html">material</a></li>
+      <li><a href="painting/painting-library.html">painting</a></li>
+      <li><a href="physics/physics-library.html">physics</a></li>
+      <li><a href="rendering/rendering-library.html">rendering</a></li>
+      <li><a href="scheduler/scheduler-library.html">scheduler</a></li>
+      <li><a href="semantics/semantics-library.html">semantics</a></li>
+      <li><a href="services/services-library.html">services</a></li>
+      <li><a href="widgets/widgets-library.html">widgets</a></li>
+      <li class="section-title">Dart</li>
+      <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+      <li><a href="dart-ui_web/dart-ui_web-library.html">dart:ui_web</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="dart-async/dart-async-library.html">dart:async</a></li>
+        <li class="section-subitem"><a href="dart-collection/dart-collection-library.html">dart:collection</a></li>
+        <li class="section-subitem"><a href="dart-convert/dart-convert-library.html">dart:convert</a></li>
+        <li class="section-subitem"><a href="dart-core/dart-core-library.html">dart:core</a></li>
+        <li class="section-subitem"><a href="dart-developer/dart-developer-library.html">dart:developer</a></li>
+        <li class="section-subitem"><a href="dart-math/dart-math-library.html">dart:math</a></li>
+        <li class="section-subitem"><a href="dart-typed_data/dart-typed_data-library.html">dart:typed_data</a></li>
+      <li class="section-subtitle">VM</li>
+        <li class="section-subitem"><a href="dart-ffi/dart-ffi-library.html">dart:ffi</a></li>
+        <li class="section-subitem"><a href="dart-io/dart-io-library.html">dart:io</a></li>
+        <li class="section-subitem"><a href="dart-isolate/dart-isolate-library.html">dart:isolate</a></li>
+      <li class="section-subtitle">Web</li>
+        <li class="section-subitem"><a href="dart-html/dart-html-library.html">dart:html</a></li>
+        <li class="section-subitem"><a href="dart-js/dart-js-library.html">dart:js</a></li>
+        <li class="section-subitem"><a href="dart-js_interop/dart-js_interop-library.html">dart:js_interop</a></li>
+        <li class="section-subitem"><a href="dart-js_interop_unsafe/dart-js_interop_unsafe-library.html">dart:js_interop_unsafe</a></li>
+        <li class="section-subitem"><a href="dart-js_util/dart-js_util-library.html">dart:js_util</a></li>
+      <li class="section-title">platform_integration</li>
+      <li><a href="Android/Android-library.html">Android</a></li>
+      <li><a href="iOS/iOS-library.html">iOS</a></li>
+      <li><a href="Linux/Linux-library.html">Linux</a></li>
+      <li><a href="macOS/macOS-library.html">macOS</a></li>
+      <li><a href="Windows/Windows-library.html">Windows</a></li>
+      <li class="section-title">flutter_test</li>
+      <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+      <li class="section-title">flutter_driver</li>
+      <li><a href="flutter_driver/flutter_driver-library.html">flutter_driver</a></li>
+      <li><a href="flutter_driver_extension/flutter_driver_extension-library.html">flutter_driver_extension</a></li>
+      <li class="section-title">Flutter</li>
+      <li class="section-title">flutter_localizations</li>
+      <li><a href="flutter_localizations/flutter_localizations-library.html">flutter_localizations</a></li>
+      <li class="section-title">flutter_web_plugins</li>
+      <li><a href="flutter_web_plugins/flutter_web_plugins-library.html">flutter_web_plugins</a></li>
+      <li><a href="package-flutter_web_plugins_url_strategy/package-flutter_web_plugins_url_strategy-library.html">url_strategy</a></li>
+      <li class="section-title">async</li>
+      <li><a href="async/async-library.html">async</a></li>
+      <li class="section-title">boolean_selector</li>
+      <li><a href="package-boolean_selector_boolean_selector/package-boolean_selector_boolean_selector-library.html">boolean_selector</a></li>
+      <li class="section-title">characters</li>
+      <li><a href="characters/characters-library.html">characters</a></li>
+      <li class="section-title">clock</li>
+      <li><a href="package-clock_clock/package-clock_clock-library.html">clock</a></li>
+      <li class="section-title">collection</li>
+      <li><a href="package-collection_collection/package-collection_collection-library.html">collection</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.algorithms/dart.pkg.collection.algorithms-library.html">dart.pkg.collection.algorithms</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.equality/dart.pkg.collection.equality-library.html">dart.pkg.collection.equality</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.iterable_zip/dart.pkg.collection.iterable_zip-library.html">dart.pkg.collection.iterable_zip</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.priority_queue/dart.pkg.collection.priority_queue-library.html">dart.pkg.collection.priority_queue</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.wrappers/dart.pkg.collection.wrappers-library.html">dart.pkg.collection.wrappers</a></li>
+      <li class="section-title">crypto</li>
+      <li><a href="package-crypto_crypto/package-crypto_crypto-library.html">crypto</a></li>
+      <li class="section-title">fake_async</li>
+      <li><a href="package-fake_async_fake_async/package-fake_async_fake_async-library.html">fake_async</a></li>
+      <li class="section-title">file</li>
+      <li><a href="package-file_chroot/package-file_chroot-library.html">chroot</a></li>
+      <li><a href="package-file_file/package-file_file-library.html">file</a></li>
+      <li><a href="package-file_local/package-file_local-library.html">local</a></li>
+      <li><a href="package-file_memory/package-file_memory-library.html">memory</a></li>
+      <li class="section-title">integration_test</li>
+      <li><a href="package-integration_test__callback_io/package-integration_test__callback_io-library.html">_callback_io</a></li>
+      <li><a href="package-integration_test__callback_web/package-integration_test__callback_web-library.html">_callback_web</a></li>
+      <li><a href="package-integration_test__extension_io/package-integration_test__extension_io-library.html">_extension_io</a></li>
+      <li><a href="package-integration_test__extension_web/package-integration_test__extension_web-library.html">_extension_web</a></li>
+      <li><a href="package-integration_test_common/package-integration_test_common-library.html">common</a></li>
+      <li><a href="package-integration_test_integration_test/package-integration_test_integration_test-library.html">integration_test</a></li>
+      <li><a href="package-integration_test_integration_test_driver/package-integration_test_integration_test_driver-library.html">integration_test_driver</a></li>
+      <li><a href="package-integration_test_integration_test_driver_extended/package-integration_test_integration_test_driver_extended-library.html">integration_test_driver_extended</a></li>
+      <li class="section-title">intl</li>
+      <li><a href="package-intl_date_symbol_data_custom/package-intl_date_symbol_data_custom-library.html">date_symbol_data_custom</a></li>
+      <li><a href="date_symbol_data_file/date_symbol_data_file-library.html">date_symbol_data_file</a></li>
+      <li><a href="date_symbol_data_http_request/date_symbol_data_http_request-library.html">date_symbol_data_http_request</a></li>
+      <li><a href="date_symbol_data_local/date_symbol_data_local-library.html">date_symbol_data_local</a></li>
+      <li><a href="date_symbols/date_symbols-library.html">date_symbols</a></li>
+      <li><a href="date_time_patterns/date_time_patterns-library.html">date_time_patterns</a></li>
+      <li><a href="intl/intl-library.html">intl</a></li>
+      <li><a href="intl_standalone/intl_standalone-library.html">intl_standalone</a></li>
+      <li><a href="package-intl_locale/package-intl_locale-library.html">locale</a></li>
+      <li><a href="message_format/message_format-library.html">message_format</a></li>
+      <li><a href="message_lookup_by_library/message_lookup_by_library-library.html">message_lookup_by_library</a></li>
+      <li><a href="number_symbol_data/number_symbol_data-library.html">number_symbol_data</a></li>
+      <li><a href="number_symbols/number_symbols-library.html">number_symbols</a></li>
+      <li class="section-title">matcher</li>
+      <li><a href="package-matcher_expect/package-matcher_expect-library.html">expect</a></li>
+      <li><a href="package-matcher_matcher/package-matcher_matcher-library.html">matcher</a></li>
+      <li class="section-title">material_color_utilities</li>
+      <li><a href="package-material_color_utilities_blend_blend/package-material_color_utilities_blend_blend-library.html">blend</a></li>
+      <li><a href="package-material_color_utilities_hct_cam16/package-material_color_utilities_hct_cam16-library.html">cam16</a></li>
+      <li><a href="package-material_color_utilities_utils_color_utils/package-material_color_utilities_utils_color_utils-library.html">color_utils</a></li>
+      <li><a href="package-material_color_utilities_contrast_contrast/package-material_color_utilities_contrast_contrast-library.html">contrast</a></li>
+      <li><a href="package-material_color_utilities_palettes_core_palette/package-material_color_utilities_palettes_core_palette-library.html">core_palette</a></li>
+      <li><a href="package-material_color_utilities_dislike_dislike_analyzer/package-material_color_utilities_dislike_dislike_analyzer-library.html">dislike_analyzer</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/package-material_color_utilities_dynamiccolor_dynamic_color-library.html">dynamic_color</a></li>
+      <li><a href="package-material_color_utilities_scheme_dynamic_scheme/package-material_color_utilities_scheme_dynamic_scheme-library.html">dynamic_scheme</a></li>
+      <li><a href="package-material_color_utilities_hct_hct/package-material_color_utilities_hct_hct-library.html">hct</a></li>
+      <li><a href="package-material_color_utilities_hct_src_hct_solver/package-material_color_utilities_hct_src_hct_solver-library.html">hct_solver</a></li>
+      <li><a href="material_color_utilities/material_color_utilities-library.html">material_color_utilities</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_material_dynamic_colors/package-material_color_utilities_dynamiccolor_material_dynamic_colors-library.html">material_dynamic_colors</a></li>
+      <li><a href="package-material_color_utilities_utils_math_utils/package-material_color_utilities_utils_math_utils-library.html">math_utils</a></li>
+      <li><a href="package-material_color_utilities_quantize_src_point_provider/package-material_color_utilities_quantize_src_point_provider-library.html">point_provider</a></li>
+      <li><a href="package-material_color_utilities_quantize_src_point_provider_lab/package-material_color_utilities_quantize_src_point_provider_lab-library.html">point_provider_lab</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer/package-material_color_utilities_quantize_quantizer-library.html">quantizer</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_celebi/package-material_color_utilities_quantize_quantizer_celebi-library.html">quantizer_celebi</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_map/package-material_color_utilities_quantize_quantizer_map-library.html">quantizer_map</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/package-material_color_utilities_quantize_quantizer_wsmeans-library.html">quantizer_wsmeans</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_wu/package-material_color_utilities_quantize_quantizer_wu-library.html">quantizer_wu</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme/package-material_color_utilities_scheme_scheme-library.html">scheme</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_content/package-material_color_utilities_scheme_scheme_content-library.html">scheme_content</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_expressive/package-material_color_utilities_scheme_scheme_expressive-library.html">scheme_expressive</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_fidelity/package-material_color_utilities_scheme_scheme_fidelity-library.html">scheme_fidelity</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_monochrome/package-material_color_utilities_scheme_scheme_monochrome-library.html">scheme_monochrome</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_neutral/package-material_color_utilities_scheme_scheme_neutral-library.html">scheme_neutral</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_tonal_spot/package-material_color_utilities_scheme_scheme_tonal_spot-library.html">scheme_tonal_spot</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_vibrant/package-material_color_utilities_scheme_scheme_vibrant-library.html">scheme_vibrant</a></li>
+      <li><a href="package-material_color_utilities_score_score/package-material_color_utilities_score_score-library.html">score</a></li>
+      <li><a href="package-material_color_utilities_utils_string_utils/package-material_color_utilities_utils_string_utils-library.html">string_utils</a></li>
+      <li><a href="package-material_color_utilities_temperature_temperature_cache/package-material_color_utilities_temperature_temperature_cache-library.html">temperature_cache</a></li>
+      <li><a href="package-material_color_utilities_palettes_tonal_palette/package-material_color_utilities_palettes_tonal_palette-library.html">tonal_palette</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_src_tone_delta_constraint/package-material_color_utilities_dynamiccolor_src_tone_delta_constraint-library.html">tone_delta_constraint</a></li>
+      <li><a href="package-material_color_utilities_scheme_variant/package-material_color_utilities_scheme_variant-library.html">variant</a></li>
+      <li><a href="package-material_color_utilities_hct_viewing_conditions/package-material_color_utilities_hct_viewing_conditions-library.html">viewing_conditions</a></li>
+      <li class="section-title">meta</li>
+      <li><a href="meta/meta-library.html">meta</a></li>
+      <li><a href="meta_dart2js/meta_dart2js-library.html">meta_dart2js</a></li>
+      <li><a href="meta_meta/meta_meta-library.html">meta_meta</a></li>
+      <li class="section-title">path</li>
+      <li><a href="package-path_path/package-path_path-library.html">path</a></li>
+      <li class="section-title">platform</li>
+      <li><a href="package-platform_platform/package-platform_platform-library.html">platform</a></li>
+      <li class="section-title">process</li>
+      <li><a href="package-process_process/package-process_process-library.html">process</a></li>
+      <li class="section-title">source_span</li>
+      <li><a href="package-source_span_source_span/package-source_span_source_span-library.html">source_span</a></li>
+      <li class="section-title">stack_trace</li>
+      <li><a href="package-stack_trace_stack_trace/package-stack_trace_stack_trace-library.html">stack_trace</a></li>
+      <li class="section-title">stream_channel</li>
+      <li><a href="package-stream_channel_isolate_channel/package-stream_channel_isolate_channel-library.html">isolate_channel</a></li>
+      <li><a href="package-stream_channel_stream_channel/package-stream_channel_stream_channel-library.html">stream_channel</a></li>
+      <li class="section-title">string_scanner</li>
+      <li><a href="package-string_scanner_string_scanner/package-string_scanner_string_scanner-library.html">string_scanner</a></li>
+      <li class="section-title">sync_http</li>
+      <li><a href="sync.http/sync.http-library.html">sync.http</a></li>
+      <li class="section-title">term_glyph</li>
+      <li><a href="package-term_glyph_term_glyph/package-term_glyph_term_glyph-library.html">term_glyph</a></li>
+      <li class="section-title">test_api</li>
+      <li><a href="package-test_api_backend/package-test_api_backend-library.html">backend</a></li>
+      <li><a href="package-test_api_hooks/package-test_api_hooks-library.html">hooks</a></li>
+      <li><a href="package-test_api_hooks_testing/package-test_api_hooks_testing-library.html">hooks_testing</a></li>
+      <li><a class="deprecated" href="test_api/test_api-library.html">test_api</a></li>
+      <li><a class="deprecated" href="test_api.fake/test_api.fake-library.html">test_api.fake</a></li>
+      <li><a href="test_api.scaffolding/test_api.scaffolding-library.html">test_api.scaffolding</a></li>
+      <li class="section-title">typed_data</li>
+      <li><a href="typed_data/typed_data-library.html">typed_data</a></li>
+      <li><a href="typed_data.typed_buffers/typed_data.typed_buffers-library.html">typed_data.typed_buffers</a></li>
+      <li class="section-title">vector_math</li>
+      <li><a class="deprecated" href="hash/hash-library.html">hash</a></li>
+      <li><a href="vector_math/vector_math-library.html">vector_math</a></li>
+      <li><a href="vector_math_64/vector_math_64-library.html">vector_math_64</a></li>
+      <li><a href="vector_math_geometry/vector_math_geometry-library.html">vector_math_geometry</a></li>
+      <li><a href="vector_math_lists/vector_math_lists-library.html">vector_math_lists</a></li>
+      <li><a href="vector_math_operations/vector_math_operations-library.html">vector_math_operations</a></li>
+      <li class="section-title">vm_service</li>
+      <li><a href="package-vm_service_utils/package-vm_service_utils-library.html">utils</a></li>
+      <li><a href="vm_service/vm_service-library.html">vm_service</a></li>
+      <li><a href="package-vm_service_vm_service_io/package-vm_service_vm_service_io-library.html">vm_service_io</a></li>
+      <li class="section-title">web</li>
+      <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+      <li><a href="package-web_web/package-web_web-library.html">web</a></li>
+      <li class="section-title">webdriver</li>
+      <li><a href="package-webdriver_support_async/package-webdriver_support_async-library.html">async</a></li>
+      <li><a href="package-webdriver_async_core/package-webdriver_async_core-library.html">async_core</a></li>
+      <li><a href="package-webdriver_async_html/package-webdriver_async_html-library.html">async_html</a></li>
+      <li><a href="package-webdriver_async_io/package-webdriver_async_io-library.html">async_io</a></li>
+      <li><a class="deprecated" href="core/core-library.html">core</a></li>
+      <li><a href="package-webdriver_support_firefox_profile/package-webdriver_support_firefox_profile-library.html">firefox_profile</a></li>
+      <li><a class="deprecated" href="io/io-library.html">io</a></li>
+      <li><a href="package-webdriver_support_stdio_stepper/package-webdriver_support_stdio_stepper-library.html">stdio_stepper</a></li>
+      <li><a href="package-webdriver_sync_core/package-webdriver_sync_core-library.html">sync_core</a></li>
+      <li><a href="package-webdriver_sync_io/package-webdriver_sync_io-library.html">sync_io</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>foundation library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

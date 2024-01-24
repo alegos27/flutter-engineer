@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the adjustPositionForNewDimensions method from the RangeMaintainingScrollPhysics class, for the Dart programming language.">
+  <title>adjustPositionForNewDimensions method - RangeMaintainingScrollPhysics class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/RangeMaintainingScrollPhysics-class.html">RangeMaintainingScrollPhysics</a></li>
+    <li class="self-crumb">adjustPositionForNewDimensions method</li>
+  </ol>
+  <div class="self-name">adjustPositionForNewDimensions</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;RangeMaintainingScrollPhysics-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/scroll_physics.dart#L569"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">adjustPositionForNewDimensions</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="dart-core/double-class.html">double</a></span>
+<span class="name ">adjustPositionForNewDimensions</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="adjustPositionForNewDimensions-param-oldPosition">{<span>required</span> <span class="type-annotation"><a href="widgets/ScrollMetrics-mixin.html">ScrollMetrics</a></span> <span class="parameter-name">oldPosition</span>, </span></li>
+<li><span class="parameter" id="adjustPositionForNewDimensions-param-newPosition"><span>required</span> <span class="type-annotation"><a href="widgets/ScrollMetrics-mixin.html">ScrollMetrics</a></span> <span class="parameter-name">newPosition</span>, </span></li>
+<li><span class="parameter" id="adjustPositionForNewDimensions-param-isScrolling"><span>required</span> <span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isScrolling</span>, </span></li>
+<li><span class="parameter" id="adjustPositionForNewDimensions-param-velocity"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">velocity</span>}</span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes what the scroll position should be given new viewport dimensions.</p>
+<p>This is called by <a href="widgets/ScrollPosition/correctForNewDimensions.html">ScrollPosition.correctForNewDimensions</a>.</p>
+<p>The arguments consist of the scroll metrics as they stood in the previous
+frame and the scroll metrics as they now stand after the last layout,
+including the position and minimum and maximum scroll extents; a flag
+indicating if the current <a href="widgets/ScrollActivity-class.html">ScrollActivity</a> considers that the user is
+actively scrolling (see <a href="widgets/ScrollActivity/isScrolling.html">ScrollActivity.isScrolling</a>); and the current
+velocity of the scroll position, if it is being driven by the scroll
+activity (this is 0.0 during a user gesture) (see
+<a href="widgets/ScrollActivity/velocity.html">ScrollActivity.velocity</a>).</p>
+<p>The scroll metrics will be identical except for the
+<a href="widgets/ScrollMetrics/minScrollExtent.html">ScrollMetrics.minScrollExtent</a> and <a href="widgets/ScrollMetrics/maxScrollExtent.html">ScrollMetrics.maxScrollExtent</a>. They
+are referred to as the <code>oldPosition</code> and <code>newPosition</code> (even though they
+both technically have the same "position", in the form of
+<a href="widgets/ScrollMetrics/pixels.html">ScrollMetrics.pixels</a>) because they are generated from the
+<a href="widgets/ScrollPosition-class.html">ScrollPosition</a> before and after updating the scroll extents.</p>
+<p>If the returned value does not exactly match the scroll offset given by
+the <code>newPosition</code> argument (see <a href="widgets/ScrollMetrics/pixels.html">ScrollMetrics.pixels</a>), then the
+<a href="widgets/ScrollPosition-class.html">ScrollPosition</a> will call <a href="widgets/ScrollPosition/correctPixels.html">ScrollPosition.correctPixels</a> to update the
+new scroll position to the returned value, and layout will be re-run. This
+is expensive. The new value is subject to further manipulation by
+<a href="widgets/ScrollPhysics/applyBoundaryConditions.html">applyBoundaryConditions</a>.</p>
+<p>If the returned value <em>does</em> match the <code>newPosition.pixels</code> scroll offset
+exactly, then <a href="widgets/ScrollPosition/applyNewDimensions.html">ScrollPosition.applyNewDimensions</a> will be called next. In
+that case, <a href="widgets/ScrollPhysics/applyBoundaryConditions.html">applyBoundaryConditions</a> is not applied to the return value.</p>
+<p>The given <a href="widgets/ScrollMetrics-mixin.html">ScrollMetrics</a> are only valid during this method call. Do not
+keep references to them to use later, as the values may update, may not
+update, or may update to reflect an entirely unrelated scrollable.</p>
+<p>The default implementation returns the <a href="widgets/ScrollMetrics/pixels.html">ScrollMetrics.pixels</a> of the
+<code>newPosition</code>, which indicates that the current scroll offset is
+acceptable.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/RangeMaintainingScrollPhysics-class.html">RangeMaintainingScrollPhysics</a>, which is enabled by default, and
+which prevents unexpected changes to the content dimensions from
+causing the scroll position to get any further out of bounds.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+double adjustPositionForNewDimensions({
+  required ScrollMetrics oldPosition,
+  required ScrollMetrics newPosition,
+  required bool isScrolling,
+  required double velocity,
+}) {
+  bool maintainOverscroll = true;
+  bool enforceBoundary = true;
+  if (velocity != 0.0) {
+    &#47;&#47; Don&#39;t try to adjust an animating position, the jumping around
+    &#47;&#47; would be distracting.
+    maintainOverscroll = false;
+    enforceBoundary = false;
+  }
+  if ((oldPosition.minScrollExtent == newPosition.minScrollExtent) &amp;&amp;
+      (oldPosition.maxScrollExtent == newPosition.maxScrollExtent)) {
+    &#47;&#47; If the extents haven&#39;t changed then ignore overscroll.
+    maintainOverscroll = false;
+  }
+  if (oldPosition.pixels != newPosition.pixels) {
+    &#47;&#47; If the position has been changed already, then it might have
+    &#47;&#47; been adjusted to expect new overscroll, so don&#39;t try to
+    &#47;&#47; maintain the relative overscroll.
+    maintainOverscroll = false;
+    if (oldPosition.minScrollExtent.isFinite &amp;&amp; oldPosition.maxScrollExtent.isFinite &amp;&amp;
+        newPosition.minScrollExtent.isFinite &amp;&amp; newPosition.maxScrollExtent.isFinite) {
+      &#47;&#47; In addition, if the position changed then we don&#39;t enforce the new
+      &#47;&#47; boundary if both the new and previous boundaries are entirely finite.
+      &#47;&#47; A common case where the position changes while one
+      &#47;&#47; of the extents is infinite is a lazily-loaded list. (If the
+      &#47;&#47; boundaries were finite, and the position changed, then we
+      &#47;&#47; assume it was intentional.)
+      enforceBoundary = false;
+    }
+  }
+  if ((oldPosition.pixels &lt; oldPosition.minScrollExtent) ||
+      (oldPosition.pixels &gt; oldPosition.maxScrollExtent)) {
+    &#47;&#47; If the old position was out of range, then we should
+    &#47;&#47; not try to keep the new position in range.
+    enforceBoundary = false;
+  }
+  if (maintainOverscroll) {
+    &#47;&#47; Force the new position to be no more out of range than it was before, if:
+    &#47;&#47;  * it was overscrolled, and
+    &#47;&#47;  * the extents have decreased, meaning that some content was removed. The
+    &#47;&#47;    reason for this condition is that when new content is added, keeping
+    &#47;&#47;    the same overscroll would mean that instead of showing it to the user,
+    &#47;&#47;    all of it is being skipped by jumping right to the max extent.
+    if (oldPosition.pixels &lt; oldPosition.minScrollExtent &amp;&amp;
+        newPosition.minScrollExtent &gt; oldPosition.minScrollExtent) {
+      final double oldDelta = oldPosition.minScrollExtent - oldPosition.pixels;
+      return newPosition.minScrollExtent - oldDelta;
+    }
+    if (oldPosition.pixels &gt; oldPosition.maxScrollExtent &amp;&amp;
+        newPosition.maxScrollExtent &lt; oldPosition.maxScrollExtent) {
+      final double oldDelta = oldPosition.pixels - oldPosition.maxScrollExtent;
+      return newPosition.maxScrollExtent + oldDelta;
+    }
+  }
+  &#47;&#47; If we&#39;re not forcing the overscroll, defer to other physics.
+  double result = super.adjustPositionForNewDimensions(oldPosition: oldPosition, newPosition: newPosition, isScrolling: isScrolling, velocity: velocity);
+  if (enforceBoundary) {
+    &#47;&#47; ...but if they put us out of range then reinforce the boundary.
+    result = clampDouble(result, newPosition.minScrollExtent, newPosition.maxScrollExtent);
+  }
+  return result;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/RangeMaintainingScrollPhysics-class.html">RangeMaintainingScrollPhysics</a></li>
+    <li class="self-crumb">adjustPositionForNewDimensions method</li>
+</ol>
+
+
+    <h5>RangeMaintainingScrollPhysics class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

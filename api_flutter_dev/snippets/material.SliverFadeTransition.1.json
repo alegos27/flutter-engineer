@@ -1,0 +1,13 @@
+{
+    "id": "material.SliverFadeTransition.1",
+    "element": "SliverFadeTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 632,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "Creates a [CustomScrollView] with a [SliverFixedExtentList] that uses a\n[SliverFadeTransition] to fade the list in and out.",
+    "file": "material.SliverFadeTransition.1.dart"
+}

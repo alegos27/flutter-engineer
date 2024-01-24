@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ImageProvider class from the painting library, for the Dart programming language.">
+  <title>ImageProvider class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">ImageProvider<span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a></span>&gt;</span> class</li>
+  </ol>
+  <div class="self-name">ImageProvider</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;painting-library-sidebar.html"
+      data-below-sidebar="painting&#47;ImageProvider-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/image_provider.dart#L342"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">ImageProvider&lt;<wbr><span class="type-parameter">T extends Object</span>&gt;</span> class 
+    <a href="https://dart.dev/language/classes#abstract-classes" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Identifies an image without committing to the precise final asset. This
+allows a set of images to be identified and for the precise image to later
+be resolved based on the environment, e.g. the device pixel ratio.</p>
+<p>To obtain an <a href="painting/ImageStream-class.html">ImageStream</a> from an <a href="painting/ImageProvider-class.html">ImageProvider</a>, call <a href="painting/ImageProvider/resolve.html">resolve</a>,
+passing it an <a href="painting/ImageConfiguration-class.html">ImageConfiguration</a> object.</p>
+<p><a href="painting/ImageProvider-class.html">ImageProvider</a> uses the global <a href="painting/imageCache.html">imageCache</a> to cache images.</p>
+<p>The type argument <code>T</code> is the type of the object used to represent a resolved
+configuration. This is also the type used for the key in the image cache. It
+should be immutable and implement the <a href="dart-core/Object/operator_equals.html">==</a> operator and the <a href="dart-core/Object/hashCode.html">hashCode</a>
+getter. Subclasses should subclass a variant of <a href="painting/ImageProvider-class.html">ImageProvider</a> with an
+explicit <code>T</code> type argument.</p>
+<p>The type argument does not have to be specified when using the type as an
+argument (where any image provider is acceptable).</p>
+<p>The following image formats are supported: JPEG, PNG, GIF, Animated GIF, WebP, Animated WebP, BMP, and WBMP. Additional
+formats may be supported by the underlying platform. Flutter will
+attempt to call platform API to decode unrecognized formats, and if the
+platform API supports decoding the image Flutter will be able to render it.</p>
+<h2 id="lifecycle-of-resolving-an-image">Lifecycle of resolving an image</h2>
+<p>The <a href="painting/ImageProvider-class.html">ImageProvider</a> goes through the following lifecycle to resolve an
+image, once the <a href="painting/ImageProvider/resolve.html">resolve</a> method is called:</p>
+<ol>
+<li>Create an <a href="painting/ImageStream-class.html">ImageStream</a> using <a href="painting/ImageProvider/createStream.html">createStream</a> to return to the caller.
+This stream will be used to communicate back to the caller when the
+image is decoded and ready to display, or when an error occurs.</li>
+<li>Obtain the key for the image using <a href="painting/ImageProvider/obtainKey.html">obtainKey</a>.
+Calling this method can throw exceptions into the zone asynchronously
+or into the call stack synchronously. To handle that, an error handler
+is created that catches both synchronous and asynchronous errors, to
+make sure errors can be routed to the correct consumers.
+The error handler is passed on to <a href="painting/ImageProvider/resolveStreamForKey.html">resolveStreamForKey</a> and the
+<a href="painting/ImageCache-class.html">ImageCache</a>.</li>
+<li>If the key is successfully obtained, schedule resolution of the image
+using that key. This is handled by <a href="painting/ImageProvider/resolveStreamForKey.html">resolveStreamForKey</a>. That method
+may fizzle if it determines the image is no longer necessary, use the
+provided <a href="painting/ImageErrorListener.html">ImageErrorListener</a> to report an error, set the completer
+from the cache if possible, or call <a href="painting/ImageProvider/loadImage.html">loadImage</a> to fetch the encoded image
+bytes and schedule decoding.</li>
+<li>The <a href="painting/ImageProvider/loadImage.html">loadImage</a> method is responsible for both fetching the encoded bytes
+and decoding them using the provided <a href="painting/ImageDecoderCallback.html">ImageDecoderCallback</a>. It is called
+in a context that uses the <a href="painting/ImageErrorListener.html">ImageErrorListener</a> to report errors back.</li>
+</ol>
+<p>Subclasses normally only have to implement the <a href="painting/ImageProvider/loadImage.html">loadImage</a> and <a href="painting/ImageProvider/obtainKey.html">obtainKey</a>
+methods. A subclass that needs finer grained control over the <a href="painting/ImageStream-class.html">ImageStream</a>
+type must override <a href="painting/ImageProvider/createStream.html">createStream</a>. A subclass that needs finer grained
+control over the resolution, such as delaying calling <a href="painting/ImageProvider/loadImage.html">loadImage</a>, must override
+<a href="painting/ImageProvider/resolveStreamForKey.html">resolveStreamForKey</a>.</p>
+<p>The <a href="painting/ImageProvider/resolve.html">resolve</a> method is marked as <a href="meta/nonVirtual-constant.html">nonVirtual</a> so that <a href="painting/ImageProvider-class.html">ImageProvider</a>s can
+be properly composed, and so that the base class can properly set up error
+handling for subsequent methods.</p>
+<h2 id="using-an-imageprovider">Using an <a href="painting/ImageProvider-class.html">ImageProvider</a></h2>
+<p>
+<a name="painting.ImageProvider.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The following shows the code required to write a widget that fully conforms
+to the <a href="painting/ImageProvider-class.html">ImageProvider</a> and <a href="widgets/Widget-class.html">Widget</a> protocols. (It is essentially a
+bare-bones version of the <a href="widgets/Image-class.html">widgets.Image</a> widget.)
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'painting.ImageProvider.1');" onclick="fixHref(this, 'painting.ImageProvider.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">class MyImage extends StatefulWidget {
+  const MyImage({
+    super.key,
+    required this.imageProvider,
+  });
+
+  final ImageProvider imageProvider;
+
+  @override
+  State&lt;MyImage&gt; createState() =&gt; _MyImageState();
+}
+
+class _MyImageState extends State&lt;MyImage&gt; {
+  ImageStream? _imageStream;
+  ImageInfo? _imageInfo;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    &#47;&#47; We call _getImage here because createLocalImageConfiguration() needs to
+    &#47;&#47; be called again if the dependencies changed, in case the changes relate
+    &#47;&#47; to the DefaultAssetBundle, MediaQuery, etc, which that method uses.
+    _getImage();
+  }
+
+  @override
+  void didUpdateWidget(MyImage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.imageProvider != oldWidget.imageProvider) {
+      _getImage();
+    }
+  }
+
+  void _getImage() {
+    final ImageStream? oldImageStream = _imageStream;
+    _imageStream = widget.imageProvider.resolve(createLocalImageConfiguration(context));
+    if (_imageStream!.key != oldImageStream?.key) {
+      &#47;&#47; If the keys are the same, then we got the same image back, and so we don&#39;t
+      &#47;&#47; need to update the listeners. If the key changed, though, we must make sure
+      &#47;&#47; to switch our listeners to the new image stream.
+      final ImageStreamListener listener = ImageStreamListener(_updateImage);
+      oldImageStream?.removeListener(listener);
+      _imageStream!.addListener(listener);
+    }
+  }
+
+  void _updateImage(ImageInfo imageInfo, bool synchronousCall) {
+    setState(() {
+      &#47;&#47; Trigger a build whenever the image changes.
+      _imageInfo?.dispose();
+      _imageInfo = imageInfo;
+    });
+  }
+
+  @override
+  void dispose() {
+    _imageStream?.removeListener(ImageStreamListener(_updateImage));
+    _imageInfo?.dispose();
+    _imageInfo = null;
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return RawImage(
+      image: _imageInfo?.image, &#47;&#47; this is a dart:ui Image object
+      scale: _imageInfo?.scale ?? 1.0,
+    );
+  }
+}</code></pre>
+  </div>
+</div>
+</p>
+<h2 id="creating-an-imageprovider">Creating an <a href="painting/ImageProvider-class.html">ImageProvider</a></h2>
+<p>
+<a name="painting.ImageProvider.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+In this example, a variant of <a href="painting/NetworkImage-class.html">NetworkImage</a> is created that passes all the
+<a href="painting/ImageConfiguration-class.html">ImageConfiguration</a> information (locale, platform, size, etc) to the server
+using query arguments in the image URL.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'painting.ImageProvider.2');" onclick="fixHref(this, 'painting.ImageProvider.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=painting.ImageProvider.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=painting.ImageProvider.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="painting/AssetBundleImageProvider-class.html">AssetBundleImageProvider</a></li>
+          <li><a href="painting/FileImage-class.html">FileImage</a></li>
+          <li><a href="painting/MemoryImage-class.html">MemoryImage</a></li>
+          <li><a href="painting/NetworkImage-class.html">NetworkImage</a></li>
+          <li><a href="painting/ResizeImage-class.html">ResizeImage</a></li>
+          <li><a href="widgets/ScrollAwareImageProvider-class.html">ScrollAwareImageProvider</a></li>
+        </ul></dd>
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="meta/optionalTypeArgs-constant.html">optionalTypeArgs</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ImageProvider" class="callable">
+          <span class="name"><a href="painting/ImageProvider/ImageProvider.html">ImageProvider</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Abstract const constructor. This constructor enables subclasses to provide
+const constructors so that they can be used in const expressions.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createStream" class="callable">
+  <span class="name"><a href="painting/ImageProvider/createStream.html">createStream</a></span><span class="signature">(<wbr><span class="parameter" id="createStream-param-configuration"><span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ImageStream-class.html">ImageStream</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called by <a href="painting/ImageProvider/resolve.html">resolve</a> to create the <a href="painting/ImageStream-class.html">ImageStream</a> it returns.
+  
+
+</dd>
+
+        <dt id="evict" class="callable">
+  <span class="name"><a href="painting/ImageProvider/evict.html">evict</a></span><span class="signature">(<wbr><span class="parameter" id="evict-param-cache">{<span class="type-annotation"><a href="painting/ImageCache-class.html">ImageCache</a>?</span> <span class="parameter-name">cache</span>, </span><span class="parameter" id="evict-param-configuration"><span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span> = <span class="default-value">ImageConfiguration.empty</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Evicts an entry from the image cache.
+  
+
+</dd>
+
+        <dt id="loadBuffer" class="callable">
+  <span class="name deprecated"><a class="deprecated" href="painting/ImageProvider/loadBuffer.html">loadBuffer</a></span><span class="signature">(<wbr><span class="parameter" id="loadBuffer-param-key"><span class="type-annotation">T</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="loadBuffer-param-decode"><span class="type-annotation"><a class="deprecated" href="painting/DecoderBufferCallback.html">DecoderBufferCallback</a></span> <span class="parameter-name">decode</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts a key into an <a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a>, and begins fetching the
+image.
+  
+
+</dd>
+
+        <dt id="loadImage" class="callable">
+  <span class="name"><a href="painting/ImageProvider/loadImage.html">loadImage</a></span><span class="signature">(<wbr><span class="parameter" id="loadImage-param-key"><span class="type-annotation">T</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="loadImage-param-decode"><span class="type-annotation"><a href="painting/ImageDecoderCallback.html">ImageDecoderCallback</a></span> <span class="parameter-name">decode</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts a key into an <a href="painting/ImageStreamCompleter-class.html">ImageStreamCompleter</a>, and begins fetching the
+image.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="obtainCacheStatus" class="callable">
+  <span class="name"><a href="painting/ImageProvider/obtainCacheStatus.html">obtainCacheStatus</a></span><span class="signature">(<wbr><span class="parameter" id="obtainCacheStatus-param-configuration">{<span>required</span> <span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span>, </span><span class="parameter" id="obtainCacheStatus-param-handleError"><span class="type-annotation"><a href="painting/ImageErrorListener.html">ImageErrorListener</a>?</span> <span class="parameter-name">handleError</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="painting/ImageCacheStatus-class.html">ImageCacheStatus</a>?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the cache location for the key that this <a href="painting/ImageProvider-class.html">ImageProvider</a> creates.
+  
+
+</dd>
+
+        <dt id="obtainKey" class="callable">
+  <span class="name"><a href="painting/ImageProvider/obtainKey.html">obtainKey</a></span><span class="signature">(<wbr><span class="parameter" id="obtainKey-param-configuration"><span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Converts an <a href="painting/ImageProvider-class.html">ImageProvider</a>'s settings plus an <a href="painting/ImageConfiguration-class.html">ImageConfiguration</a> to a key
+that describes the precise image to load.
+  
+
+</dd>
+
+        <dt id="resolve" class="callable">
+  <span class="name"><a href="painting/ImageProvider/resolve.html">resolve</a></span><span class="signature">(<wbr><span class="parameter" id="resolve-param-configuration"><span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/ImageStream-class.html">ImageStream</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Resolves this image provider using the given <code>configuration</code>, returning
+an <a href="painting/ImageStream-class.html">ImageStream</a>.
+  
+
+</dd>
+
+        <dt id="resolveStreamForKey" class="callable">
+  <span class="name"><a href="painting/ImageProvider/resolveStreamForKey.html">resolveStreamForKey</a></span><span class="signature">(<wbr><span class="parameter" id="resolveStreamForKey-param-configuration"><span class="type-annotation"><a href="painting/ImageConfiguration-class.html">ImageConfiguration</a></span> <span class="parameter-name">configuration</span>, </span><span class="parameter" id="resolveStreamForKey-param-stream"><span class="type-annotation"><a href="painting/ImageStream-class.html">ImageStream</a></span> <span class="parameter-name">stream</span>, </span><span class="parameter" id="resolveStreamForKey-param-key"><span class="type-annotation">T</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="resolveStreamForKey-param-handleError"><span class="type-annotation"><a href="painting/ImageErrorListener.html">ImageErrorListener</a></span> <span class="parameter-name">handleError</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called by <a href="painting/ImageProvider/resolve.html">resolve</a> with the key returned by <a href="painting/ImageProvider/obtainKey.html">obtainKey</a>.
+  
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="painting/ImageProvider/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">ImageProvider<span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="dart-core/Object-class.html">Object</a></span>&gt;</span> class</li>
+</ol>
+
+
+    <!--<h5>painting library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.ScrollPosition.3",
+    "element": "ScrollPosition",
+    "sourcePath": "lib/src/widgets/scroll_position.dart",
+    "sourceLine": 179,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample shows how a [ScrollMetricsNotification] is dispatched when\nthe `windowSize` is changed. Press the floating action button to increase\nthe scrollable window's size.",
+    "file": "cupertino.ScrollPosition.3.dart"
+}

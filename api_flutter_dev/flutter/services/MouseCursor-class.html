@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MouseCursor class from the services library, for the Dart programming language.">
+  <title>MouseCursor class - services library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">MouseCursor class</li>
+  </ol>
+  <div class="self-name">MouseCursor</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="services&#47;services-library-sidebar.html"
+      data-below-sidebar="services&#47;MouseCursor-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/services/mouse_cursor.dart#L185"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">MouseCursor</span> class 
+    <a href="https://dart.dev/language/classes#abstract-classes" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An interface for mouse cursor definitions.</p>
+<p>A mouse cursor is a graphical image on the screen that echoes the movement
+of a pointing device, such as a mouse or a stylus. A <a href="services/MouseCursor-class.html">MouseCursor</a> object
+defines a kind of mouse cursor, such as an arrow, a pointing hand, or an
+I-beam.</p>
+<p>During the painting phase, <a href="services/MouseCursor-class.html">MouseCursor</a> objects are assigned to regions on
+the screen via annotations. Later during a device update (e.g. when a mouse
+moves), <a href="rendering/MouseTracker-class.html">MouseTracker</a> finds the <em>active cursor</em> of each mouse device, which
+is the front-most region associated with the position of each mouse cursor,
+or defaults to <a href="services/SystemMouseCursors/basic-constant.html">SystemMouseCursors.basic</a> if no cursors are associated with
+the position. <a href="rendering/MouseTracker-class.html">MouseTracker</a> changes the cursor of the pointer if the new
+active cursor is different from the previous active cursor, whose effect is
+defined by the session created by <a href="services/MouseCursor/createSession.html">createSession</a>.</p>
+<h2 id="cursor-classes">Cursor classes</h2>
+<p>A <a href="services/SystemMouseCursor-class.html">SystemMouseCursor</a> is a cursor that is natively supported by the
+platform that the program is running on. All supported system mouse cursors
+are enumerated in <a href="services/SystemMouseCursors-class.html">SystemMouseCursors</a>.</p>
+<h2 id="using-cursors">Using cursors</h2>
+<p>A <a href="services/MouseCursor-class.html">MouseCursor</a> object is used by being assigned to a <a href="widgets/MouseRegion-class.html">MouseRegion</a> or
+another widget that exposes the <a href="widgets/MouseRegion-class.html">MouseRegion</a> API, such as
+<a href="material/InkResponse/mouseCursor.html">InkResponse.mouseCursor</a>.</p>
+<p>
+<a name="services.MouseCursor.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample creates a rectangular region that is wrapped by a <a href="widgets/MouseRegion-class.html">MouseRegion</a>
+with a system mouse cursor. The mouse pointer becomes an I-beam when
+hovering over the region.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'services.MouseCursor.1');" onclick="fixHref(this, 'services.MouseCursor.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=services.MouseCursor.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=services.MouseCursor.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>Assigning regions with mouse cursors on platforms that do not support mouse
+cursors, or when there are no mice connected, will have no effect.</p>
+<h2 id="related-classes">Related classes</h2>
+<p><a href="services/MouseCursorSession-class.html">MouseCursorSession</a> represents the duration when a pointing device displays
+a cursor, and defines the states and behaviors of the cursor. Every mouse
+cursor class usually has a corresponding <a href="services/MouseCursorSession-class.html">MouseCursorSession</a> class.</p>
+<p><a href="services/MouseCursorManager-class.html">MouseCursorManager</a> is a class that adds the feature of changing
+cursors to <a href="rendering/MouseTracker-class.html">MouseTracker</a>, which tracks the relationship between mouse
+devices and annotations. <a href="services/MouseCursorManager-class.html">MouseCursorManager</a> is usually used as a part
+of <a href="rendering/MouseTracker-class.html">MouseTracker</a>.</p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+  <dt>Mixed in types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="foundation/Diagnosticable-mixin.html">Diagnosticable</a></li>
+    </ul>
+  </dd>
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="material/MaterialStateMouseCursor-class.html">MaterialStateMouseCursor</a></li>
+          <li><a href="services/SystemMouseCursor-class.html">SystemMouseCursor</a></li>
+        </ul></dd>
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="meta/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="MouseCursor" class="callable">
+          <span class="name"><a href="services/MouseCursor/MouseCursor.html">MouseCursor</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          Abstract const constructor. This constructor enables subclasses to provide
+const constructors so that they can be used in const expressions.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="debugDescription" class="property">
+  <span class="name"><a href="services/MouseCursor/debugDescription.html">debugDescription</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  A very short description of the mouse cursor.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createSession" class="callable">
+  <span class="name"><a href="services/MouseCursor/createSession.html">createSession</a></span><span class="signature">(<wbr><span class="parameter" id="createSession-param-device"><span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">device</span></span>)
+    <span class="returntype parameter">&#8594; <a href="services/MouseCursorSession-class.html">MouseCursorSession</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Associate a pointing device to this cursor.
+  
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable">
+  <span class="name"><a href="services/MouseCursor/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A string representation of this object.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A brief description of this object, usually just the <a href="dart-core/Object/runtimeType.html">runtimeType</a> and the
+<a href="dart-core/Object/hashCode.html">hashCode</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="defer" class="constant">
+    <span class="name "><a href="services/MouseCursor/defer-constant.html">defer</a></span>
+  <span class="signature">&#8594; const <a href="services/MouseCursor-class.html">MouseCursor</a></span>
+  
+
+</dt>
+<dd>
+  A special class that indicates that the region with this cursor defers the
+choice of cursor to the next region behind it.
+  
+
+    <div>
+      <span class="signature"><code>_DeferringMouseCursor._()</code></span>
+    </div>
+</dd>
+
+        <dt id="uncontrolled" class="constant">
+    <span class="name "><a href="services/MouseCursor/uncontrolled-constant.html">uncontrolled</a></span>
+  <span class="signature">&#8594; const <a href="services/MouseCursor-class.html">MouseCursor</a></span>
+  
+
+</dt>
+<dd>
+  A special value that doesn't change cursor by itself, but make a region
+that blocks other regions behind it from changing the cursor.
+  
+
+    <div>
+      <span class="signature"><code>_NoopMouseCursor._()</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">MouseCursor class</li>
+</ol>
+
+
+    <!--<h5>services library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

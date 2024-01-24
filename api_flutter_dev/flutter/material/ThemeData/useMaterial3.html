@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the useMaterial3 property from the ThemeData class, for the Dart programming language.">
+  <title>useMaterial3 property - ThemeData class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ThemeData-class.html">ThemeData</a></li>
+    <li class="self-crumb">useMaterial3 property</li>
+  </ol>
+  <div class="self-name">useMaterial3</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;ThemeData-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/theme_data.dart#L1103"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-property">useMaterial3</span> property 
+</h1></div>
+
+        <section class="multi-line-signature">
+          
+          <a href="dart-core/bool-class.html">bool</a>
+          <span class="name ">useMaterial3</span>
+          <div class="features"><span class="feature">final</span></div>
+
+        </section>
+        
+<section class="desc markdown">
+  <p>A temporary flag that can be used to opt-out of Material 3 features.</p>
+<p>This flag is <em>true</em> by default. If false, then components will
+continue to use the colors, typography and other features of
+Material 2.</p>
+<p>In the long run this flag will be deprecated and eventually
+only Material 3 will be supported. We recommend that applications
+migrate to Material 3 as soon as that's practical. Until that migration
+is complete, this flag can be set to false.</p>
+<h2 id="defaults">Defaults</h2>
+<p>If a <a href="material/ThemeData-class.html">ThemeData</a> is <em>constructed</em> with <a href="material/ThemeData/useMaterial3.html">useMaterial3</a> set to true, then
+some properties will get updated defaults. However, the
+<a href="material/ThemeData/copyWith.html">ThemeData.copyWith</a> method with <a href="material/ThemeData/useMaterial3.html">useMaterial3</a> set to true will <em>not</em>
+change any of these properties in the resulting <a href="material/ThemeData-class.html">ThemeData</a>.</p>
+<style>table,td,th { border-collapse: collapse; padding: 0.45em; } td { border: 1px solid }</style>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="left">Material 3 default</th>
+<th align="left">Material 2 default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><a href="material/ThemeData/colorScheme.html">colorScheme</a></td>
+<td align="left">M3 baseline light color scheme</td>
+<td align="left">M2 baseline light color scheme</td>
+</tr>
+<tr>
+<td align="left"><a href="material/ThemeData/typography.html">typography</a></td>
+<td align="left"><a href="material/Typography/Typography.material2021.html">Typography.material2021</a></td>
+<td align="left"><a href="material/Typography/Typography.material2014.html">Typography.material2014</a></td>
+</tr>
+<tr>
+<td align="left"><a href="material/ThemeData/splashFactory.html">splashFactory</a></td>
+<td align="left"><a href="material/InkSparkle-class.html">InkSparkle</a>* or <a href="material/InkRipple-class.html">InkRipple</a></td>
+<td align="left"><a href="material/InkSplash-class.html">InkSplash</a></td>
+</tr>
+</tbody>
+</table>
+<p>* if the target platform is Android and the app is not
+running on the web, otherwise it will fallback to <a href="material/InkRipple-class.html">InkRipple</a>.</p>
+<p>If <a href="material/ThemeData/brightness.html">brightness</a> is <a href="dart-ui/Brightness.html">Brightness.dark</a> then the default color scheme will
+be either the M3 baseline dark color scheme or the M2 baseline dark color
+scheme depending on <a href="material/ThemeData/useMaterial3.html">useMaterial3</a>.</p>
+<h2 id="affected-widgets">Affected widgets</h2>
+<p>This flag affects styles and components.</p>
+<h3 id="styles">Styles</h3>
+<ul>
+<li>Color: <a href="material/ColorScheme-class.html">ColorScheme</a>, <a href="material/Material-class.html">Material</a> (see table above)</li>
+<li>Shape: (see components below)</li>
+<li>Typography: <a href="material/Typography-class.html">Typography</a> (see table above)</li>
+</ul>
+<h3 id="components">Components</h3>
+<ul>
+<li>Badges: <a href="material/Badge-class.html">Badge</a></li>
+<li>Bottom app bar: <a href="material/BottomAppBar-class.html">BottomAppBar</a></li>
+<li>Bottom sheets: <a href="material/BottomSheet-class.html">BottomSheet</a></li>
+<li>Buttons
+<ul>
+<li>Common buttons: <a href="material/ElevatedButton-class.html">ElevatedButton</a>, <a href="material/FilledButton-class.html">FilledButton</a>, <a href="material/FilledButton/FilledButton.tonal.html">FilledButton.tonal</a>, <a href="material/OutlinedButton-class.html">OutlinedButton</a>, <a href="material/TextButton-class.html">TextButton</a></li>
+<li>FAB: <a href="material/FloatingActionButton-class.html">FloatingActionButton</a>, <a href="material/FloatingActionButton/FloatingActionButton.extended.html">FloatingActionButton.extended</a></li>
+<li>Icon buttons: <a href="material/IconButton-class.html">IconButton</a>, <a href="material/IconButton/IconButton.filled.html">IconButton.filled</a> (<em>new</em>), <a href="material/IconButton/IconButton.filledTonal.html">IconButton.filledTonal</a>, <a href="material/IconButton/IconButton.outlined.html">IconButton.outlined</a></li>
+<li>Segmented buttons: <a href="material/SegmentedButton-class.html">SegmentedButton</a> (replacing <a href="material/ToggleButtons-class.html">ToggleButtons</a>)</li>
+</ul>
+</li>
+<li>Cards: <a href="material/Card-class.html">Card</a></li>
+<li>Checkbox: <a href="material/Checkbox-class.html">Checkbox</a>, <a href="material/CheckboxListTile-class.html">CheckboxListTile</a></li>
+<li>Chips:
+<ul>
+<li><a href="material/ActionChip-class.html">ActionChip</a> (used for Assist and Suggestion chips),</li>
+<li><a href="material/FilterChip-class.html">FilterChip</a>, <a href="material/ChoiceChip-class.html">ChoiceChip</a> (used for single selection filter chips),</li>
+<li><a href="material/InputChip-class.html">InputChip</a></li>
+</ul>
+</li>
+<li>Date pickers: <a href="material/showDatePicker.html">showDatePicker</a>, <a href="material/showDateRangePicker.html">showDateRangePicker</a>, <a href="material/DatePickerDialog-class.html">DatePickerDialog</a>, <a href="material/DateRangePickerDialog-class.html">DateRangePickerDialog</a>, <a href="material/InputDatePickerFormField-class.html">InputDatePickerFormField</a></li>
+<li>Dialogs: <a href="material/AlertDialog-class.html">AlertDialog</a>, <a href="material/Dialog/Dialog.fullscreen.html">Dialog.fullscreen</a></li>
+<li>Divider: <a href="material/Divider-class.html">Divider</a>, <a href="material/VerticalDivider-class.html">VerticalDivider</a></li>
+<li>Lists: <a href="material/ListTile-class.html">ListTile</a></li>
+<li>Menus: <a href="material/MenuAnchor-class.html">MenuAnchor</a>, <a href="material/DropdownMenu-class.html">DropdownMenu</a>, <a href="material/MenuBar-class.html">MenuBar</a></li>
+<li>Navigation bar: <a href="material/NavigationBar-class.html">NavigationBar</a> (replacing <a href="material/BottomNavigationBar-class.html">BottomNavigationBar</a>)</li>
+<li>Navigation drawer: <a href="material/NavigationDrawer-class.html">NavigationDrawer</a> (replacing <a href="material/Drawer-class.html">Drawer</a>)</li>
+<li>Navigation rail: <a href="material/NavigationRail-class.html">NavigationRail</a></li>
+<li>Progress indicators: <a href="material/CircularProgressIndicator-class.html">CircularProgressIndicator</a>, <a href="material/LinearProgressIndicator-class.html">LinearProgressIndicator</a></li>
+<li>Radio button: <a href="material/Radio-class.html">Radio</a>, <a href="material/RadioListTile-class.html">RadioListTile</a></li>
+<li>Search: <a href="material/SearchBar-class.html">SearchBar</a>, <a href="material/SearchAnchor-class.html">SearchAnchor</a>,</li>
+<li>Snack bar: <a href="material/SnackBar-class.html">SnackBar</a></li>
+<li>Slider: <a href="material/Slider-class.html">Slider</a>, <a href="material/RangeSlider-class.html">RangeSlider</a></li>
+<li>Switch: <a href="material/Switch-class.html">Switch</a>, <a href="material/SwitchListTile-class.html">SwitchListTile</a></li>
+<li>Tabs: <a href="material/TabBar-class.html">TabBar</a>, <a href="material/TabBar/TabBar.secondary.html">TabBar.secondary</a></li>
+<li>TextFields: <a href="material/TextField-class.html">TextField</a> together with its <a href="material/InputDecoration-class.html">InputDecoration</a></li>
+<li>Time pickers: <a href="material/showTimePicker.html">showTimePicker</a>, <a href="material/TimePickerDialog-class.html">TimePickerDialog</a></li>
+<li>Top app bar: <a href="material/AppBar-class.html">AppBar</a>, <a href="material/SliverAppBar-class.html">SliverAppBar</a>, <a href="material/SliverAppBar/SliverAppBar.medium.html">SliverAppBar.medium</a>, <a href="material/SliverAppBar/SliverAppBar.large.html">SliverAppBar.large</a></li>
+</ul>
+<p>In addition, this flag enables features introduced in Android 12.</p>
+<ul>
+<li>Stretch overscroll: <a href="material/MaterialScrollBehavior-class.html">MaterialScrollBehavior</a></li>
+<li>Ripple: <code>splashFactory</code> (see table above)</li>
+</ul>
+<p>See also:</p>
+<ul>
+<li><a href="https://m3.material.io/">Material 3 specification</a>.</li>
+</ul>
+</section>
+
+        
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">final bool useMaterial3;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ThemeData-class.html">ThemeData</a></li>
+    <li class="self-crumb">useMaterial3 property</li>
+</ol>
+
+
+    <h5>ThemeData class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

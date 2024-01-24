@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the calculateDynamicTone method from the DynamicColor class, for the Dart programming language.">
+  <title>calculateDynamicTone method - DynamicColor class - dynamic_color library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/package-material_color_utilities_dynamiccolor_dynamic_color-library.html">dynamic_color</a></li>
+    <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/DynamicColor-class.html">DynamicColor</a></li>
+    <li class="self-crumb">calculateDynamicTone static method</li>
+  </ol>
+  <div class="self-name">calculateDynamicTone</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-material_color_utilities_dynamiccolor_dynamic_color&#47;DynamicColor-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">calculateDynamicTone</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-core/double-class.html">double</a></span>
+<span class="name ">calculateDynamicTone</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="calculateDynamicTone-param-scheme">{<span>required</span> <span class="type-annotation"><a href="package-material_color_utilities_scheme_dynamic_scheme/DynamicScheme-class.html">DynamicScheme</a></span> <span class="parameter-name">scheme</span>, </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-toneStandard"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">toneStandard</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="package-material_color_utilities_scheme_dynamic_scheme/DynamicScheme-class.html">DynamicScheme</a></span></span></li>
+</ol>
+), </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-toneToJudge"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">toneToJudge</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="package-material_color_utilities_dynamiccolor_dynamic_color/DynamicColor-class.html">DynamicColor</a></span></span></li>
+</ol>
+), </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-desiredTone"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">desiredTone</span>(<ol class="parameter-list"><li><span class="parameter" id="param-standardRatio"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">standardRatio</span>, </span></li>
+<li><span class="parameter" id="param-bgTone"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">bgTone</span></span></li>
+</ol>
+), </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-background"><span>required</span> <span class="type-annotation"><a href="package-material_color_utilities_dynamiccolor_dynamic_color/DynamicColor-class.html">DynamicColor</a>?</span> <span class="parameter-name">background</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="package-material_color_utilities_scheme_dynamic_scheme/DynamicScheme-class.html">DynamicScheme</a></span></span></li>
+</ol>
+)?, </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-constraint"><span>required</span> <span class="type-annotation"><a href="package-material_color_utilities_dynamiccolor_src_tone_delta_constraint/ToneDeltaConstraint-class.html">ToneDeltaConstraint</a></span> <span class="parameter-name">constraint</span>(<ol class="parameter-list"><li><span class="parameter" id="param-"><span class="type-annotation"><a href="package-material_color_utilities_scheme_dynamic_scheme/DynamicScheme-class.html">DynamicScheme</a></span></span></li>
+</ol>
+)?, </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-minRatio"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">minRatio</span>(<ol class="parameter-list"><li><span class="parameter" id="param-standardRatio"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">standardRatio</span></span></li>
+</ol>
+)?, </span></li>
+<li><span class="parameter" id="calculateDynamicTone-param-maxRatio"><span>required</span> <span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">maxRatio</span>(<ol class="parameter-list"><li><span class="parameter" id="param-standardRatio"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">standardRatio</span></span></li>
+</ol>
+)?}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Core method for calculating a tone for under dynamic contrast.</p>
+<p>It enforces important properties:
+#1. Desired contrast ratio is reached.
+As contrast increases from standard to max, the tones involved should
+always be at least the standard ratio. For example, if a button is T90,
+and button text is T0, and the button is T0 at max contrast, the button
+text cannot simply linearly interpolate from T0 to T100, or at some point
+they'll both be at the same tone.
+#2. Enable light foregrounds on midtones.
+The eye prefers light foregrounds on T50 to T60, possibly up to T70, but,
+contrast ratio 4.5 can't be reached with T100 unless the foreground is
+T50. Contrast ratio 4.5 is crucial, it represents 'readable text', i.e.
+text smaller than ~40 dp / 1/4". So, if a tone is between T50 and T60, it
+is proactively changed to T49 to enable light foregrounds.
+#3. Ensure tone delta with another color.
+In design systems, there may be colors without a background/foreground
+relationship that require different tones for visual differentiation.
+<a href="package-material_color_utilities_dynamiccolor_src_tone_delta_constraint/ToneDeltaConstraint-class.html">ToneDeltaConstraint</a> models this requirement, and <a href="package-material_color_utilities_dynamiccolor_dynamic_color/DynamicColor-class.html">DynamicColor</a>
+enforces it.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static double calculateDynamicTone({
+  required DynamicScheme scheme,
+  required double Function(DynamicScheme) toneStandard,
+  required double Function(DynamicColor) toneToJudge,
+  required double Function(double standardRatio, double bgTone) desiredTone,
+  required DynamicColor? Function(DynamicScheme)? background,
+  required ToneDeltaConstraint Function(DynamicScheme)? constraint,
+  required double Function(double standardRatio)? minRatio,
+  required double Function(double standardRatio)? maxRatio,
+}) {
+  &#47;&#47; Start with the tone with no adjustment for contrast.
+  &#47;&#47; If there is no background, don&#39;t perform any adjustment, return immediately.
+  final toneStd = toneStandard(scheme);
+  var answer = toneStd;
+  final bgDynamic = background?.call(scheme);
+  if (bgDynamic == null) {
+    return answer;
+  }
+  final bgToneStd = bgDynamic.tone(scheme);
+  final stdRatio = Contrast.ratioOfTones(toneStd, bgToneStd);
+
+  &#47;&#47; If there is a background, determine its tone after contrast adjustment.
+  &#47;&#47; Then, calculate the foreground tone that ensures the caller&#39;s desired contrast ratio is met.
+  final bgTone = toneToJudge(bgDynamic);
+  final myDesiredTone = desiredTone(stdRatio, bgTone);
+  final currentRatio = Contrast.ratioOfTones(bgTone, myDesiredTone);
+  final desiredRatio = MathUtils.clampDouble(minRatio?.call(stdRatio) ?? 1.0,
+      maxRatio?.call(stdRatio) ?? 21.0, currentRatio);
+  if (desiredRatio == currentRatio) {
+    answer = myDesiredTone;
+  } else {
+    answer = DynamicColor.foregroundTone(bgTone, desiredRatio);
+  }
+
+  &#47;&#47; If the background has no background,  adjust the foreground tone to
+  &#47;&#47; ensure that it is dark enough to have a light foreground.
+  if (bgDynamic.background(scheme) == null) {
+    answer = DynamicColor.enableLightForeground(answer);
+  }
+
+  &#47;&#47; If the caller has specified a constraint where it must have a certain
+  &#47;&#47; tone distance from another color, enforce that constraint.
+  answer = ensureToneDelta(
+    tone: answer,
+    toneStandard: toneStd,
+    scheme: scheme,
+    constraintProvider: constraint,
+    toneToDistanceFrom: (c) =&gt; toneToJudge(c),
+  );
+
+  return answer;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/package-material_color_utilities_dynamiccolor_dynamic_color-library.html">dynamic_color</a></li>
+    <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/DynamicColor-class.html">DynamicColor</a></li>
+    <li class="self-crumb">calculateDynamicTone static method</li>
+</ol>
+
+
+    <h5>DynamicColor class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

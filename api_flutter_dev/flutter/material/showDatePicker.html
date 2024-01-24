@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the showDatePicker function from the material library, for the Dart programming language.">
+  <title>showDatePicker function - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showDatePicker function</li>
+  </ol>
+  <div class="self-name">showDatePicker</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/date_picker.dart#L159"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">showDatePicker</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/DateTime-class.html">DateTime</a>?</span>&gt;</span></span>
+<span class="name ">showDatePicker</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="showDatePicker-param-context">{<span>required</span> <span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-initialDate"><span class="type-annotation"><a href="dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">initialDate</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-firstDate"><span>required</span> <span class="type-annotation"><a href="dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">firstDate</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-lastDate"><span>required</span> <span class="type-annotation"><a href="dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">lastDate</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-currentDate"><span class="type-annotation"><a href="dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">currentDate</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-initialEntryMode"><span class="type-annotation"><a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a></span> <span class="parameter-name">initialEntryMode</span> = <span class="default-value">DatePickerEntryMode.calendar</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-selectableDayPredicate"><span class="type-annotation"><a href="material/SelectableDayPredicate.html">SelectableDayPredicate</a>?</span> <span class="parameter-name">selectableDayPredicate</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-helpText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">helpText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-cancelText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cancelText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-confirmText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">confirmText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-locale"><span class="type-annotation"><a href="dart-ui/Locale-class.html">Locale</a>?</span> <span class="parameter-name">locale</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-barrierDismissible"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">barrierDismissible</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-barrierColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">barrierColor</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-barrierLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">barrierLabel</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-useRootNavigator"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useRootNavigator</span> = <span class="default-value">true</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-routeSettings"><span class="type-annotation"><a href="widgets/RouteSettings-class.html">RouteSettings</a>?</span> <span class="parameter-name">routeSettings</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-textDirection"><span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-builder"><span class="type-annotation"><a href="widgets/TransitionBuilder.html">TransitionBuilder</a>?</span> <span class="parameter-name">builder</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-initialDatePickerMode"><span class="type-annotation"><a href="material/DatePickerMode.html">DatePickerMode</a></span> <span class="parameter-name">initialDatePickerMode</span> = <span class="default-value">DatePickerMode.day</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-errorFormatText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">errorFormatText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-errorInvalidText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">errorInvalidText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-fieldHintText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">fieldHintText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-fieldLabelText"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">fieldLabelText</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-keyboardType"><span class="type-annotation"><a href="services/TextInputType-class.html">TextInputType</a>?</span> <span class="parameter-name">keyboardType</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-anchorPoint"><span class="type-annotation"><a href="dart-ui/Offset-class.html">Offset</a>?</span> <span class="parameter-name">anchorPoint</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-onDatePickerModeChange"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a></span>&gt;</span>?</span> <span class="parameter-name">onDatePickerModeChange</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-switchToInputEntryModeIcon"><span class="type-annotation"><a href="widgets/Icon-class.html">Icon</a>?</span> <span class="parameter-name">switchToInputEntryModeIcon</span>, </span></li>
+<li><span class="parameter" id="showDatePicker-param-switchToCalendarEntryModeIcon"><span class="type-annotation"><a href="widgets/Icon-class.html">Icon</a>?</span> <span class="parameter-name">switchToCalendarEntryModeIcon</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Shows a dialog containing a Material Design date picker.</p>
+<p>The returned <a href="dart-async/Future-class.html">Future</a> resolves to the date selected by the user when the
+user confirms the dialog. If the user cancels the dialog, null is returned.</p>
+<p>When the date picker is first displayed, if <code>initialDate</code> is not null, it
+will show the month of <code>initialDate</code>, with <code>initialDate</code> selected. Otherwise
+it will show the <code>currentDate</code>'s month.</p>
+<p>The <code>firstDate</code> is the earliest allowable date. The <code>lastDate</code> is the latest
+allowable date. If <code>initialDate</code> is not null, it must either fall between
+these dates, or be equal to one of them. For each of these <a href="dart-core/DateTime-class.html">DateTime</a>
+parameters, only their dates are considered. Their time fields are ignored.
+They must all be non-null.</p>
+<p>The <code>currentDate</code> represents the current day (i.e. today). This
+date will be highlighted in the day grid. If null, the date of
+<a href="dart-core/DateTime/DateTime.now.html">DateTime.now</a> will be used.</p>
+<p>An optional <code>initialEntryMode</code> argument can be used to display the date
+picker in the <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.calendar</a> (a calendar month grid)
+or <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.input</a> (a text input field) mode.
+It defaults to <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.calendar</a>.</p>
+<p>An optional <code>switchToInputEntryModeIcon</code> argument can be used to
+display a custom Icon in the corner of the dialog
+when <a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a> is <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.calendar</a>. Clicking on
+icon changes the <a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a> to <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.input</a>.
+If null, <code>Icon(useMaterial3 ? Icons.edit_outlined : Icons.edit)</code> is used.</p>
+<p>An optional <code>switchToCalendarEntryModeIcon</code> argument can be used to
+display a custom Icon in the corner of the dialog
+when <a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a> is <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.input</a>. Clicking on
+icon changes the <a href="material/DatePickerEntryMode.html">DatePickerEntryMode</a> to <a href="material/DatePickerEntryMode.html">DatePickerEntryMode.calendar</a>.
+If null, <code>Icon(Icons.calendar_today)</code> is used.</p>
+<p>An optional <code>selectableDayPredicate</code> function can be passed in to only allow
+certain days for selection. If provided, only the days that
+<code>selectableDayPredicate</code> returns true for will be selectable. For example,
+this can be used to only allow weekdays for selection. If provided, it must
+return true for <code>initialDate</code>.</p>
+<p>The following optional string parameters allow you to override the default
+text used for various parts of the dialog:</p>
+<ul>
+<li><code>helpText</code>, label displayed at the top of the dialog.</li>
+<li><code>cancelText</code>, label on the cancel button.</li>
+<li><code>confirmText</code>, label on the ok button.</li>
+<li><code>errorFormatText</code>, message used when the input text isn't in a proper date format.</li>
+<li><code>errorInvalidText</code>, message used when the input text isn't a selectable date.</li>
+<li><code>fieldHintText</code>, text used to prompt the user when no text has been entered in the field.</li>
+<li><code>fieldLabelText</code>, label for the date text input field.</li>
+</ul>
+<p>An optional <code>locale</code> argument can be used to set the locale for the date
+picker. It defaults to the ambient locale provided by <a href="widgets/Localizations-class.html">Localizations</a>.</p>
+<p>An optional <code>textDirection</code> argument can be used to set the text direction
+(<a href="dart-ui/TextDirection.html">TextDirection.ltr</a> or <a href="dart-ui/TextDirection.html">TextDirection.rtl</a>) for the date picker. It
+defaults to the ambient text direction provided by <a href="widgets/Directionality-class.html">Directionality</a>. If both
+<code>locale</code> and <code>textDirection</code> are non-null, <code>textDirection</code> overrides the
+direction chosen for the <code>locale</code>.</p>
+<p>The <code>context</code>, <code>barrierDismissible</code>, <code>barrierColor</code>, <code>barrierLabel</code>,
+<code>useRootNavigator</code> and <code>routeSettings</code> arguments are passed to <a href="material/showDialog.html">showDialog</a>,
+the documentation for which discusses how it is used.</p>
+<p>The <code>builder</code> parameter can be used to wrap the dialog widget
+to add inherited widgets like <a href="material/Theme-class.html">Theme</a>.</p>
+<p>An optional <code>initialDatePickerMode</code> argument can be used to have the
+calendar date picker initially appear in the <a href="material/DatePickerMode.html">DatePickerMode.year</a> or
+<a href="material/DatePickerMode.html">DatePickerMode.day</a> mode. It defaults to <a href="material/DatePickerMode.html">DatePickerMode.day</a>.</p>
+<p>A <a href="dart-ui/DisplayFeature-class.html">DisplayFeature</a> can split the screen into sub-screens. The closest one to
+<code>anchorPoint</code> is used to render the content.</p>
+<p>If no <code>anchorPoint</code> is provided, then <a href="widgets/Directionality-class.html">Directionality</a> is used:</p>
+<ul>
+<li>for <a href="dart-ui/TextDirection.html">TextDirection.ltr</a>, <code>anchorPoint</code> is <code>Offset.zero</code>, which will
+cause the content to appear in the top-left sub-screen.</li>
+<li>for <a href="dart-ui/TextDirection.html">TextDirection.rtl</a>, <code>anchorPoint</code> is <code>Offset(double.maxFinite, 0)</code>,
+which will cause the content to appear in the top-right sub-screen.</li>
+</ul>
+<p>If no <code>anchorPoint</code> is provided, and there is no <a href="widgets/Directionality-class.html">Directionality</a> ancestor
+widget in the tree, then the widget asserts during build in debug mode.</p>
+<h3 id="state-restoration">State Restoration</h3>
+<p>Using this method will not enable state restoration for the date picker.
+In order to enable state restoration for a date picker, use
+<a href="widgets/Navigator/restorablePush.html">Navigator.restorablePush</a> or <a href="widgets/Navigator/restorablePushNamed.html">Navigator.restorablePushNamed</a> with
+<a href="material/DatePickerDialog-class.html">DatePickerDialog</a>.</p>
+<p>For more information about state restoration, see <a href="services/RestorationManager-class.html">RestorationManager</a>.</p>
+<p>To test state restoration on Android:</p>
+<ol>
+<li>Turn on "Don't keep activities", which destroys the Android activity
+as soon as the user leaves it. This option should become available
+when Developer Options are turned on for the device.</li>
+<li>Run the code sample on an Android device.</li>
+<li>Create some in-memory state in the app on the phone,
+e.g. by navigating to a different screen.</li>
+<li>Background the Flutter app, then return to it. It will restart
+and restore its state.</li>
+</ol>
+<p>To test state restoration on iOS:</p>
+<ol>
+<li>Open <code>ios/Runner.xcworkspace/</code> in Xcode.</li>
+<li>(iOS 14+ only): Switch to build in profile or release mode, as
+launching an app from the home screen is not supported in debug
+mode.</li>
+<li>Press the Play button in Xcode to build and run the app.</li>
+<li>Create some in-memory state in the app on the phone,
+e.g. by navigating to a different screen.</li>
+<li>Background the app on the phone, e.g. by going back to the home screen.</li>
+<li>Press the Stop button in Xcode to terminate the app while running in
+the background.</li>
+<li>Open the app again on the phone (not via Xcode). It will restart
+and restore its state.</li>
+</ol>
+<p>
+<a name="material.showDatePicker.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample demonstrates how to create a restorable Material date picker.
+This is accomplished by enabling state restoration by specifying
+<a href="material/MaterialApp/restorationScopeId.html">MaterialApp.restorationScopeId</a> and using <a href="widgets/Navigator/restorablePush.html">Navigator.restorablePush</a> to
+push <a href="material/DatePickerDialog-class.html">DatePickerDialog</a> when the button is tapped.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.showDatePicker.1');" onclick="fixHref(this, 'material.showDatePicker.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.showDatePicker.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.showDatePicker.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/showDateRangePicker.html">showDateRangePicker</a>, which shows a Material Design date range picker
+used to select a range of dates.</li>
+<li><a href="material/CalendarDatePicker-class.html">CalendarDatePicker</a>, which provides the calendar grid used by the date picker dialog.</li>
+<li><a href="material/InputDatePickerFormField-class.html">InputDatePickerFormField</a>, which provides a text input field for entering dates.</li>
+<li><a href="widgets/DisplayFeatureSubScreen-class.html">DisplayFeatureSubScreen</a>, which documents the specifics of how
+<a href="dart-ui/DisplayFeature-class.html">DisplayFeature</a>s can split the screen into sub-screens.</li>
+<li><a href="material/showTimePicker.html">showTimePicker</a>, which shows a dialog that contains a Material Design time picker.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;DateTime?&gt; showDatePicker({
+  required BuildContext context,
+  DateTime? initialDate,
+  required DateTime firstDate,
+  required DateTime lastDate,
+  DateTime? currentDate,
+  DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
+  SelectableDayPredicate? selectableDayPredicate,
+  String? helpText,
+  String? cancelText,
+  String? confirmText,
+  Locale? locale,
+  bool barrierDismissible = true,
+  Color? barrierColor,
+  String? barrierLabel,
+  bool useRootNavigator = true,
+  RouteSettings? routeSettings,
+  TextDirection? textDirection,
+  TransitionBuilder? builder,
+  DatePickerMode initialDatePickerMode = DatePickerMode.day,
+  String? errorFormatText,
+  String? errorInvalidText,
+  String? fieldHintText,
+  String? fieldLabelText,
+  TextInputType? keyboardType,
+  Offset? anchorPoint,
+  final ValueChanged&lt;DatePickerEntryMode&gt;? onDatePickerModeChange,
+  final Icon? switchToInputEntryModeIcon,
+  final Icon? switchToCalendarEntryModeIcon,
+}) async {
+  initialDate = initialDate == null ? null : DateUtils.dateOnly(initialDate);
+  firstDate = DateUtils.dateOnly(firstDate);
+  lastDate = DateUtils.dateOnly(lastDate);
+  assert(
+    !lastDate.isBefore(firstDate),
+    &#39;lastDate $lastDate must be on or after firstDate $firstDate.&#39;,
+  );
+  assert(
+    initialDate == null || !initialDate.isBefore(firstDate),
+    &#39;initialDate $initialDate must be on or after firstDate $firstDate.&#39;,
+  );
+  assert(
+    initialDate == null || !initialDate.isAfter(lastDate),
+    &#39;initialDate $initialDate must be on or before lastDate $lastDate.&#39;,
+  );
+  assert(
+    selectableDayPredicate == null || initialDate == null || selectableDayPredicate(initialDate),
+    &#39;Provided initialDate $initialDate must satisfy provided selectableDayPredicate.&#39;,
+  );
+  assert(debugCheckHasMaterialLocalizations(context));
+
+  Widget dialog = DatePickerDialog(
+    initialDate: initialDate,
+    firstDate: firstDate,
+    lastDate: lastDate,
+    currentDate: currentDate,
+    initialEntryMode: initialEntryMode,
+    selectableDayPredicate: selectableDayPredicate,
+    helpText: helpText,
+    cancelText: cancelText,
+    confirmText: confirmText,
+    initialCalendarMode: initialDatePickerMode,
+    errorFormatText: errorFormatText,
+    errorInvalidText: errorInvalidText,
+    fieldHintText: fieldHintText,
+    fieldLabelText: fieldLabelText,
+    keyboardType: keyboardType,
+    onDatePickerModeChange: onDatePickerModeChange,
+    switchToInputEntryModeIcon: switchToInputEntryModeIcon,
+    switchToCalendarEntryModeIcon: switchToCalendarEntryModeIcon,
+  );
+
+  if (textDirection != null) {
+    dialog = Directionality(
+      textDirection: textDirection,
+      child: dialog,
+    );
+  }
+
+  if (locale != null) {
+    dialog = Localizations.override(
+      context: context,
+      locale: locale,
+      child: dialog,
+    );
+  }
+
+  return showDialog&lt;DateTime&gt;(
+    context: context,
+    barrierDismissible: barrierDismissible,
+    barrierColor: barrierColor,
+    barrierLabel: barrierLabel,
+    useRootNavigator: useRootNavigator,
+    routeSettings: routeSettings,
+    builder: (BuildContext context) {
+      return builder == null ? dialog : builder(context, dialog);
+    },
+    anchorPoint: anchorPoint,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showDatePicker function</li>
+</ol>
+
+
+    <h5>material library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

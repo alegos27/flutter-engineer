@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ExpansionTile class from the material library, for the Dart programming language.">
+  <title>ExpansionTile class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">ExpansionTile class</li>
+  </ol>
+  <div class="self-name">ExpansionTile</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;ExpansionTile-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/expansion_tile.dart#L222"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">ExpansionTile</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A single-line <a href="material/ListTile-class.html">ListTile</a> with an expansion arrow icon that expands or collapses
+the tile to reveal or hide the <a href="material/ExpansionTile/children.html">children</a>.</p>
+<p>This widget is typically used with <a href="widgets/ListView-class.html">ListView</a> to create an "expand /
+collapse" list entry. When used with scrolling widgets like <a href="widgets/ListView-class.html">ListView</a>, a
+unique <a href="widgets/PageStorageKey-class.html">PageStorageKey</a> must be specified as the <a href="widgets/Widget/key.html">key</a>, to enable the
+<a href="material/ExpansionTile-class.html">ExpansionTile</a> to save and restore its expanded state when it is scrolled
+in and out of view.</p>
+<p>This class overrides the <a href="material/ListTileThemeData/iconColor.html">ListTileThemeData.iconColor</a> and <a href="material/ListTileThemeData/textColor.html">ListTileThemeData.textColor</a>
+theme properties for its <a href="material/ListTile-class.html">ListTile</a>. These colors animate between values when
+the tile is expanded and collapsed: between <a href="material/ExpansionTile/iconColor.html">iconColor</a>, <a href="material/ExpansionTile/collapsedIconColor.html">collapsedIconColor</a> and
+between <a href="material/ExpansionTile/textColor.html">textColor</a> and <a href="material/ExpansionTile/collapsedTextColor.html">collapsedTextColor</a>.</p>
+<p>The expansion arrow icon is shown on the right by default in left-to-right languages
+(i.e. the trailing edge). This can be changed using <a href="material/ExpansionTile/controlAffinity.html">controlAffinity</a>. This maps
+to the <a href="material/ExpansionTile/leading.html">leading</a> and <a href="material/ExpansionTile/trailing.html">trailing</a> properties of <a href="material/ExpansionTile-class.html">ExpansionTile</a>.</p>
+<p>
+<a name="material.ExpansionTile.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example demonstrates how the <a href="material/ExpansionTile-class.html">ExpansionTile</a> icon's location and appearance
+can be customized.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.ExpansionTile.1');" onclick="fixHref(this, 'material.ExpansionTile.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.ExpansionTile.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.ExpansionTile.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="material.ExpansionTile.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This example demonstrates how an <a href="material/ExpansionTileController-class.html">ExpansionTileController</a> can be used to
+programatically expand or collapse an <a href="material/ExpansionTile-class.html">ExpansionTile</a>.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.ExpansionTile.2');" onclick="fixHref(this, 'material.ExpansionTile.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.ExpansionTile.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.ExpansionTile.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/ListTile-class.html">ListTile</a>, useful for creating expansion tile <a href="material/ExpansionTile/children.html">children</a> when the
+expansion tile represents a sublist.</li>
+<li>The "Expand and collapse" section of
+<a href="https://material.io/components/lists#types">material.io/components/lists#types</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>ExpansionTile</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="ExpansionTile" class="callable">
+          <span class="name"><a href="material/ExpansionTile/ExpansionTile.html">ExpansionTile</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-leading"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">leading</span>, </span><span class="parameter" id="-param-title"><span>required</span> <span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a></span> <span class="parameter-name">title</span>, </span><span class="parameter" id="-param-subtitle"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">subtitle</span>, </span><span class="parameter" id="-param-onExpansionChanged"><span class="type-annotation"><a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> <span class="parameter-name">onExpansionChanged</span>, </span><span class="parameter" id="-param-children"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span></span> <span class="parameter-name">children</span> = <span class="default-value">const &lt;Widget&gt;[]</span>, </span><span class="parameter" id="-param-trailing"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">trailing</span>, </span><span class="parameter" id="-param-initiallyExpanded"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">initiallyExpanded</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-maintainState"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">maintainState</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-tilePadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">tilePadding</span>, </span><span class="parameter" id="-param-expandedCrossAxisAlignment"><span class="type-annotation"><a href="rendering/CrossAxisAlignment.html">CrossAxisAlignment</a>?</span> <span class="parameter-name">expandedCrossAxisAlignment</span>, </span><span class="parameter" id="-param-expandedAlignment"><span class="type-annotation"><a href="painting/Alignment-class.html">Alignment</a>?</span> <span class="parameter-name">expandedAlignment</span>, </span><span class="parameter" id="-param-childrenPadding"><span class="type-annotation"><a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> <span class="parameter-name">childrenPadding</span>, </span><span class="parameter" id="-param-backgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">backgroundColor</span>, </span><span class="parameter" id="-param-collapsedBackgroundColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">collapsedBackgroundColor</span>, </span><span class="parameter" id="-param-textColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">textColor</span>, </span><span class="parameter" id="-param-collapsedTextColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">collapsedTextColor</span>, </span><span class="parameter" id="-param-iconColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">iconColor</span>, </span><span class="parameter" id="-param-collapsedIconColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">collapsedIconColor</span>, </span><span class="parameter" id="-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="-param-collapsedShape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">collapsedShape</span>, </span><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a>?</span> <span class="parameter-name">clipBehavior</span>, </span><span class="parameter" id="-param-controlAffinity"><span class="type-annotation"><a href="material/ListTileControlAffinity.html">ListTileControlAffinity</a>?</span> <span class="parameter-name">controlAffinity</span>, </span><span class="parameter" id="-param-controller"><span class="type-annotation"><a href="material/ExpansionTileController-class.html">ExpansionTileController</a>?</span> <span class="parameter-name">controller</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a single-line <a href="material/ListTile-class.html">ListTile</a> with an expansion arrow icon that expands or collapses
+the tile to reveal or hide the <a href="material/ExpansionTile/children.html">children</a>. The <a href="material/ExpansionTile/initiallyExpanded.html">initiallyExpanded</a> property must
+be non-null.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="backgroundColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/backgroundColor.html">backgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to display behind the sublist when expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="children" class="property">
+  <span class="name"><a href="material/ExpansionTile/children.html">children</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/Widget-class.html">Widget</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The widgets that are displayed when the tile expands.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="childrenPadding" class="property">
+  <span class="name"><a href="material/ExpansionTile/childrenPadding.html">childrenPadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Specifies padding for <a href="material/ExpansionTile/children.html">children</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="clipBehavior" class="property">
+  <span class="name"><a href="material/ExpansionTile/clipBehavior.html">clipBehavior</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Clip.html">Clip</a>?</span> 
+
+</dt>
+<dd>
+  The content will be clipped (or not) according to this option.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="collapsedBackgroundColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/collapsedBackgroundColor.html">collapsedBackgroundColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  When not null, defines the background color of tile when the sublist is collapsed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="collapsedIconColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/collapsedIconColor.html">collapsedIconColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The icon color of tile's expansion arrow icon when the sublist is collapsed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="collapsedShape" class="property">
+  <span class="name"><a href="material/ExpansionTile/collapsedShape.html">collapsedShape</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd>
+  The tile's border shape when the sublist is collapsed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="collapsedTextColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/collapsedTextColor.html">collapsedTextColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color of the tile's titles when the sublist is collapsed.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="controlAffinity" class="property">
+  <span class="name"><a href="material/ExpansionTile/controlAffinity.html">controlAffinity</a></span>
+  <span class="signature">&#8594; <a href="material/ListTileControlAffinity.html">ListTileControlAffinity</a>?</span> 
+
+</dt>
+<dd>
+  Typically used to force the expansion arrow icon to the tile's leading or trailing edge.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="controller" class="property">
+  <span class="name"><a href="material/ExpansionTile/controller.html">controller</a></span>
+  <span class="signature">&#8594; <a href="material/ExpansionTileController-class.html">ExpansionTileController</a>?</span> 
+
+</dt>
+<dd>
+  If provided, the controller can be used to expand and collapse tiles.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="expandedAlignment" class="property">
+  <span class="name"><a href="material/ExpansionTile/expandedAlignment.html">expandedAlignment</a></span>
+  <span class="signature">&#8594; <a href="painting/Alignment-class.html">Alignment</a>?</span> 
+
+</dt>
+<dd>
+  Specifies the alignment of <a href="material/ExpansionTile/children.html">children</a>, which are arranged in a column when
+the tile is expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="expandedCrossAxisAlignment" class="property">
+  <span class="name"><a href="material/ExpansionTile/expandedCrossAxisAlignment.html">expandedCrossAxisAlignment</a></span>
+  <span class="signature">&#8594; <a href="rendering/CrossAxisAlignment.html">CrossAxisAlignment</a>?</span> 
+
+</dt>
+<dd>
+  Specifies the alignment of each child within <a href="material/ExpansionTile/children.html">children</a> when the tile is expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="iconColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/iconColor.html">iconColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The icon color of tile's expansion arrow icon when the sublist is expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="initiallyExpanded" class="property">
+  <span class="name"><a href="material/ExpansionTile/initiallyExpanded.html">initiallyExpanded</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Specifies if the list tile is initially expanded (true) or collapsed (false, the default).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="leading" class="property">
+  <span class="name"><a href="material/ExpansionTile/leading.html">leading</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  A widget to display before the title.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="maintainState" class="property">
+  <span class="name"><a href="material/ExpansionTile/maintainState.html">maintainState</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Specifies whether the state of the children is maintained when the tile expands and collapses.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onExpansionChanged" class="property">
+  <span class="name"><a href="material/ExpansionTile/onExpansionChanged.html">onExpansionChanged</a></span>
+  <span class="signature">&#8594; <a href="foundation/ValueChanged.html">ValueChanged</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/bool-class.html">bool</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  Called when the tile expands or collapses.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shape" class="property">
+  <span class="name"><a href="material/ExpansionTile/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd>
+  The tile's border shape when the sublist is expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="subtitle" class="property">
+  <span class="name"><a href="material/ExpansionTile/subtitle.html">subtitle</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  Additional content displayed below the title.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textColor" class="property">
+  <span class="name"><a href="material/ExpansionTile/textColor.html">textColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color of the tile's titles when the sublist is expanded.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="tilePadding" class="property">
+  <span class="name"><a href="material/ExpansionTile/tilePadding.html">tilePadding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a>?</span> 
+
+</dt>
+<dd>
+  Specifies padding for the <a href="material/ListTile-class.html">ListTile</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="title" class="property">
+  <span class="name"><a href="material/ExpansionTile/title.html">title</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a></span> 
+
+</dt>
+<dd>
+  The primary content of the list item.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="trailing" class="property">
+  <span class="name"><a href="material/ExpansionTile/trailing.html">trailing</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  A widget to display after the title.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="material/ExpansionTile/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/State-class.html">State</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/ExpansionTile-class.html">ExpansionTile</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">ExpansionTile class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

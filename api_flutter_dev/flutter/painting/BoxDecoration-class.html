@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the BoxDecoration class from the painting library, for the Dart programming language.">
+  <title>BoxDecoration class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">BoxDecoration class</li>
+  </ol>
+  <div class="self-name">BoxDecoration</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;painting-library-sidebar.html"
+      data-below-sidebar="painting&#47;BoxDecoration-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/box_decoration.dart#L75"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">BoxDecoration</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An immutable description of how to paint a box.</p>
+<p>The <a href="painting/BoxDecoration-class.html">BoxDecoration</a> class provides a variety of ways to draw a box.</p>
+<p>The box has a <a href="painting/BoxDecoration/border.html">border</a>, a body, and may cast a <a href="painting/BoxDecoration/boxShadow.html">boxShadow</a>.</p>
+<p>The <a href="painting/BoxDecoration/shape.html">shape</a> of the box can be a circle or a rectangle. If it is a rectangle,
+then the <a href="painting/BoxDecoration/borderRadius.html">borderRadius</a> property controls the roundness of the corners.</p>
+<p>The body of the box is painted in layers. The bottom-most layer is the
+<a href="painting/BoxDecoration/color.html">color</a>, which fills the box. Above that is the <a href="painting/BoxDecoration/gradient.html">gradient</a>, which also fills
+the box. Finally there is the <a href="painting/BoxDecoration/image.html">image</a>, the precise alignment of which is
+controlled by the <a href="painting/DecorationImage-class.html">DecorationImage</a> class.</p>
+<p>The <a href="painting/BoxDecoration/border.html">border</a> paints over the body; the <a href="painting/BoxDecoration/boxShadow.html">boxShadow</a>, naturally, paints below it.</p>
+<p>
+<a name="painting.BoxDecoration.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The following applies a <a href="painting/BoxDecoration-class.html">BoxDecoration</a> to a <a href="widgets/Container-class.html">Container</a> widget to draw an
+<a href="painting/BoxDecoration/image.html">image</a> of an owl with a thick black <a href="painting/BoxDecoration/border.html">border</a> and rounded corners.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/painting/box_decoration.png" alt="">
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'painting.BoxDecoration.1');" onclick="fixHref(this, 'painting.BoxDecoration.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">Container(
+  decoration: BoxDecoration(
+    color: const Color(0xff7c94b6),
+    image: const DecorationImage(
+      image: NetworkImage(&#39;https:&#47;&#47;flutter.github.io&#47;assets-for-api-docs&#47;assets&#47;widgets&#47;owl-2.jpg&#39;),
+      fit: BoxFit.cover,
+    ),
+    border: Border.all(
+      width: 8,
+    ),
+    borderRadius: BorderRadius.circular(12),
+  ),
+)</code></pre>
+  </div>
+</div>
+</p>
+<p>The <a href="painting/BoxDecoration/shape.html">shape</a> or the <a href="painting/BoxDecoration/borderRadius.html">borderRadius</a> won't clip the children of the
+decorated <a href="widgets/Container-class.html">Container</a>. If the clip is required, insert a clip widget
+(e.g., <a href="widgets/ClipRect-class.html">ClipRect</a>, <a href="widgets/ClipRRect-class.html">ClipRRect</a>, <a href="widgets/ClipPath-class.html">ClipPath</a>) as the child of the <a href="widgets/Container-class.html">Container</a>.
+Be aware that clipping may be costly in terms of performance.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/DecoratedBox-class.html">DecoratedBox</a> and <a href="widgets/Container-class.html">Container</a>, widgets that can be configured with
+<a href="painting/BoxDecoration-class.html">BoxDecoration</a> objects.</li>
+<li><a href="widgets/DecoratedSliver-class.html">DecoratedSliver</a>, a widget that can be configured with a <a href="painting/BoxDecoration-class.html">BoxDecoration</a>
+  that is converted to render with slivers.</li>
+<li><a href="widgets/CustomPaint-class.html">CustomPaint</a>, a widget that lets you draw arbitrary graphics.</li>
+<li><a href="painting/Decoration-class.html">Decoration</a>, the base class which lets you define other decorations.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="painting/Decoration-class.html">Decoration</a></li>
+      <li>BoxDecoration</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="BoxDecoration" class="callable">
+          <span class="name"><a href="painting/BoxDecoration/BoxDecoration.html">BoxDecoration</a></span><span class="signature">(<span class="parameter" id="-param-color">{<span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-image"><span class="type-annotation"><a href="painting/DecorationImage-class.html">DecorationImage</a>?</span> <span class="parameter-name">image</span>, </span><span class="parameter" id="-param-border"><span class="type-annotation"><a href="painting/BoxBorder-class.html">BoxBorder</a>?</span> <span class="parameter-name">border</span>, </span><span class="parameter" id="-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a>?</span> <span class="parameter-name">borderRadius</span>, </span><span class="parameter" id="-param-boxShadow"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="painting/BoxShadow-class.html">BoxShadow</a></span>&gt;</span>?</span> <span class="parameter-name">boxShadow</span>, </span><span class="parameter" id="-param-gradient"><span class="type-annotation"><a href="painting/Gradient-class.html">Gradient</a>?</span> <span class="parameter-name">gradient</span>, </span><span class="parameter" id="-param-backgroundBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">backgroundBlendMode</span>, </span><span class="parameter" id="-param-shape"><span class="type-annotation"><a href="painting/BoxShape.html">BoxShape</a></span> <span class="parameter-name">shape</span> = <span class="default-value">BoxShape.rectangle</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a box decoration.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="backgroundBlendMode" class="property">
+  <span class="name"><a href="painting/BoxDecoration/backgroundBlendMode.html">backgroundBlendMode</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/BlendMode.html">BlendMode</a>?</span> 
+
+</dt>
+<dd>
+  The blend mode applied to the <a href="painting/BoxDecoration/color.html">color</a> or <a href="painting/BoxDecoration/gradient.html">gradient</a> background of the box.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="border" class="property">
+  <span class="name"><a href="painting/BoxDecoration/border.html">border</a></span>
+  <span class="signature">&#8594; <a href="painting/BoxBorder-class.html">BoxBorder</a>?</span> 
+
+</dt>
+<dd>
+  A border to draw above the background <a href="painting/BoxDecoration/color.html">color</a>, <a href="painting/BoxDecoration/gradient.html">gradient</a>, or <a href="painting/BoxDecoration/image.html">image</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="borderRadius" class="property">
+  <span class="name"><a href="painting/BoxDecoration/borderRadius.html">borderRadius</a></span>
+  <span class="signature">&#8594; <a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a>?</span> 
+
+</dt>
+<dd>
+  If non-null, the corners of this box are rounded by this <a href="painting/BorderRadius-class.html">BorderRadius</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="boxShadow" class="property">
+  <span class="name"><a href="painting/BoxDecoration/boxShadow.html">boxShadow</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="painting/BoxShadow-class.html">BoxShadow</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  A list of shadows cast by this box behind the box.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property">
+  <span class="name"><a href="painting/BoxDecoration/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to fill in the background of the box.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="gradient" class="property">
+  <span class="name"><a href="painting/BoxDecoration/gradient.html">gradient</a></span>
+  <span class="signature">&#8594; <a href="painting/Gradient-class.html">Gradient</a>?</span> 
+
+</dt>
+<dd>
+  A gradient to use when filling the box.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property">
+  <span class="name"><a href="painting/BoxDecoration/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="image" class="property">
+  <span class="name"><a href="painting/BoxDecoration/image.html">image</a></span>
+  <span class="signature">&#8594; <a href="painting/DecorationImage-class.html">DecorationImage</a>?</span> 
+
+</dt>
+<dd>
+  An image to paint above the background <a href="painting/BoxDecoration/color.html">color</a> or <a href="painting/BoxDecoration/gradient.html">gradient</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="isComplex" class="property">
+  <span class="name"><a href="painting/BoxDecoration/isComplex.html">isComplex</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this decoration is complex enough to benefit from caching its painting.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="padding" class="property">
+  <span class="name"><a href="painting/BoxDecoration/padding.html">padding</a></span>
+  <span class="signature">&#8594; <a href="painting/EdgeInsetsGeometry-class.html">EdgeInsetsGeometry</a></span> 
+
+</dt>
+<dd>
+  Returns the insets to apply when using this decoration on a box
+that has contents, so that the contents do not overlap the edges
+of the decoration. For example, if the decoration draws a frame
+around its edge, the padding would return the distance by which
+to inset the children so as to not overlap the frame.
+  <div class="features"><span class="feature">read-only</span><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shape" class="property">
+  <span class="name"><a href="painting/BoxDecoration/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/BoxShape.html">BoxShape</a></span> 
+
+</dt>
+<dd>
+  The shape to fill the background <a href="painting/BoxDecoration/color.html">color</a>, <a href="painting/BoxDecoration/gradient.html">gradient</a>, and <a href="painting/BoxDecoration/image.html">image</a> into and
+to cast as the <a href="painting/BoxDecoration/boxShadow.html">boxShadow</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="copyWith" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/copyWith.html">copyWith</a></span><span class="signature">(<wbr><span class="parameter" id="copyWith-param-color">{<span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="copyWith-param-image"><span class="type-annotation"><a href="painting/DecorationImage-class.html">DecorationImage</a>?</span> <span class="parameter-name">image</span>, </span><span class="parameter" id="copyWith-param-border"><span class="type-annotation"><a href="painting/BoxBorder-class.html">BoxBorder</a>?</span> <span class="parameter-name">border</span>, </span><span class="parameter" id="copyWith-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a>?</span> <span class="parameter-name">borderRadius</span>, </span><span class="parameter" id="copyWith-param-boxShadow"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="painting/BoxShadow-class.html">BoxShadow</a></span>&gt;</span>?</span> <span class="parameter-name">boxShadow</span>, </span><span class="parameter" id="copyWith-param-gradient"><span class="type-annotation"><a href="painting/Gradient-class.html">Gradient</a>?</span> <span class="parameter-name">gradient</span>, </span><span class="parameter" id="copyWith-param-backgroundBlendMode"><span class="type-annotation"><a href="dart-ui/BlendMode.html">BlendMode</a>?</span> <span class="parameter-name">backgroundBlendMode</span>, </span><span class="parameter" id="copyWith-param-shape"><span class="type-annotation"><a href="painting/BoxShape.html">BoxShape</a>?</span> <span class="parameter-name">shape</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxDecoration-class.html">BoxDecoration</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a copy of this object but with the given fields replaced with the
+new values.
+  
+
+</dd>
+
+        <dt id="createBoxPainter" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/createBoxPainter.html">createBoxPainter</a></span><span class="signature">(<wbr><span class="parameter" id="createBoxPainter-param-onChanged">[<span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a>?</span> <span class="parameter-name">onChanged</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxPainter-class.html">BoxPainter</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a <a href="painting/BoxPainter-class.html">BoxPainter</a> that will paint this decoration.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugAssertIsValid" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/debugAssertIsValid.html">debugAssertIsValid</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  In debug mode, throws an exception if the object is not in a
+valid configuration. Otherwise, returns true.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="getClipPath" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/getClipPath.html">getClipPath</a></span><span class="signature">(<wbr><span class="parameter" id="getClipPath-param-rect"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">rect</span>, </span><span class="parameter" id="getClipPath-param-textDirection"><span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a></span> <span class="parameter-name">textDirection</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-ui/Path-class.html">Path</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a closed <a href="dart-ui/Path-class.html">Path</a> that describes the outer edge of this decoration.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="hitTest" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/hitTest.html">hitTest</a></span><span class="signature">(<wbr><span class="parameter" id="hitTest-param-size"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">size</span>, </span><span class="parameter" id="hitTest-param-position"><span class="type-annotation"><a href="dart-ui/Offset-class.html">Offset</a></span> <span class="parameter-name">position</span>, </span><span class="parameter" id="hitTest-param-textDirection">{<span class="type-annotation"><a href="dart-ui/TextDirection.html">TextDirection</a>?</span> <span class="parameter-name">textDirection</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Tests whether the given point, on a rectangle of a given size,
+would be considered to hit the decoration or not. For example,
+if the decoration only draws a circle, this function might
+return true if the point was inside the circle and false
+otherwise.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpFrom" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/lerpFrom.html">lerpFrom</a></span><span class="signature">(<wbr><span class="parameter" id="lerpFrom-param-a"><span class="type-annotation"><a href="painting/Decoration-class.html">Decoration</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerpFrom-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from another <a href="painting/Decoration-class.html">Decoration</a> (which may be of a
+different class) to <code>this</code>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="lerpTo" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/lerpTo.html">lerpTo</a></span><span class="signature">(<wbr><span class="parameter" id="lerpTo-param-b"><span class="type-annotation"><a href="painting/Decoration-class.html">Decoration</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerpTo-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolates from <code>this</code> to another <a href="painting/Decoration-class.html">Decoration</a> (which may be of
+a different class).
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scale" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/scale.html">scale</a></span><span class="signature">(<wbr><span class="parameter" id="scale-param-factor"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">factor</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxDecoration-class.html">BoxDecoration</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a new box decoration that is scaled by the given factor.
+  
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="painting/Decoration/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A brief description of this object, usually just the <a href="dart-core/Object/runtimeType.html">runtimeType</a> and the
+<a href="painting/BoxDecoration/hashCode.html">hashCode</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The equality operator.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="lerp" class="callable">
+  <span class="name"><a href="painting/BoxDecoration/lerp.html">lerp</a></span><span class="signature">(<wbr><span class="parameter" id="lerp-param-a"><span class="type-annotation"><a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span> <span class="parameter-name">a</span>, </span><span class="parameter" id="lerp-param-b"><span class="type-annotation"><a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span> <span class="parameter-name">b</span>, </span><span class="parameter" id="lerp-param-t"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">t</span></span>)
+    <span class="returntype parameter">&#8594; <a href="painting/BoxDecoration-class.html">BoxDecoration</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Linearly interpolate between two box decorations.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">BoxDecoration class</li>
+</ol>
+
+
+    <!--<h5>painting library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

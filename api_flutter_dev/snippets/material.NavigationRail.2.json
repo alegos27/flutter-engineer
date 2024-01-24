@@ -1,0 +1,13 @@
+{
+    "id": "material.NavigationRail.2",
+    "element": "NavigationRail",
+    "sourcePath": "lib/src/material/navigation_rail.dart",
+    "sourceLine": 72,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This sample shows the creation of [NavigationRail] widget used within a Scaffold with 3\n[NavigationRailDestination]s, as described in: https://m3.material.io/components/navigation-rail/overview",
+    "file": "material.NavigationRail.2.dart"
+}

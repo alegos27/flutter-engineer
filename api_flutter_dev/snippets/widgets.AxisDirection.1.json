@@ -1,0 +1,13 @@
+{
+    "id": "widgets.AxisDirection.1",
+    "element": "AxisDirection",
+    "sourcePath": "lib/src/painting/basic_types.dart",
+    "sourceLine": 200,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This sample shows a [CustomScrollView], with [Radio] buttons in the\n[AppBar.bottom] that change the [AxisDirection] to illustrate different\nconfigurations.",
+    "file": "widgets.AxisDirection.1.dart"
+}

@@ -1,0 +1,13 @@
+{
+    "id": "material.AspectRatio.2",
+    "element": "AspectRatio",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 3354,
+    "channel": "stable",
+    "serial": "2",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This second example uses an aspect ratio of 2.0, and layout constraints that\nrequire the width to be between 0.0 and 100.0, and the height to be between\n0.0 and 100.0. The widget selects a width of 100.0 (the biggest allowed) and\na height of 50.0 (to match the aspect ratio).",
+    "file": "material.AspectRatio.2.dart"
+}

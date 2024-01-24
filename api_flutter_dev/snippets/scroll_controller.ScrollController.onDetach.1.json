@@ -1,0 +1,13 @@
+{
+    "id": "scroll_controller.ScrollController.onDetach.1",
+    "element": "ScrollController.onDetach",
+    "sourcePath": "lib/src/widgets/scroll_controller.dart",
+    "sourceLine": 132,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "scroll_controller",
+    "copyright": null,
+    "description": "This sample shows how to apply a listener to the\n[ScrollPosition.isScrollingNotifier] using [ScrollController.onAttach]\n& [ScrollController.onDetach].\nThis is used to change the [AppBar]'s color when scrolling is occurring.",
+    "file": "scroll_controller.ScrollController.onDetach.1.dart"
+}

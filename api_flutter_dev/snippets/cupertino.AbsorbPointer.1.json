@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AbsorbPointer.1",
+    "element": "AbsorbPointer",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 6936,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following sample has an [AbsorbPointer] widget wrapping the button on\ntop of the stack, which absorbs pointer events, preventing its child button\n__and__ the button below it in the stack from receiving the pointer events.",
+    "file": "cupertino.AbsorbPointer.1.dart"
+}

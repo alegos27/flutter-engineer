@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="matcher library API docs, for the Dart programming language.">
+  <title>matcher library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li class="self-crumb">matcher library</li>
+  </ol>
+  <div class="self-name">matcher</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar=""
+      data-below-sidebar="package-matcher_matcher&#47;package-matcher_matcher-library-sidebar.html">
+      
+      <div>
+<h1><span class="kind-library">matcher</span> library 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Support for specifying test expectations, such as for unit tests.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="CustomMatcher">
+  <span class="name "><a href="package-matcher_expect/CustomMatcher-class.html">CustomMatcher</a></span> 
+
+</dt>
+<dd>
+  A useful utility class for implementing other matchers through inheritance.
+Derived classes should call the base constructor with a feature name and
+description, and an instance matcher, and should implement the
+<a href="package-matcher_expect/CustomMatcher/featureValueOf.html">featureValueOf</a> abstract method.
+</dd>
+
+        <dt id="Description">
+  <span class="name "><a href="package-matcher_expect/Description-class.html">Description</a></span> 
+
+</dt>
+<dd>
+  Matchers build up their error messages by appending to Description objects.
+</dd>
+
+        <dt id="isInstanceOf">
+  <span class="name deprecated"><a class="deprecated" href="package-matcher_expect/isInstanceOf-class.html">isInstanceOf</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  <strong>DEPRECATED</strong> Use <a href="package-matcher_expect/isA.html">isA</a> instead.
+</dd>
+
+        <dt id="Matcher">
+  <span class="name "><a href="package-matcher_expect/Matcher-class.html">Matcher</a></span> 
+
+</dt>
+<dd>
+  The base class for all matchers.
+</dd>
+
+        <dt id="StringDescription">
+  <span class="name "><a href="package-matcher_expect/StringDescription-class.html">StringDescription</a></span> 
+
+</dt>
+<dd>
+  The default implementation of <a href="package-matcher_expect/Description-class.html">Description</a>. This should rarely need
+substitution, although conceivably it is a place where other languages
+could be supported.
+</dd>
+
+        <dt id="TypeMatcher">
+  <span class="name "><a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  A <a href="package-matcher_expect/Matcher-class.html">Matcher</a> subclass that supports validating the <a href="dart-core/Type-class.html">Type</a> of the target
+object.
+</dd>
+
+      </dl>
+    </section>
+
+
+
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="anything" class="constant">
+    <span class="name "><a href="package-matcher_expect/anything-constant.html">anything</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches any value.
+  
+
+    <div>
+      <span class="signature"><code>_IsAnything()</code></span>
+    </div>
+</dd>
+
+        <dt id="isArgumentError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isArgumentError-constant.html">isArgumentError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/ArgumentError-class.html">ArgumentError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>ArgumentError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;ArgumentError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isCastError" class="constant">
+    <span class="name deprecated"><a class="deprecated" href="package-matcher_expect/isCastError-constant.html">isCastError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/TypeError-class.html">TypeError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>TypeError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;TypeError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isConcurrentModificationError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isConcurrentModificationError-constant.html">isConcurrentModificationError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/ConcurrentModificationError-class.html">ConcurrentModificationError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>ConcurrentModificationError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;ConcurrentModificationError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isCyclicInitializationError" class="constant">
+    <span class="name deprecated"><a class="deprecated" href="package-matcher_expect/isCyclicInitializationError-constant.html">isCyclicInitializationError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Error-class.html">Error</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>Error</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;Error&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isEmpty" class="constant">
+    <span class="name "><a href="package-matcher_expect/isEmpty-constant.html">isEmpty</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches the isEmpty property.
+  
+
+    <div>
+      <span class="signature"><code>_Empty()</code></span>
+    </div>
+</dd>
+
+        <dt id="isException" class="constant">
+    <span class="name "><a href="package-matcher_expect/isException-constant.html">isException</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Exception-class.html">Exception</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>Exception</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;Exception&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isFalse" class="constant">
+    <span class="name "><a href="package-matcher_expect/isFalse-constant.html">isFalse</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches anything except the Boolean value true.
+  
+
+    <div>
+      <span class="signature"><code>_IsFalse()</code></span>
+    </div>
+</dd>
+
+        <dt id="isFormatException" class="constant">
+    <span class="name "><a href="package-matcher_expect/isFormatException-constant.html">isFormatException</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/FormatException-class.html">FormatException</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>FormatException</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;FormatException&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isList" class="constant">
+    <span class="name "><a href="package-matcher_expect/isList-constant.html">isList</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/List-class.html">List</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>List</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;List&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isMap" class="constant">
+    <span class="name "><a href="package-matcher_expect/isMap-constant.html">isMap</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Map-class.html">Map</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>Map</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;Map&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNaN" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNaN-constant.html">isNaN</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches the numeric value NaN.
+  
+
+    <div>
+      <span class="signature"><code>_IsNaN()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNegative" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNegative-constant.html">isNegative</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is negative.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, false, true, false, &#39;a negative value&#39;, false)</code></span>
+    </div>
+</dd>
+
+        <dt id="isNonNegative" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNonNegative-constant.html">isNonNegative</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is zero or positive.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, true, false, true, &#39;a non-negative value&#39;, false)</code></span>
+    </div>
+</dd>
+
+        <dt id="isNonPositive" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNonPositive-constant.html">isNonPositive</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is zero or negative.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, true, true, false, &#39;a non-positive value&#39;, false)</code></span>
+    </div>
+</dd>
+
+        <dt id="isNonZero" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNonZero-constant.html">isNonZero</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is non-zero.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, false, true, true, &#39;a value not equal to&#39;)</code></span>
+    </div>
+</dd>
+
+        <dt id="isNoSuchMethodError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNoSuchMethodError-constant.html">isNoSuchMethodError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/NoSuchMethodError-class.html">NoSuchMethodError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>NoSuchMethodError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;NoSuchMethodError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNotEmpty" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNotEmpty-constant.html">isNotEmpty</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches the isNotEmpty property.
+  
+
+    <div>
+      <span class="signature"><code>_NotEmpty()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNotNaN" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNotNaN-constant.html">isNotNaN</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches any non-NaN value.
+  
+
+    <div>
+      <span class="signature"><code>_IsNotNaN()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNotNull" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNotNull-constant.html">isNotNull</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches any non-null value.
+  
+
+    <div>
+      <span class="signature"><code>_IsNotNull()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNull" class="constant">
+    <span class="name "><a href="package-matcher_expect/isNull-constant.html">isNull</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches any null value.
+  
+
+    <div>
+      <span class="signature"><code>_IsNull()</code></span>
+    </div>
+</dd>
+
+        <dt id="isNullThrownError" class="constant">
+    <span class="name deprecated"><a class="deprecated" href="package-matcher_expect/isNullThrownError-constant.html">isNullThrownError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/TypeError-class.html">TypeError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>TypeError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;TypeError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isPositive" class="constant">
+    <span class="name "><a href="package-matcher_expect/isPositive-constant.html">isPositive</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is positive.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, false, false, true, &#39;a positive value&#39;, false)</code></span>
+    </div>
+</dd>
+
+        <dt id="isRangeError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isRangeError-constant.html">isRangeError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/RangeError-class.html">RangeError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>RangeError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;RangeError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isStateError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isStateError-constant.html">isStateError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/StateError-class.html">StateError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>StateError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;StateError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isTrue" class="constant">
+    <span class="name "><a href="package-matcher_expect/isTrue-constant.html">isTrue</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches the Boolean value true.
+  
+
+    <div>
+      <span class="signature"><code>_IsTrue()</code></span>
+    </div>
+</dd>
+
+        <dt id="isUnimplementedError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isUnimplementedError-constant.html">isUnimplementedError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/UnimplementedError-class.html">UnimplementedError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>UnimplementedError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;UnimplementedError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isUnsupportedError" class="constant">
+    <span class="name "><a href="package-matcher_expect/isUnsupportedError-constant.html">isUnsupportedError</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/UnsupportedError-class.html">UnsupportedError</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  A matcher for <code>UnsupportedError</code>.
+  
+
+    <div>
+      <span class="signature"><code>TypeMatcher&lt;UnsupportedError&gt;()</code></span>
+    </div>
+</dd>
+
+        <dt id="isZero" class="constant">
+    <span class="name "><a href="package-matcher_expect/isZero-constant.html">isZero</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher which matches if the match argument is zero.
+  
+
+    <div>
+      <span class="signature"><code>_OrderingMatcher(0, true, false, false, &#39;a value equal to&#39;)</code></span>
+    </div>
+</dd>
+
+        <dt id="returnsNormally" class="constant">
+    <span class="name "><a href="package-matcher_expect/returnsNormally-constant.html">returnsNormally</a></span>
+  <span class="signature">&#8594; const <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  
+
+</dt>
+<dd>
+  A matcher that matches a function call against no exception.
+  
+
+    <div>
+      <span class="signature"><code>_ReturnsNormally()</code></span>
+    </div>
+</dd>
+
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="addStateInfo" class="callable">
+  <span class="name"><a href="package-matcher_expect/addStateInfo.html">addStateInfo</a></span><span class="signature">(<wbr><span class="parameter" id="addStateInfo-param-matchState"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a></span> <span class="parameter-name">matchState</span>, </span><span class="parameter" id="addStateInfo-param-values"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a></span> <span class="parameter-name">values</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Useful utility for nesting match states.
+  
+
+</dd>
+
+        <dt id="allOf" class="callable">
+  <span class="name"><a href="package-matcher_expect/allOf.html">allOf</a></span><span class="signature">(<wbr><span class="parameter" id="allOf-param-arg0"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg0</span>, </span><span class="parameter" id="allOf-param-arg1">[<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg1</span>, </span><span class="parameter" id="allOf-param-arg2"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg2</span>, </span><span class="parameter" id="allOf-param-arg3"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg3</span>, </span><span class="parameter" id="allOf-param-arg4"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg4</span>, </span><span class="parameter" id="allOf-param-arg5"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg5</span>, </span><span class="parameter" id="allOf-param-arg6"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg6</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  This returns a matcher that matches if all of the matchers passed as
+arguments (up to 7) match.
+  
+
+</dd>
+
+        <dt id="anyElement" class="callable">
+  <span class="name"><a href="package-matcher_expect/anyElement.html">anyElement</a></span><span class="signature">(<wbr><span class="parameter" id="anyElement-param-valueOrMatcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valueOrMatcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches <a href="dart-core/Iterable-class.html">Iterable</a>s in which at least one
+element matches the given <code>valueOrMatcher</code>.
+  
+
+</dd>
+
+        <dt id="anyOf" class="callable">
+  <span class="name"><a href="package-matcher_expect/anyOf.html">anyOf</a></span><span class="signature">(<wbr><span class="parameter" id="anyOf-param-arg0"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg0</span>, </span><span class="parameter" id="anyOf-param-arg1">[<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg1</span>, </span><span class="parameter" id="anyOf-param-arg2"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg2</span>, </span><span class="parameter" id="anyOf-param-arg3"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg3</span>, </span><span class="parameter" id="anyOf-param-arg4"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg4</span>, </span><span class="parameter" id="anyOf-param-arg5"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg5</span>, </span><span class="parameter" id="anyOf-param-arg6"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">arg6</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Matches if any of the given matchers evaluate to true.
+  
+
+</dd>
+
+        <dt id="closeTo" class="callable">
+  <span class="name"><a href="package-matcher_expect/closeTo.html">closeTo</a></span><span class="signature">(<wbr><span class="parameter" id="closeTo-param-value"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">value</span>, </span><span class="parameter" id="closeTo-param-delta"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">delta</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is within <code>delta</code>
+of some <code>value</code>.
+  
+
+</dd>
+
+        <dt id="collapseWhitespace" class="callable">
+  <span class="name"><a href="package-matcher_expect/collapseWhitespace.html">collapseWhitespace</a></span><span class="signature">(<wbr><span class="parameter" id="collapseWhitespace-param-string"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">string</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Utility function to collapse whitespace runs to single spaces
+and strip leading/trailing whitespace.
+  
+
+</dd>
+
+        <dt id="contains" class="callable">
+  <span class="name"><a href="package-matcher_expect/contains.html">contains</a></span><span class="signature">(<wbr><span class="parameter" id="contains-param-expected"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument contains the expected
+value.
+  
+
+</dd>
+
+        <dt id="containsAll" class="callable">
+  <span class="name"><a href="package-matcher_expect/containsAll.html">containsAll</a></span><span class="signature">(<wbr><span class="parameter" id="containsAll-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a></span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Matches <a href="dart-core/Iterable-class.html">Iterable</a>s which contain an element matching every value in
+<code>expected</code> in any order, and may contain additional values.
+  
+
+</dd>
+
+        <dt id="containsAllInOrder" class="callable">
+  <span class="name"><a href="package-matcher_expect/containsAllInOrder.html">containsAllInOrder</a></span><span class="signature">(<wbr><span class="parameter" id="containsAllInOrder-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a></span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Matches <a href="dart-core/Iterable-class.html">Iterable</a>s which contain an element matching every value in
+<code>expected</code> in the same order, but may contain additional values interleaved
+throughout.
+  
+
+</dd>
+
+        <dt id="containsOnce" class="callable">
+  <span class="name"><a href="package-matcher_expect/containsOnce.html">containsOnce</a></span><span class="signature">(<wbr><span class="parameter" id="containsOnce-param-expected"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Matches <a href="dart-core/Iterable-class.html">Iterable</a>s where exactly one element matches the expected
+value, and all other elements don't match.
+  
+
+</dd>
+
+        <dt id="containsPair" class="callable">
+  <span class="name"><a href="package-matcher_expect/containsPair.html">containsPair</a></span><span class="signature">(<wbr><span class="parameter" id="containsPair-param-key"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="containsPair-param-valueOrMatcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valueOrMatcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches maps containing the key-value pair
+with <code>key</code> =&gt; <code>valueOrMatcher</code>.
+  
+
+</dd>
+
+        <dt id="containsValue" class="callable">
+  <span class="name"><a href="package-matcher_expect/containsValue.html">containsValue</a></span><span class="signature">(<wbr><span class="parameter" id="containsValue-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches maps containing the given <code>value</code>.
+  
+
+</dd>
+
+        <dt id="endsWith" class="callable">
+  <span class="name"><a href="package-matcher_expect/endsWith.html">endsWith</a></span><span class="signature">(<wbr><span class="parameter" id="endsWith-param-suffixString"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">suffixString</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument is a string and
+ends with <code>suffixString</code>.
+  
+
+</dd>
+
+        <dt id="equals" class="callable">
+  <span class="name"><a href="package-matcher_expect/equals.html">equals</a></span><span class="signature">(<wbr><span class="parameter" id="equals-param-expected"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">expected</span>, </span><span class="parameter" id="equals-param-limit">[<span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">limit</span> = <span class="default-value">100</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the value is structurally equal to
+<code>expected</code>.
+  
+
+</dd>
+
+        <dt id="equalsIgnoringCase" class="callable">
+  <span class="name"><a href="package-matcher_expect/equalsIgnoringCase.html">equalsIgnoringCase</a></span><span class="signature">(<wbr><span class="parameter" id="equalsIgnoringCase-param-value"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is a string and
+is equal to <code>value</code> when compared case-insensitively.
+  
+
+</dd>
+
+        <dt id="equalsIgnoringWhitespace" class="callable">
+  <span class="name"><a href="package-matcher_expect/equalsIgnoringWhitespace.html">equalsIgnoringWhitespace</a></span><span class="signature">(<wbr><span class="parameter" id="equalsIgnoringWhitespace-param-value"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is a string and
+is equal to <code>value</code>, ignoring whitespace.
+  
+
+</dd>
+
+        <dt id="escape" class="callable">
+  <span class="name"><a href="package-matcher_expect/escape.html">escape</a></span><span class="signature">(<wbr><span class="parameter" id="escape-param-str"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">str</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns <code>str</code> with all whitespace characters represented as their escape
+sequences.
+  
+
+</dd>
+
+        <dt id="everyElement" class="callable">
+  <span class="name"><a href="package-matcher_expect/everyElement.html">everyElement</a></span><span class="signature">(<wbr><span class="parameter" id="everyElement-param-valueOrMatcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valueOrMatcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches <a href="dart-core/Iterable-class.html">Iterable</a>s in which all elements
+match the given <code>valueOrMatcher</code>.
+  
+
+</dd>
+
+        <dt id="greaterThan" class="callable">
+  <span class="name"><a href="package-matcher_expect/greaterThan.html">greaterThan</a></span><span class="signature">(<wbr><span class="parameter" id="greaterThan-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than the given <code>value</code>.
+  
+
+</dd>
+
+        <dt id="greaterThanOrEqualTo" class="callable">
+  <span class="name"><a href="package-matcher_expect/greaterThanOrEqualTo.html">greaterThanOrEqualTo</a></span><span class="signature">(<wbr><span class="parameter" id="greaterThanOrEqualTo-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than or equal to the given <code>value</code>.
+  
+
+</dd>
+
+        <dt id="hasLength" class="callable">
+  <span class="name"><a href="package-matcher_expect/hasLength.html">hasLength</a></span><span class="signature">(<wbr><span class="parameter" id="hasLength-param-matcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">matcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if an object has a length property
+that matches <code>matcher</code>.
+  
+
+</dd>
+
+        <dt id="inClosedOpenRange" class="callable">
+  <span class="name"><a href="package-matcher_expect/inClosedOpenRange.html">inClosedOpenRange</a></span><span class="signature">(<wbr><span class="parameter" id="inClosedOpenRange-param-low"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">low</span>, </span><span class="parameter" id="inClosedOpenRange-param-high"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">high</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than or equal to a <code>low</code> and less than <code>high</code>.
+  
+
+</dd>
+
+        <dt id="inExclusiveRange" class="callable">
+  <span class="name"><a href="package-matcher_expect/inExclusiveRange.html">inExclusiveRange</a></span><span class="signature">(<wbr><span class="parameter" id="inExclusiveRange-param-low"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">low</span>, </span><span class="parameter" id="inExclusiveRange-param-high"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">high</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than <code>low</code> and less than <code>high</code>.
+  
+
+</dd>
+
+        <dt id="inInclusiveRange" class="callable">
+  <span class="name"><a href="package-matcher_expect/inInclusiveRange.html">inInclusiveRange</a></span><span class="signature">(<wbr><span class="parameter" id="inInclusiveRange-param-low"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">low</span>, </span><span class="parameter" id="inInclusiveRange-param-high"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">high</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than or equal to <code>low</code> and less than or equal to <code>high</code>.
+  
+
+</dd>
+
+        <dt id="inOpenClosedRange" class="callable">
+  <span class="name"><a href="package-matcher_expect/inOpenClosedRange.html">inOpenClosedRange</a></span><span class="signature">(<wbr><span class="parameter" id="inOpenClosedRange-param-low"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">low</span>, </span><span class="parameter" id="inOpenClosedRange-param-high"><span class="type-annotation"><a href="dart-core/num-class.html">num</a></span> <span class="parameter-name">high</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is greater
+than <code>low</code> and less than or equal to <code>high</code>.
+  
+
+</dd>
+
+        <dt id="isA" class="callable">
+  <span class="name"><a href="package-matcher_expect/isA.html">isA</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/TypeMatcher-class.html">TypeMatcher</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches objects with type <code>T</code>.
+  
+
+</dd>
+
+        <dt id="isIn" class="callable">
+  <span class="name"><a href="package-matcher_expect/isIn.html">isIn</a></span><span class="signature">(<wbr><span class="parameter" id="isIn-param-expected"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument is in
+the expected value. This is the converse of <a href="package-matcher_expect/contains.html">contains</a>.
+  
+
+</dd>
+
+        <dt id="isNot" class="callable">
+  <span class="name"><a href="package-matcher_expect/isNot.html">isNot</a></span><span class="signature">(<wbr><span class="parameter" id="isNot-param-valueOrMatcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valueOrMatcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that inverts <code>valueOrMatcher</code> to its logical negation.
+  
+
+</dd>
+
+        <dt id="lessThan" class="callable">
+  <span class="name"><a href="package-matcher_expect/lessThan.html">lessThan</a></span><span class="signature">(<wbr><span class="parameter" id="lessThan-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is less
+than the given <code>value</code>.
+  
+
+</dd>
+
+        <dt id="lessThanOrEqualTo" class="callable">
+  <span class="name"><a href="package-matcher_expect/lessThanOrEqualTo.html">lessThanOrEqualTo</a></span><span class="signature">(<wbr><span class="parameter" id="lessThanOrEqualTo-param-value"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">value</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches if the match argument is less
+than or equal to the given <code>value</code>.
+  
+
+</dd>
+
+        <dt id="matches" class="callable">
+  <span class="name"><a href="package-matcher_expect/matches.html">matches</a></span><span class="signature">(<wbr><span class="parameter" id="matches-param-re"><span class="type-annotation"><a href="dart-core/Pattern-class.html">Pattern</a></span> <span class="parameter-name">re</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument is a string and
+matches the regular expression given by <code>re</code>.
+  
+
+</dd>
+
+        <dt id="orderedEquals" class="callable">
+  <span class="name"><a href="package-matcher_expect/orderedEquals.html">orderedEquals</a></span><span class="signature">(<wbr><span class="parameter" id="orderedEquals-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a></span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches <a href="dart-core/Iterable-class.html">Iterable</a>s that have the same
+length and the same elements as <code>expected</code>, in the same order.
+  
+
+</dd>
+
+        <dt id="pairwiseCompare" class="callable">
+  <span class="name"><a href="package-matcher_expect/pairwiseCompare.html">pairwiseCompare</a></span><span class="signature">&lt;<wbr><span class="type-parameter">S</span>, <span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="pairwiseCompare-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter">S</span>&gt;</span></span> <span class="parameter-name">expected</span>, </span><span class="parameter" id="pairwiseCompare-param-comparator"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">comparator</span>(<span class="parameter" id="param-"><span class="type-annotation">S</span>, </span><span class="parameter" id="param-"><span class="type-annotation">T</span></span>), </span><span class="parameter" id="pairwiseCompare-param-description"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">description</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A pairwise matcher for <a href="dart-core/Iterable-class.html">Iterable</a>s.
+  
+
+</dd>
+
+        <dt id="predicate" class="callable">
+  <span class="name"><a href="package-matcher_expect/predicate.html">predicate</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="predicate-param-f"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">f</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span></span>), </span><span class="parameter" id="predicate-param-description">[<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">description</span> = <span class="default-value">&#39;satisfies function&#39;</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that uses an arbitrary function that returns
+true or false for the actual value.
+  
+
+</dd>
+
+        <dt id="same" class="callable">
+  <span class="name"><a href="package-matcher_expect/same.html">same</a></span><span class="signature">(<wbr><span class="parameter" id="same-param-expected"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matches that matches if the value is the same instance
+as <code>expected</code>, using <a href="dart-core/identical.html">identical</a>.
+  
+
+</dd>
+
+        <dt id="startsWith" class="callable">
+  <span class="name"><a href="package-matcher_expect/startsWith.html">startsWith</a></span><span class="signature">(<wbr><span class="parameter" id="startsWith-param-prefixString"><span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixString</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument is a string and
+starts with <code>prefixString</code>.
+  
+
+</dd>
+
+        <dt id="stringContainsInOrder" class="callable">
+  <span class="name"><a href="package-matcher_expect/stringContainsInOrder.html">stringContainsInOrder</a></span><span class="signature">(<wbr><span class="parameter" id="stringContainsInOrder-param-substrings"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">substrings</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher that matches if the match argument is a string and
+contains a given list of <code>substrings</code> in relative order.
+  
+
+</dd>
+
+        <dt id="unorderedEquals" class="callable">
+  <span class="name"><a href="package-matcher_expect/unorderedEquals.html">unorderedEquals</a></span><span class="signature">(<wbr><span class="parameter" id="unorderedEquals-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a></span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches <a href="dart-core/Iterable-class.html">Iterable</a>s that have the same length and
+the same elements as <code>expected</code>, but not necessarily in the same order.
+  
+
+</dd>
+
+        <dt id="unorderedMatches" class="callable">
+  <span class="name"><a href="package-matcher_expect/unorderedMatches.html">unorderedMatches</a></span><span class="signature">(<wbr><span class="parameter" id="unorderedMatches-param-expected"><span class="type-annotation"><a href="dart-core/Iterable-class.html">Iterable</a></span> <span class="parameter-name">expected</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a matcher which matches <a href="dart-core/Iterable-class.html">Iterable</a>s whose elements match the
+matchers in <code>expected</code>, but not necessarily in the same order.
+  
+
+</dd>
+
+        <dt id="wrapMatcher" class="callable">
+  <span class="name"><a href="package-matcher_expect/wrapMatcher.html">wrapMatcher</a></span><span class="signature">(<wbr><span class="parameter" id="wrapMatcher-param-valueOrMatcher"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valueOrMatcher</span></span>)
+    <span class="returntype parameter">&#8594; <a href="package-matcher_expect/Matcher-class.html">Matcher</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Takes an argument and returns an equivalent <a href="package-matcher_expect/Matcher-class.html">Matcher</a>.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li class="self-crumb">matcher library</li>
+</ol>
+
+
+    <h5><span class="package-name">Flutter</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="animation/animation-library.html">animation</a></li>
+      <li><a href="cupertino/cupertino-library.html">cupertino</a></li>
+      <li><a href="foundation/foundation-library.html">foundation</a></li>
+      <li><a href="gestures/gestures-library.html">gestures</a></li>
+      <li><a href="material/material-library.html">material</a></li>
+      <li><a href="painting/painting-library.html">painting</a></li>
+      <li><a href="physics/physics-library.html">physics</a></li>
+      <li><a href="rendering/rendering-library.html">rendering</a></li>
+      <li><a href="scheduler/scheduler-library.html">scheduler</a></li>
+      <li><a href="semantics/semantics-library.html">semantics</a></li>
+      <li><a href="services/services-library.html">services</a></li>
+      <li><a href="widgets/widgets-library.html">widgets</a></li>
+      <li class="section-title">Dart</li>
+      <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+      <li><a href="dart-ui_web/dart-ui_web-library.html">dart:ui_web</a></li>
+      <li class="section-subtitle">Core</li>
+        <li class="section-subitem"><a href="dart-async/dart-async-library.html">dart:async</a></li>
+        <li class="section-subitem"><a href="dart-collection/dart-collection-library.html">dart:collection</a></li>
+        <li class="section-subitem"><a href="dart-convert/dart-convert-library.html">dart:convert</a></li>
+        <li class="section-subitem"><a href="dart-core/dart-core-library.html">dart:core</a></li>
+        <li class="section-subitem"><a href="dart-developer/dart-developer-library.html">dart:developer</a></li>
+        <li class="section-subitem"><a href="dart-math/dart-math-library.html">dart:math</a></li>
+        <li class="section-subitem"><a href="dart-typed_data/dart-typed_data-library.html">dart:typed_data</a></li>
+      <li class="section-subtitle">VM</li>
+        <li class="section-subitem"><a href="dart-ffi/dart-ffi-library.html">dart:ffi</a></li>
+        <li class="section-subitem"><a href="dart-io/dart-io-library.html">dart:io</a></li>
+        <li class="section-subitem"><a href="dart-isolate/dart-isolate-library.html">dart:isolate</a></li>
+      <li class="section-subtitle">Web</li>
+        <li class="section-subitem"><a href="dart-html/dart-html-library.html">dart:html</a></li>
+        <li class="section-subitem"><a href="dart-js/dart-js-library.html">dart:js</a></li>
+        <li class="section-subitem"><a href="dart-js_interop/dart-js_interop-library.html">dart:js_interop</a></li>
+        <li class="section-subitem"><a href="dart-js_interop_unsafe/dart-js_interop_unsafe-library.html">dart:js_interop_unsafe</a></li>
+        <li class="section-subitem"><a href="dart-js_util/dart-js_util-library.html">dart:js_util</a></li>
+      <li class="section-title">platform_integration</li>
+      <li><a href="Android/Android-library.html">Android</a></li>
+      <li><a href="iOS/iOS-library.html">iOS</a></li>
+      <li><a href="Linux/Linux-library.html">Linux</a></li>
+      <li><a href="macOS/macOS-library.html">macOS</a></li>
+      <li><a href="Windows/Windows-library.html">Windows</a></li>
+      <li class="section-title">flutter_test</li>
+      <li><a href="flutter_test/flutter_test-library.html">flutter_test</a></li>
+      <li class="section-title">flutter_driver</li>
+      <li><a href="flutter_driver/flutter_driver-library.html">flutter_driver</a></li>
+      <li><a href="flutter_driver_extension/flutter_driver_extension-library.html">flutter_driver_extension</a></li>
+      <li class="section-title">Flutter</li>
+      <li class="section-title">flutter_localizations</li>
+      <li><a href="flutter_localizations/flutter_localizations-library.html">flutter_localizations</a></li>
+      <li class="section-title">flutter_web_plugins</li>
+      <li><a href="flutter_web_plugins/flutter_web_plugins-library.html">flutter_web_plugins</a></li>
+      <li><a href="package-flutter_web_plugins_url_strategy/package-flutter_web_plugins_url_strategy-library.html">url_strategy</a></li>
+      <li class="section-title">async</li>
+      <li><a href="async/async-library.html">async</a></li>
+      <li class="section-title">boolean_selector</li>
+      <li><a href="package-boolean_selector_boolean_selector/package-boolean_selector_boolean_selector-library.html">boolean_selector</a></li>
+      <li class="section-title">characters</li>
+      <li><a href="characters/characters-library.html">characters</a></li>
+      <li class="section-title">clock</li>
+      <li><a href="package-clock_clock/package-clock_clock-library.html">clock</a></li>
+      <li class="section-title">collection</li>
+      <li><a href="package-collection_collection/package-collection_collection-library.html">collection</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.algorithms/dart.pkg.collection.algorithms-library.html">dart.pkg.collection.algorithms</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.equality/dart.pkg.collection.equality-library.html">dart.pkg.collection.equality</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.iterable_zip/dart.pkg.collection.iterable_zip-library.html">dart.pkg.collection.iterable_zip</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.priority_queue/dart.pkg.collection.priority_queue-library.html">dart.pkg.collection.priority_queue</a></li>
+      <li><a class="deprecated" href="dart.pkg.collection.wrappers/dart.pkg.collection.wrappers-library.html">dart.pkg.collection.wrappers</a></li>
+      <li class="section-title">crypto</li>
+      <li><a href="package-crypto_crypto/package-crypto_crypto-library.html">crypto</a></li>
+      <li class="section-title">fake_async</li>
+      <li><a href="package-fake_async_fake_async/package-fake_async_fake_async-library.html">fake_async</a></li>
+      <li class="section-title">file</li>
+      <li><a href="package-file_chroot/package-file_chroot-library.html">chroot</a></li>
+      <li><a href="package-file_file/package-file_file-library.html">file</a></li>
+      <li><a href="package-file_local/package-file_local-library.html">local</a></li>
+      <li><a href="package-file_memory/package-file_memory-library.html">memory</a></li>
+      <li class="section-title">integration_test</li>
+      <li><a href="package-integration_test__callback_io/package-integration_test__callback_io-library.html">_callback_io</a></li>
+      <li><a href="package-integration_test__callback_web/package-integration_test__callback_web-library.html">_callback_web</a></li>
+      <li><a href="package-integration_test__extension_io/package-integration_test__extension_io-library.html">_extension_io</a></li>
+      <li><a href="package-integration_test__extension_web/package-integration_test__extension_web-library.html">_extension_web</a></li>
+      <li><a href="package-integration_test_common/package-integration_test_common-library.html">common</a></li>
+      <li><a href="package-integration_test_integration_test/package-integration_test_integration_test-library.html">integration_test</a></li>
+      <li><a href="package-integration_test_integration_test_driver/package-integration_test_integration_test_driver-library.html">integration_test_driver</a></li>
+      <li><a href="package-integration_test_integration_test_driver_extended/package-integration_test_integration_test_driver_extended-library.html">integration_test_driver_extended</a></li>
+      <li class="section-title">intl</li>
+      <li><a href="package-intl_date_symbol_data_custom/package-intl_date_symbol_data_custom-library.html">date_symbol_data_custom</a></li>
+      <li><a href="date_symbol_data_file/date_symbol_data_file-library.html">date_symbol_data_file</a></li>
+      <li><a href="date_symbol_data_http_request/date_symbol_data_http_request-library.html">date_symbol_data_http_request</a></li>
+      <li><a href="date_symbol_data_local/date_symbol_data_local-library.html">date_symbol_data_local</a></li>
+      <li><a href="date_symbols/date_symbols-library.html">date_symbols</a></li>
+      <li><a href="date_time_patterns/date_time_patterns-library.html">date_time_patterns</a></li>
+      <li><a href="intl/intl-library.html">intl</a></li>
+      <li><a href="intl_standalone/intl_standalone-library.html">intl_standalone</a></li>
+      <li><a href="package-intl_locale/package-intl_locale-library.html">locale</a></li>
+      <li><a href="message_format/message_format-library.html">message_format</a></li>
+      <li><a href="message_lookup_by_library/message_lookup_by_library-library.html">message_lookup_by_library</a></li>
+      <li><a href="number_symbol_data/number_symbol_data-library.html">number_symbol_data</a></li>
+      <li><a href="number_symbols/number_symbols-library.html">number_symbols</a></li>
+      <li class="section-title">matcher</li>
+      <li><a href="package-matcher_expect/package-matcher_expect-library.html">expect</a></li>
+      <li><a href="package-matcher_matcher/package-matcher_matcher-library.html">matcher</a></li>
+      <li class="section-title">material_color_utilities</li>
+      <li><a href="package-material_color_utilities_blend_blend/package-material_color_utilities_blend_blend-library.html">blend</a></li>
+      <li><a href="package-material_color_utilities_hct_cam16/package-material_color_utilities_hct_cam16-library.html">cam16</a></li>
+      <li><a href="package-material_color_utilities_utils_color_utils/package-material_color_utilities_utils_color_utils-library.html">color_utils</a></li>
+      <li><a href="package-material_color_utilities_contrast_contrast/package-material_color_utilities_contrast_contrast-library.html">contrast</a></li>
+      <li><a href="package-material_color_utilities_palettes_core_palette/package-material_color_utilities_palettes_core_palette-library.html">core_palette</a></li>
+      <li><a href="package-material_color_utilities_dislike_dislike_analyzer/package-material_color_utilities_dislike_dislike_analyzer-library.html">dislike_analyzer</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_dynamic_color/package-material_color_utilities_dynamiccolor_dynamic_color-library.html">dynamic_color</a></li>
+      <li><a href="package-material_color_utilities_scheme_dynamic_scheme/package-material_color_utilities_scheme_dynamic_scheme-library.html">dynamic_scheme</a></li>
+      <li><a href="package-material_color_utilities_hct_hct/package-material_color_utilities_hct_hct-library.html">hct</a></li>
+      <li><a href="package-material_color_utilities_hct_src_hct_solver/package-material_color_utilities_hct_src_hct_solver-library.html">hct_solver</a></li>
+      <li><a href="material_color_utilities/material_color_utilities-library.html">material_color_utilities</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_material_dynamic_colors/package-material_color_utilities_dynamiccolor_material_dynamic_colors-library.html">material_dynamic_colors</a></li>
+      <li><a href="package-material_color_utilities_utils_math_utils/package-material_color_utilities_utils_math_utils-library.html">math_utils</a></li>
+      <li><a href="package-material_color_utilities_quantize_src_point_provider/package-material_color_utilities_quantize_src_point_provider-library.html">point_provider</a></li>
+      <li><a href="package-material_color_utilities_quantize_src_point_provider_lab/package-material_color_utilities_quantize_src_point_provider_lab-library.html">point_provider_lab</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer/package-material_color_utilities_quantize_quantizer-library.html">quantizer</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_celebi/package-material_color_utilities_quantize_quantizer_celebi-library.html">quantizer_celebi</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_map/package-material_color_utilities_quantize_quantizer_map-library.html">quantizer_map</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_wsmeans/package-material_color_utilities_quantize_quantizer_wsmeans-library.html">quantizer_wsmeans</a></li>
+      <li><a href="package-material_color_utilities_quantize_quantizer_wu/package-material_color_utilities_quantize_quantizer_wu-library.html">quantizer_wu</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme/package-material_color_utilities_scheme_scheme-library.html">scheme</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_content/package-material_color_utilities_scheme_scheme_content-library.html">scheme_content</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_expressive/package-material_color_utilities_scheme_scheme_expressive-library.html">scheme_expressive</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_fidelity/package-material_color_utilities_scheme_scheme_fidelity-library.html">scheme_fidelity</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_monochrome/package-material_color_utilities_scheme_scheme_monochrome-library.html">scheme_monochrome</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_neutral/package-material_color_utilities_scheme_scheme_neutral-library.html">scheme_neutral</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_tonal_spot/package-material_color_utilities_scheme_scheme_tonal_spot-library.html">scheme_tonal_spot</a></li>
+      <li><a href="package-material_color_utilities_scheme_scheme_vibrant/package-material_color_utilities_scheme_scheme_vibrant-library.html">scheme_vibrant</a></li>
+      <li><a href="package-material_color_utilities_score_score/package-material_color_utilities_score_score-library.html">score</a></li>
+      <li><a href="package-material_color_utilities_utils_string_utils/package-material_color_utilities_utils_string_utils-library.html">string_utils</a></li>
+      <li><a href="package-material_color_utilities_temperature_temperature_cache/package-material_color_utilities_temperature_temperature_cache-library.html">temperature_cache</a></li>
+      <li><a href="package-material_color_utilities_palettes_tonal_palette/package-material_color_utilities_palettes_tonal_palette-library.html">tonal_palette</a></li>
+      <li><a href="package-material_color_utilities_dynamiccolor_src_tone_delta_constraint/package-material_color_utilities_dynamiccolor_src_tone_delta_constraint-library.html">tone_delta_constraint</a></li>
+      <li><a href="package-material_color_utilities_scheme_variant/package-material_color_utilities_scheme_variant-library.html">variant</a></li>
+      <li><a href="package-material_color_utilities_hct_viewing_conditions/package-material_color_utilities_hct_viewing_conditions-library.html">viewing_conditions</a></li>
+      <li class="section-title">meta</li>
+      <li><a href="meta/meta-library.html">meta</a></li>
+      <li><a href="meta_dart2js/meta_dart2js-library.html">meta_dart2js</a></li>
+      <li><a href="meta_meta/meta_meta-library.html">meta_meta</a></li>
+      <li class="section-title">path</li>
+      <li><a href="package-path_path/package-path_path-library.html">path</a></li>
+      <li class="section-title">platform</li>
+      <li><a href="package-platform_platform/package-platform_platform-library.html">platform</a></li>
+      <li class="section-title">process</li>
+      <li><a href="package-process_process/package-process_process-library.html">process</a></li>
+      <li class="section-title">source_span</li>
+      <li><a href="package-source_span_source_span/package-source_span_source_span-library.html">source_span</a></li>
+      <li class="section-title">stack_trace</li>
+      <li><a href="package-stack_trace_stack_trace/package-stack_trace_stack_trace-library.html">stack_trace</a></li>
+      <li class="section-title">stream_channel</li>
+      <li><a href="package-stream_channel_isolate_channel/package-stream_channel_isolate_channel-library.html">isolate_channel</a></li>
+      <li><a href="package-stream_channel_stream_channel/package-stream_channel_stream_channel-library.html">stream_channel</a></li>
+      <li class="section-title">string_scanner</li>
+      <li><a href="package-string_scanner_string_scanner/package-string_scanner_string_scanner-library.html">string_scanner</a></li>
+      <li class="section-title">sync_http</li>
+      <li><a href="sync.http/sync.http-library.html">sync.http</a></li>
+      <li class="section-title">term_glyph</li>
+      <li><a href="package-term_glyph_term_glyph/package-term_glyph_term_glyph-library.html">term_glyph</a></li>
+      <li class="section-title">test_api</li>
+      <li><a href="package-test_api_backend/package-test_api_backend-library.html">backend</a></li>
+      <li><a href="package-test_api_hooks/package-test_api_hooks-library.html">hooks</a></li>
+      <li><a href="package-test_api_hooks_testing/package-test_api_hooks_testing-library.html">hooks_testing</a></li>
+      <li><a class="deprecated" href="test_api/test_api-library.html">test_api</a></li>
+      <li><a class="deprecated" href="test_api.fake/test_api.fake-library.html">test_api.fake</a></li>
+      <li><a href="test_api.scaffolding/test_api.scaffolding-library.html">test_api.scaffolding</a></li>
+      <li class="section-title">typed_data</li>
+      <li><a href="typed_data/typed_data-library.html">typed_data</a></li>
+      <li><a href="typed_data.typed_buffers/typed_data.typed_buffers-library.html">typed_data.typed_buffers</a></li>
+      <li class="section-title">vector_math</li>
+      <li><a class="deprecated" href="hash/hash-library.html">hash</a></li>
+      <li><a href="vector_math/vector_math-library.html">vector_math</a></li>
+      <li><a href="vector_math_64/vector_math_64-library.html">vector_math_64</a></li>
+      <li><a href="vector_math_geometry/vector_math_geometry-library.html">vector_math_geometry</a></li>
+      <li><a href="vector_math_lists/vector_math_lists-library.html">vector_math_lists</a></li>
+      <li><a href="vector_math_operations/vector_math_operations-library.html">vector_math_operations</a></li>
+      <li class="section-title">vm_service</li>
+      <li><a href="package-vm_service_utils/package-vm_service_utils-library.html">utils</a></li>
+      <li><a href="vm_service/vm_service-library.html">vm_service</a></li>
+      <li><a href="package-vm_service_vm_service_io/package-vm_service_vm_service_io-library.html">vm_service_io</a></li>
+      <li class="section-title">web</li>
+      <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+      <li><a href="package-web_web/package-web_web-library.html">web</a></li>
+      <li class="section-title">webdriver</li>
+      <li><a href="package-webdriver_support_async/package-webdriver_support_async-library.html">async</a></li>
+      <li><a href="package-webdriver_async_core/package-webdriver_async_core-library.html">async_core</a></li>
+      <li><a href="package-webdriver_async_html/package-webdriver_async_html-library.html">async_html</a></li>
+      <li><a href="package-webdriver_async_io/package-webdriver_async_io-library.html">async_io</a></li>
+      <li><a class="deprecated" href="core/core-library.html">core</a></li>
+      <li><a href="package-webdriver_support_firefox_profile/package-webdriver_support_firefox_profile-library.html">firefox_profile</a></li>
+      <li><a class="deprecated" href="io/io-library.html">io</a></li>
+      <li><a href="package-webdriver_support_stdio_stepper/package-webdriver_support_stdio_stepper-library.html">stdio_stepper</a></li>
+      <li><a href="package-webdriver_sync_core/package-webdriver_sync_core-library.html">sync_core</a></li>
+      <li><a href="package-webdriver_sync_io/package-webdriver_sync_io-library.html">sync_io</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>matcher library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

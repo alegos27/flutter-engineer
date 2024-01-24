@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the applyBoxFit function from the painting library, for the Dart programming language.">
+  <title>applyBoxFit function - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">applyBoxFit function</li>
+  </ol>
+  <div class="self-name">applyBoxFit</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;painting-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/box_fit.dart#L141"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">applyBoxFit</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="painting/FittedSizes-class.html">FittedSizes</a></span>
+<span class="name ">applyBoxFit</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="applyBoxFit-param-fit"><span class="type-annotation"><a href="painting/BoxFit.html">BoxFit</a></span> <span class="parameter-name">fit</span>, </span></li>
+<li><span class="parameter" id="applyBoxFit-param-inputSize"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">inputSize</span>, </span></li>
+<li><span class="parameter" id="applyBoxFit-param-outputSize"><span class="type-annotation"><a href="dart-ui/Size-class.html">Size</a></span> <span class="parameter-name">outputSize</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Apply a <a href="painting/BoxFit.html">BoxFit</a> value.</p>
+<p>The arguments to this method, in addition to the <a href="painting/BoxFit.html">BoxFit</a> value to apply,
+are two sizes, ostensibly the sizes of an input box and an output box.
+Specifically, the <code>inputSize</code> argument gives the size of the complete source
+that is being fitted, and the <code>outputSize</code> gives the size of the rectangle
+into which the source is to be drawn.</p>
+<p>This function then returns two sizes, combined into a single <a href="painting/FittedSizes-class.html">FittedSizes</a>
+object.</p>
+<p>The <a href="painting/FittedSizes/source.html">FittedSizes.source</a> size is the subpart of the <code>inputSize</code> that is to
+be shown. If the entire input source is shown, then this will equal the
+<code>inputSize</code>, but if the input source is to be cropped down, this may be
+smaller.</p>
+<p>The <a href="painting/FittedSizes/destination.html">FittedSizes.destination</a> size is the subpart of the <code>outputSize</code> in
+which to paint the (possibly cropped) source. If the
+<a href="painting/FittedSizes/destination.html">FittedSizes.destination</a> size is smaller than the <code>outputSize</code> then the
+source is being letterboxed (or pillarboxed).</p>
+<p>This method does not express an opinion regarding the alignment of the
+source and destination sizes within the input and output rectangles.
+Typically they are centered (this is what <a href="painting/BoxDecoration-class.html">BoxDecoration</a> does, for
+instance, and is how <a href="painting/BoxFit.html">BoxFit</a> is defined). The <a href="painting/Alignment-class.html">Alignment</a> class provides a
+convenience function, <a href="painting/Alignment/inscribe.html">Alignment.inscribe</a>, for resolving the sizes to
+rects, as shown in the example below.</p>
+<p>
+<a name="painting.applyBoxFit.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+This function paints a <a href="dart-ui/Image-class.html">dart:ui.Image</a> <code>image</code> onto the <a href="dart-ui/Rect-class.html">Rect</a> <code>outputRect</code> on a
+<a href="dart-ui/Canvas-class.html">Canvas</a> <code>canvas</code>, using a <a href="dart-ui/Paint-class.html">Paint</a> <code>paint</code>, applying the <a href="painting/BoxFit.html">BoxFit</a> algorithm
+<code>fit</code>:
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+    onmouseenter="fixHref(this, 'painting.applyBoxFit.1');" onclick="fixHref(this, 'painting.applyBoxFit.1'); copyStringToClipboard(this.href);"
+    href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(findSiblingWithId(this, 'sample-code'));">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre class="language-dart" id="sample-code"><code class="language-dart">void paintImage(ui.Image image, Rect outputRect, Canvas canvas, Paint paint, BoxFit fit) {
+  final Size imageSize = Size(image.width.toDouble(), image.height.toDouble());
+  final FittedSizes sizes = applyBoxFit(fit, imageSize, outputRect.size);
+  final Rect inputSubrect = Alignment.center.inscribe(sizes.source, Offset.zero &amp; imageSize);
+  final Rect outputSubrect = Alignment.center.inscribe(sizes.destination, outputRect);
+  canvas.drawImageRect(image, inputSubrect, outputSubrect, paint);
+}</code></pre>
+  </div>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/FittedBox-class.html">FittedBox</a>, a widget that applies this algorithm to another widget.</li>
+<li><a href="painting/paintImage.html">paintImage</a>, a function that applies this algorithm to images for painting.</li>
+<li><a href="widgets/DecoratedBox-class.html">DecoratedBox</a>, <a href="painting/BoxDecoration-class.html">BoxDecoration</a>, and <a href="painting/DecorationImage-class.html">DecorationImage</a>, which together
+provide access to <a href="painting/paintImage.html">paintImage</a> at the widgets layer.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">FittedSizes applyBoxFit(BoxFit fit, Size inputSize, Size outputSize) {
+  if (inputSize.height &lt;= 0.0 || inputSize.width &lt;= 0.0 || outputSize.height &lt;= 0.0 || outputSize.width &lt;= 0.0) {
+    return const FittedSizes(Size.zero, Size.zero);
+  }
+
+  Size sourceSize, destinationSize;
+  switch (fit) {
+    case BoxFit.fill:
+      sourceSize = inputSize;
+      destinationSize = outputSize;
+    case BoxFit.contain:
+      sourceSize = inputSize;
+      if (outputSize.width &#47; outputSize.height &gt; sourceSize.width &#47; sourceSize.height) {
+        destinationSize = Size(sourceSize.width * outputSize.height &#47; sourceSize.height, outputSize.height);
+      } else {
+        destinationSize = Size(outputSize.width, sourceSize.height * outputSize.width &#47; sourceSize.width);
+      }
+    case BoxFit.cover:
+      if (outputSize.width &#47; outputSize.height &gt; inputSize.width &#47; inputSize.height) {
+        sourceSize = Size(inputSize.width, inputSize.width * outputSize.height &#47; outputSize.width);
+      } else {
+        sourceSize = Size(inputSize.height * outputSize.width &#47; outputSize.height, inputSize.height);
+      }
+      destinationSize = outputSize;
+    case BoxFit.fitWidth:
+      if (outputSize.width &#47; outputSize.height &gt; inputSize.width &#47; inputSize.height) {
+        &#47;&#47; Like &quot;cover&quot;
+        sourceSize = Size(inputSize.width, inputSize.width * outputSize.height &#47; outputSize.width);
+        destinationSize = outputSize;
+      } else {
+        &#47;&#47; Like &quot;contain&quot;
+        sourceSize = inputSize;
+        destinationSize = Size(outputSize.width, sourceSize.height * outputSize.width &#47; sourceSize.width);
+      }
+    case BoxFit.fitHeight:
+      if (outputSize.width &#47; outputSize.height &gt; inputSize.width &#47; inputSize.height) {
+        &#47;&#47; Like &quot;contain&quot;
+        sourceSize = inputSize;
+        destinationSize = Size(sourceSize.width * outputSize.height &#47; sourceSize.height, outputSize.height);
+      } else {
+        &#47;&#47; Like &quot;cover&quot;
+        sourceSize = Size(inputSize.height * outputSize.width &#47; outputSize.height, inputSize.height);
+        destinationSize = outputSize;
+      }
+    case BoxFit.none:
+      sourceSize = Size(math.min(inputSize.width, outputSize.width), math.min(inputSize.height, outputSize.height));
+      destinationSize = sourceSize;
+    case BoxFit.scaleDown:
+      sourceSize = inputSize;
+      destinationSize = inputSize;
+      final double aspectRatio = inputSize.width &#47; inputSize.height;
+      if (destinationSize.height &gt; outputSize.height) {
+        destinationSize = Size(outputSize.height * aspectRatio, outputSize.height);
+      }
+      if (destinationSize.width &gt; outputSize.width) {
+        destinationSize = Size(outputSize.width, outputSize.width &#47; aspectRatio);
+      }
+  }
+  return FittedSizes(sourceSize, destinationSize);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li class="self-crumb">applyBoxFit function</li>
+</ol>
+
+
+    <h5>painting library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

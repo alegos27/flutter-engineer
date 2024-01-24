@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getOuterPath method from the CircularNotchedRectangle class, for the Dart programming language.">
+  <title>getOuterPath method - CircularNotchedRectangle class - painting library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li><a href="painting/CircularNotchedRectangle-class.html">CircularNotchedRectangle</a></li>
+    <li class="self-crumb">getOuterPath method</li>
+  </ol>
+  <div class="self-name">getOuterPath</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="painting&#47;CircularNotchedRectangle-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/painting/notched_shapes.dart#L58"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">getOuterPath</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="dart-ui/Path-class.html">Path</a></span>
+<span class="name ">getOuterPath</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="getOuterPath-param-host"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a></span> <span class="parameter-name">host</span>, </span></li>
+<li><span class="parameter" id="getOuterPath-param-guest"><span class="type-annotation"><a href="dart-ui/Rect-class.html">Rect</a>?</span> <span class="parameter-name">guest</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Creates a <a href="dart-ui/Path-class.html">Path</a> that describes a rectangle with a smooth circular notch.</p>
+<p><code>host</code> is the bounding box for the returned shape. Conceptually this is
+the rectangle to which the notch will be applied.</p>
+<p><code>guest</code> is the bounding box of a circle that the notch accommodates. All
+points in the circle bounded by <code>guest</code> will be outside of the returned
+path.</p>
+<p>The notch is curve that smoothly connects the host's top edge and
+the guest circle.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">&#47;&#47; TODO(amirh): add an example diagram here.
+@override
+Path getOuterPath(Rect host, Rect? guest) {
+  if (guest == null || !host.overlaps(guest)) {
+    return Path()..addRect(host);
+  }
+
+  &#47;&#47; The guest&#39;s shape is a circle bounded by the guest rectangle.
+  &#47;&#47; So the guest&#39;s radius is half the guest width.
+  final double notchRadius = guest.width &#47; 2.0;
+
+  &#47;&#47; We build a path for the notch from 3 segments:
+  &#47;&#47; Segment A - a Bezier curve from the host&#39;s top edge to segment B.
+  &#47;&#47; Segment B - an arc with radius notchRadius.
+  &#47;&#47; Segment C - a Bezier curve from segment B back to the host&#39;s top edge.
+  &#47;&#47;
+  &#47;&#47; A detailed explanation and the derivation of the formulas below is
+  &#47;&#47; available at: https:&#47;&#47;goo.gl&#47;Ufzrqn
+
+  const double s1 = 15.0;
+  const double s2 = 1.0;
+
+  final double r = notchRadius;
+  final double a = -1.0 * r - s2;
+  final double b = host.top - guest.center.dy;
+
+  final double n2 = math.sqrt(b * b * r * r * (a * a + b * b - r * r));
+  final double p2xA = ((a * r * r) - n2) &#47; (a * a + b * b);
+  final double p2xB = ((a * r * r) + n2) &#47; (a * a + b * b);
+  final double p2yA = math.sqrt(r * r - p2xA * p2xA);
+  final double p2yB = math.sqrt(r * r - p2xB * p2xB);
+
+  final List&lt;Offset?&gt; p = List&lt;Offset?&gt;.filled(6, null);
+
+  &#47;&#47; p0, p1, and p2 are the control points for segment A.
+  p[0] = Offset(a - s1, b);
+  p[1] = Offset(a, b);
+  final double cmp = b &lt; 0 ? -1.0 : 1.0;
+  p[2] = cmp * p2yA &gt; cmp * p2yB ? Offset(p2xA, p2yA) : Offset(p2xB, p2yB);
+
+  &#47;&#47; p3, p4, and p5 are the control points for segment B, which is a mirror
+  &#47;&#47; of segment A around the y axis.
+  p[3] = Offset(-1.0 * p[2]!.dx, p[2]!.dy);
+  p[4] = Offset(-1.0 * p[1]!.dx, p[1]!.dy);
+  p[5] = Offset(-1.0 * p[0]!.dx, p[0]!.dy);
+
+  &#47;&#47; translate all points back to the absolute coordinate system.
+  for (int i = 0; i &lt; p.length; i += 1) {
+    p[i] = p[i]! + guest.center;
+  }
+
+  return Path()
+    ..moveTo(host.left, host.top)
+    ..lineTo(p[0]!.dx, p[0]!.dy)
+    ..quadraticBezierTo(p[1]!.dx, p[1]!.dy, p[2]!.dx, p[2]!.dy)
+    ..arcToPoint(
+      p[3]!,
+      radius: Radius.circular(notchRadius),
+      clockwise: false,
+    )
+    ..quadraticBezierTo(p[4]!.dx, p[4]!.dy, p[5]!.dx, p[5]!.dy)
+    ..lineTo(host.right, host.top)
+    ..lineTo(host.right, host.bottom)
+    ..lineTo(host.left, host.bottom)
+    ..close();
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="painting/painting-library.html">painting</a></li>
+    <li><a href="painting/CircularNotchedRectangle-class.html">CircularNotchedRectangle</a></li>
+    <li class="self-crumb">getOuterPath method</li>
+</ol>
+
+
+    <h5>CircularNotchedRectangle class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

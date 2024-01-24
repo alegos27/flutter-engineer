@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.PositionedTransition.1",
+    "element": "PositionedTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 731,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "The following code implements the [PositionedTransition] as seen in the video\nabove:",
+    "file": "cupertino.PositionedTransition.1.dart"
+}

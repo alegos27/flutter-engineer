@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.AnimatedGrid.1",
+    "element": "AnimatedGrid",
+    "sourcePath": "lib/src/widgets/animated_scroll_view.dart",
+    "sourceLine": 271,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This sample application uses an [AnimatedGrid] to create an effect when\nitems are removed or added to the grid.",
+    "file": "cupertino.AnimatedGrid.1.dart"
+}

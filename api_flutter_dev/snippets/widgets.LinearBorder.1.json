@@ -1,0 +1,13 @@
+{
+    "id": "widgets.LinearBorder.1",
+    "element": "LinearBorder",
+    "sourcePath": "lib/src/painting/linear_border.dart",
+    "sourceLine": 142,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "This example shows how to draw different kinds of [LinearBorder]s.",
+    "file": "widgets.LinearBorder.1.dart"
+}

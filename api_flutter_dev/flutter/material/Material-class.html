@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Material class from the material library, for the Dart programming language.">
+  <title>Material class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">Material class</li>
+  </ol>
+  <div class="self-name">Material</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="material&#47;Material-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/material.dart#L171"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">Material</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A piece of material.</p>
+<p>The Material widget is responsible for:</p>
+<ol>
+<li>Clipping: If <a href="material/Material/clipBehavior.html">clipBehavior</a> is not <a href="dart-ui/Clip.html">Clip.none</a>, Material clips its widget
+sub-tree to the shape specified by <a href="material/Material/shape.html">shape</a>, <a href="material/Material/type.html">type</a>, and <a href="material/Material/borderRadius.html">borderRadius</a>.
+By default, <a href="material/Material/clipBehavior.html">clipBehavior</a> is <a href="dart-ui/Clip.html">Clip.none</a> for performance considerations.
+See <a href="material/Ink-class.html">Ink</a> for an example of how this affects clipping <a href="material/Ink-class.html">Ink</a> widgets.</li>
+<li>Elevation: Material elevates its widget sub-tree on the Z axis by
+<a href="material/Material/elevation.html">elevation</a> pixels, and draws the appropriate shadow.</li>
+<li>Ink effects: Material shows ink effects implemented by <a href="material/InkFeature-class.html">InkFeature</a>s
+like <a href="material/InkSplash-class.html">InkSplash</a> and <a href="material/InkHighlight-class.html">InkHighlight</a> below its children.</li>
+</ol>
+<h2 id="the-material-metaphor">The Material Metaphor</h2>
+<p>Material is the central metaphor in Material Design. Each piece of material
+exists at a given elevation, which influences how that piece of material
+visually relates to other pieces of material and how that material casts
+shadows.</p>
+<p>Most user interface elements are either conceptually printed on a piece of
+material or themselves made of material. Material reacts to user input using
+<a href="material/InkSplash-class.html">InkSplash</a> and <a href="material/InkHighlight-class.html">InkHighlight</a> effects. To trigger a reaction on the
+material, use a <a href="material/MaterialInkController-class.html">MaterialInkController</a> obtained via <a href="material/Material/of.html">Material.of</a>.</p>
+<p>In general, the features of a <a href="material/Material-class.html">Material</a> should not change over time (e.g. a
+<a href="material/Material-class.html">Material</a> should not change its <a href="material/Material/color.html">color</a>, <a href="material/Material/shadowColor.html">shadowColor</a> or <a href="material/Material/type.html">type</a>).
+Changes to <a href="material/Material/elevation.html">elevation</a>, <a href="material/Material/shadowColor.html">shadowColor</a> and <a href="material/Material/surfaceTintColor.html">surfaceTintColor</a> are animated
+for <a href="material/Material/animationDuration.html">animationDuration</a>. Changes to <a href="material/Material/shape.html">shape</a> are animated if <a href="material/Material/type.html">type</a> is
+not <a href="material/MaterialType.html">MaterialType.transparency</a> and <a href="painting/ShapeBorder/lerp.html">ShapeBorder.lerp</a> between the previous
+and next <a href="material/Material/shape.html">shape</a> values is supported. Shape changes are also animated
+for <a href="material/Material/animationDuration.html">animationDuration</a>.</p>
+<h2 id="shape">Shape</h2>
+<p>The shape for material is determined by <a href="material/Material/shape.html">shape</a>, <a href="material/Material/type.html">type</a>, and <a href="material/Material/borderRadius.html">borderRadius</a>.</p>
+<ul>
+<li>If <a href="material/Material/shape.html">shape</a> is non null, it determines the shape.</li>
+<li>If <a href="material/Material/shape.html">shape</a> is null and <a href="material/Material/borderRadius.html">borderRadius</a> is non null, the shape is a
+rounded rectangle, with corners specified by <a href="material/Material/borderRadius.html">borderRadius</a>.</li>
+<li>If <a href="material/Material/shape.html">shape</a> and <a href="material/Material/borderRadius.html">borderRadius</a> are null, <a href="material/Material/type.html">type</a> determines the
+shape as follows:
+<ul>
+<li><a href="material/MaterialType.html">MaterialType.canvas</a>: the default material shape is a rectangle.</li>
+<li><a href="material/MaterialType.html">MaterialType.card</a>: the default material shape is a rectangle with
+rounded edges. The edge radii is specified by <a href="material/kMaterialEdges-constant.html">kMaterialEdges</a>.</li>
+<li><a href="material/MaterialType.html">MaterialType.circle</a>: the default material shape is a circle.</li>
+<li><a href="material/MaterialType.html">MaterialType.button</a>: the default material shape is a rectangle with
+rounded edges. The edge radii is specified by <a href="material/kMaterialEdges-constant.html">kMaterialEdges</a>.</li>
+<li><a href="material/MaterialType.html">MaterialType.transparency</a>: the default material shape is a rectangle.</li>
+</ul>
+</li>
+</ul>
+<h2 id="border">Border</h2>
+<p>If <a href="material/Material/shape.html">shape</a> is not null, then its border will also be painted (if any).</p>
+<h2 id="layout-change-notifications">Layout change notifications</h2>
+<p>If the layout changes (e.g. because there's a list on the material, and it's
+been scrolled), a <a href="widgets/LayoutChangedNotification-class.html">LayoutChangedNotification</a> must be dispatched at the
+relevant subtree. This in particular means that transitions (e.g.
+<a href="widgets/SlideTransition-class.html">SlideTransition</a>) should not be placed inside <a href="material/Material-class.html">Material</a> widgets so as to
+move subtrees that contain <a href="material/InkResponse-class.html">InkResponse</a>s, <a href="material/InkWell-class.html">InkWell</a>s, <a href="material/Ink-class.html">Ink</a>s, or other
+widgets that use the <a href="material/InkFeature-class.html">InkFeature</a> mechanism. Otherwise, in-progress ink
+features (e.g., ink splashes and ink highlights) won't move to account for
+the new layout.</p>
+<h2 id="painting-over-the-material">Painting over the material</h2>
+<p>Material widgets will often trigger reactions on their nearest material
+ancestor. For example, <a href="material/ListTile/hoverColor.html">ListTile.hoverColor</a> triggers a reaction on the
+tile's material when a pointer is hovering over it. These reactions will be
+obscured if any widget in between them and the material paints in such a
+way as to obscure the material (such as setting a <a href="painting/BoxDecoration/color.html">BoxDecoration.color</a> on
+a <a href="widgets/DecoratedBox-class.html">DecoratedBox</a>). To avoid this behavior, use <a href="material/InkDecoration-class.html">InkDecoration</a> to decorate
+the material itself.</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/MergeableMaterial-class.html">MergeableMaterial</a>, a piece of material that can split and re-merge.</li>
+<li><a href="material/Card-class.html">Card</a>, a wrapper for a <a href="material/Material-class.html">Material</a> of <a href="material/Material/type.html">type</a> <a href="material/MaterialType.html">MaterialType.card</a>.</li>
+<li><a href="https://material.io/design/">material.io/design/</a></li>
+<li><a href="https://m3.material.io/styles/color/the-color-system/color-roles">m3.material.io/styles/color/the-color-system/color-roles</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatefulWidget-class.html">StatefulWidget</a></li>
+      <li>Material</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="Material" class="callable">
+          <span class="name"><a href="material/Material/Material.html">Material</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-type"><span class="type-annotation"><a href="material/MaterialType.html">MaterialType</a></span> <span class="parameter-name">type</span> = <span class="default-value">MaterialType.canvas</span>, </span><span class="parameter" id="-param-elevation"><span class="type-annotation"><a href="dart-core/double-class.html">double</a></span> <span class="parameter-name">elevation</span> = <span class="default-value">0.0</span>, </span><span class="parameter" id="-param-color"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">color</span>, </span><span class="parameter" id="-param-shadowColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadowColor</span>, </span><span class="parameter" id="-param-surfaceTintColor"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTintColor</span>, </span><span class="parameter" id="-param-textStyle"><span class="type-annotation"><a href="painting/TextStyle-class.html">TextStyle</a>?</span> <span class="parameter-name">textStyle</span>, </span><span class="parameter" id="-param-borderRadius"><span class="type-annotation"><a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a>?</span> <span class="parameter-name">borderRadius</span>, </span><span class="parameter" id="-param-shape"><span class="type-annotation"><a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> <span class="parameter-name">shape</span>, </span><span class="parameter" id="-param-borderOnForeground"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">borderOnForeground</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-clipBehavior"><span class="type-annotation"><a href="dart-ui/Clip.html">Clip</a></span> <span class="parameter-name">clipBehavior</span> = <span class="default-value">Clip.none</span>, </span><span class="parameter" id="-param-animationDuration"><span class="type-annotation"><a href="dart-core/Duration-class.html">Duration</a></span> <span class="parameter-name">animationDuration</span> = <span class="default-value">kThemeChangeDuration</span>, </span><span class="parameter" id="-param-child"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">child</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a piece of material.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="animationDuration" class="property">
+  <span class="name"><a href="material/Material/animationDuration.html">animationDuration</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Duration-class.html">Duration</a></span> 
+
+</dt>
+<dd>
+  Defines the duration of animated changes for <a href="material/Material/shape.html">shape</a>, <a href="material/Material/elevation.html">elevation</a>,
+<a href="material/Material/shadowColor.html">shadowColor</a>, <a href="material/Material/surfaceTintColor.html">surfaceTintColor</a> and the elevation overlay if it is applied.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="borderOnForeground" class="property">
+  <span class="name"><a href="material/Material/borderOnForeground.html">borderOnForeground</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to paint the <a href="material/Material/shape.html">shape</a> border in front of the <a href="material/Material/child.html">child</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="borderRadius" class="property">
+  <span class="name"><a href="material/Material/borderRadius.html">borderRadius</a></span>
+  <span class="signature">&#8594; <a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a>?</span> 
+
+</dt>
+<dd>
+  If non-null, the corners of this box are rounded by this
+<a href="painting/BorderRadiusGeometry-class.html">BorderRadiusGeometry</a> value.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="child" class="property">
+  <span class="name"><a href="material/Material/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The widget below this widget in the tree.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="clipBehavior" class="property">
+  <span class="name"><a href="material/Material/clipBehavior.html">clipBehavior</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Clip.html">Clip</a></span> 
+
+</dt>
+<dd>
+  The content will be clipped (or not) according to this option.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="color" class="property">
+  <span class="name"><a href="material/Material/color.html">color</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to paint the material.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="elevation" class="property">
+  <span class="name"><a href="material/Material/elevation.html">elevation</a></span>
+  <span class="signature">&#8594; <a href="dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  The z-coordinate at which to place this material relative to its parent.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="shadowColor" class="property">
+  <span class="name"><a href="material/Material/shadowColor.html">shadowColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color to paint the shadow below the material.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="shape" class="property">
+  <span class="name"><a href="material/Material/shape.html">shape</a></span>
+  <span class="signature">&#8594; <a href="painting/ShapeBorder-class.html">ShapeBorder</a>?</span> 
+
+</dt>
+<dd>
+  Defines the material's shape as well its shadow.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="surfaceTintColor" class="property">
+  <span class="name"><a href="material/Material/surfaceTintColor.html">surfaceTintColor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Color-class.html">Color</a>?</span> 
+
+</dt>
+<dd>
+  The color of the surface tint overlay applied to the material color
+to indicate elevation.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textStyle" class="property">
+  <span class="name"><a href="material/Material/textStyle.html">textStyle</a></span>
+  <span class="signature">&#8594; <a href="painting/TextStyle-class.html">TextStyle</a>?</span> 
+
+</dt>
+<dd>
+  The typographical style to use for text within this material.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="type" class="property">
+  <span class="name"><a href="material/Material/type.html">type</a></span>
+  <span class="signature">&#8594; <a href="material/MaterialType.html">MaterialType</a></span> 
+
+</dt>
+<dd>
+  The kind of material to show (e.g., card or canvas). This
+affects the shape of the widget, the roundness of its corners if
+the shape is rectangular, and the default color.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatefulWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatefulElement-class.html">StatefulElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatefulElement-class.html">StatefulElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="createState" class="callable">
+  <span class="name"><a href="material/Material/createState.html">createState</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/State-class.html">State</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/Material-class.html">Material</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates the mutable state for this widget at a given location in the tree.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="material/Material/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="maybeOf" class="callable">
+  <span class="name"><a href="material/Material/maybeOf.html">maybeOf</a></span><span class="signature">(<wbr><span class="parameter" id="maybeOf-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="material/MaterialInkController-class.html">MaterialInkController</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  The ink controller from the closest instance of this class that
+encloses the given context within the closest <a href="widgets/LookupBoundary-class.html">LookupBoundary</a>.
+  
+
+</dd>
+
+        <dt id="of" class="callable">
+  <span class="name"><a href="material/Material/of.html">of</a></span><span class="signature">(<wbr><span class="parameter" id="of-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="material/MaterialInkController-class.html">MaterialInkController</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  The ink controller from the closest instance of <a href="material/Material-class.html">Material</a> that encloses
+the given context within the closest <a href="widgets/LookupBoundary-class.html">LookupBoundary</a>.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+
+    <dl class="properties">
+        <dt id="defaultSplashRadius" class="constant">
+    <span class="name "><a href="material/Material/defaultSplashRadius-constant.html">defaultSplashRadius</a></span>
+  <span class="signature">&#8594; const <a href="dart-core/double-class.html">double</a></span>
+  
+
+</dt>
+<dd>
+  The default radius of an ink splash in logical pixels.
+  
+
+    <div>
+      <span class="signature"><code>35.0</code></span>
+    </div>
+</dd>
+
+    </dl>
+  </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">Material class</li>
+</ol>
+
+
+    <!--<h5>material library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

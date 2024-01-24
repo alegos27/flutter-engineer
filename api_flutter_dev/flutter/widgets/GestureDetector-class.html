@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the GestureDetector class from the widgets library, for the Dart programming language.">
+  <title>GestureDetector class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">GestureDetector class</li>
+  </ol>
+  <div class="self-name">GestureDetector</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="widgets&#47;GestureDetector-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/gesture_detector.dart#L210"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">GestureDetector</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A widget that detects gestures.</p>
+<p>Attempts to recognize gestures that correspond to its non-null callbacks.</p>
+<p>If this widget has a child, it defers to that child for its sizing behavior.
+If it does not have a child, it grows to fit the parent instead.</p>
+<iframe src="https://www.youtube.com/embed/WhVXkCFPmK4?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; 
+autoplay; 
+clipboard-write; 
+encrypted-media; 
+gyroscope; 
+picture-in-picture" allowfullscreen="" style="max-width: 560px;
+max-height: 315px;
+width: 100%;
+height: 100%;
+aspect-ratio: 560 / 315;">
+</iframe>
+<p>By default a GestureDetector with an invisible child ignores touches;
+this behavior can be controlled with <a href="widgets/GestureDetector/behavior.html">behavior</a>.</p>
+<p>GestureDetector also listens for accessibility events and maps
+them to the callbacks. To ignore accessibility events, set
+<a href="widgets/GestureDetector/excludeFromSemantics.html">excludeFromSemantics</a> to true.</p>
+<p>See <a href="http://flutter.dev/gestures/">flutter.dev/gestures/</a> for additional information.</p>
+<p>Material design applications typically react to touches with ink splash
+effects. The <a href="material/InkWell-class.html">InkWell</a> class implements this effect and can be used in place
+of a <a href="widgets/GestureDetector-class.html">GestureDetector</a> for handling taps.</p>
+<p>
+<a name="widgets.GestureDetector.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example contains a black light bulb wrapped in a <a href="widgets/GestureDetector-class.html">GestureDetector</a>. It
+turns the light bulb yellow when the "TURN LIGHT ON" button is tapped by
+setting the <code>_lights</code> field, and off again when "TURN LIGHT OFF" is tapped.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.GestureDetector.1');" onclick="fixHref(this, 'widgets.GestureDetector.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.GestureDetector.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.GestureDetector.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>
+<a name="widgets.GestureDetector.2"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet2">
+    <div class="snippet-description">
+This example uses a <a href="widgets/Container-class.html">Container</a> that wraps a <a href="widgets/GestureDetector-class.html">GestureDetector</a> widget which
+detects a tap.</p>
+<p>Since the <a href="widgets/GestureDetector-class.html">GestureDetector</a> does not have a child, it takes on the size of its
+parent, making the entire area of the surrounding <a href="widgets/Container-class.html">Container</a> clickable. When
+tapped, the <a href="widgets/Container-class.html">Container</a> turns yellow by setting the <code>_color</code> field. When
+tapped again, it goes back to white.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.GestureDetector.2');" onclick="fixHref(this, 'widgets.GestureDetector.2'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.GestureDetector.2 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.GestureDetector.2&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>Why isn't my parent <a href="widgets/GestureDetector/onTap.html">GestureDetector.onTap</a> method called?</p>
+<p>Given a parent <a href="widgets/GestureDetector-class.html">GestureDetector</a> with an onTap callback, and a child
+GestureDetector that also defines an onTap callback, when the inner
+GestureDetector is tapped, both GestureDetectors send a <a href="gestures/GestureRecognizer-class.html">GestureRecognizer</a>
+into the gesture arena. This is because the pointer coordinates are within the
+bounds of both GestureDetectors. The child GestureDetector wins in this
+scenario because it was the first to enter the arena, resolving as first come,
+first served. The child onTap is called, and the parent's is not as the gesture has
+been consumed.
+For more information on gesture disambiguation see:
+<a href="https://docs.flutter.dev/development/ui/advanced/gestures#gesture-disambiguation">Gesture disambiguation</a>.</p>
+<p>Setting <a href="widgets/GestureDetector/behavior.html">GestureDetector.behavior</a> to <a href="rendering/HitTestBehavior.html">HitTestBehavior.opaque</a>
+or <a href="rendering/HitTestBehavior.html">HitTestBehavior.translucent</a> has no impact on parent-child relationships:
+both GestureDetectors send a GestureRecognizer into the gesture arena, only one wins.</p>
+<p>Some callbacks (e.g. onTapDown) can fire before a recognizer wins the arena,
+and others (e.g. onTapCancel) fire even when it loses the arena. Therefore,
+the parent detector in the example above may call some of its callbacks even
+though it loses in the arena.</p>
+<p>
+<a name="widgets.GestureDetector.3"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet3">
+    <div class="snippet-description">
+This example uses a <a href="widgets/GestureDetector-class.html">GestureDetector</a> that wraps a green <a href="widgets/Container-class.html">Container</a> and a second
+GestureDetector that wraps a yellow Container. The second GestureDetector is
+a child of the green Container.
+Both GestureDetectors define an onTap callback. When the callback is called it
+adds a red border to the corresponding Container.</p>
+<p>When the green Container is tapped, it's parent GestureDetector enters
+the gesture arena. It wins because there is no competing GestureDetector and
+the green Container shows a red border.
+When the yellow Container is tapped, it's parent GestureDetector enters
+the gesture arena. The GestureDetector that wraps the green Container also
+enters the gesture arena (the pointer events coordinates are inside both
+GestureDetectors bounds). The GestureDetector that wraps the yellow Container
+wins because it was the first detector to enter the arena.</p>
+<p>This example sets <a href="gestures/debugPrintGestureArenaDiagnostics.html">debugPrintGestureArenaDiagnostics</a> to true.
+This flag prints useful information about gesture arenas.</p>
+<p>Changing the <a href="widgets/GestureDetector/behavior.html">GestureDetector.behavior</a> property to <a href="rendering/HitTestBehavior.html">HitTestBehavior.translucent</a>
+or <a href="rendering/HitTestBehavior.html">HitTestBehavior.opaque</a> has no impact: both GestureDetectors send a <a href="gestures/GestureRecognizer-class.html">GestureRecognizer</a>
+into the gesture arena, only one wins.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.GestureDetector.3');" onclick="fixHref(this, 'widgets.GestureDetector.3'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.GestureDetector.3 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.GestureDetector.3&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<h2 id="debugging">Debugging</h2>
+<p>To see how large the hit test box of a <a href="widgets/GestureDetector-class.html">GestureDetector</a> is for debugging
+purposes, set <a href="rendering/debugPaintPointersEnabled.html">debugPaintPointersEnabled</a> to true.</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/Listener-class.html">Listener</a>, a widget for listening to lower-level raw pointer events.</li>
+<li><a href="widgets/MouseRegion-class.html">MouseRegion</a>, a widget that tracks the movement of mice, even when no
+button is pressed.</li>
+<li><a href="widgets/RawGestureDetector-class.html">RawGestureDetector</a>, a widget that is used to detect custom gestures.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+  <dt>Inheritance</dt>
+  <dd>
+    <ul class="gt-separated dark clazz-relationships">
+      <li><a href="dart-core/Object-class.html">Object</a></li>
+        <li><a href="foundation/DiagnosticableTree-class.html">DiagnosticableTree</a></li>
+        <li><a href="widgets/Widget-class.html">Widget</a></li>
+        <li><a href="widgets/StatelessWidget-class.html">StatelessWidget</a></li>
+      <li>GestureDetector</li>
+    </ul>
+  </dd>
+
+        
+        
+
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="GestureDetector" class="callable">
+          <span class="name"><a href="widgets/GestureDetector/GestureDetector.html">GestureDetector</a></span><span class="signature">(<span class="parameter" id="-param-key">{<span class="type-annotation"><a href="foundation/Key-class.html">Key</a>?</span> <span class="parameter-name">key</span>, </span><span class="parameter" id="-param-child"><span class="type-annotation"><a href="widgets/Widget-class.html">Widget</a>?</span> <span class="parameter-name">child</span>, </span><span class="parameter" id="-param-onTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onTapDown</span>, </span><span class="parameter" id="-param-onTapUp"><span class="type-annotation"><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> <span class="parameter-name">onTapUp</span>, </span><span class="parameter" id="-param-onTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onTap</span>, </span><span class="parameter" id="-param-onTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> <span class="parameter-name">onTapCancel</span>, </span><span class="parameter" id="-param-onSecondaryTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onSecondaryTap</span>, </span><span class="parameter" id="-param-onSecondaryTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onSecondaryTapDown</span>, </span><span class="parameter" id="-param-onSecondaryTapUp"><span class="type-annotation"><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> <span class="parameter-name">onSecondaryTapUp</span>, </span><span class="parameter" id="-param-onSecondaryTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> <span class="parameter-name">onSecondaryTapCancel</span>, </span><span class="parameter" id="-param-onTertiaryTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onTertiaryTapDown</span>, </span><span class="parameter" id="-param-onTertiaryTapUp"><span class="type-annotation"><a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> <span class="parameter-name">onTertiaryTapUp</span>, </span><span class="parameter" id="-param-onTertiaryTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> <span class="parameter-name">onTertiaryTapCancel</span>, </span><span class="parameter" id="-param-onDoubleTapDown"><span class="type-annotation"><a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> <span class="parameter-name">onDoubleTapDown</span>, </span><span class="parameter" id="-param-onDoubleTap"><span class="type-annotation"><a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> <span class="parameter-name">onDoubleTap</span>, </span><span class="parameter" id="-param-onDoubleTapCancel"><span class="type-annotation"><a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> <span class="parameter-name">onDoubleTapCancel</span>, </span><span class="parameter" id="-param-onLongPressDown"><span class="type-annotation"><a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> <span class="parameter-name">onLongPressDown</span>, </span><span class="parameter" id="-param-onLongPressCancel"><span class="type-annotation"><a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> <span class="parameter-name">onLongPressCancel</span>, </span><span class="parameter" id="-param-onLongPress"><span class="type-annotation"><a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> <span class="parameter-name">onLongPress</span>, </span><span class="parameter" id="-param-onLongPressStart"><span class="type-annotation"><a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> <span class="parameter-name">onLongPressStart</span>, </span><span class="parameter" id="-param-onLongPressMoveUpdate"><span class="type-annotation"><a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> <span class="parameter-name">onLongPressMoveUpdate</span>, </span><span class="parameter" id="-param-onLongPressUp"><span class="type-annotation"><a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> <span class="parameter-name">onLongPressUp</span>, </span><span class="parameter" id="-param-onLongPressEnd"><span class="type-annotation"><a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> <span class="parameter-name">onLongPressEnd</span>, </span><span class="parameter" id="-param-onSecondaryLongPressDown"><span class="type-annotation"><a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressDown</span>, </span><span class="parameter" id="-param-onSecondaryLongPressCancel"><span class="type-annotation"><a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressCancel</span>, </span><span class="parameter" id="-param-onSecondaryLongPress"><span class="type-annotation"><a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> <span class="parameter-name">onSecondaryLongPress</span>, </span><span class="parameter" id="-param-onSecondaryLongPressStart"><span class="type-annotation"><a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressStart</span>, </span><span class="parameter" id="-param-onSecondaryLongPressMoveUpdate"><span class="type-annotation"><a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressMoveUpdate</span>, </span><span class="parameter" id="-param-onSecondaryLongPressUp"><span class="type-annotation"><a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressUp</span>, </span><span class="parameter" id="-param-onSecondaryLongPressEnd"><span class="type-annotation"><a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> <span class="parameter-name">onSecondaryLongPressEnd</span>, </span><span class="parameter" id="-param-onTertiaryLongPressDown"><span class="type-annotation"><a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressDown</span>, </span><span class="parameter" id="-param-onTertiaryLongPressCancel"><span class="type-annotation"><a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressCancel</span>, </span><span class="parameter" id="-param-onTertiaryLongPress"><span class="type-annotation"><a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> <span class="parameter-name">onTertiaryLongPress</span>, </span><span class="parameter" id="-param-onTertiaryLongPressStart"><span class="type-annotation"><a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressStart</span>, </span><span class="parameter" id="-param-onTertiaryLongPressMoveUpdate"><span class="type-annotation"><a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressMoveUpdate</span>, </span><span class="parameter" id="-param-onTertiaryLongPressUp"><span class="type-annotation"><a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressUp</span>, </span><span class="parameter" id="-param-onTertiaryLongPressEnd"><span class="type-annotation"><a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> <span class="parameter-name">onTertiaryLongPressEnd</span>, </span><span class="parameter" id="-param-onVerticalDragDown"><span class="type-annotation"><a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> <span class="parameter-name">onVerticalDragDown</span>, </span><span class="parameter" id="-param-onVerticalDragStart"><span class="type-annotation"><a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> <span class="parameter-name">onVerticalDragStart</span>, </span><span class="parameter" id="-param-onVerticalDragUpdate"><span class="type-annotation"><a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> <span class="parameter-name">onVerticalDragUpdate</span>, </span><span class="parameter" id="-param-onVerticalDragEnd"><span class="type-annotation"><a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> <span class="parameter-name">onVerticalDragEnd</span>, </span><span class="parameter" id="-param-onVerticalDragCancel"><span class="type-annotation"><a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> <span class="parameter-name">onVerticalDragCancel</span>, </span><span class="parameter" id="-param-onHorizontalDragDown"><span class="type-annotation"><a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> <span class="parameter-name">onHorizontalDragDown</span>, </span><span class="parameter" id="-param-onHorizontalDragStart"><span class="type-annotation"><a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> <span class="parameter-name">onHorizontalDragStart</span>, </span><span class="parameter" id="-param-onHorizontalDragUpdate"><span class="type-annotation"><a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> <span class="parameter-name">onHorizontalDragUpdate</span>, </span><span class="parameter" id="-param-onHorizontalDragEnd"><span class="type-annotation"><a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> <span class="parameter-name">onHorizontalDragEnd</span>, </span><span class="parameter" id="-param-onHorizontalDragCancel"><span class="type-annotation"><a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> <span class="parameter-name">onHorizontalDragCancel</span>, </span><span class="parameter" id="-param-onForcePressStart"><span class="type-annotation"><a href="gestures/GestureForcePressStartCallback.html">GestureForcePressStartCallback</a>?</span> <span class="parameter-name">onForcePressStart</span>, </span><span class="parameter" id="-param-onForcePressPeak"><span class="type-annotation"><a href="gestures/GestureForcePressPeakCallback.html">GestureForcePressPeakCallback</a>?</span> <span class="parameter-name">onForcePressPeak</span>, </span><span class="parameter" id="-param-onForcePressUpdate"><span class="type-annotation"><a href="gestures/GestureForcePressUpdateCallback.html">GestureForcePressUpdateCallback</a>?</span> <span class="parameter-name">onForcePressUpdate</span>, </span><span class="parameter" id="-param-onForcePressEnd"><span class="type-annotation"><a href="gestures/GestureForcePressEndCallback.html">GestureForcePressEndCallback</a>?</span> <span class="parameter-name">onForcePressEnd</span>, </span><span class="parameter" id="-param-onPanDown"><span class="type-annotation"><a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> <span class="parameter-name">onPanDown</span>, </span><span class="parameter" id="-param-onPanStart"><span class="type-annotation"><a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> <span class="parameter-name">onPanStart</span>, </span><span class="parameter" id="-param-onPanUpdate"><span class="type-annotation"><a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> <span class="parameter-name">onPanUpdate</span>, </span><span class="parameter" id="-param-onPanEnd"><span class="type-annotation"><a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> <span class="parameter-name">onPanEnd</span>, </span><span class="parameter" id="-param-onPanCancel"><span class="type-annotation"><a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> <span class="parameter-name">onPanCancel</span>, </span><span class="parameter" id="-param-onScaleStart"><span class="type-annotation"><a href="gestures/GestureScaleStartCallback.html">GestureScaleStartCallback</a>?</span> <span class="parameter-name">onScaleStart</span>, </span><span class="parameter" id="-param-onScaleUpdate"><span class="type-annotation"><a href="gestures/GestureScaleUpdateCallback.html">GestureScaleUpdateCallback</a>?</span> <span class="parameter-name">onScaleUpdate</span>, </span><span class="parameter" id="-param-onScaleEnd"><span class="type-annotation"><a href="gestures/GestureScaleEndCallback.html">GestureScaleEndCallback</a>?</span> <span class="parameter-name">onScaleEnd</span>, </span><span class="parameter" id="-param-behavior"><span class="type-annotation"><a href="rendering/HitTestBehavior.html">HitTestBehavior</a>?</span> <span class="parameter-name">behavior</span>, </span><span class="parameter" id="-param-excludeFromSemantics"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">excludeFromSemantics</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-dragStartBehavior"><span class="type-annotation"><a href="gestures/DragStartBehavior.html">DragStartBehavior</a></span> <span class="parameter-name">dragStartBehavior</span> = <span class="default-value">DragStartBehavior.start</span>, </span><span class="parameter" id="-param-trackpadScrollCausesScale"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">trackpadScrollCausesScale</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-trackpadScrollToScaleFactor"><span class="type-annotation"><a href="dart-ui/Offset-class.html">Offset</a></span> <span class="parameter-name">trackpadScrollToScaleFactor</span> = <span class="default-value">kDefaultTrackpadScrollToScaleFactor</span>, </span><span class="parameter" id="-param-supportedDevices"><span class="type-annotation"><a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a></span>&gt;</span>?</span> <span class="parameter-name">supportedDevices</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a widget that detects gestures.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="behavior" class="property">
+  <span class="name"><a href="widgets/GestureDetector/behavior.html">behavior</a></span>
+  <span class="signature">&#8594; <a href="rendering/HitTestBehavior.html">HitTestBehavior</a>?</span> 
+
+</dt>
+<dd>
+  How this gesture detector should behave during hit testing when deciding
+how the hit test propagates to children and whether to consider targets
+behind this one.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="child" class="property">
+  <span class="name"><a href="widgets/GestureDetector/child.html">child</a></span>
+  <span class="signature">&#8594; <a href="widgets/Widget-class.html">Widget</a>?</span> 
+
+</dt>
+<dd>
+  The widget below this widget in the tree.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="dragStartBehavior" class="property">
+  <span class="name"><a href="widgets/GestureDetector/dragStartBehavior.html">dragStartBehavior</a></span>
+  <span class="signature">&#8594; <a href="gestures/DragStartBehavior.html">DragStartBehavior</a></span> 
+
+</dt>
+<dd>
+  Determines the way that drag start behavior is handled.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="excludeFromSemantics" class="property">
+  <span class="name"><a href="widgets/GestureDetector/excludeFromSemantics.html">excludeFromSemantics</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to exclude these gestures from the semantics tree. For
+example, the long-press gesture for showing a tooltip is
+excluded because the tooltip itself is included in the semantics
+tree directly and so having a gesture to show it would result in
+duplication of information.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="widgets/Widget/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="key" class="property inherited">
+  <span class="name"><a href="widgets/Widget/key.html">key</a></span>
+  <span class="signature">&#8594; <a href="foundation/Key-class.html">Key</a>?</span> 
+
+</dt>
+<dd class="inherited">
+  Controls how one widget replaces another widget in the tree.
+  <div class="features"><span class="feature">final</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="onDoubleTap" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onDoubleTap.html">onDoubleTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd>
+  The user has tapped the screen with a primary button at the same location
+twice in quick succession.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onDoubleTapCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onDoubleTapCancel.html">onDoubleTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onDoubleTapDown.html">onDoubleTapDown</a> will not end up
+causing a double tap.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onDoubleTapDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onDoubleTapDown.html">onDoubleTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that might cause a double tap has contacted the screen at a
+particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onForcePressEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onForcePressEnd.html">onForcePressEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureForcePressEndCallback.html">GestureForcePressEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer tracked by <a href="widgets/GestureDetector/onForcePressStart.html">onForcePressStart</a> is no longer in contact with the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onForcePressPeak" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onForcePressPeak.html">onForcePressPeak</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureForcePressPeakCallback.html">GestureForcePressPeakCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer is in contact with the screen and has pressed with the maximum
+force. The amount of force is at least
+<a href="gestures/ForcePressGestureRecognizer/peakPressure.html">ForcePressGestureRecognizer.peakPressure</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onForcePressStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onForcePressStart.html">onForcePressStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureForcePressStartCallback.html">GestureForcePressStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer is in contact with the screen and has pressed with sufficient
+force to initiate a force press. The amount of force is at least
+<a href="gestures/ForcePressGestureRecognizer/startPressure.html">ForcePressGestureRecognizer.startPressure</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onForcePressUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onForcePressUpdate.html">onForcePressUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureForcePressUpdateCallback.html">GestureForcePressUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer is in contact with the screen, has previously passed the
+<a href="gestures/ForcePressGestureRecognizer/startPressure.html">ForcePressGestureRecognizer.startPressure</a> and is either moving on the
+plane of the screen, pressing the screen with varying forces or both
+simultaneously.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onHorizontalDragCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onHorizontalDragCancel.html">onHorizontalDragCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onHorizontalDragDown.html">onHorizontalDragDown</a> did not
+complete.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onHorizontalDragDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onHorizontalDragDown.html">onHorizontalDragDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and might begin
+to move horizontally.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onHorizontalDragEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onHorizontalDragEnd.html">onHorizontalDragEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that was previously in contact with the screen with a primary
+button and moving horizontally is no longer in contact with the screen and
+was moving at a specific velocity when it stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onHorizontalDragStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onHorizontalDragStart.html">onHorizontalDragStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and has begun to
+move horizontally.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onHorizontalDragUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onHorizontalDragUpdate.html">onHorizontalDragUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that is in contact with the screen with a primary button and
+moving horizontally has moved in the horizontal direction.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPress" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPress.html">onLongPress</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a primary button has been recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressCancel.html">onLongPressCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that previously triggered <a href="widgets/GestureDetector/onLongPressDown.html">onLongPressDown</a> will not end up
+causing a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressDown.html">onLongPressDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer has contacted the screen with a primary button, which might
+be the start of a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressEnd.html">onLongPressEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a primary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressMoveUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressMoveUpdate.html">onLongPressMoveUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has been drag-moved after a long-press with a primary button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressStart.html">onLongPressStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a primary button has been recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onLongPressUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onLongPressUp.html">onLongPressUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a primary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPanCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onPanCancel.html">onPanCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onPanDown.html">onPanDown</a> did not complete.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPanDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onPanDown.html">onPanDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and might begin
+to move.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPanEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onPanEnd.html">onPanEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that was previously in contact with the screen with a primary
+button and moving is no longer in contact with the screen and was moving
+at a specific velocity when it stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPanStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onPanStart.html">onPanStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and has begun to
+move.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onPanUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onPanUpdate.html">onPanUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that is in contact with the screen with a primary button and
+moving has moved again.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onScaleEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onScaleEnd.html">onScaleEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureScaleEndCallback.html">GestureScaleEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointers are no longer in contact with the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onScaleStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onScaleStart.html">onScaleStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureScaleStartCallback.html">GestureScaleStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointers in contact with the screen have established a focal point and
+initial scale of 1.0.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onScaleUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onScaleUpdate.html">onScaleUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureScaleUpdateCallback.html">GestureScaleUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointers in contact with the screen have indicated a new focal point
+and/or scale.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPress" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPress.html">onSecondaryLongPress</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a secondary button has been
+recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressCancel.html">onSecondaryLongPressCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that previously triggered <a href="widgets/GestureDetector/onSecondaryLongPressDown.html">onSecondaryLongPressDown</a> will not
+end up causing a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressDown.html">onSecondaryLongPressDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer has contacted the screen with a secondary button, which might
+be the start of a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressEnd.html">onSecondaryLongPressEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a secondary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressMoveUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressMoveUpdate.html">onSecondaryLongPressMoveUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has been drag-moved after a long press with a secondary button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressStart.html">onSecondaryLongPressStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a secondary button has been
+recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryLongPressUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryLongPressUp.html">onSecondaryLongPressUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a secondary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTap" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryTap.html">onSecondaryTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd>
+  A tap with a secondary button has occurred.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryTapCancel.html">onSecondaryTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onSecondaryTapDown.html">onSecondaryTapDown</a> will not end up
+causing a tap.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryTapDown.html">onSecondaryTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that might cause a tap with a secondary button has contacted the
+screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onSecondaryTapUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onSecondaryTapUp.html">onSecondaryTapUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that will trigger a tap with a secondary button has stopped
+contacting the screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTap" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTap.html">onTap</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCallback.html">GestureTapCallback</a>?</span> 
+
+</dt>
+<dd>
+  A tap with a primary button has occurred.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTapCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTapCancel.html">onTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onTapDown.html">onTapDown</a> will not end up causing
+a tap.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTapDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTapDown.html">onTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that might cause a tap with a primary button has contacted the
+screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTapUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTapUp.html">onTapUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that will trigger a tap with a primary button has stopped
+contacting the screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPress" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPress.html">onTertiaryLongPress</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCallback.html">GestureLongPressCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a tertiary button has been
+recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressCancel.html">onTertiaryLongPressCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressCancelCallback.html">GestureLongPressCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that previously triggered <a href="widgets/GestureDetector/onTertiaryLongPressDown.html">onTertiaryLongPressDown</a> will not
+end up causing a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressDown.html">onTertiaryLongPressDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressDownCallback.html">GestureLongPressDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer has contacted the screen with a tertiary button, which might
+be the start of a long-press.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressEnd.html">onTertiaryLongPressEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressEndCallback.html">GestureLongPressEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a tertiary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressMoveUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressMoveUpdate.html">onTertiaryLongPressMoveUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressMoveUpdateCallback.html">GestureLongPressMoveUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has been drag-moved after a long press with a tertiary button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressStart.html">onTertiaryLongPressStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressStartCallback.html">GestureLongPressStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called when a long press gesture with a tertiary button has been
+recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryLongPressUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryLongPressUp.html">onTertiaryLongPressUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureLongPressUpCallback.html">GestureLongPressUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that has triggered a long-press with a tertiary button has
+stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryTapCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryTapCancel.html">onTertiaryTapCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapCancelCallback.html">GestureTapCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onTertiaryTapDown.html">onTertiaryTapDown</a> will not end up
+causing a tap.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryTapDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryTapDown.html">onTertiaryTapDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapDownCallback.html">GestureTapDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that might cause a tap with a tertiary button has contacted the
+screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onTertiaryTapUp" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onTertiaryTapUp.html">onTertiaryTapUp</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureTapUpCallback.html">GestureTapUpCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that will trigger a tap with a tertiary button has stopped
+contacting the screen at a particular location.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onVerticalDragCancel" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onVerticalDragCancel.html">onVerticalDragCancel</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragCancelCallback.html">GestureDragCancelCallback</a>?</span> 
+
+</dt>
+<dd>
+  The pointer that previously triggered <a href="widgets/GestureDetector/onVerticalDragDown.html">onVerticalDragDown</a> did not
+complete.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onVerticalDragDown" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onVerticalDragDown.html">onVerticalDragDown</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragDownCallback.html">GestureDragDownCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and might begin
+to move vertically.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onVerticalDragEnd" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onVerticalDragEnd.html">onVerticalDragEnd</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragEndCallback.html">GestureDragEndCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that was previously in contact with the screen with a primary
+button and moving vertically is no longer in contact with the screen and
+was moving at a specific velocity when it stopped contacting the screen.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onVerticalDragStart" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onVerticalDragStart.html">onVerticalDragStart</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragStartCallback.html">GestureDragStartCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer has contacted the screen with a primary button and has begun to
+move vertically.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onVerticalDragUpdate" class="property">
+  <span class="name"><a href="widgets/GestureDetector/onVerticalDragUpdate.html">onVerticalDragUpdate</a></span>
+  <span class="signature">&#8594; <a href="gestures/GestureDragUpdateCallback.html">GestureDragUpdateCallback</a>?</span> 
+
+</dt>
+<dd>
+  A pointer that is in contact with the screen with a primary button and
+moving vertically has moved in the vertical direction.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="supportedDevices" class="property">
+  <span class="name"><a href="widgets/GestureDetector/supportedDevices.html">supportedDevices</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Set-class.html">Set</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-ui/PointerDeviceKind.html">PointerDeviceKind</a></span>&gt;</span>?</span> 
+
+</dt>
+<dd>
+  The kind of devices that are allowed to be recognized.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="trackpadScrollCausesScale" class="property">
+  <span class="name"><a href="widgets/GestureDetector/trackpadScrollCausesScale.html">trackpadScrollCausesScale</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether scrolling up/down on a trackpad should cause scaling instead of
+panning.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="trackpadScrollToScaleFactor" class="property">
+  <span class="name"><a href="widgets/GestureDetector/trackpadScrollToScaleFactor.html">trackpadScrollToScaleFactor</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Offset-class.html">Offset</a></span> 
+
+</dt>
+<dd>
+  A factor to control the direction and magnitude of scale when converting
+trackpad scrolling.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="build" class="callable">
+  <span class="name"><a href="widgets/GestureDetector/build.html">build</a></span><span class="signature">(<wbr><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/Widget-class.html">Widget</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Describes the part of the user interface represented by this widget.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="createElement" class="callable inherited">
+  <span class="name"><a href="widgets/StatelessWidget/createElement.html">createElement</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="widgets/StatelessElement-class.html">StatelessElement</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Creates a <a href="widgets/StatelessElement-class.html">StatelessElement</a> to manage this widget's location in the tree.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="widgets/GestureDetector/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/Diagnosticable/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTree/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A short, textual description of this widget.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="widgets/Widget/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">GestureDetector class</li>
+</ol>
+
+
+    <!--<h5>widgets library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

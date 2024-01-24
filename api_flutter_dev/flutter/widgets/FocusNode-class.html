@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the FocusNode class from the widgets library, for the Dart programming language.">
+  <title>FocusNode class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">FocusNode class</li>
+  </ol>
+  <div class="self-name">FocusNode</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;widgets-library-sidebar.html"
+      data-below-sidebar="widgets&#47;FocusNode-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/focus_manager.dart#L415"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">FocusNode</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>An object that can be used by a stateful widget to obtain the keyboard focus
+and to handle keyboard events.</p>
+<p><em>Please see the <a href="widgets/Focus-class.html">Focus</a> and <a href="widgets/FocusScope-class.html">FocusScope</a> widgets, which are utility widgets
+that manage their own <a href="widgets/FocusNode-class.html">FocusNode</a>s and <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>s, respectively. If
+they aren't appropriate, <a href="widgets/FocusNode-class.html">FocusNode</a>s can be managed directly, but doing this
+is rare.</em></p>
+<p><a href="widgets/FocusNode-class.html">FocusNode</a>s are persistent objects that form a <em>focus tree</em> that is a
+representation of the widgets in the hierarchy that are interested in focus.
+A focus node might need to be created if it is passed in from an ancestor of
+a <a href="widgets/Focus-class.html">Focus</a> widget to control the focus of the children from the ancestor, or
+a widget might need to host one if the widget subsystem is not being used,
+or if the <a href="widgets/Focus-class.html">Focus</a> and <a href="widgets/FocusScope-class.html">FocusScope</a> widgets provide insufficient control.</p>
+<p><a href="widgets/FocusNode-class.html">FocusNode</a>s are organized into <em>scopes</em> (see <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>), which form
+sub-trees of nodes that restrict traversal to a group of nodes. Within a
+scope, the most recent nodes to have focus are remembered, and if a node is
+focused and then unfocused, the previous node receives focus again.</p>
+<p>The focus node hierarchy can be traversed using the <a href="widgets/FocusNode/parent.html">parent</a>, <a href="widgets/FocusNode/children.html">children</a>,
+<a href="widgets/FocusNode/ancestors.html">ancestors</a> and <a href="widgets/FocusNode/descendants.html">descendants</a> accessors.</p>
+<p><a href="widgets/FocusNode-class.html">FocusNode</a>s are <a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a>s, so a listener can be registered to
+receive a notification when the focus changes. Listeners will also be
+notified when <a href="widgets/FocusNode/skipTraversal.html">skipTraversal</a>, <a href="widgets/FocusNode/canRequestFocus.html">canRequestFocus</a>, <a href="widgets/FocusNode/descendantsAreFocusable.html">descendantsAreFocusable</a>,
+and <a href="widgets/FocusNode/descendantsAreTraversable.html">descendantsAreTraversable</a> properties are updated. If the <a href="widgets/Focus-class.html">Focus</a> and
+<a href="widgets/FocusScope-class.html">FocusScope</a> widgets are being used to manage the nodes, consider
+establishing an <a href="widgets/InheritedWidget-class.html">InheritedWidget</a> dependency on them by calling <a href="widgets/Focus/of.html">Focus.of</a>
+or <a href="widgets/FocusScope/of.html">FocusScope.of</a> instead. <a href="widgets/FocusNode/hasFocus.html">FocusNode.hasFocus</a> can also be used to
+establish a similar dependency, especially if all that is needed is to
+determine whether or not the widget is focused at build time.</p>
+<p>To see the focus tree in the debug console, call <a href="widgets/debugDumpFocusTree.html">debugDumpFocusTree</a>. To
+get the focus tree as a string, call <a href="widgets/debugDescribeFocusTree.html">debugDescribeFocusTree</a>.</p>
+<h2 id="lifecycle">Lifecycle</h2>
+<p>There are several actors involved in the lifecycle of a
+<a href="widgets/FocusNode-class.html">FocusNode</a>/<a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>. They are created and disposed by their
+<em>owner</em>, attached, detached, and re-parented using a <a href="widgets/FocusAttachment-class.html">FocusAttachment</a> by
+their <em>host</em> (which must be owned by the <a href="widgets/State-class.html">State</a> of a <a href="widgets/StatefulWidget-class.html">StatefulWidget</a>), and
+they are managed by the <a href="widgets/FocusManager-class.html">FocusManager</a>. Different parts of the <a href="widgets/FocusNode-class.html">FocusNode</a>
+API are intended for these different actors.</p>
+<p><a href="widgets/FocusNode-class.html">FocusNode</a>s (and hence <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>s) are persistent objects that form
+part of a <em>focus tree</em> that is a sparse representation of the widgets in the
+hierarchy that are interested in receiving keyboard events. They must be
+managed like other persistent state, which is typically done by a
+<a href="widgets/StatefulWidget-class.html">StatefulWidget</a> that owns the node. A stateful widget that owns a focus
+scope node must call <a href="widgets/FocusNode/dispose.html">dispose</a> from its <a href="widgets/State/dispose.html">State.dispose</a> method.</p>
+<p>Once created, a <a href="widgets/FocusNode-class.html">FocusNode</a> must be attached to the widget tree via a
+<a href="widgets/FocusAttachment-class.html">FocusAttachment</a> object. This attachment is created by calling <a href="widgets/FocusNode/attach.html">attach</a>,
+usually from the <a href="widgets/State/initState.html">State.initState</a> method. If the hosting widget is updated
+to have a different focus node, then the updated node needs to be attached
+in <a href="widgets/State/didUpdateWidget.html">State.didUpdateWidget</a>, after calling <a href="widgets/FocusAttachment/detach.html">FocusAttachment.detach</a> on the
+previous <a href="widgets/FocusAttachment-class.html">FocusAttachment</a>.</p>
+<p>Because <a href="widgets/FocusNode-class.html">FocusNode</a>s form a sparse representation of the widget tree, they
+must be updated whenever the widget tree is rebuilt. This is done by calling
+<a href="widgets/FocusAttachment/reparent.html">FocusAttachment.reparent</a>, usually from the <a href="widgets/State/build.html">State.build</a> or
+<a href="widgets/State/didChangeDependencies.html">State.didChangeDependencies</a> methods of the widget that represents the
+focused region, so that the <a href="widgets/BuildContext-class.html">BuildContext</a> assigned to the <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>
+can be tracked (the context is used to obtain the <a href="rendering/RenderObject-class.html">RenderObject</a>, from which
+the geometry of focused regions can be determined).</p>
+<p>Creating a <a href="widgets/FocusNode-class.html">FocusNode</a> each time <a href="widgets/State/build.html">State.build</a> is invoked will cause the
+focus to be lost each time the widget is built, which is usually not desired
+behavior (call <a href="widgets/FocusNode/unfocus.html">unfocus</a> if losing focus is desired).</p>
+<p>If, as is common, the hosting <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> is also the owner of the
+focus node, then it will also call <a href="widgets/FocusNode/dispose.html">dispose</a> from its <a href="widgets/State/dispose.html">State.dispose</a> (in
+which case the <a href="widgets/FocusAttachment/detach.html">FocusAttachment.detach</a> may be skipped, since dispose will
+automatically detach). If another object owns the focus node, then it must
+call <a href="widgets/FocusNode/dispose.html">dispose</a> when the node is done being used.</p>
+<h2 id="key-event-propagation">Key Event Propagation</h2>
+<p>The <a href="widgets/FocusManager-class.html">FocusManager</a> receives key events from <a href="services/RawKeyboard-class.html">RawKeyboard</a> and
+<a href="services/HardwareKeyboard-class.html">HardwareKeyboard</a> and will pass them to the focused nodes. It starts with
+the node with the primary focus, and will call the <a href="widgets/FocusNode/onKey.html">onKey</a> or <a href="widgets/FocusNode/onKeyEvent.html">onKeyEvent</a>
+callback for that node. If the callback returns <a href="widgets/KeyEventResult.html">KeyEventResult.ignored</a>,
+indicating that it did not handle the event, the <a href="widgets/FocusManager-class.html">FocusManager</a> will move
+to the parent of that node and call its <a href="widgets/FocusNode/onKey.html">onKey</a> or <a href="widgets/FocusNode/onKeyEvent.html">onKeyEvent</a>. If that
+<a href="widgets/FocusNode/onKey.html">onKey</a> or <a href="widgets/FocusNode/onKeyEvent.html">onKeyEvent</a> returns <a href="widgets/KeyEventResult.html">KeyEventResult.handled</a>, then it will stop
+propagating the event. If it reaches the root <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>,
+<a href="widgets/FocusManager/rootScope.html">FocusManager.rootScope</a>, the event is discarded.</p>
+<h2 id="focus-traversal">Focus Traversal</h2>
+<p>The term <em>traversal</em>, sometimes called <em>tab traversal</em>, refers to moving the
+focus from one widget to the next in a particular order (also sometimes
+referred to as the <em>tab order</em>, since the TAB key is often bound to the
+action to move to the next widget).</p>
+<p>To give focus to the logical <em>next</em> or <em>previous</em> widget in the UI, call the
+<a href="widgets/FocusNode/nextFocus.html">nextFocus</a> or <a href="widgets/FocusNode/previousFocus.html">previousFocus</a> methods. To give the focus to a widget in a
+particular direction, call the <a href="widgets/FocusNode/focusInDirection.html">focusInDirection</a> method.</p>
+<p>The policy for what the <em>next</em> or <em>previous</em> widget is, or the widget in a
+particular direction, is determined by the <a href="widgets/FocusTraversalPolicy-class.html">FocusTraversalPolicy</a> in force.</p>
+<p>The ambient policy is determined by looking up the widget hierarchy for a
+<a href="widgets/FocusTraversalGroup-class.html">FocusTraversalGroup</a> widget, and obtaining the focus traversal policy from
+it. Different focus nodes can inherit difference policies, so part of the
+app can go in a predefined order (using <a href="widgets/OrderedTraversalPolicy-class.html">OrderedTraversalPolicy</a>), and part
+can go in reading order (using <a href="widgets/ReadingOrderTraversalPolicy-class.html">ReadingOrderTraversalPolicy</a>), depending
+upon the use case.</p>
+<p>Predefined policies include <a href="widgets/WidgetOrderTraversalPolicy-class.html">WidgetOrderTraversalPolicy</a>,
+<a href="widgets/ReadingOrderTraversalPolicy-class.html">ReadingOrderTraversalPolicy</a>, <a href="widgets/OrderedTraversalPolicy-class.html">OrderedTraversalPolicy</a>, and
+<a href="widgets/DirectionalFocusTraversalPolicyMixin-mixin.html">DirectionalFocusTraversalPolicyMixin</a>, but custom policies can be built
+based upon these policies. See <a href="widgets/FocusTraversalPolicy-class.html">FocusTraversalPolicy</a> for more information.</p>
+<p>
+<a name="widgets.FocusNode.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example shows how a FocusNode should be managed if not using the
+<a href="widgets/Focus-class.html">Focus</a> or <a href="widgets/FocusScope-class.html">FocusScope</a> widgets. See the <a href="widgets/Focus-class.html">Focus</a> widget for a similar
+example using <a href="widgets/Focus-class.html">Focus</a> and <a href="widgets/FocusScope-class.html">FocusScope</a> widgets.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.FocusNode.1');" onclick="fixHref(this, 'widgets.FocusNode.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.FocusNode.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.FocusNode.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="widgets/Focus-class.html">Focus</a>, a widget that manages a <a href="widgets/FocusNode-class.html">FocusNode</a> and provides access to focus
+information and actions to its descendant widgets.</li>
+<li><a href="widgets/FocusTraversalGroup-class.html">FocusTraversalGroup</a>, a widget used to group together and configure the
+focus traversal policy for a widget subtree.</li>
+<li><a href="widgets/FocusManager-class.html">FocusManager</a>, a singleton that manages the primary focus and distributes
+key events to focused nodes.</li>
+<li><a href="widgets/FocusTraversalPolicy-class.html">FocusTraversalPolicy</a>, a class used to determine how to move the focus to
+other nodes.</li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+  <dt>Mixed in types</dt>
+  <dd>
+    <ul class="comma-separated clazz-relationships">
+        <li><a href="foundation/DiagnosticableTreeMixin-mixin.html">DiagnosticableTreeMixin</a></li>
+        <li><a href="foundation/ChangeNotifier-class.html">ChangeNotifier</a></li>
+    </ul>
+  </dd>
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a></li>
+        </ul></dd>
+
+
+        
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="FocusNode" class="callable">
+          <span class="name"><a href="widgets/FocusNode/FocusNode.html">FocusNode</a></span><span class="signature">(<span class="parameter" id="-param-debugLabel">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">debugLabel</span>, </span><span class="parameter" id="-param-onKey"><span class="type-annotation"><a href="widgets/FocusOnKeyCallback.html">FocusOnKeyCallback</a>?</span> <span class="parameter-name">onKey</span>, </span><span class="parameter" id="-param-onKeyEvent"><span class="type-annotation"><a href="widgets/FocusOnKeyEventCallback.html">FocusOnKeyEventCallback</a>?</span> <span class="parameter-name">onKeyEvent</span>, </span><span class="parameter" id="-param-skipTraversal"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">skipTraversal</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-canRequestFocus"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">canRequestFocus</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-descendantsAreFocusable"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">descendantsAreFocusable</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-descendantsAreTraversable"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">descendantsAreTraversable</span> = <span class="default-value">true</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates a focus node.
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="ancestors" class="property">
+  <span class="name"><a href="widgets/FocusNode/ancestors.html">ancestors</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/FocusNode-class.html">FocusNode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An <a href="dart-core/Iterable-class.html">Iterable</a> over the ancestors of this node.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="canRequestFocus" class="property">
+  <span class="name"><a href="widgets/FocusNode/canRequestFocus.html">canRequestFocus</a></span>
+  <span class="signature">&#8596; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  If true, this focus node may request the primary focus.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="children" class="property">
+  <span class="name"><a href="widgets/FocusNode/children.html">children</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/FocusNode-class.html">FocusNode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An iterator over the children of this node.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="context" class="property">
+  <span class="name"><a href="widgets/FocusNode/context.html">context</a></span>
+  <span class="signature">&#8594; <a href="widgets/BuildContext-class.html">BuildContext</a>?</span> 
+
+</dt>
+<dd>
+  The context that was supplied to <a href="widgets/FocusNode/attach.html">attach</a>.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="debugLabel" class="property">
+  <span class="name"><a href="widgets/FocusNode/debugLabel.html">debugLabel</a></span>
+  <span class="signature">&#8596; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  A debug label that is used for diagnostic output.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="descendants" class="property">
+  <span class="name"><a href="widgets/FocusNode/descendants.html">descendants</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/FocusNode-class.html">FocusNode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An <a href="dart-core/Iterable-class.html">Iterable</a> over the hierarchy of children below this one, in
+depth-first order.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="descendantsAreFocusable" class="property">
+  <span class="name"><a href="widgets/FocusNode/descendantsAreFocusable.html">descendantsAreFocusable</a></span>
+  <span class="signature">&#8596; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  If false, will disable focus for all of this node's descendants.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="descendantsAreTraversable" class="property">
+  <span class="name"><a href="widgets/FocusNode/descendantsAreTraversable.html">descendantsAreTraversable</a></span>
+  <span class="signature">&#8596; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  If false, tells the focus traversal policy to skip over for all of this
+node's descendants for purposes of the traversal algorithm.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="enclosingScope" class="property">
+  <span class="name"><a href="widgets/FocusNode/enclosingScope.html">enclosingScope</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>?</span> 
+
+</dt>
+<dd>
+  Returns the nearest enclosing scope node above this node, or null if the
+node has not yet be added to the focus tree.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="hasFocus" class="property">
+  <span class="name"><a href="widgets/FocusNode/hasFocus.html">hasFocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether this node has input focus.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hasListeners" class="property inherited">
+  <span class="name"><a href="foundation/ChangeNotifier/hasListeners.html">hasListeners</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd class="inherited">
+  Whether any listeners are currently registered.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hasPrimaryFocus" class="property">
+  <span class="name"><a href="widgets/FocusNode/hasPrimaryFocus.html">hasPrimaryFocus</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Returns true if this node currently has the application-wide input focus.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="highlightMode" class="property">
+  <span class="name"><a href="widgets/FocusNode/highlightMode.html">highlightMode</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusHighlightMode.html">FocusHighlightMode</a></span> 
+
+</dt>
+<dd>
+  Returns the <a href="widgets/FocusHighlightMode.html">FocusHighlightMode</a> that is currently in effect for this node.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="nearestScope" class="property">
+  <span class="name"><a href="widgets/FocusNode/nearestScope.html">nearestScope</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusScopeNode-class.html">FocusScopeNode</a>?</span> 
+
+</dt>
+<dd>
+  Returns the nearest enclosing scope node above this node, including
+this node, if it's a scope.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="offset" class="property">
+  <span class="name"><a href="widgets/FocusNode/offset.html">offset</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Offset-class.html">Offset</a></span> 
+
+</dt>
+<dd>
+  Returns the global offset to the upper left corner of the attached
+widget's <a href="rendering/RenderObject-class.html">RenderObject</a>, in logical units.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="onKey" class="property">
+  <span class="name"><a href="widgets/FocusNode/onKey.html">onKey</a></span>
+  <span class="signature">&#8596; <a href="widgets/FocusOnKeyCallback.html">FocusOnKeyCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called if this focus node receives a key event while focused (i.e. when
+<a href="widgets/FocusNode/hasFocus.html">hasFocus</a> returns true).
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="onKeyEvent" class="property">
+  <span class="name"><a href="widgets/FocusNode/onKeyEvent.html">onKeyEvent</a></span>
+  <span class="signature">&#8596; <a href="widgets/FocusOnKeyEventCallback.html">FocusOnKeyEventCallback</a>?</span> 
+
+</dt>
+<dd>
+  Called if this focus node receives a key event while focused (i.e. when
+<a href="widgets/FocusNode/hasFocus.html">hasFocus</a> returns true).
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="parent" class="property">
+  <span class="name"><a href="widgets/FocusNode/parent.html">parent</a></span>
+  <span class="signature">&#8594; <a href="widgets/FocusNode-class.html">FocusNode</a>?</span> 
+
+</dt>
+<dd>
+  Returns the parent node for this object.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="rect" class="property">
+  <span class="name"><a href="widgets/FocusNode/rect.html">rect</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Rect-class.html">Rect</a></span> 
+
+</dt>
+<dd>
+  Returns the global rectangle of the attached widget's <a href="rendering/RenderObject-class.html">RenderObject</a>, in
+logical units.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="size" class="property">
+  <span class="name"><a href="widgets/FocusNode/size.html">size</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Size-class.html">Size</a></span> 
+
+</dt>
+<dd>
+  Returns the size of the attached widget's <a href="rendering/RenderObject-class.html">RenderObject</a>, in logical
+units.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="skipTraversal" class="property">
+  <span class="name"><a href="widgets/FocusNode/skipTraversal.html">skipTraversal</a></span>
+  <span class="signature">&#8596; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  If true, tells the focus traversal policy to skip over this node for
+purposes of the traversal algorithm.
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="traversalChildren" class="property">
+  <span class="name"><a href="widgets/FocusNode/traversalChildren.html">traversalChildren</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/FocusNode-class.html">FocusNode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  An iterator over the children that are allowed to be traversed by the
+<a href="widgets/FocusTraversalPolicy-class.html">FocusTraversalPolicy</a>.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="traversalDescendants" class="property">
+  <span class="name"><a href="widgets/FocusNode/traversalDescendants.html">traversalDescendants</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="widgets/FocusNode-class.html">FocusNode</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Returns all descendants which do not have the <a href="widgets/FocusNode/skipTraversal.html">skipTraversal</a> and do have
+the <a href="widgets/FocusNode/canRequestFocus.html">canRequestFocus</a> flag set.
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="addListener" class="callable inherited">
+  <span class="name"><a href="foundation/ChangeNotifier/addListener.html">addListener</a></span><span class="signature">(<wbr><span class="parameter" id="addListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Register a closure to be called when the object changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="attach" class="callable">
+  <span class="name"><a href="widgets/FocusNode/attach.html">attach</a></span><span class="signature">(<wbr><span class="parameter" id="attach-param-context"><span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a>?</span> <span class="parameter-name">context</span>, </span><span class="parameter" id="attach-param-onKeyEvent">{<span class="type-annotation"><a href="widgets/FocusOnKeyEventCallback.html">FocusOnKeyEventCallback</a>?</span> <span class="parameter-name">onKeyEvent</span>, </span><span class="parameter" id="attach-param-onKey"><span class="type-annotation"><a href="widgets/FocusOnKeyCallback.html">FocusOnKeyCallback</a>?</span> <span class="parameter-name">onKey</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="widgets/FocusAttachment-class.html">FocusAttachment</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Called by the <em>host</em> <a href="widgets/StatefulWidget-class.html">StatefulWidget</a> to attach a <a href="widgets/FocusNode-class.html">FocusNode</a> to the
+widget tree.
+  
+
+</dd>
+
+        <dt id="consumeKeyboardToken" class="callable">
+  <span class="name"><a href="widgets/FocusNode/consumeKeyboardToken.html">consumeKeyboardToken</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes the keyboard token from this focus node if it has one.
+  
+
+</dd>
+
+        <dt id="debugDescribeChildren" class="callable">
+  <span class="name"><a href="widgets/FocusNode/debugDescribeChildren.html">debugDescribeChildren</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a list of <code>DiagnosticsNode</code> objects describing this node's
+children.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="debugFillProperties" class="callable">
+  <span class="name"><a href="widgets/FocusNode/debugFillProperties.html">debugFillProperties</a></span><span class="signature">(<wbr><span class="parameter" id="debugFillProperties-param-properties"><span class="type-annotation"><a href="foundation/DiagnosticPropertiesBuilder-class.html">DiagnosticPropertiesBuilder</a></span> <span class="parameter-name">properties</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Add additional properties associated with the node.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="widgets/FocusNode/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Discards any resources used by the object. After this is called, the
+object is not in a usable state and should be discarded (calls to
+<a href="foundation/ChangeNotifier/addListener.html">addListener</a> will throw after the object is disposed).
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="focusInDirection" class="callable">
+  <span class="name"><a href="widgets/FocusNode/focusInDirection.html">focusInDirection</a></span><span class="signature">(<wbr><span class="parameter" id="focusInDirection-param-direction"><span class="type-annotation"><a href="widgets/TraversalDirection.html">TraversalDirection</a></span> <span class="parameter-name">direction</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Request to move the focus to the nearest focus node in the given
+direction, by calling the <a href="widgets/FocusTraversalPolicy/inDirection.html">FocusTraversalPolicy.inDirection</a> method.
+  
+
+</dd>
+
+        <dt id="nextFocus" class="callable">
+  <span class="name"><a href="widgets/FocusNode/nextFocus.html">nextFocus</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Request to move the focus to the next focus node, by calling the
+<a href="widgets/FocusTraversalPolicy/next.html">FocusTraversalPolicy.next</a> method.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="notifyListeners" class="callable inherited">
+  <span class="name"><a href="foundation/ChangeNotifier/notifyListeners.html">notifyListeners</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Call all the registered listeners.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="previousFocus" class="callable">
+  <span class="name"><a href="widgets/FocusNode/previousFocus.html">previousFocus</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Request to move the focus to the previous focus node, by calling the
+<a href="widgets/FocusTraversalPolicy/previous.html">FocusTraversalPolicy.previous</a> method.
+  
+
+</dd>
+
+        <dt id="removeListener" class="callable inherited">
+  <span class="name"><a href="foundation/ChangeNotifier/removeListener.html">removeListener</a></span><span class="signature">(<wbr><span class="parameter" id="removeListener-param-listener"><span class="type-annotation"><a href="dart-ui/VoidCallback.html">VoidCallback</a></span> <span class="parameter-name">listener</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Remove a previously registered closure from the list of closures that are
+notified when the object changes.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="requestFocus" class="callable">
+  <span class="name"><a href="widgets/FocusNode/requestFocus.html">requestFocus</a></span><span class="signature">(<wbr><span class="parameter" id="requestFocus-param-node">[<span class="type-annotation"><a href="widgets/FocusNode-class.html">FocusNode</a>?</span> <span class="parameter-name">node</span>]</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Requests the primary focus for this node, or for a supplied <code>node</code>, which
+will also give focus to its <a href="widgets/FocusNode/ancestors.html">ancestors</a>.
+  
+
+</dd>
+
+        <dt id="toDiagnosticsNode" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toDiagnosticsNode.html">toDiagnosticsNode</a></span><span class="signature">(<wbr><span class="parameter" id="toDiagnosticsNode-param-name">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">name</span>, </span><span class="parameter" id="toDiagnosticsNode-param-style"><span class="type-annotation"><a href="foundation/DiagnosticsTreeStyle.html">DiagnosticsTreeStyle</a>?</span> <span class="parameter-name">style</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="foundation/DiagnosticsNode-class.html">DiagnosticsNode</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a debug representation of the object that is used by debugging
+tools and by <a href="foundation/DiagnosticsNode/toStringDeep.html">DiagnosticsNode.toStringDeep</a>.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toString.html">toString</a></span><span class="signature">(<wbr><span class="parameter" id="toString-param-minLevel">{<span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.info</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringDeep" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toStringDeep.html">toStringDeep</a></span><span class="signature">(<wbr><span class="parameter" id="toStringDeep-param-prefixLineOne">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">prefixLineOne</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="toStringDeep-param-prefixOtherLines"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">prefixOtherLines</span>, </span><span class="parameter" id="toStringDeep-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a string representation of this node and its descendants.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShallow" class="callable inherited">
+  <span class="name"><a href="foundation/DiagnosticableTreeMixin/toStringShallow.html">toStringShallow</a></span><span class="signature">(<wbr><span class="parameter" id="toStringShallow-param-joiner">{<span class="type-annotation"><a href="dart-core/String-class.html">String</a></span> <span class="parameter-name">joiner</span> = <span class="default-value">&#39;, &#39;</span>, </span><span class="parameter" id="toStringShallow-param-minLevel"><span class="type-annotation"><a href="foundation/DiagnosticLevel.html">DiagnosticLevel</a></span> <span class="parameter-name">minLevel</span> = <span class="default-value">DiagnosticLevel.debug</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Returns a one-line detailed description of the object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toStringShort" class="callable">
+  <span class="name"><a href="widgets/FocusNode/toStringShort.html">toStringShort</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  A brief description of this object, usually just the <a href="dart-core/Object/runtimeType.html">runtimeType</a> and the
+<a href="dart-core/Object/hashCode.html">hashCode</a>.
+  <div class="features"><span class="feature">override</span></div>
+
+</dd>
+
+        <dt id="unfocus" class="callable">
+  <span class="name"><a href="widgets/FocusNode/unfocus.html">unfocus</a></span><span class="signature">(<wbr><span class="parameter" id="unfocus-param-disposition">{<span class="type-annotation"><a href="widgets/UnfocusDisposition.html">UnfocusDisposition</a></span> <span class="parameter-name">disposition</span> = <span class="default-value">UnfocusDisposition.scope</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Removes the focus on this node by moving the primary focus to another node.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li class="self-crumb">FocusNode class</li>
+</ol>
+
+
+    <!--<h5>widgets library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

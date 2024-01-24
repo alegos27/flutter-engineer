@@ -1,0 +1,13 @@
+{
+    "id": "material.NavigationRail.1",
+    "element": "NavigationRail",
+    "sourcePath": "lib/src/material/navigation_rail.dart",
+    "sourceLine": 72,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a [NavigationRail] used within a Scaffold with 3\n[NavigationRailDestination]s. The main content is separated by a divider\n(although elevation on the navigation rail can be used instead). The\n`_selectedIndex` is updated by the `onDestinationSelected` callback.",
+    "file": "material.NavigationRail.1.dart"
+}

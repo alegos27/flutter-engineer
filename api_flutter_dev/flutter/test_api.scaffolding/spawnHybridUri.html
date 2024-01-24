@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the spawnHybridUri function from the test_api.scaffolding library, for the Dart programming language.">
+  <title>spawnHybridUri function - test_api.scaffolding library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="test_api.scaffolding/test_api.scaffolding-library.html">test_api.scaffolding</a></li>
+    <li class="self-crumb">spawnHybridUri function</li>
+  </ol>
+  <div class="self-name">spawnHybridUri</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="test_api.scaffolding&#47;test_api.scaffolding-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">spawnHybridUri</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a></span>
+<span class="name ">spawnHybridUri</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="spawnHybridUri-param-uri"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">uri</span>, </span></li>
+<li><span class="parameter" id="spawnHybridUri-param-message">{<span class="type-annotation"><a href="dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">message</span>, </span></li>
+<li><span class="parameter" id="spawnHybridUri-param-stayAlive"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">stayAlive</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Spawns a VM isolate for the given <code>uri</code>, which may be a <a href="dart-core/Uri-class.html">Uri</a> or a <a href="dart-core/String-class.html">String</a>.</p>
+<p>This allows browser tests to spawn servers with which they can communicate
+to test client/server interactions. It can also be used by VM tests to
+easily spawn an isolate.</p>
+<p>The Dart file at <code>uri</code> must define a top-level <code>hybridMain()</code> function that
+takes a <code>StreamChannel</code> argument and, optionally, an <code>Object</code> argument to
+which <code>message</code> will be passed. Note that <code>message</code> must be JSON-encodable.
+For example:</p>
+<pre class="language-dart"><code class="language-dart">import "package:stream_channel/stream_channel.dart";
+
+hybridMain(StreamChannel channel, Object message) {
+  // ...
+}
+</code></pre>
+<p>If <code>uri</code> is relative, it will be interpreted relative to the <code>file:</code> URL for
+the test suite being executed. If it's root-relative (that is, if it begins
+with <code>/</code>) it will be interpreted relative to the root of the package (the
+directory that contains <code>pubspec.yaml</code>, <em>not</em> the <code>test/</code> directory). If
+it's a <code>package:</code> URL, it will be resolved using the current package's
+dependency constellation.</p>
+<p>Returns a <a href="package-stream_channel_stream_channel/StreamChannel-class.html">StreamChannel</a> that's connected to the channel passed to
+<code>hybridMain()</code>. Only JSON-encodable objects may be sent through this
+channel. If the channel is closed, the hybrid isolate is killed. If the
+isolate is killed, the channel's stream will emit a "done" event.</p>
+<p>Any unhandled errors loading or running the hybrid isolate will be emitted
+as errors over the channel's stream. Any calls to <code>print()</code> in the hybrid
+isolate will be printed as though they came from the test that created the
+isolate.</p>
+<p>Code in the hybrid isolate is not considered to be running in a test
+context, so it can't access test functions like <code>expect()</code> and
+<code>expectAsync()</code>.</p>
+<p>By default, the hybrid isolate is automatically killed when the test
+finishes running. If <code>stayAlive</code> is <code>true</code>, it won't be killed until the
+entire test suite finishes running.</p>
+<p><strong>Note</strong>: If you use this API, be sure to add a dependency on the
+**<code>stream_channel</code> package, since you're using its API as well!</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">StreamChannel spawnHybridUri(
+  Object uri, {
+  Object? message,
+  bool stayAlive = false,
+}) {
+  if (uri is String) {
+    &#47;&#47; Ensure that it can be parsed as a uri.
+    Uri.parse(uri);
+  } else if (uri is! Uri) {
+    throw ArgumentError.value(uri, &#39;uri&#39;, &#39;must be a Uri or a String.&#39;);
+  }
+  return _spawn(uri.toString(), message, stayAlive: stayAlive);
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="test_api.scaffolding/test_api.scaffolding-library.html">test_api.scaffolding</a></li>
+    <li class="self-crumb">spawnHybridUri function</li>
+</ol>
+
+
+    <h5>test_api.scaffolding library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

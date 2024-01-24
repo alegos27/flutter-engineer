@@ -1,0 +1,13 @@
+{
+    "id": "material.PopScope.1",
+    "element": "PopScope",
+    "sourcePath": "lib/src/widgets/pop_scope.dart",
+    "sourceLine": 44,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This sample demonstrates how to use this widget to handle nested navigation\nin a bottom navigation bar.",
+    "file": "material.PopScope.1.dart"
+}

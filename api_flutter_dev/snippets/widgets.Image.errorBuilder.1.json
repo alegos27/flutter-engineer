@@ -1,0 +1,13 @@
+{
+    "id": "widgets.Image.errorBuilder.1",
+    "element": "Image.errorBuilder",
+    "sourcePath": "lib/src/widgets/image.dart",
+    "sourceLine": 820,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "widgets",
+    "copyright": null,
+    "description": "The following sample uses [errorBuilder] to show a '😢' in place of the\nimage that fails to load, and prints the error to the console.",
+    "file": "widgets.Image.errorBuilder.1.dart"
+}

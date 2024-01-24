@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the FontFeature.localeAware constructor from Class FontFeature from the dart:ui library, for the Dart programming language.">
+  <title>FontFeature.localeAware constructor - FontFeature - dart:ui library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+    <li><a href="dart-ui/FontFeature-class.html">FontFeature</a></li>
+    <li class="self-crumb">FontFeature.localeAware const constructor</li>
+  </ol>
+  <div class="self-name">FontFeature.localeAware</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="dart-ui&#47;FontFeature-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">FontFeature.localeAware</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      const
+      <span class="name ">FontFeature.localeAware</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="localeAware-param-enable">{<span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enable</span> = <span class="default-value">true</span>}</span></li>
+</ol>)
+    </section>
+
+    
+<section class="desc markdown">
+  <p>Use locale-specific glyphs. (<code>locl</code>)</p>
+<p>Some characters, most notably those in the Unicode Han
+Unification blocks, vary in presentation based on the locale in
+use. For example, the ideograph for "grass" (U+8349, 草) has a
+broken top line in Traditional Chinese, but a solid top line in
+Simplified Chinese, Japanese, Korean, and Vietnamese. This kind
+of variation also exists with other alphabets, for example
+Cyrillic characters as used in the Bulgarian and Serbian
+alphabets vary from their Russian counterparts.</p>
+<p>A particular font may default to the forms for the locale for
+which it was constructed, but still support alternative forms
+for other locales. When this feature is enabled, the locale (as
+specified using <a href="painting/TextStyle/locale.html">painting.TextStyle.locale</a>, for instance) is
+used to determine which glyphs to use when locale-specific
+alternatives exist. Disabling this feature causes the font
+rendering to ignore locale information and only use the default
+glyphs.</p>
+<p>This feature is enabled by default. Using
+<code>FontFeature.localeAware(enable: false)</code> disables the
+locale-awareness. (So does not specifying the locale in the
+first place, of course.)</p>
+<p>
+<a name="dart.dart_ui.FontFeature.localeAware.1"></a>
+<div class="snippet snippet-container anchor-container">
+  <div class="snippet-description">
+The Noto Sans CJK font supports the <code>locl</code> feature for CJK characters.
+In this example, the <code>localeAware</code> feature is not explicitly used, as it is
+enabled by default. This example instead shows how to set the locale,
+thus demonstrating how Noto Sans adapts the glyph shapes to the locale.</p>
+<p><img src="https://flutter.github.io/assets-for-api-docs/assets/dart-ui/font_feature_locl.png" alt="">
+</div>
+  <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard" onmouseenter="fixHref(this, 'dart.dart_ui.FontFeature.localeAware.1');"
+    onclick="fixHref(this, 'dart.dart_ui.FontFeature.localeAware.1'); copyStringToClipboard(this.href);" href="#">
+    <i class="material-icons anchor-image">link</i>
+  </a>
+  <div class="snippet-description">
+    <p>To create a local project with this code sample, run:<br />
+      <span class="snippet-create-command">flutter create --sample=dart.dart_ui.FontFeature.localeAware.1 mysample</span>
+    </p>
+  </div>
+  <div class="copyable-container">
+    <button class="copy-button-overlay copy-button" title="Copy to clipboard"
+      onclick="copyTextToClipboard(longSnippet1);">
+      <i class="material-icons copy-image">content_copy</i>
+    </button>
+    <pre id="longSnippet1"
+      class="language-dart"><code class="language-dart">import &#39;package:flutter&#47;widgets.dart&#39;;
+
+&#47;&#47;&#47; Flutter code sample for [FontFeature.FontFeature.localeAware].
+
+void main() =&gt; runApp(const ExampleApp());
+
+class ExampleApp extends StatelessWidget {
+  const ExampleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return WidgetsApp(
+      builder: (BuildContext context, Widget? navigator) =&gt;
+          const ExampleWidget(),
+      color: const Color(0xffffffff),
+    );
+  }
+}
+
+class ExampleWidget extends StatelessWidget {
+  const ExampleWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    &#47;&#47; The Noto family of fonts can be downloaded from Google Fonts
+    &#47;&#47; (https:&#47;&#47;www.google.com&#47;fonts).
+    return const Text(
+      &#39;次 化 刃 直 入 令&#39;,
+      locale: Locale(
+          &#39;zh&#39;, &#39;CN&#39;), &#47;&#47; or Locale(&#39;ja&#39;), Locale(&#39;ko&#39;), Locale(&#39;zh&#39;, &#39;TW&#39;), etc
+      style: TextStyle(
+        fontFamily: &#39;Noto Sans&#39;,
+      ),
+    );
+  }
+}
+</code></pre>
+  </div>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/typography/opentype/spec/features_ko#locl">docs.microsoft.com/en-us/typography/opentype/spec/features_ko#locl</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Han_unification">en.wikipedia.org/wiki/Han_unification</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cyrillic_script">en.wikipedia.org/wiki/Cyrillic_script</a></li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">const FontFeature.localeAware({ bool enable = true }) : feature = &#39;locl&#39;, value = enable ? 1 : 0;</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="dart-ui/dart-ui-library.html">dart:ui</a></li>
+    <li><a href="dart-ui/FontFeature-class.html">FontFeature</a></li>
+    <li class="self-crumb">FontFeature.localeAware const constructor</li>
+</ol>
+
+
+    <h5>FontFeature class</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

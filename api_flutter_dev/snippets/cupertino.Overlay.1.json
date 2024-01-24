@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.Overlay.1",
+    "element": "Overlay",
+    "sourcePath": "lib/src/widgets/overlay.dart",
+    "sourceLine": 403,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "This example shows how to use the [Overlay] to highlight the [NavigationBar]\ndestination.",
+    "file": "cupertino.Overlay.1.dart"
+}

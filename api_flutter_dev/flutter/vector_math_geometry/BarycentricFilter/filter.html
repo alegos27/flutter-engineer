@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the filter method from the BarycentricFilter class, for the Dart programming language.">
+  <title>filter method - BarycentricFilter class - vector_math_geometry library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="vector_math_geometry/vector_math_geometry-library.html">vector_math_geometry</a></li>
+    <li><a href="vector_math_geometry/BarycentricFilter-class.html">BarycentricFilter</a></li>
+    <li class="self-crumb">filter method</li>
+  </ol>
+  <div class="self-name">filter</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="vector_math_geometry&#47;BarycentricFilter-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">filter</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+
+<span class="returntype"><a href="vector_math_geometry/MeshGeometry-class.html">MeshGeometry</a></span>
+<span class="name ">filter</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="filter-param-mesh"><span class="type-annotation"><a href="vector_math_geometry/MeshGeometry-class.html">MeshGeometry</a></span> <span class="parameter-name">mesh</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Returns a copy of the mesh with any filter transforms applied.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+MeshGeometry filter(MeshGeometry mesh) {
+  final newAttribs = List&lt;VertexAttrib&gt;.from(mesh.attribs);
+
+  if (mesh.getAttrib(&#39;BARYCENTRIC&#39;) == null) {
+    newAttribs.add(VertexAttrib(&#39;BARYCENTRIC&#39;, 3, &#39;float&#39;));
+  }
+
+  final output = MeshGeometry(mesh.triangleVertexCount, newAttribs);
+
+  Vector3List barycentricCoords;
+  final view = output.getViewForAttrib(&#39;BARYCENTRIC&#39;);
+  if (view is Vector3List) {
+    barycentricCoords = view;
+  } else {
+    throw UnimplementedError();
+  }
+
+  final srcAttribs = &lt;VectorList&lt;Vector&gt;&gt;[];
+  final destAttribs = &lt;VectorList&lt;Vector&gt;&gt;[];
+  for (var attrib in mesh.attribs) {
+    if (attrib.name == &#39;BARYCENTRIC&#39;) {
+      continue;
+    }
+
+    srcAttribs.add(mesh.getViewForAttrib(attrib.name)!);
+    destAttribs.add(output.getViewForAttrib(attrib.name)!);
+  }
+
+  final b0 = Vector3(1.0, 0.0, 0.0);
+  final b1 = Vector3(0.0, 1.0, 0.0);
+  final b2 = Vector3(0.0, 0.0, 1.0);
+
+  int i0, i1, i2;
+
+  for (var i = 0; i &lt; output.length; i += 3) {
+    if (mesh.indices != null) {
+      i0 = mesh.indices![i];
+      i1 = mesh.indices![i + 1];
+      i2 = mesh.indices![i + 2];
+    } else {
+      i0 = i;
+      i1 = i + 1;
+      i2 = i + 2;
+    }
+
+    barycentricCoords[i] = b0;
+    barycentricCoords[i + 1] = b1;
+    barycentricCoords[i + 2] = b2;
+
+    &#47;&#47; Copy the remaining attributes over
+    for (var j = 0; j &lt; srcAttribs.length; ++j) {
+      destAttribs[j][i] = srcAttribs[j][i0];
+      destAttribs[j][i + 1] = srcAttribs[j][i1];
+      destAttribs[j][i + 2] = srcAttribs[j][i2];
+    }
+  }
+
+  return output;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="vector_math_geometry/vector_math_geometry-library.html">vector_math_geometry</a></li>
+    <li><a href="vector_math_geometry/BarycentricFilter-class.html">BarycentricFilter</a></li>
+    <li class="self-crumb">filter method</li>
+</ol>
+
+
+    <h5>BarycentricFilter class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

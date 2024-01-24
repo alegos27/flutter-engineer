@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the EventTarget class from the helpers library, for the Dart programming language.">
+  <title>EventTarget class - helpers library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+    <li class="self-crumb">EventTarget class</li>
+  </ol>
+  <div class="self-name">EventTarget</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-web_helpers&#47;package-web_helpers-library-sidebar.html"
+      data-below-sidebar="package-web_helpers&#47;EventTarget-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">EventTarget</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="package-web_helpers/AbortSignal-class.html">AbortSignal</a></li>
+          <li><a href="package-web_helpers/Animation-class.html">Animation</a></li>
+          <li><a href="package-web_helpers/AudioDecoder-class.html">AudioDecoder</a></li>
+          <li><a href="package-web_helpers/AudioEncoder-class.html">AudioEncoder</a></li>
+          <li><a href="package-web_helpers/AudioNode-class.html">AudioNode</a></li>
+          <li><a href="package-web_helpers/AudioRenderCapacity-class.html">AudioRenderCapacity</a></li>
+          <li><a href="package-web_helpers/AudioSession-class.html">AudioSession</a></li>
+          <li><a href="package-web_helpers/AudioTrackList-class.html">AudioTrackList</a></li>
+          <li><a href="package-web_helpers/BackgroundFetchRegistration-class.html">BackgroundFetchRegistration</a></li>
+          <li><a href="package-web_helpers/BaseAudioContext-class.html">BaseAudioContext</a></li>
+          <li><a href="package-web_helpers/BatteryManager-class.html">BatteryManager</a></li>
+          <li><a href="package-web_helpers/Bluetooth-class.html">Bluetooth</a></li>
+          <li><a href="package-web_helpers/BluetoothDevice-class.html">BluetoothDevice</a></li>
+          <li><a href="package-web_helpers/BluetoothRemoteGATTCharacteristic-class.html">BluetoothRemoteGATTCharacteristic</a></li>
+          <li><a href="package-web_helpers/BluetoothRemoteGATTService-class.html">BluetoothRemoteGATTService</a></li>
+          <li><a href="package-web_helpers/BroadcastChannel-class.html">BroadcastChannel</a></li>
+          <li><a href="package-web_helpers/CaptureController-class.html">CaptureController</a></li>
+          <li><a href="package-web_helpers/Clipboard-class.html">Clipboard</a></li>
+          <li><a href="package-web_helpers/CookieStore-class.html">CookieStore</a></li>
+          <li><a href="package-web_helpers/CSSPseudoElement-class.html">CSSPseudoElement</a></li>
+          <li><a href="package-web_helpers/DevicePosture-class.html">DevicePosture</a></li>
+          <li><a href="package-web_helpers/DocumentPictureInPicture-class.html">DocumentPictureInPicture</a></li>
+          <li><a href="package-web_helpers/EditContext-class.html">EditContext</a></li>
+          <li><a href="package-web_helpers/EventSource-class.html">EventSource</a></li>
+          <li><a href="package-web_helpers/FileReader-class.html">FileReader</a></li>
+          <li><a href="package-web_helpers/FontFaceSet-class.html">FontFaceSet</a></li>
+          <li><a href="package-web_helpers/GPUDevice-class.html">GPUDevice</a></li>
+          <li><a href="package-web_helpers/HID-class.html">HID</a></li>
+          <li><a href="package-web_helpers/HIDDevice-class.html">HIDDevice</a></li>
+          <li><a href="package-web_helpers/IDBDatabase-class.html">IDBDatabase</a></li>
+          <li><a href="package-web_helpers/IDBRequest-class.html">IDBRequest</a></li>
+          <li><a href="package-web_helpers/IDBTransaction-class.html">IDBTransaction</a></li>
+          <li><a href="package-web_helpers/IdleDetector-class.html">IdleDetector</a></li>
+          <li><a href="package-web_helpers/Keyboard-class.html">Keyboard</a></li>
+          <li><a href="package-web_helpers/MediaDevices-class.html">MediaDevices</a></li>
+          <li><a href="package-web_helpers/MediaKeySession-class.html">MediaKeySession</a></li>
+          <li><a href="package-web_helpers/MediaQueryList-class.html">MediaQueryList</a></li>
+          <li><a href="package-web_helpers/MediaRecorder-class.html">MediaRecorder</a></li>
+          <li><a href="package-web_helpers/MediaSource-class.html">MediaSource</a></li>
+          <li><a href="package-web_helpers/MediaStream-class.html">MediaStream</a></li>
+          <li><a href="package-web_helpers/MediaStreamTrack-class.html">MediaStreamTrack</a></li>
+          <li><a href="package-web_helpers/MessagePort-class.html">MessagePort</a></li>
+          <li><a href="package-web_helpers/MIDIAccess-class.html">MIDIAccess</a></li>
+          <li><a href="package-web_helpers/MIDIPort-class.html">MIDIPort</a></li>
+          <li><a href="package-web_helpers/NamedFlow-class.html">NamedFlow</a></li>
+          <li><a href="package-web_helpers/Navigation-class.html">Navigation</a></li>
+          <li><a href="package-web_helpers/NavigationHistoryEntry-class.html">NavigationHistoryEntry</a></li>
+          <li><a href="package-web_helpers/NDEFReader-class.html">NDEFReader</a></li>
+          <li><a href="package-web_helpers/NetworkInformation-class.html">NetworkInformation</a></li>
+          <li><a href="package-web_helpers/Node-class.html">Node</a></li>
+          <li><a href="package-web_helpers/Notification-class.html">Notification</a></li>
+          <li><a href="package-web_helpers/OffscreenCanvas-class.html">OffscreenCanvas</a></li>
+          <li><a href="package-web_helpers/PaymentRequest-class.html">PaymentRequest</a></li>
+          <li><a href="package-web_helpers/PaymentResponse-class.html">PaymentResponse</a></li>
+          <li><a href="package-web_helpers/Performance-class.html">Performance</a></li>
+          <li><a href="package-web_helpers/PermissionStatus-class.html">PermissionStatus</a></li>
+          <li><a href="package-web_helpers/PictureInPictureWindow-class.html">PictureInPictureWindow</a></li>
+          <li><a href="package-web_helpers/PortalHost-class.html">PortalHost</a></li>
+          <li><a href="package-web_helpers/PresentationAvailability-class.html">PresentationAvailability</a></li>
+          <li><a href="package-web_helpers/PresentationConnection-class.html">PresentationConnection</a></li>
+          <li><a href="package-web_helpers/PresentationConnectionList-class.html">PresentationConnectionList</a></li>
+          <li><a href="package-web_helpers/PresentationRequest-class.html">PresentationRequest</a></li>
+          <li><a href="package-web_helpers/Profiler-class.html">Profiler</a></li>
+          <li><a href="package-web_helpers/RemotePlayback-class.html">RemotePlayback</a></li>
+          <li><a href="package-web_helpers/RTCDataChannel-class.html">RTCDataChannel</a></li>
+          <li><a href="package-web_helpers/RTCDtlsTransport-class.html">RTCDtlsTransport</a></li>
+          <li><a href="package-web_helpers/RTCDTMFSender-class.html">RTCDTMFSender</a></li>
+          <li><a href="package-web_helpers/RTCIceTransport-class.html">RTCIceTransport</a></li>
+          <li><a href="package-web_helpers/RTCPeerConnection-class.html">RTCPeerConnection</a></li>
+          <li><a href="package-web_helpers/RTCSctpTransport-class.html">RTCSctpTransport</a></li>
+          <li><a href="package-web_helpers/ScreenDetails-class.html">ScreenDetails</a></li>
+          <li><a href="package-web_helpers/ScreenOrientation-class.html">ScreenOrientation</a></li>
+          <li><a href="package-web_helpers/Sensor-class.html">Sensor</a></li>
+          <li><a href="package-web_helpers/Serial-class.html">Serial</a></li>
+          <li><a href="package-web_helpers/SerialPort-class.html">SerialPort</a></li>
+          <li><a href="package-web_helpers/ServiceWorker-class.html">ServiceWorker</a></li>
+          <li><a href="package-web_helpers/ServiceWorkerContainer-class.html">ServiceWorkerContainer</a></li>
+          <li><a href="package-web_helpers/ServiceWorkerRegistration-class.html">ServiceWorkerRegistration</a></li>
+          <li><a href="package-web_helpers/SFrameTransform-class.html">SFrameTransform</a></li>
+          <li><a href="package-web_helpers/SharedWorker-class.html">SharedWorker</a></li>
+          <li><a href="package-web_helpers/SourceBuffer-class.html">SourceBuffer</a></li>
+          <li><a href="package-web_helpers/SourceBufferList-class.html">SourceBufferList</a></li>
+          <li><a href="package-web_helpers/SpeechRecognition-class.html">SpeechRecognition</a></li>
+          <li><a href="package-web_helpers/SpeechSynthesis-class.html">SpeechSynthesis</a></li>
+          <li><a href="package-web_helpers/SpeechSynthesisUtterance-class.html">SpeechSynthesisUtterance</a></li>
+          <li><a href="package-web_helpers/TextTrack-class.html">TextTrack</a></li>
+          <li><a href="package-web_helpers/TextTrackCue-class.html">TextTrackCue</a></li>
+          <li><a href="package-web_helpers/TextTrackList-class.html">TextTrackList</a></li>
+          <li><a href="package-web_helpers/USB-class.html">USB</a></li>
+          <li><a href="package-web_helpers/VideoDecoder-class.html">VideoDecoder</a></li>
+          <li><a href="package-web_helpers/VideoEncoder-class.html">VideoEncoder</a></li>
+          <li><a href="package-web_helpers/VideoTrackList-class.html">VideoTrackList</a></li>
+          <li><a href="package-web_helpers/VirtualKeyboard-class.html">VirtualKeyboard</a></li>
+          <li><a href="package-web_helpers/VisualViewport-class.html">VisualViewport</a></li>
+          <li><a href="package-web_helpers/WakeLockSentinel-class.html">WakeLockSentinel</a></li>
+          <li><a href="package-web_helpers/WebSocket-class.html">WebSocket</a></li>
+          <li><a href="package-web_helpers/Window-class.html">Window</a></li>
+          <li><a href="package-web_helpers/WindowControlsOverlay-class.html">WindowControlsOverlay</a></li>
+          <li><a href="package-web_helpers/Worker-class.html">Worker</a></li>
+          <li><a href="package-web_helpers/WorkerGlobalScope-class.html">WorkerGlobalScope</a></li>
+          <li><a href="package-web_helpers/XMLHttpRequestEventTarget-class.html">XMLHttpRequestEventTarget</a></li>
+          <li><a href="package-web_helpers/XRLayer-class.html">XRLayer</a></li>
+          <li><a href="package-web_helpers/XRLightProbe-class.html">XRLightProbe</a></li>
+          <li><a href="package-web_helpers/XRSession-class.html">XRSession</a></li>
+          <li><a href="package-web_helpers/XRSpace-class.html">XRSpace</a></li>
+          <li><a href="package-web_helpers/XRSystem-class.html">XRSystem</a></li>
+        </ul></dd>
+
+        <dt>Available Extensions</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="package-web_helpers/EventTargetExtension.html">EventTargetExtension</a></li>
+          <li><a href="dart-js_interop_unsafe/JSObjectUnsafeUtilExtension.html">JSObjectUnsafeUtilExtension</a></li>
+          <li><a href="dart-js_interop/JSObjectUtilExtension.html">JSObjectUtilExtension</a></li>
+          <li><a href="dart-js_interop/NullableUndefineableJSAnyExtension.html">NullableUndefineableJSAnyExtension</a></li>
+        </ul></dd>
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="dart-js_interop/JS-class.html">JS</a>(&#39;EventTarget&#39;)</li>
+        <li>@<a href="dart-js_interop/staticInterop-constant.html">staticInterop</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="EventTarget" class="callable">
+          <span class="name"><a href="package-web_helpers/EventTarget/EventTarget.html">EventTarget</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+    <li class="self-crumb">EventTarget class</li>
+</ol>
+
+
+    <!--<h5>helpers library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,13 @@
+{
+    "id": "material.FractionallySizedBox.1",
+    "element": "FractionallySizedBox",
+    "sourcePath": "lib/src/widgets/basic.dart",
+    "sourceLine": 2871,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This sample shows a [FractionallySizedBox] whose one child is 50% of\nthe box's size per the width and height factor parameters, and centered\nwithin that box by the alignment parameter.",
+    "file": "material.FractionallySizedBox.1.dart"
+}

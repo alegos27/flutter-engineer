@@ -1,0 +1,13 @@
+{
+    "id": "material.DefaultTextStyleTransition.1",
+    "element": "DefaultTextStyleTransition",
+    "sourcePath": "lib/src/widgets/transitions.dart",
+    "sourceLine": 970,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "The following code implements the [DefaultTextStyleTransition] that shows\na transition between thick blue font and thin red font.",
+    "file": "material.DefaultTextStyleTransition.1.dart"
+}

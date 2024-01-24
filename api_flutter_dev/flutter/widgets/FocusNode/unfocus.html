@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the unfocus method from the FocusNode class, for the Dart programming language.">
+  <title>unfocus method - FocusNode class - widgets library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/FocusNode-class.html">FocusNode</a></li>
+    <li class="self-crumb">unfocus method</li>
+  </ol>
+  <div class="self-name">unfocus</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="widgets&#47;FocusNode-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/widgets/focus_manager.dart#L864"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">unfocus</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype">void</span>
+<span class="name ">unfocus</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="unfocus-param-disposition">{<span class="type-annotation"><a href="widgets/UnfocusDisposition.html">UnfocusDisposition</a></span> <span class="parameter-name">disposition</span> = <span class="default-value">UnfocusDisposition.scope</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Removes the focus on this node by moving the primary focus to another node.</p>
+<p>This method removes focus from a node that has the primary focus, cancels
+any outstanding requests to focus it, while setting the primary focus to
+another node according to the <code>disposition</code>.</p>
+<p>It is safe to call regardless of whether this node has ever requested
+focus or not. If this node doesn't have focus or primary focus, nothing
+happens.</p>
+<p>The <code>disposition</code> argument determines which node will receive primary
+focus after this one loses it.</p>
+<p>If <code>disposition</code> is set to <a href="widgets/UnfocusDisposition.html">UnfocusDisposition.scope</a> (the default), then
+the previously focused node history of the enclosing scope will be
+cleared, and the primary focus will be moved to the nearest enclosing
+scope ancestor that is enabled for focus, ignoring the
+<a href="widgets/FocusScopeNode/focusedChild.html">FocusScopeNode.focusedChild</a> for that scope.</p>
+<p>If <code>disposition</code> is set to <a href="widgets/UnfocusDisposition.html">UnfocusDisposition.previouslyFocusedChild</a>,
+then this node will be removed from the previously focused list in the
+<a href="widgets/FocusNode/enclosingScope.html">enclosingScope</a>, and the focus will be moved to the previously focused
+node of the <a href="widgets/FocusNode/enclosingScope.html">enclosingScope</a>, which (if it is a scope itself), will find
+its focused child, etc., until a leaf focus node is found. If there is no
+previously focused child, then the scope itself will receive focus, as if
+<a href="widgets/UnfocusDisposition.html">UnfocusDisposition.scope</a> were specified.</p>
+<p>If you want this node to lose focus and the focus to move to the next or
+previous node in the enclosing <a href="widgets/FocusTraversalGroup-class.html">FocusTraversalGroup</a>, call <a href="widgets/FocusNode/nextFocus.html">nextFocus</a> or
+<a href="widgets/FocusNode/previousFocus.html">previousFocus</a> instead of calling <a href="widgets/FocusNode/unfocus.html">unfocus</a>.</p>
+<p>
+<a name="widgets.FocusNode.unfocus.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This example shows the difference between the different <a href="widgets/UnfocusDisposition.html">UnfocusDisposition</a>
+values for <a href="widgets/FocusNode/unfocus.html">unfocus</a>.</p>
+<p>Try setting focus on the four text fields by selecting them, and then
+select "UNFOCUS" to see what happens when the current
+<a href="widgets/FocusManager/primaryFocus.html">FocusManager.primaryFocus</a> is unfocused.</p>
+<p>Try pressing the TAB key after unfocusing to see what the next widget
+chosen is.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'widgets.FocusNode.unfocus.1');" onclick="fixHref(this, 'widgets.FocusNode.unfocus.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=widgets.FocusNode.unfocus.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=widgets.FocusNode.unfocus.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void unfocus({
+  UnfocusDisposition disposition = UnfocusDisposition.scope,
+}) {
+  if (!hasFocus &amp;&amp; (_manager == null || _manager!._markedForFocus != this)) {
+    return;
+  }
+  FocusScopeNode? scope = enclosingScope;
+  if (scope == null) {
+    &#47;&#47; If the scope is null, then this is either the root node, or a node that
+    &#47;&#47; is not yet in the tree, neither of which do anything when unfocused.
+    return;
+  }
+  switch (disposition) {
+    case UnfocusDisposition.scope:
+      &#47;&#47; If it can&#39;t request focus, then don&#39;t modify its focused children.
+      if (scope.canRequestFocus) {
+        &#47;&#47; Clearing the focused children here prevents re-focusing the node
+        &#47;&#47; that we just unfocused if we immediately hit &quot;next&quot; after
+        &#47;&#47; unfocusing, and also prevents choosing to refocus the next-to-last
+        &#47;&#47; focused child if unfocus is called more than once.
+        scope._focusedChildren.clear();
+      }
+
+      while (!scope!.canRequestFocus) {
+        scope = scope.enclosingScope ?? _manager?.rootScope;
+      }
+      scope._doRequestFocus(findFirstFocus: false);
+    case UnfocusDisposition.previouslyFocusedChild:
+      &#47;&#47; Select the most recent focused child from the nearest focusable scope
+      &#47;&#47; and focus that. If there isn&#39;t one, focus the scope itself.
+      if (scope.canRequestFocus) {
+        scope._focusedChildren.remove(this);
+      }
+      while (!scope!.canRequestFocus) {
+        scope.enclosingScope?._focusedChildren.remove(scope);
+        scope = scope.enclosingScope ?? _manager?.rootScope;
+      }
+      scope._doRequestFocus(findFirstFocus: true);
+  }
+  assert(_focusDebug(() =&gt; &#39;Unfocused node:&#39;, () =&gt; &lt;Object&gt;[&#39;primary focus was $this&#39;, &#39;next focus will be ${_manager?._markedForFocus}&#39;]));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="widgets/widgets-library.html">widgets</a></li>
+    <li><a href="widgets/FocusNode-class.html">FocusNode</a></li>
+    <li class="self-crumb">unfocus method</li>
+</ol>
+
+
+    <h5>FocusNode class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

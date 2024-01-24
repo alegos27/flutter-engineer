@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the TextInputConfiguration class from the services library, for the Dart programming language.">
+  <title>TextInputConfiguration class - services library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">TextInputConfiguration class</li>
+  </ol>
+  <div class="self-name">TextInputConfiguration</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="services&#47;services-library-sidebar.html"
+      data-below-sidebar="services&#47;TextInputConfiguration-class-sidebar.html">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/services/text_input.dart#L461"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-class">TextInputConfiguration</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Controls the visual appearance of the text input control.</p>
+<p>Many <a href="services/TextInputAction.html">TextInputAction</a>s are common between Android and iOS. However, if an
+<a href="services/TextInputConfiguration/inputAction.html">inputAction</a> is provided that is not supported by the current
+platform in debug mode, an error will be thrown when the corresponding
+text input is attached. For example, providing iOS's "emergencyCall"
+action when running on an Android device will result in an error when in
+debug mode. In release mode, incompatible <a href="services/TextInputAction.html">TextInputAction</a>s are replaced
+either with "unspecified" on Android, or "default" on iOS. Appropriate
+<a href="services/TextInputConfiguration/inputAction.html">inputAction</a>s can be chosen by checking the current platform and then
+selecting the appropriate action.</p>
+<p>See also:</p>
+<ul>
+<li><a href="services/TextInput/attach.html">TextInput.attach</a></li>
+<li><a href="services/TextInputAction.html">TextInputAction</a></li>
+</ul>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="meta/immutable-constant.html">immutable</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="TextInputConfiguration" class="callable">
+          <span class="name"><a href="services/TextInputConfiguration/TextInputConfiguration.html">TextInputConfiguration</a></span><span class="signature">(<span class="parameter" id="-param-inputType">{<span class="type-annotation"><a href="services/TextInputType-class.html">TextInputType</a></span> <span class="parameter-name">inputType</span> = <span class="default-value">TextInputType.text</span>, </span><span class="parameter" id="-param-readOnly"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">readOnly</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-obscureText"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">obscureText</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-autocorrect"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">autocorrect</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-smartDashesType"><span class="type-annotation"><a href="services/SmartDashesType.html">SmartDashesType</a>?</span> <span class="parameter-name">smartDashesType</span>, </span><span class="parameter" id="-param-smartQuotesType"><span class="type-annotation"><a href="services/SmartQuotesType.html">SmartQuotesType</a>?</span> <span class="parameter-name">smartQuotesType</span>, </span><span class="parameter" id="-param-enableSuggestions"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableSuggestions</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-enableInteractiveSelection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableInteractiveSelection</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-actionLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">actionLabel</span>, </span><span class="parameter" id="-param-inputAction"><span class="type-annotation"><a href="services/TextInputAction.html">TextInputAction</a></span> <span class="parameter-name">inputAction</span> = <span class="default-value">TextInputAction.done</span>, </span><span class="parameter" id="-param-keyboardAppearance"><span class="type-annotation"><a href="dart-ui/Brightness.html">Brightness</a></span> <span class="parameter-name">keyboardAppearance</span> = <span class="default-value">Brightness.light</span>, </span><span class="parameter" id="-param-textCapitalization"><span class="type-annotation"><a href="services/TextCapitalization.html">TextCapitalization</a></span> <span class="parameter-name">textCapitalization</span> = <span class="default-value">TextCapitalization.none</span>, </span><span class="parameter" id="-param-autofillConfiguration"><span class="type-annotation"><a href="services/AutofillConfiguration-class.html">AutofillConfiguration</a></span> <span class="parameter-name">autofillConfiguration</span> = <span class="default-value">AutofillConfiguration.disabled</span>, </span><span class="parameter" id="-param-enableIMEPersonalizedLearning"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableIMEPersonalizedLearning</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-allowedMimeTypes"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">allowedMimeTypes</span> = <span class="default-value">const &lt;String&gt;[]</span>, </span><span class="parameter" id="-param-enableDeltaModel"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableDeltaModel</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          Creates configuration information for a text input control.
+            <div class="constructor-modifier features">const</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="actionLabel" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/actionLabel.html">actionLabel</a></span>
+  <span class="signature">&#8594; <a href="dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  What text to display in the text input control's action button.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="allowedMimeTypes" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/allowedMimeTypes.html">allowedMimeTypes</a></span>
+  <span class="signature">&#8594; <a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span></span> 
+
+</dt>
+<dd>
+  Used when a user inserts image-based content through the device keyboard,
+currently only used on Android.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="autocorrect" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/autocorrect.html">autocorrect</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to enable autocorrection.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="autofillConfiguration" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/autofillConfiguration.html">autofillConfiguration</a></span>
+  <span class="signature">&#8594; <a href="services/AutofillConfiguration-class.html">AutofillConfiguration</a></span> 
+
+</dt>
+<dd>
+  The configuration to use for autofill.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableDeltaModel" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/enableDeltaModel.html">enableDeltaModel</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to enable that the engine sends text input updates to the
+framework as <a href="services/TextEditingDelta-class.html">TextEditingDelta</a>'s or as one <a href="services/TextEditingValue-class.html">TextEditingValue</a>.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableIMEPersonalizedLearning" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/enableIMEPersonalizedLearning.html">enableIMEPersonalizedLearning</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to enable that the IME update personalized data such as typing
+history and user dictionary data.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableInteractiveSelection" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/enableInteractiveSelection.html">enableInteractiveSelection</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether a user can change its selection.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="enableSuggestions" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/enableSuggestions.html">enableSuggestions</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to show input suggestions as the user types.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="inputAction" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/inputAction.html">inputAction</a></span>
+  <span class="signature">&#8594; <a href="services/TextInputAction.html">TextInputAction</a></span> 
+
+</dt>
+<dd>
+  What kind of action to request for the action button on the IME.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="inputType" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/inputType.html">inputType</a></span>
+  <span class="signature">&#8594; <a href="services/TextInputType-class.html">TextInputType</a></span> 
+
+</dt>
+<dd>
+  The type of information for which to optimize the text input control.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="keyboardAppearance" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/keyboardAppearance.html">keyboardAppearance</a></span>
+  <span class="signature">&#8594; <a href="dart-ui/Brightness.html">Brightness</a></span> 
+
+</dt>
+<dd>
+  The appearance of the keyboard.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="obscureText" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/obscureText.html">obscureText</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether to hide the text being edited (e.g., for passwords).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="readOnly" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/readOnly.html">readOnly</a></span>
+  <span class="signature">&#8594; <a href="dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Whether the text field can be edited or not.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="smartDashesType" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/smartDashesType.html">smartDashesType</a></span>
+  <span class="signature">&#8594; <a href="services/SmartDashesType.html">SmartDashesType</a></span> 
+
+</dt>
+<dd>
+  Whether to allow the platform to automatically format dashes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="smartQuotesType" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/smartQuotesType.html">smartQuotesType</a></span>
+  <span class="signature">&#8594; <a href="services/SmartQuotesType.html">SmartQuotesType</a></span> 
+
+</dt>
+<dd>
+  Whether to allow the platform to automatically format quotes.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="textCapitalization" class="property">
+  <span class="name"><a href="services/TextInputConfiguration/textCapitalization.html">textCapitalization</a></span>
+  <span class="signature">&#8594; <a href="services/TextCapitalization.html">TextCapitalization</a></span> 
+
+</dt>
+<dd>
+  Specifies how platforms may automatically capitalize text entered by the
+user.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="copyWith" class="callable">
+  <span class="name"><a href="services/TextInputConfiguration/copyWith.html">copyWith</a></span><span class="signature">(<wbr><span class="parameter" id="copyWith-param-inputType">{<span class="type-annotation"><a href="services/TextInputType-class.html">TextInputType</a>?</span> <span class="parameter-name">inputType</span>, </span><span class="parameter" id="copyWith-param-readOnly"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">readOnly</span>, </span><span class="parameter" id="copyWith-param-obscureText"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">obscureText</span>, </span><span class="parameter" id="copyWith-param-autocorrect"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">autocorrect</span>, </span><span class="parameter" id="copyWith-param-smartDashesType"><span class="type-annotation"><a href="services/SmartDashesType.html">SmartDashesType</a>?</span> <span class="parameter-name">smartDashesType</span>, </span><span class="parameter" id="copyWith-param-smartQuotesType"><span class="type-annotation"><a href="services/SmartQuotesType.html">SmartQuotesType</a>?</span> <span class="parameter-name">smartQuotesType</span>, </span><span class="parameter" id="copyWith-param-enableSuggestions"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableSuggestions</span>, </span><span class="parameter" id="copyWith-param-enableInteractiveSelection"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableInteractiveSelection</span>, </span><span class="parameter" id="copyWith-param-actionLabel"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">actionLabel</span>, </span><span class="parameter" id="copyWith-param-inputAction"><span class="type-annotation"><a href="services/TextInputAction.html">TextInputAction</a>?</span> <span class="parameter-name">inputAction</span>, </span><span class="parameter" id="copyWith-param-keyboardAppearance"><span class="type-annotation"><a href="dart-ui/Brightness.html">Brightness</a>?</span> <span class="parameter-name">keyboardAppearance</span>, </span><span class="parameter" id="copyWith-param-textCapitalization"><span class="type-annotation"><a href="services/TextCapitalization.html">TextCapitalization</a>?</span> <span class="parameter-name">textCapitalization</span>, </span><span class="parameter" id="copyWith-param-enableIMEPersonalizedLearning"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableIMEPersonalizedLearning</span>, </span><span class="parameter" id="copyWith-param-allowedMimeTypes"><span class="type-annotation"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">allowedMimeTypes</span>, </span><span class="parameter" id="copyWith-param-autofillConfiguration"><span class="type-annotation"><a href="services/AutofillConfiguration-class.html">AutofillConfiguration</a>?</span> <span class="parameter-name">autofillConfiguration</span>, </span><span class="parameter" id="copyWith-param-enableDeltaModel"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">enableDeltaModel</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="services/TextInputConfiguration-class.html">TextInputConfiguration</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Creates a copy of this <a href="services/TextInputConfiguration-class.html">TextInputConfiguration</a> with the given fields
+replaced with new values.
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toJson" class="callable">
+  <span class="name"><a href="services/TextInputConfiguration/toJson.html">toJson</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a representation of this object as a JSON object.
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="services/services-library.html">services</a></li>
+    <li class="self-crumb">TextInputConfiguration class</li>
+</ol>
+
+
+    <!--<h5>services library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

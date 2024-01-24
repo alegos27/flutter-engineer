@@ -1,0 +1,13 @@
+{
+    "id": "borders.BorderSide.strokeAlign.1",
+    "element": "BorderSide.strokeAlign",
+    "sourcePath": "lib/src/painting/borders.dart",
+    "sourceLine": 156,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "borders",
+    "copyright": null,
+    "description": "This example shows an animation of how [strokeAlign] affects the drawing\nwhen applied to borders of various shapes.",
+    "file": "borders.BorderSide.strokeAlign.1.dart"
+}

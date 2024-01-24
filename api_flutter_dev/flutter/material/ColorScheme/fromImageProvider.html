@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the fromImageProvider method from the ColorScheme class, for the Dart programming language.">
+  <title>fromImageProvider method - ColorScheme class - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ColorScheme-class.html">ColorScheme</a></li>
+    <li class="self-crumb">fromImageProvider static method</li>
+  </ol>
+  <div class="self-name">fromImageProvider</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;ColorScheme-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/color_scheme.dart#L932"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-method">fromImageProvider</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="material/ColorScheme-class.html">ColorScheme</a></span>&gt;</span></span>
+<span class="name ">fromImageProvider</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="fromImageProvider-param-provider">{<span>required</span> <span class="type-annotation"><a href="painting/ImageProvider-class.html">ImageProvider</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/Object-class.html">Object</a></span>&gt;</span></span> <span class="parameter-name">provider</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-brightness"><span class="type-annotation"><a href="dart-ui/Brightness.html">Brightness</a></span> <span class="parameter-name">brightness</span> = <span class="default-value">Brightness.light</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-primary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onPrimary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onPrimary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-primaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">primaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onPrimaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onPrimaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-secondary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">secondary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onSecondary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onSecondary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-secondaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">secondaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onSecondaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onSecondaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-tertiary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">tertiary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onTertiary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onTertiary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-tertiaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">tertiaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onTertiaryContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onTertiaryContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-error"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">error</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onError"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onError</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-errorContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">errorContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onErrorContainer"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onErrorContainer</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-outline"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">outline</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-outlineVariant"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">outlineVariant</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-background"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">background</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onBackground"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onBackground</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-surface"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surface</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onSurface"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onSurface</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-surfaceVariant"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceVariant</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onSurfaceVariant"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onSurfaceVariant</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-inverseSurface"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">inverseSurface</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-onInverseSurface"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">onInverseSurface</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-inversePrimary"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">inversePrimary</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-shadow"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">shadow</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-scrim"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">scrim</span>, </span></li>
+<li><span class="parameter" id="fromImageProvider-param-surfaceTint"><span class="type-annotation"><a href="dart-ui/Color-class.html">Color</a>?</span> <span class="parameter-name">surfaceTint</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Generate a <code>ColorScheme</code> derived from the given <code>imageProvider</code>.</p>
+<p>Material Color Utilities extracts the dominant color from the
+supplied <a href="painting/ImageProvider-class.html">ImageProvider</a>. Using this color, a <code>ColorScheme</code> is generated
+with harmnonious colors that meet contrast requirements for accessibility.</p>
+<p>If any of the optional color parameters are non-null, they will be
+used in place of the generated colors for that field in the resulting
+<code>ColorScheme</code>. This allows apps to override specific colors for their
+needs.</p>
+<p>Given the nature of the algorithm, the most dominant color of the
+<code>imageProvider</code> may not wind up as one of the <code>ColorScheme</code> colors.</p>
+<p>The provided image will be scaled down to a maximum size of 112x112 pixels
+during color extraction.</p>
+<p>
+<a name="material.ColorScheme.fromImageProvider.1"></a>
+<div class="snippet snippet-container anchor-container" id="longSnippet1">
+    <div class="snippet-description">
+This sample shows how to use <a href="material/ColorScheme/fromImageProvider.html">ColorScheme.fromImageProvider</a> to create
+content-based dynamic color schemes.
+</div>
+    <a class="anchor-button-overlay anchor-button" title="Copy link to clipboard"
+        onmouseenter="fixHref(this, 'material.ColorScheme.fromImageProvider.1');" onclick="fixHref(this, 'material.ColorScheme.fromImageProvider.1'); copyStringToClipboard(this.href);"
+        href="#">
+        <i class="material-icons anchor-image">link</i>
+    </a>
+    <div class="snippet-description">
+        <p>To create a local project with this code sample, run:<br />
+            <span class="snippet-create-command">flutter create --sample=material.ColorScheme.fromImageProvider.1 mysample</span>
+        </p>
+    </div>
+    <iframe class="snippet-dartpad"
+        src="https://dartpad.dev/embed-flutter.html?split=60&amp;run=true&amp;sample_id=material.ColorScheme.fromImageProvider.1&amp;sample_channel=stable&amp;channel=stable">
+    </iframe>
+</div>
+</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://m3.material.io/styles/color/dynamic-color/user-generated-color#8af550b9-a19e-4e9f-bb0a-7f611fed5d0f">M3 Guidelines: Dynamic color from content</a></li>
+<li><a href="https://pub.dev/packages/dynamic_color">pub.dev/packages/dynamic_color</a>, a package to create
+<code>ColorScheme</code>s based on a platform's implementation of dynamic color.</li>
+<li><a href="https://m3.material.io/styles/color/the-color-system/color-roles">m3.material.io/styles/color/the-color-system/color-roles</a>, the
+Material 3 Color system specification.</li>
+<li><a href="https://pub.dev/packages/material_color_utilities">pub.dev/packages/material_color_utilities</a>, the package
+used to algorightmically determine the dominant color and to generate
+the <code>ColorScheme</code>.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Future&lt;ColorScheme&gt; fromImageProvider({
+  required ImageProvider provider,
+  Brightness brightness = Brightness.light,
+  Color? primary,
+  Color? onPrimary,
+  Color? primaryContainer,
+  Color? onPrimaryContainer,
+  Color? secondary,
+  Color? onSecondary,
+  Color? secondaryContainer,
+  Color? onSecondaryContainer,
+  Color? tertiary,
+  Color? onTertiary,
+  Color? tertiaryContainer,
+  Color? onTertiaryContainer,
+  Color? error,
+  Color? onError,
+  Color? errorContainer,
+  Color? onErrorContainer,
+  Color? outline,
+  Color? outlineVariant,
+  Color? background,
+  Color? onBackground,
+  Color? surface,
+  Color? onSurface,
+  Color? surfaceVariant,
+  Color? onSurfaceVariant,
+  Color? inverseSurface,
+  Color? onInverseSurface,
+  Color? inversePrimary,
+  Color? shadow,
+  Color? scrim,
+  Color? surfaceTint,
+}) async {
+  &#47;&#47; Extract dominant colors from image.
+  final QuantizerResult quantizerResult =
+      await _extractColorsFromImageProvider(provider);
+  final Map&lt;int, int&gt; colorToCount = quantizerResult.colorToCount.map(
+    (int key, int value) =&gt; MapEntry&lt;int, int&gt;(_getArgbFromAbgr(key), value),
+  );
+
+  &#47;&#47; Score colors for color scheme suitability.
+  final List&lt;int&gt; scoredResults = Score.score(colorToCount, desired: 1);
+  final ui.Color baseColor = Color(scoredResults.first);
+
+  final Scheme scheme;
+  switch (brightness) {
+    case Brightness.light:
+      scheme = Scheme.light(baseColor.value);
+    case Brightness.dark:
+      scheme = Scheme.dark(baseColor.value);
+  }
+
+  return ColorScheme(primary: primary ?? Color(scheme.primary),
+    onPrimary: onPrimary ?? Color(scheme.onPrimary),
+    primaryContainer: primaryContainer ?? Color(scheme.primaryContainer),
+    onPrimaryContainer: onPrimaryContainer ?? Color(scheme.onPrimaryContainer),
+    secondary: secondary ?? Color(scheme.secondary),
+    onSecondary: onSecondary ?? Color(scheme.onSecondary),
+    secondaryContainer: secondaryContainer ?? Color(scheme.secondaryContainer),
+    onSecondaryContainer: onSecondaryContainer ?? Color(scheme.onSecondaryContainer),
+    tertiary: tertiary ?? Color(scheme.tertiary),
+    onTertiary: onTertiary ?? Color(scheme.onTertiary),
+    tertiaryContainer: tertiaryContainer ?? Color(scheme.tertiaryContainer),
+    onTertiaryContainer: onTertiaryContainer ?? Color(scheme.onTertiaryContainer),
+    error: error ?? Color(scheme.error),
+    onError: onError ?? Color(scheme.onError),
+    errorContainer: errorContainer ?? Color(scheme.errorContainer),
+    onErrorContainer: onErrorContainer ?? Color(scheme.onErrorContainer),
+    outline: outline ?? Color(scheme.outline),
+    outlineVariant: outlineVariant ?? Color(scheme.outlineVariant),
+    background: background ?? Color(scheme.background),
+    onBackground: onBackground ?? Color(scheme.onBackground),
+    surface: surface ?? Color(scheme.surface),
+    onSurface: onSurface ?? Color(scheme.onSurface),
+    surfaceVariant: surfaceVariant ?? Color(scheme.surfaceVariant),
+    onSurfaceVariant: onSurfaceVariant ?? Color(scheme.onSurfaceVariant),
+    inverseSurface: inverseSurface ?? Color(scheme.inverseSurface),
+    onInverseSurface: onInverseSurface ?? Color(scheme.inverseOnSurface),
+    inversePrimary: inversePrimary ?? Color(scheme.inversePrimary),
+    shadow: shadow ?? Color(scheme.shadow),
+    scrim: scrim ?? Color(scheme.scrim),
+    surfaceTint: surfaceTint ?? Color(scheme.primary),
+    brightness: brightness,
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li><a href="material/ColorScheme-class.html">ColorScheme</a></li>
+    <li class="self-crumb">fromImageProvider static method</li>
+</ol>
+
+
+    <h5>ColorScheme class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

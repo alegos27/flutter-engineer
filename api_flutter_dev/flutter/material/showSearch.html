@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the showSearch function from the material library, for the Dart programming language.">
+  <title>showSearch function - material library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showSearch&lt;<wbr><span class="type-parameter">T</span>&gt; function</li>
+  </ol>
+  <div class="self-name">showSearch</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="material&#47;material-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+  <div id="external-links" class="btn-group"><a title="View source code" class="source-link" href="https://github.com/flutter/flutter/blob/master/packages/flutter/lib/src/material/search.dart#L60"><span class="material-symbols-outlined">description</span></a></div>
+<h1><span class="kind-function">showSearch&lt;<wbr><span class="type-parameter">T</span>&gt;</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+<span class="name ">showSearch</span>&lt;<wbr><span class="type-parameter">T</span>&gt;(<wbr><ol class="parameter-list"><li><span class="parameter" id="showSearch-param-context">{<span>required</span> <span class="type-annotation"><a href="widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="showSearch-param-delegate"><span>required</span> <span class="type-annotation"><a href="material/SearchDelegate-class.html">SearchDelegate</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">delegate</span>, </span></li>
+<li><span class="parameter" id="showSearch-param-query"><span class="type-annotation"><a href="dart-core/String-class.html">String</a>?</span> <span class="parameter-name">query</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+<li><span class="parameter" id="showSearch-param-useRootNavigator"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">useRootNavigator</span> = <span class="default-value">false</span>}</span></li>
+</ol>)
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Shows a full screen search page and returns the search result selected by
+the user when the page is closed.</p>
+<p>The search page consists of an app bar with a search field and a body which
+can either show suggested search queries or the search results.</p>
+<p>The appearance of the search page is determined by the provided
+<code>delegate</code>. The initial query string is given by <code>query</code>, which defaults
+to the empty string. When <code>query</code> is set to null, <code>delegate.query</code> will
+be used as the initial query.</p>
+<p>This method returns the selected search result, which can be set in the
+<a href="material/SearchDelegate/close.html">SearchDelegate.close</a> call. If the search page is closed with the system
+back button, it returns null.</p>
+<p>A given <a href="material/SearchDelegate-class.html">SearchDelegate</a> can only be associated with one active <a href="material/showSearch.html">showSearch</a>
+call. Call <a href="material/SearchDelegate/close.html">SearchDelegate.close</a> before re-using the same delegate instance
+for another <a href="material/showSearch.html">showSearch</a> call.</p>
+<p>The <code>useRootNavigator</code> argument is used to determine whether to push the
+search page to the <a href="widgets/Navigator-class.html">Navigator</a> furthest from or nearest to the given
+<code>context</code>. By default, <code>useRootNavigator</code> is <code>false</code> and the search page
+route created by this method is pushed to the nearest navigator to the
+given <code>context</code>. It can not be <code>null</code>.</p>
+<p>The transition to the search page triggered by this method looks best if the
+screen triggering the transition contains an <a href="material/AppBar-class.html">AppBar</a> at the top and the
+transition is called from an <a href="material/IconButton-class.html">IconButton</a> that's part of <a href="material/AppBar/actions.html">AppBar.actions</a>.
+The animation provided by <a href="material/SearchDelegate/transitionAnimation.html">SearchDelegate.transitionAnimation</a> can be used
+to trigger additional animations in the underlying page while the search
+page fades in or out. This is commonly used to animate an <a href="material/AnimatedIcon-class.html">AnimatedIcon</a> in
+the <a href="material/AppBar/leading.html">AppBar.leading</a> position e.g. from the hamburger menu to the back arrow
+used to exit the search page.</p>
+<h2 id="handling-emojis-and-other-complex-characters">Handling emojis and other complex characters</h2>
+<p>It's important to always use
+<a href="https://pub.dev/packages/characters">characters</a> when dealing with user
+input text that may contain complex characters. This will ensure that
+extended grapheme clusters and surrogate pairs are treated as single
+characters, as they appear to the user.</p>
+<p>For example, when finding the length of some user input, use
+<code>string.characters.length</code>. Do NOT use <code>string.length</code> or even
+<code>string.runes.length</code>. For the complex character "👨‍👩‍👦", this
+appears to the user as a single character, and <code>string.characters.length</code>
+intuitively returns 1. On the other hand, <code>string.length</code> returns 8, and
+<code>string.runes.length</code> returns 5!</p>
+<p>See also:</p>
+<ul>
+<li><a href="material/SearchDelegate-class.html">SearchDelegate</a> to define the content of the search page.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;T?&gt; showSearch&lt;T&gt;({
+  required BuildContext context,
+  required SearchDelegate&lt;T&gt; delegate,
+  String? query = &#39;&#39;,
+  bool useRootNavigator = false,
+}) {
+  delegate.query = query ?? delegate.query;
+  delegate._currentBody = _SearchBody.suggestions;
+  return Navigator.of(context, rootNavigator: useRootNavigator).push(_SearchPageRoute&lt;T&gt;(
+    delegate: delegate,
+  ));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="material/material-library.html">material</a></li>
+    <li class="self-crumb">showSearch&lt;<wbr><span class="type-parameter">T</span>&gt; function</li>
+</ol>
+
+
+    <h5>material library</h5>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

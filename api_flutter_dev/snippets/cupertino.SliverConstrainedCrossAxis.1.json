@@ -1,0 +1,13 @@
+{
+    "id": "cupertino.SliverConstrainedCrossAxis.1",
+    "element": "SliverConstrainedCrossAxis",
+    "sourcePath": "lib/src/widgets/sliver.dart",
+    "sourceLine": 1401,
+    "channel": "stable",
+    "serial": "1",
+    "package": "flutter",
+    "library": "cupertino",
+    "copyright": null,
+    "description": "In this sample the [SliverConstrainedCrossAxis] sizes its child so that the\ncross axis extent takes up less space than the actual viewport.",
+    "file": "cupertino.SliverConstrainedCrossAxis.1.dart"
+}

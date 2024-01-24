@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the score method from the Score class, for the Dart programming language.">
+  <title>score method - Score class - score library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-material_color_utilities_score_score/package-material_color_utilities_score_score-library.html">score</a></li>
+    <li><a href="package-material_color_utilities_score_score/Score-class.html">Score</a></li>
+    <li class="self-crumb">score static method</li>
+  </ol>
+  <div class="self-name">score</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-material_color_utilities_score_score&#47;Score-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-method">score</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span>
+<span class="name ">score</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="score-param-colorsToPopulation"><span class="type-annotation"><a href="dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>, <span class="type-parameter"><a href="dart-core/int-class.html">int</a></span>&gt;</span></span> <span class="parameter-name">colorsToPopulation</span>, </span></li>
+<li><span class="parameter" id="score-param-desired">{<span class="type-annotation"><a href="dart-core/int-class.html">int</a></span> <span class="parameter-name">desired</span> = <span class="default-value">4</span>, </span></li>
+<li><span class="parameter" id="score-param-filter"><span class="type-annotation"><a href="dart-core/bool-class.html">bool</a></span> <span class="parameter-name">filter</span> = <span class="default-value">true</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Given a map with keys of colors and values of how often the color appears,
+rank the colors based on suitability for being used for a UI theme.</p>
+<p><code>colorsToPopulation</code> is a map with keys of colors and values of often the
+color appears, usually from a source image.</p>
+<p>The list returned is of length &lt;= <code>desired</code>. The recommended color is the
+first item, the least suitable is the last. There will always be at least
+one color returned. If all the input colors were not suitable for a theme,
+a default fallback color will be provided, Google Blue. The default
+number of colors returned is 4, simply because thats the # of colors
+display in Android 12's wallpaper picker.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static List&lt;int&gt; score(Map&lt;int, int&gt; colorsToPopulation,
+    {int desired = 4, bool filter = true}) {
+  var populationSum = 0.0;
+  for (var population in colorsToPopulation.values) {
+    populationSum += population;
+  }
+
+  &#47;&#47; Turn the count of each color into a proportion by dividing by the total
+  &#47;&#47; count. Also, fill a cache of CAM16 colors representing each color, and
+  &#47;&#47; record the proportion of colors for each CAM16 hue.
+  final argbToRawProportion = &lt;int, double&gt;{};
+  final argbToHct = &lt;int, Hct&gt;{};
+  final hueProportions = List&lt;double&gt;.filled(360, 0.0);
+  for (var color in colorsToPopulation.keys) {
+    final population = colorsToPopulation[color]!;
+    final proportion = population &#47; populationSum;
+    argbToRawProportion[color] = proportion;
+
+    final hct = Hct.fromInt(color);
+    argbToHct[color] = hct;
+
+    final hue = hct.hue.floor();
+    hueProportions[hue] += proportion;
+  }
+
+  &#47;&#47; Determine the proportion of the colors around each color, by summing the
+  &#47;&#47; proportions around each color&#39;s hue.
+  final argbToHueProportion = &lt;int, double&gt;{};
+  for (var entry in argbToHct.entries) {
+    final color = entry.key;
+    final cam = entry.value;
+    final hue = cam.hue.round();
+
+    var excitedProportion = 0.0;
+    for (var i = hue - 15; i &lt; hue + 15; i++) {
+      final neighborHue = MathUtils.sanitizeDegreesInt(i);
+      excitedProportion += hueProportions[neighborHue];
+    }
+    argbToHueProportion[color] = excitedProportion;
+  }
+
+  &#47;&#47; Remove colors that are unsuitable, ex. very dark or unchromatic colors.
+  &#47;&#47; Also, remove colors that are very similar in hue.
+  final filteredColors = filter
+      ? _filter(argbToHueProportion, argbToHct)
+      : argbToHueProportion.keys.toList();
+
+  &#47;&#47; Score the colors by their proportion, as well as how chromatic they are.
+  final argbToScore = &lt;int, double&gt;{};
+  for (var color in filteredColors) {
+    final cam = argbToHct[color]!;
+    final proportion = argbToHueProportion[color]!;
+
+    final proportionScore = proportion * 100.0 * _weightProportion;
+
+    final chromaWeight =
+        cam.chroma &lt; _targetChroma ? _weightChromaBelow : _weightChromaAbove;
+    final chromaScore = (cam.chroma - _targetChroma) * chromaWeight;
+
+    final score = proportionScore + chromaScore;
+    argbToScore[color] = score;
+  }
+
+  final _argbAndScoreSorted = argbToScore.entries
+      .map((entry) =&gt; [entry.key, entry.value])
+      .toList(growable: false);
+  _argbAndScoreSorted.sort((a, b) =&gt; a[1].compareTo(b[1]) * -1);
+  final argbsScoreSorted =
+      _argbAndScoreSorted.map((e) =&gt; e[0]).toList(growable: false);
+  final finalColorsToScore = &lt;num, double&gt;{};
+  for (var differenceDegrees = 90.0;
+      differenceDegrees &gt;= 15.0;
+      differenceDegrees--) {
+    finalColorsToScore.clear();
+    for (var color in argbsScoreSorted) {
+      var duplicateHue = false;
+      final cam = argbToHct[color]!;
+      for (var alreadyChosenColor in finalColorsToScore.keys) {
+        final alreadyChosenCam = argbToHct[alreadyChosenColor]!;
+        if (MathUtils.differenceDegrees(cam.hue, alreadyChosenCam.hue) &lt;
+            differenceDegrees) {
+          duplicateHue = true;
+          break;
+        }
+      }
+      if (!duplicateHue) {
+        finalColorsToScore[color] = argbToScore[color]!;
+      }
+    }
+    if (finalColorsToScore.length &gt;= desired) {
+      break;
+    }
+  }
+
+  &#47;&#47; Ensure the list of colors returned is sorted such that the first in the
+  &#47;&#47; list is the most suitable, and the last is the least suitable.
+  final colorsByScoreDescending = finalColorsToScore.entries
+      .map((entry) =&gt; _ArgbAndScore(entry.key.toInt(), entry.value))
+      .toList();
+  colorsByScoreDescending.sort();
+
+  &#47;&#47; Ensure that at least one color is returned.
+  if (colorsByScoreDescending.isEmpty) {
+    return [0xff4285F4]; &#47;&#47; Google Blue
+  }
+  return colorsByScoreDescending.map((e) =&gt; e.argb).toList();
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-material_color_utilities_score_score/package-material_color_utilities_score_score-library.html">score</a></li>
+    <li><a href="package-material_color_utilities_score_score/Score-class.html">Score</a></li>
+    <li class="self-crumb">score static method</li>
+</ol>
+
+
+    <h5>Score class</h5>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

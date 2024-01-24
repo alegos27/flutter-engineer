@@ -1,0 +1,3185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the WebGL2RenderingContextBase class from the helpers library, for the Dart programming language.">
+  <title>WebGL2RenderingContextBase class - helpers library - Dart API</title>
+
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  <!-- style overrides for dartdoc -->
+<style>
+@import 'https://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:500,400italic,300,400,100i';
+@import 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round';
+</style>
+
+<link href="https://flutter.github.io/assets-for-api-docs/assets/cupertino/cupertino.css" rel="stylesheet" type="text/css">
+
+<link href="../assets/overrides.css" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round" rel="stylesheet">
+<style>
+  /* Rule for sizing the icon. */
+  .md-36 { font-size: 36px; }
+</style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)
+})(window,document,'script','dataLayer','GTM-ND4LWWZ');</script>
+<!-- End Google Tag Manager -->
+
+<script async="" defer="" src="../assets/api_survey.js"></script>
+
+<!-- Styles and scripting for handling custom code snippets -->
+<link href="../assets/snippets.css" rel="stylesheet" type="text/css">
+<script src="../assets/snippets.js"></script>
+
+<link rel="search" type="application/opensearchdescription+xml" title="Flutter API" href="/opensearch.xml"/>
+
+</head>
+
+
+<body data-base-href="../" data-using-base-href="true" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+    <li class="self-crumb">WebGL2RenderingContextBase class</li>
+  </ol>
+  <div class="self-name">WebGL2RenderingContextBase</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="package-web_helpers&#47;package-web_helpers-library-sidebar.html"
+      data-below-sidebar="package-web_helpers&#47;WebGL2RenderingContextBase-class-sidebar.html">
+      <div>
+<h1><span class="kind-class">WebGL2RenderingContextBase</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+        <dt>Implementers</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="package-web_helpers/WebGL2RenderingContext-class.html">WebGL2RenderingContext</a></li>
+        </ul></dd>
+
+        <dt>Available Extensions</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="dart-js_interop_unsafe/JSObjectUnsafeUtilExtension.html">JSObjectUnsafeUtilExtension</a></li>
+          <li><a href="dart-js_interop/JSObjectUtilExtension.html">JSObjectUtilExtension</a></li>
+          <li><a href="dart-js_interop/NullableUndefineableJSAnyExtension.html">NullableUndefineableJSAnyExtension</a></li>
+          <li><a href="package-web_helpers/WebGL2RenderingContextBaseExtension.html">WebGL2RenderingContextBaseExtension</a></li>
+        </ul></dd>
+
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="dart-js_interop/JS-class.html">JS</a>(&#39;WebGL2RenderingContextBase&#39;)</li>
+        <li>@<a href="dart-js_interop/staticInterop-constant.html">staticInterop</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="WebGL2RenderingContextBase" class="callable">
+          <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/WebGL2RenderingContextBase.html">WebGL2RenderingContextBase</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+
+    <dl class="properties">
+        <dt id="ACTIVE_UNIFORM_BLOCKS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/ACTIVE_UNIFORM_BLOCKS.html">ACTIVE_UNIFORM_BLOCKS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="ALREADY_SIGNALED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/ALREADY_SIGNALED.html">ALREADY_SIGNALED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="ANY_SAMPLES_PASSED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/ANY_SAMPLES_PASSED.html">ANY_SAMPLES_PASSED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="ANY_SAMPLES_PASSED_CONSERVATIVE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/ANY_SAMPLES_PASSED_CONSERVATIVE.html">ANY_SAMPLES_PASSED_CONSERVATIVE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR.html">COLOR</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT1" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT1.html">COLOR_ATTACHMENT1</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT10" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT10.html">COLOR_ATTACHMENT10</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT11" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT11.html">COLOR_ATTACHMENT11</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT12" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT12.html">COLOR_ATTACHMENT12</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT13" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT13.html">COLOR_ATTACHMENT13</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT14" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT14.html">COLOR_ATTACHMENT14</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT15" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT15.html">COLOR_ATTACHMENT15</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT2.html">COLOR_ATTACHMENT2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT3" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT3.html">COLOR_ATTACHMENT3</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT4" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT4.html">COLOR_ATTACHMENT4</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT5" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT5.html">COLOR_ATTACHMENT5</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT6" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT6.html">COLOR_ATTACHMENT6</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT7" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT7.html">COLOR_ATTACHMENT7</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT8.html">COLOR_ATTACHMENT8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COLOR_ATTACHMENT9" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COLOR_ATTACHMENT9.html">COLOR_ATTACHMENT9</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COMPARE_REF_TO_TEXTURE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COMPARE_REF_TO_TEXTURE.html">COMPARE_REF_TO_TEXTURE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="CONDITION_SATISFIED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/CONDITION_SATISFIED.html">CONDITION_SATISFIED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COPY_READ_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COPY_READ_BUFFER.html">COPY_READ_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COPY_READ_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COPY_READ_BUFFER_BINDING.html">COPY_READ_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COPY_WRITE_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COPY_WRITE_BUFFER.html">COPY_WRITE_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="COPY_WRITE_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/COPY_WRITE_BUFFER_BINDING.html">COPY_WRITE_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="CURRENT_QUERY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/CURRENT_QUERY.html">CURRENT_QUERY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DEPTH" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DEPTH.html">DEPTH</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DEPTH24_STENCIL8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DEPTH24_STENCIL8.html">DEPTH24_STENCIL8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DEPTH32F_STENCIL8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DEPTH32F_STENCIL8.html">DEPTH32F_STENCIL8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DEPTH_COMPONENT24" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DEPTH_COMPONENT24.html">DEPTH_COMPONENT24</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DEPTH_COMPONENT32F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DEPTH_COMPONENT32F.html">DEPTH_COMPONENT32F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER0" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER0.html">DRAW_BUFFER0</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER1" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER1.html">DRAW_BUFFER1</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER10" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER10.html">DRAW_BUFFER10</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER11" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER11.html">DRAW_BUFFER11</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER12" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER12.html">DRAW_BUFFER12</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER13" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER13.html">DRAW_BUFFER13</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER14" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER14.html">DRAW_BUFFER14</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER15" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER15.html">DRAW_BUFFER15</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER2.html">DRAW_BUFFER2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER3" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER3.html">DRAW_BUFFER3</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER4" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER4.html">DRAW_BUFFER4</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER5" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER5.html">DRAW_BUFFER5</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER6" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER6.html">DRAW_BUFFER6</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER7" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER7.html">DRAW_BUFFER7</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER8.html">DRAW_BUFFER8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_BUFFER9" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_BUFFER9.html">DRAW_BUFFER9</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_FRAMEBUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_FRAMEBUFFER.html">DRAW_FRAMEBUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DRAW_FRAMEBUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DRAW_FRAMEBUFFER_BINDING.html">DRAW_FRAMEBUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DYNAMIC_COPY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DYNAMIC_COPY.html">DYNAMIC_COPY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="DYNAMIC_READ" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/DYNAMIC_READ.html">DYNAMIC_READ</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_32_UNSIGNED_INT_24_8_REV" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_32_UNSIGNED_INT_24_8_REV.html">FLOAT_32_UNSIGNED_INT_24_8_REV</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT2x3" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT2x3.html">FLOAT_MAT2x3</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT2x4" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT2x4.html">FLOAT_MAT2x4</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT3x2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT3x2.html">FLOAT_MAT3x2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT3x4" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT3x4.html">FLOAT_MAT3x4</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT4x2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT4x2.html">FLOAT_MAT4x2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FLOAT_MAT4x3" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FLOAT_MAT4x3.html">FLOAT_MAT4x3</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAGMENT_SHADER_DERIVATIVE_HINT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAGMENT_SHADER_DERIVATIVE_HINT.html">FRAGMENT_SHADER_DERIVATIVE_HINT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE.html">FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_BLUE_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_BLUE_SIZE.html">FRAMEBUFFER_ATTACHMENT_BLUE_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING.html">FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE.html">FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE.html">FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_GREEN_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_GREEN_SIZE.html">FRAMEBUFFER_ATTACHMENT_GREEN_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_RED_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_RED_SIZE.html">FRAMEBUFFER_ATTACHMENT_RED_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE.html">FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER.html">FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_DEFAULT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_DEFAULT.html">FRAMEBUFFER_DEFAULT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="FRAMEBUFFER_INCOMPLETE_MULTISAMPLE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/FRAMEBUFFER_INCOMPLETE_MULTISAMPLE.html">FRAMEBUFFER_INCOMPLETE_MULTISAMPLE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="HALF_FLOAT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/HALF_FLOAT.html">HALF_FLOAT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INT_2_10_10_10_REV" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INT_2_10_10_10_REV.html">INT_2_10_10_10_REV</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INT_SAMPLER_2D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INT_SAMPLER_2D.html">INT_SAMPLER_2D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INT_SAMPLER_2D_ARRAY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INT_SAMPLER_2D_ARRAY.html">INT_SAMPLER_2D_ARRAY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INT_SAMPLER_3D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INT_SAMPLER_3D.html">INT_SAMPLER_3D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INT_SAMPLER_CUBE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INT_SAMPLER_CUBE.html">INT_SAMPLER_CUBE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INTERLEAVED_ATTRIBS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INTERLEAVED_ATTRIBS.html">INTERLEAVED_ATTRIBS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="INVALID_INDEX" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/INVALID_INDEX.html">INVALID_INDEX</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX.html">MAX</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_3D_TEXTURE_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_3D_TEXTURE_SIZE.html">MAX_3D_TEXTURE_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_ARRAY_TEXTURE_LAYERS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_ARRAY_TEXTURE_LAYERS.html">MAX_ARRAY_TEXTURE_LAYERS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_CLIENT_WAIT_TIMEOUT_WEBGL" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_CLIENT_WAIT_TIMEOUT_WEBGL.html">MAX_CLIENT_WAIT_TIMEOUT_WEBGL</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_COLOR_ATTACHMENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_COLOR_ATTACHMENTS.html">MAX_COLOR_ATTACHMENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS.html">MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_COMBINED_UNIFORM_BLOCKS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_COMBINED_UNIFORM_BLOCKS.html">MAX_COMBINED_UNIFORM_BLOCKS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS.html">MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_DRAW_BUFFERS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_DRAW_BUFFERS.html">MAX_DRAW_BUFFERS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_ELEMENT_INDEX" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_ELEMENT_INDEX.html">MAX_ELEMENT_INDEX</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_ELEMENTS_INDICES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_ELEMENTS_INDICES.html">MAX_ELEMENTS_INDICES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_ELEMENTS_VERTICES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_ELEMENTS_VERTICES.html">MAX_ELEMENTS_VERTICES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_FRAGMENT_INPUT_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_FRAGMENT_INPUT_COMPONENTS.html">MAX_FRAGMENT_INPUT_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_FRAGMENT_UNIFORM_BLOCKS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_FRAGMENT_UNIFORM_BLOCKS.html">MAX_FRAGMENT_UNIFORM_BLOCKS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_FRAGMENT_UNIFORM_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_FRAGMENT_UNIFORM_COMPONENTS.html">MAX_FRAGMENT_UNIFORM_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_PROGRAM_TEXEL_OFFSET" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_PROGRAM_TEXEL_OFFSET.html">MAX_PROGRAM_TEXEL_OFFSET</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_SAMPLES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_SAMPLES.html">MAX_SAMPLES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_SERVER_WAIT_TIMEOUT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_SERVER_WAIT_TIMEOUT.html">MAX_SERVER_WAIT_TIMEOUT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_TEXTURE_LOD_BIAS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_TEXTURE_LOD_BIAS.html">MAX_TEXTURE_LOD_BIAS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS.html">MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS.html">MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS.html">MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_UNIFORM_BLOCK_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_UNIFORM_BLOCK_SIZE.html">MAX_UNIFORM_BLOCK_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_UNIFORM_BUFFER_BINDINGS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_UNIFORM_BUFFER_BINDINGS.html">MAX_UNIFORM_BUFFER_BINDINGS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_VARYING_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_VARYING_COMPONENTS.html">MAX_VARYING_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_VERTEX_OUTPUT_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_VERTEX_OUTPUT_COMPONENTS.html">MAX_VERTEX_OUTPUT_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_VERTEX_UNIFORM_BLOCKS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_VERTEX_UNIFORM_BLOCKS.html">MAX_VERTEX_UNIFORM_BLOCKS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MAX_VERTEX_UNIFORM_COMPONENTS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MAX_VERTEX_UNIFORM_COMPONENTS.html">MAX_VERTEX_UNIFORM_COMPONENTS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MIN" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MIN.html">MIN</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="MIN_PROGRAM_TEXEL_OFFSET" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/MIN_PROGRAM_TEXEL_OFFSET.html">MIN_PROGRAM_TEXEL_OFFSET</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="OBJECT_TYPE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/OBJECT_TYPE.html">OBJECT_TYPE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PACK_ROW_LENGTH" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PACK_ROW_LENGTH.html">PACK_ROW_LENGTH</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PACK_SKIP_PIXELS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PACK_SKIP_PIXELS.html">PACK_SKIP_PIXELS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PACK_SKIP_ROWS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PACK_SKIP_ROWS.html">PACK_SKIP_ROWS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PIXEL_PACK_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PIXEL_PACK_BUFFER.html">PIXEL_PACK_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PIXEL_PACK_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PIXEL_PACK_BUFFER_BINDING.html">PIXEL_PACK_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PIXEL_UNPACK_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PIXEL_UNPACK_BUFFER.html">PIXEL_UNPACK_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="PIXEL_UNPACK_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/PIXEL_UNPACK_BUFFER_BINDING.html">PIXEL_UNPACK_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="QUERY_RESULT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/QUERY_RESULT.html">QUERY_RESULT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="QUERY_RESULT_AVAILABLE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/QUERY_RESULT_AVAILABLE.html">QUERY_RESULT_AVAILABLE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R11F_G11F_B10F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R11F_G11F_B10F.html">R11F_G11F_B10F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R16F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R16F.html">R16F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R16I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R16I.html">R16I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R16UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R16UI.html">R16UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R32F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R32F.html">R32F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R32I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R32I.html">R32I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R32UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R32UI.html">R32UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R8.html">R8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R8_SNORM" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R8_SNORM.html">R8_SNORM</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R8I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R8I.html">R8I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="R8UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/R8UI.html">R8UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RASTERIZER_DISCARD" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RASTERIZER_DISCARD.html">RASTERIZER_DISCARD</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="READ_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/READ_BUFFER.html">READ_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="READ_FRAMEBUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/READ_FRAMEBUFFER.html">READ_FRAMEBUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="READ_FRAMEBUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/READ_FRAMEBUFFER_BINDING.html">READ_FRAMEBUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RED.html">RED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RED_INTEGER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RED_INTEGER.html">RED_INTEGER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RENDERBUFFER_SAMPLES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RENDERBUFFER_SAMPLES.html">RENDERBUFFER_SAMPLES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG.html">RG</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG16F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG16F.html">RG16F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG16I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG16I.html">RG16I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG16UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG16UI.html">RG16UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG32F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG32F.html">RG32F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG32I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG32I.html">RG32I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG32UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG32UI.html">RG32UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG8.html">RG8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG8_SNORM" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG8_SNORM.html">RG8_SNORM</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG8I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG8I.html">RG8I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG8UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG8UI.html">RG8UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RG_INTEGER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RG_INTEGER.html">RG_INTEGER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB10_A2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB10_A2.html">RGB10_A2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB10_A2UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB10_A2UI.html">RGB10_A2UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB16F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB16F.html">RGB16F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB16I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB16I.html">RGB16I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB16UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB16UI.html">RGB16UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB32F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB32F.html">RGB32F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB32I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB32I.html">RGB32I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB32UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB32UI.html">RGB32UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB8.html">RGB8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB8_SNORM" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB8_SNORM.html">RGB8_SNORM</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB8I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB8I.html">RGB8I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB8UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB8UI.html">RGB8UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB9_E5" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB9_E5.html">RGB9_E5</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGB_INTEGER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGB_INTEGER.html">RGB_INTEGER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA16F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA16F.html">RGBA16F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA16I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA16I.html">RGBA16I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA16UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA16UI.html">RGBA16UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA32F" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA32F.html">RGBA32F</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA32I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA32I.html">RGBA32I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA32UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA32UI.html">RGBA32UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA8.html">RGBA8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA8_SNORM" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA8_SNORM.html">RGBA8_SNORM</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA8I" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA8I.html">RGBA8I</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA8UI" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA8UI.html">RGBA8UI</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="RGBA_INTEGER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/RGBA_INTEGER.html">RGBA_INTEGER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_2D_ARRAY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_2D_ARRAY.html">SAMPLER_2D_ARRAY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_2D_ARRAY_SHADOW" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_2D_ARRAY_SHADOW.html">SAMPLER_2D_ARRAY_SHADOW</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_2D_SHADOW" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_2D_SHADOW.html">SAMPLER_2D_SHADOW</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_3D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_3D.html">SAMPLER_3D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_BINDING.html">SAMPLER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SAMPLER_CUBE_SHADOW" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SAMPLER_CUBE_SHADOW.html">SAMPLER_CUBE_SHADOW</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SEPARATE_ATTRIBS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SEPARATE_ATTRIBS.html">SEPARATE_ATTRIBS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SIGNALED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SIGNALED.html">SIGNALED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SIGNED_NORMALIZED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SIGNED_NORMALIZED.html">SIGNED_NORMALIZED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SRGB" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SRGB.html">SRGB</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SRGB8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SRGB8.html">SRGB8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SRGB8_ALPHA8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SRGB8_ALPHA8.html">SRGB8_ALPHA8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="STATIC_COPY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/STATIC_COPY.html">STATIC_COPY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="STATIC_READ" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/STATIC_READ.html">STATIC_READ</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="STENCIL" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/STENCIL.html">STENCIL</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="STREAM_COPY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/STREAM_COPY.html">STREAM_COPY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="STREAM_READ" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/STREAM_READ.html">STREAM_READ</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_CONDITION" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_CONDITION.html">SYNC_CONDITION</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_FENCE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_FENCE.html">SYNC_FENCE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_FLAGS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_FLAGS.html">SYNC_FLAGS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_FLUSH_COMMANDS_BIT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_FLUSH_COMMANDS_BIT.html">SYNC_FLUSH_COMMANDS_BIT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_GPU_COMMANDS_COMPLETE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_GPU_COMMANDS_COMPLETE.html">SYNC_GPU_COMMANDS_COMPLETE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="SYNC_STATUS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/SYNC_STATUS.html">SYNC_STATUS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_2D_ARRAY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_2D_ARRAY.html">TEXTURE_2D_ARRAY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_3D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_3D.html">TEXTURE_3D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_BASE_LEVEL" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_BASE_LEVEL.html">TEXTURE_BASE_LEVEL</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_BINDING_2D_ARRAY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_BINDING_2D_ARRAY.html">TEXTURE_BINDING_2D_ARRAY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_BINDING_3D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_BINDING_3D.html">TEXTURE_BINDING_3D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_COMPARE_FUNC" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_COMPARE_FUNC.html">TEXTURE_COMPARE_FUNC</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_COMPARE_MODE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_COMPARE_MODE.html">TEXTURE_COMPARE_MODE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_IMMUTABLE_FORMAT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_IMMUTABLE_FORMAT.html">TEXTURE_IMMUTABLE_FORMAT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_IMMUTABLE_LEVELS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_IMMUTABLE_LEVELS.html">TEXTURE_IMMUTABLE_LEVELS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_MAX_LEVEL" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_MAX_LEVEL.html">TEXTURE_MAX_LEVEL</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_MAX_LOD" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_MAX_LOD.html">TEXTURE_MAX_LOD</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_MIN_LOD" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_MIN_LOD.html">TEXTURE_MIN_LOD</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TEXTURE_WRAP_R" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TEXTURE_WRAP_R.html">TEXTURE_WRAP_R</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TIMEOUT_EXPIRED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TIMEOUT_EXPIRED.html">TIMEOUT_EXPIRED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TIMEOUT_IGNORED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TIMEOUT_IGNORED.html">TIMEOUT_IGNORED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLint64.html">GLint64</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK.html">TRANSFORM_FEEDBACK</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_ACTIVE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_ACTIVE.html">TRANSFORM_FEEDBACK_ACTIVE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BINDING.html">TRANSFORM_FEEDBACK_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BUFFER.html">TRANSFORM_FEEDBACK_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BUFFER_BINDING.html">TRANSFORM_FEEDBACK_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BUFFER_MODE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BUFFER_MODE.html">TRANSFORM_FEEDBACK_BUFFER_MODE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BUFFER_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BUFFER_SIZE.html">TRANSFORM_FEEDBACK_BUFFER_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_BUFFER_START" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_BUFFER_START.html">TRANSFORM_FEEDBACK_BUFFER_START</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_PAUSED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_PAUSED.html">TRANSFORM_FEEDBACK_PAUSED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN.html">TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="TRANSFORM_FEEDBACK_VARYINGS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/TRANSFORM_FEEDBACK_VARYINGS.html">TRANSFORM_FEEDBACK_VARYINGS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_ARRAY_STRIDE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_ARRAY_STRIDE.html">UNIFORM_ARRAY_STRIDE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES.html">UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_ACTIVE_UNIFORMS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_ACTIVE_UNIFORMS.html">UNIFORM_BLOCK_ACTIVE_UNIFORMS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_BINDING.html">UNIFORM_BLOCK_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_DATA_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_DATA_SIZE.html">UNIFORM_BLOCK_DATA_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_INDEX" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_INDEX.html">UNIFORM_BLOCK_INDEX</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER.html">UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER.html">UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BUFFER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BUFFER.html">UNIFORM_BUFFER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BUFFER_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BUFFER_BINDING.html">UNIFORM_BUFFER_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BUFFER_OFFSET_ALIGNMENT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BUFFER_OFFSET_ALIGNMENT.html">UNIFORM_BUFFER_OFFSET_ALIGNMENT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BUFFER_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BUFFER_SIZE.html">UNIFORM_BUFFER_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_BUFFER_START" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_BUFFER_START.html">UNIFORM_BUFFER_START</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_IS_ROW_MAJOR" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_IS_ROW_MAJOR.html">UNIFORM_IS_ROW_MAJOR</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_MATRIX_STRIDE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_MATRIX_STRIDE.html">UNIFORM_MATRIX_STRIDE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_OFFSET" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_OFFSET.html">UNIFORM_OFFSET</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_SIZE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_SIZE.html">UNIFORM_SIZE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNIFORM_TYPE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNIFORM_TYPE.html">UNIFORM_TYPE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNPACK_IMAGE_HEIGHT" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNPACK_IMAGE_HEIGHT.html">UNPACK_IMAGE_HEIGHT</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNPACK_ROW_LENGTH" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNPACK_ROW_LENGTH.html">UNPACK_ROW_LENGTH</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNPACK_SKIP_IMAGES" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNPACK_SKIP_IMAGES.html">UNPACK_SKIP_IMAGES</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNPACK_SKIP_PIXELS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNPACK_SKIP_PIXELS.html">UNPACK_SKIP_PIXELS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNPACK_SKIP_ROWS" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNPACK_SKIP_ROWS.html">UNPACK_SKIP_ROWS</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNALED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNALED.html">UNSIGNALED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_10F_11F_11F_REV" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_10F_11F_11F_REV.html">UNSIGNED_INT_10F_11F_11F_REV</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_24_8" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_24_8.html">UNSIGNED_INT_24_8</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_2_10_10_10_REV" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_2_10_10_10_REV.html">UNSIGNED_INT_2_10_10_10_REV</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_5_9_9_9_REV" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_5_9_9_9_REV.html">UNSIGNED_INT_5_9_9_9_REV</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_SAMPLER_2D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_SAMPLER_2D.html">UNSIGNED_INT_SAMPLER_2D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_SAMPLER_2D_ARRAY" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_SAMPLER_2D_ARRAY.html">UNSIGNED_INT_SAMPLER_2D_ARRAY</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_SAMPLER_3D" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_SAMPLER_3D.html">UNSIGNED_INT_SAMPLER_3D</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_SAMPLER_CUBE" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_SAMPLER_CUBE.html">UNSIGNED_INT_SAMPLER_CUBE</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_VEC2" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_VEC2.html">UNSIGNED_INT_VEC2</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_VEC3" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_VEC3.html">UNSIGNED_INT_VEC3</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_INT_VEC4" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_INT_VEC4.html">UNSIGNED_INT_VEC4</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="UNSIGNED_NORMALIZED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/UNSIGNED_NORMALIZED.html">UNSIGNED_NORMALIZED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="VERTEX_ARRAY_BINDING" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/VERTEX_ARRAY_BINDING.html">VERTEX_ARRAY_BINDING</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="VERTEX_ATTRIB_ARRAY_DIVISOR" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/VERTEX_ATTRIB_ARRAY_DIVISOR.html">VERTEX_ATTRIB_ARRAY_DIVISOR</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="VERTEX_ATTRIB_ARRAY_INTEGER" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/VERTEX_ATTRIB_ARRAY_INTEGER.html">VERTEX_ATTRIB_ARRAY_INTEGER</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+        <dt id="WAIT_FAILED" class="property">
+  <span class="name"><a href="package-web_helpers/WebGL2RenderingContextBase/WAIT_FAILED.html">WAIT_FAILED</a></span>
+  <span class="signature">&#8594; <a href="package-web_helpers/GLenum.html">GLenum</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read-only</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="index.html">Flutter</a></li>
+    <li><a href="package-web_helpers/package-web_helpers-library.html">helpers</a></li>
+    <li class="self-crumb">WebGL2RenderingContextBase class</li>
+</ol>
+
+
+    <!--<h5>helpers library</h5>-->
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    Flutter
+      0.0.0
+  </span>
+
+  <script src="footer.js"></script>
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND4LWWZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+</body>
+
+</html>
+

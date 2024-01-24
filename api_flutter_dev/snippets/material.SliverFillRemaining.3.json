@@ -1,0 +1,13 @@
+{
+    "id": "material.SliverFillRemaining.3",
+    "element": "SliverFillRemaining",
+    "sourcePath": "lib/src/widgets/sliver_fill.dart",
+    "sourceLine": 257,
+    "channel": "stable",
+    "serial": "3",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "In this sample the [SliverFillRemaining] defers to the size of its [child]\nbecause the [SliverConstraints.precedingScrollExtent] has gone\nbeyond that of the viewport's main axis.",
+    "file": "material.SliverFillRemaining.3.dart"
+}

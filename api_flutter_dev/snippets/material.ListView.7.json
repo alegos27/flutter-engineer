@@ -1,0 +1,13 @@
+{
+    "id": "material.ListView.7",
+    "element": "ListView",
+    "sourcePath": "lib/src/widgets/scroll_view.dart",
+    "sourceLine": 1201,
+    "channel": "stable",
+    "serial": "7",
+    "package": "flutter",
+    "library": "material",
+    "copyright": null,
+    "description": "This example shows a custom implementation of [ListTile] selection in a [ListView] or [GridView].\nLong press any [ListTile] to enable selection mode.",
+    "file": "material.ListView.7.dart"
+}
